@@ -12,6 +12,14 @@ The complete history of agile methodology, from its roots in Toyota's manufactur
 - [Timeline](agile/timeline.md) - Complete timeline of agile programming
 - [Bibliography](agile/bibliography.md) - Sources and references
 
+### LLM Coding Agents
+
+A comprehensive survey of the tooling ecosystem around LLM coding agents, covering instruction files, configuration files, and monitoring tools as of February 2026.
+
+- [Instruction Files](llm-agents/agent-instruction-files.md) - Comparison of CLAUDE.md, AGENTS.md, copilot-instructions.md, and SKILL.md across tools
+- [Configuration Files](llm-agents/agent-config-files.md) - Configuration systems for Claude Code, Codex, Copilot, and OpenCode
+- [Monitoring Tools](llm-agents/llm-agent-monitoring-tools.md) - Session managers, notification tools, cost trackers, and observability platforms
+
 ### Self
 
 The history and legacy of the Self programming language, designed in 1986 at Xerox PARC. A prototype-based language that pioneered the optimization techniques now used in V8, HotSpot, and every major JavaScript engine.
