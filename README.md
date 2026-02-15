@@ -14,11 +14,14 @@ The complete history of agile methodology, from its roots in Toyota's manufactur
 
 ### LLM Coding Agents
 
-A comprehensive survey of the tooling ecosystem around LLM coding agents, covering instruction files, configuration files, and monitoring tools as of February 2026.
+A comprehensive survey of the tooling ecosystem around LLM coding agents as of February 2026.
 
+- [CLI Coding Agents](llm-agents/coding-agent-clis.md) - Every LLM coding agent for the terminal in early 2026: 90+ tools cataloged and compared
+- [Agent Tool Axes](llm-agents/agent-tool-axes.md) - Eight axes for reasoning about LLM agent tool use: autonomy, security, mutation, trust, and more
 - [Instruction Files](llm-agents/agent-instruction-files.md) - Comparison of CLAUDE.md, AGENTS.md, copilot-instructions.md, and SKILL.md across tools
 - [Configuration Files](llm-agents/agent-config-files.md) - Configuration systems for Claude Code, Codex, Copilot, and OpenCode
 - [Monitoring Tools](llm-agents/llm-agent-monitoring-tools.md) - Session managers, notification tools, cost trackers, and observability platforms
+- [Tmux & Worktree Tools](llm-agents/tmux-worktree-tools.md) - Tools for managing parallel agent sessions with tmux and git worktrees
 
 ### Self
 
