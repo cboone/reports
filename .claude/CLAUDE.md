@@ -39,14 +39,12 @@ When adding new reports to the repository:
      _Updated: March 1, 2026_
      ```
 3. Update `README.md`:
-   - Topics are listed alphabetically as `##` headings, each with a short description paragraph.
-   - Each report is its own `###` sub-section with a linked title, an italicized datestamp, and a short summary paragraph:
+   - Topics are listed alphabetically as `##` headings. No per-topic intro paragraph — the report summaries cover that.
+   - Each report is its own `###` sub-section with a linked title and a summary paragraph (2-4 sentences, enough to convey scope and what the reader will find). No datestamps in the README — dates live in the reports themselves.
      ```
      ### [Report title](topic/filename.md)
 
-     _February 15, 2026_
-
-     One-to-two sentence summary of the report.
+     Summary paragraph describing the report's scope, what it covers, and what the reader will find.
      ```
    - Report titles must be self-explanatory without relying on the topic section for context. Avoid generic names like "Bibliography" or "Configuration files comparison" — use titles like "Agile methodology: sources and references" or "LLM coding agent configuration files: comparing Claude Code, Codex, Copilot, and OpenCode."
 

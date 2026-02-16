@@ -4,84 +4,54 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 
 ## Agile
 
-The complete history of agile methodology, from its roots in Toyota's manufacturing philosophy through the 2001 Snowbird meeting to modern enterprise adoption and ongoing debates.
-
 ### [The complete history of agile: from Toyota to transformation](agile/history.md)
 
-_January 23, 2026_
-
-How agile methodology emerged from three tributaries — Toyota's production system, early iterative experiments at NASA and IBM, and mounting evidence of waterfall's failures — and what happened after 17 practitioners met in Utah's Wasatch Mountains.
+How agile methodology emerged from three tributaries — Toyota's production system, early iterative experiments at NASA and IBM, and mounting evidence of waterfall's failures — and what happened after 17 practitioners met in Utah's Wasatch Mountains in February 2001. Covers the pre-history through lean manufacturing, the methodology wars of the 1990s, the Snowbird meeting, the explosion of frameworks (Scrum, XP, Kanban), enterprise adoption, and the ongoing debates about whether mainstream agile has preserved or diluted its original values.
 
 ### [Complete timeline of agile programming](agile/timeline.md)
 
-_January 23, 2026_
-
-Chronological timeline from Toyota's factory floors to today's global software industry, covering intellectual roots, key breakthroughs, influential figures, and landmark publications.
+Chronological timeline from Toyota's factory floors in the 1940s to today's global software industry. Traces the full arc: manufacturing philosophy, early iterative development at NASA and IBM, the methodology wars, the Agile Manifesto, the rise of Scrum and SAFe, and the current landscape of agile practice.
 
 ### [Agile methodology: sources and references](agile/bibliography.md)
 
-_January 23, 2026_
-
-Primary sources, foundational documents, and further reading for the history of agile.
+Primary sources, foundational documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
 
 ## LLM Coding Agents
 
-A comprehensive survey of the tooling ecosystem around LLM coding agents as of February 2026.
-
 ### [Every LLM coding agent for the terminal in early 2026](llm-agents/coding-agent-clis.md)
 
-_February 10, 2026_
-
-Catalog of over 90 CLI and TUI coding tools that use large language models, organized into categories (full-featured agents, chat/REPL tools, shell assistants, multi-agent frameworks, orchestration tools) with comparison tables and landscape analysis.
+Catalog of over 90 CLI and TUI coding tools that use large language models for software development. Organized into categories — full-featured agentic assistants, code-aware chat and REPL tools, shell and command assistants, multi-agent coding frameworks, orchestration and session management tools, research and SWE-bench tools, terminal editor plugins, and context preparation utilities — with cross-category comparison tables and landscape analysis covering market consolidation, key trends, and gaps.
 
 ### [Axes for reasoning about LLM agent tool use](llm-agents/agent-tool-axes.md)
 
-_February 10, 2026_
-
-A framework of eight independent axes — interaction topology, autonomy, security surface, state mutation, determinism, error recovery, context cost, and trust boundary — for reasoning about the design space of agent-tool systems.
+A framework of eight independent axes for reasoning about the design space of agent-tool systems: interaction topology, degree of autonomy, security surface, state mutation, determinism and idempotency, error recovery and observability, context cost, and trust boundary. Each axis is defined with concrete examples, and the document maps how axes interact to create emergent risk (the mutation-autonomy-security triangle) or emergent capability.
 
 ### [LLM coding agent instruction files: comparing CLAUDE.md, AGENTS.md, copilot-instructions.md, and SKILL.md](llm-agents/agent-instruction-files.md)
 
-_February 15, 2026_
-
-How the four major instruction file formats compare across Claude Code, Codex, Copilot, and OpenCode, with concrete recommendations for cross-tool compatibility.
+How the four major instruction file formats work and compare across Claude Code, Codex, Copilot, and OpenCode. Covers file location, hierarchical loading, path-scoping, import mechanisms, and override semantics for each format, with concrete recommendations for cross-tool compatibility including the AGENTS.md-as-source-of-truth strategy with symlinks.
 
 ### [LLM coding agent configuration files: comparing Claude Code, Codex, Copilot, and OpenCode](llm-agents/agent-config-files.md)
 
-_February 15, 2026_
-
-Where every config file lives, what it controls, and which files should be committed to version control, across the four major LLM coding agents.
+Where every configuration file lives, what it controls, and which files should be committed to version control across the four major LLM coding agents. Covers permissions, sandboxing, MCP server configuration, hooks, model selection, named profiles, and admin enforcement, with a decision framework for what goes where and a dotfiles strategy for syncing preferences across tools and machines.
 
 ### [LLM coding agent monitoring, session management, and notification tools](llm-agents/llm-agent-monitoring-tools.md)
 
-_February 15, 2026_
-
-Every notable tool for monitoring LLM coding agent activity, managing sessions, receiving notifications, and tracking usage and costs — desktop session managers, terminal TUIs, mobile clients, notification hooks, cost trackers, and observability platforms.
+Every notable tool available as of mid-February 2026 for monitoring LLM coding agent activity, managing sessions, receiving notifications, and tracking usage and costs. Covers desktop session managers (macOS), terminal TUI session managers, desktop apps for parallel agent workflows, mobile and remote clients, notification hooks, usage and cost monitoring CLIs, IDE extensions, LLM observability platforms, and agent SDKs, with comparison tables across each category.
 
 ### [Parallel LLM coding agents with tmux and git worktrees](llm-agents/tmux-worktree-tools.md)
 
-_February 15, 2026_
-
-Survey of tools for managing parallel agent sessions with tmux and git worktrees, from full-featured TUI session managers to lightweight shell scripts, with architectural analysis and recommendations by use case.
+Comprehensive survey of tools at the intersection of LLM coding agents, tmux session management, and git worktree isolation. Profiles every significant tool from full-featured TUI session managers (claude-squad, ccmanager, agent-deck) through opinionated workflow tools (workmux, dmux, barrel) to lightweight shell scripts, with architectural analysis of the core pattern, the containerization gap, worktree conventions, and community discussion.
 
 ## Self
 
-The history and legacy of the Self programming language, designed in 1986 at Xerox PARC. A prototype-based language that pioneered the optimization techniques now used in V8, HotSpot, and every major JavaScript engine.
-
 ### [Self: the invisible language that powers modern computing](self/history.md)
 
-_January 23, 2026_
-
-How a radical simplification of Smalltalk — removing classes entirely in favor of prototypes — produced the optimization techniques that now power every major JavaScript engine and the Java Virtual Machine.
+How a radical simplification of Smalltalk — removing classes entirely in favor of prototypes — produced the optimization techniques that now power every major JavaScript engine and the Java Virtual Machine. Traces Self's journey from Xerox PARC through Stanford to Sun Microsystems, the breakthroughs in adaptive compilation and polymorphic inline caches, the direct lineage to Java HotSpot and V8, and Self's influence on JavaScript's prototype-based object model.
 
 ### [Timeline of Self and its legacy](self/timeline.md)
 
-_January 23, 2026_
-
-Chronological timeline from Self's design at Xerox PARC through its influence on JavaScript, Java HotSpot, and modern JIT compilation.
+Chronological timeline from Smalltalk's creation at Xerox PARC in 1972 through Self's design, implementation, and optimization breakthroughs in the late 1980s and 1990s, to its lasting impact on JavaScript, Java HotSpot, V8, and modern JIT compilation techniques.
 
 ### [The Self programming language: key papers and resources](self/bibliography.md)
 
-_January 23, 2026_
-
-Key academic papers and resources on Self and its technical legacy.
+Key academic papers and resources on Self and its technical legacy, including the foundational OOPSLA and ECOOP papers by Ungar, Smith, Chambers, and Hölzle, doctoral theses, implementation guides, and the Self language website and community resources.
