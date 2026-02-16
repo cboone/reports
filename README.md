@@ -70,6 +70,10 @@ Comprehensive survey of tools at the intersection of LLM coding agents, tmux ses
 
 ## Programming Languages
 
+### [Go: the cloud's native language](programming-languages/go-cloud-native-language.md)
+
+Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became the dominant language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of foundational papers, talks, and books.
+
 ### [Three algorithms, dozens of languages: an overview](programming-languages/three-algorithms-overview.md)
 
 Introduces and connects three companion studies that each implement a single algorithm across dozens of programming languages. Includes a summary table rating every language family across all three problems and analysis of cross-cutting themes: how data shape determines paradigm fit, the abstraction spectrum from APL to C, and how mainstream languages borrow from specialized paradigms over time.
