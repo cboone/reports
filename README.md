@@ -2,10 +2,17 @@
 
 Detailed reports on various topics, created by LLMs, usually the latest version of Claude. Everything in here was written by an LLM (other than this intro). Often multiple LLMs, or at least multiple rounds without preserving context, were used to fact-check, increase accuracy, and fill in gaps. I did my best to encourage real references, citations, etc. But you know how this works. Double check anything important.
 
-[Agile](#agile)
+[AI Ethics](#ai-ethics)
+∙ [Agile](#agile)
 ∙ [LLM Agents](#llm-coding-agents)
 ∙ [Programming Languages](#programming-languages)
 ∙ [Self](#self)
+
+## AI Ethics
+
+### [Moral philosophy confronts generative AI: mapping the ethical landscape](ai-ethics/moral-philosophy-generative-ai.md)
+
+How virtue ethics, care ethics, Rawlsian justice, and non-Western frameworks like Ubuntu and Confucian ethics are competing to shape the evaluation of generative AI in early 2026. Covers the shift from principalism toward structural analysis, the four main impact domains (social, political, economic, environmental), key fault lines dividing the field, and the gap between philosophical sophistication and practical governance.
 
 ## Agile
 
