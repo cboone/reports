@@ -5,6 +5,7 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 [AI Ethics](#ai-ethics)
 ∙ [Agile](#agile)
 ∙ [Apple](#apple)
+∙ [Fonts](#fonts)
 ∙ [Hacker News](#hacker-news)
 ∙ [LLM Agents](#llm-coding-agents)
 ∙ [Programming Languages](#programming-languages)
@@ -35,6 +36,12 @@ Primary sources, foundational documents, and further reading for the history of 
 ### [Apple's native container revolution in macOS 26 Tahoe](apple/macos-native-containers.md)
 
 How Apple's Containerization framework uses a VM-per-container architecture on Apple Silicon to provide hardware-level isolation with sub-second startup times. Covers the three-layer stack (Container CLI, Containerization framework, Virtualization.framework), the minimal Swift-based vminitd init system, performance benchmarks against Docker Desktop and OrbStack, the security model, OCI compliance, and the ecosystem maturity trade-offs at version 0.6.0.
+
+## Fonts
+
+### [Programming fonts in 2026: a comprehensive survey](fonts/programming-fonts-survey.md)
+
+Survey of the programming font landscape covering established standards (Consolas, Fira Code, JetBrains Mono, Iosevka), recent innovations (Monaspace's texture healing, Intel One Mono's accessibility-first design, Commit Mono's smart kerning), premium options (PragmataPro, Operator Mono, Berkeley Mono), the unresolved ligature debate, accessibility and CJK fonts, and academic research on font effectiveness including the finding that individual variation matters more than font choice.
 
 ## Hacker News
 
