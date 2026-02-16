@@ -5,6 +5,7 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 [AI Ethics](#ai-ethics)
 ∙ [Agile](#agile)
 ∙ [Apple](#apple)
+∙ [Data Formats](#data-formats)
 ∙ [Fonts](#fonts)
 ∙ [Go](#go)
 ∙ [Hacker News](#hacker-news)
@@ -42,6 +43,12 @@ How Apple's Containerization framework uses a VM-per-container architecture on A
 ### [macOS terminal emulators in 2026: a comprehensive review](apple/macos-terminal-emulators.md)
 
 Evaluation of nine macOS terminal emulators -- Terminal.app, iTerm2, Alacritty, Kitty, Ghostty, WezTerm, Warp, Rio, and Wave -- across performance benchmarks, graphics protocol support (Sixel, Kitty Graphics, iTerm2 inline images), Unicode handling, native macOS integration, configuration philosophies, AI features, latency measurements, and standards compliance, with use-case recommendations by developer profile.
+
+## Data Formats
+
+### [Human-readable alternatives to JSON: performance, syntax, and adoption](data-formats/json-alternatives.md)
+
+How TOML, YAML, JSON5, KDL, RON, Dhall, and Pkl compare against JSON for configuration files, APIs, and data storage. Covers parsing performance benchmarks across Python, Rust, Go, and Node.js, YAML's entrenched DevOps dominance despite its gotchas, TOML's rise through Python and Rust ecosystems, emerging formats targeting specialized needs, and practical recommendations by use case.
 
 ## Fonts
 
