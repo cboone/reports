@@ -6,6 +6,8 @@ created: 2026-01-27
 
 _January 27, 2026_
 
+See also: [The complete guide to programming fonts for IDEs and terminals](programming-fonts-complete-guide.md)
+
 The programming font landscape has evolved dramatically, with **texture healing**, **variable font axes**, and **accessibility-first design** emerging as the defining innovations of 2023-2026. JetBrains Mono and Fira Code remain the most widely adopted free options, while Monaspace represents the most significant technical breakthrough in years. For developers seeking optimal readability, research shows personalized font selection can improve reading speed by up to 35%—meaning experimentation matters more than following trends.
 
 ## The established standards still dominating IDEs

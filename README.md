@@ -52,6 +52,10 @@ How TOML, YAML, JSON5, KDL, RON, Dhall, and Pkl compare against JSON for configu
 
 ## Fonts
 
+### [The complete guide to programming fonts for IDEs and terminals](fonts/programming-fonts-complete-guide.md)
+
+History and catalog of programming fonts from typewriters through CRT terminals to modern displays. Traces the Bitstream Vera lineage (DejaVu, Menlo, Hack), the ClearType revolution and Consolas, Adobe's Source Code Pro and the birth of ligatures via Hasklig, Fira Code's mainstream breakthrough, corporate entries from JetBrains and Microsoft, Monaspace's texture healing, the Nerd Fonts icon-patching ecosystem, commercial options with download links, and platform rendering differences.
+
 ### [Programming fonts in 2026: a comprehensive survey](fonts/programming-fonts-survey.md)
 
 Survey of the programming font landscape covering established standards (Consolas, Fira Code, JetBrains Mono, Iosevka), recent innovations (Monaspace's texture healing, Intel One Mono's accessibility-first design, Commit Mono's smart kerning), premium options (PragmataPro, Operator Mono, Berkeley Mono), the unresolved ligature debate, accessibility and CJK fonts, and academic research on font effectiveness including the finding that individual variation matters more than font choice.
