@@ -4,6 +4,7 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 
 [AI Ethics](#ai-ethics)
 ∙ [Agile](#agile)
+∙ [Apple](#apple)
 ∙ [Hacker News](#hacker-news)
 ∙ [LLM Agents](#llm-coding-agents)
 ∙ [Programming Languages](#programming-languages)
@@ -28,6 +29,12 @@ Chronological timeline from Toyota's factory floors in the 1940s to today's glob
 ### [Agile methodology: sources and references](agile/bibliography.md)
 
 Primary sources, foundational documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
+
+## Apple
+
+### [Apple's native container revolution in macOS 26 Tahoe](apple/macos-native-containers.md)
+
+How Apple's Containerization framework uses a VM-per-container architecture on Apple Silicon to provide hardware-level isolation with sub-second startup times. Covers the three-layer stack (Container CLI, Containerization framework, Virtualization.framework), the minimal Swift-based vminitd init system, performance benchmarks against Docker Desktop and OrbStack, the security model, OCI compliance, and the ecosystem maturity trade-offs at version 0.6.0.
 
 ## Hacker News
 
