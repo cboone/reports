@@ -4,6 +4,7 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 
 [AI Ethics](#ai-ethics)
 ∙ [Agile](#agile)
+∙ [Hacker News](#hacker-news)
 ∙ [LLM Agents](#llm-coding-agents)
 ∙ [Programming Languages](#programming-languages)
 ∙ [Self](#self)
@@ -27,6 +28,12 @@ Chronological timeline from Toyota's factory floors in the 1940s to today's glob
 ### [Agile methodology: sources and references](agile/bibliography.md)
 
 Primary sources, foundational documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
+
+## Hacker News
+
+### [How to craft a Show HN post that resonates](hacker-news/show-hn-post-guide.md)
+
+What makes Show HN posts succeed, based on analysis of top-performing posts from 2024-2026. Covers title conventions, project types that resonate (DIY hardware and open-source outperform AI), description structure, timing strategy, comment engagement patterns, and anti-patterns that guarantee poor reception, with a checklist for launching developer tools.
 
 ## LLM Coding Agents
 
