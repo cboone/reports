@@ -2,6 +2,11 @@
 
 Detailed reports on various topics, created by LLMs, usually the latest version of Claude. Everything in here was written by an LLM (other than this intro). Often multiple LLMs, or at least multiple rounds without preserving context, were used to fact-check, increase accuracy, and fill in gaps. I did my best to encourage real references, citations, etc. But you know how this works. Double check anything important.
 
+[Agile](#agile)
+∙ [LLM Agents](#llm-coding-agents)
+∙ [Programming Languages](#programming-languages)
+∙ [Self](#self)
+
 ## Agile
 
 ### [The complete history of agile: from Toyota to transformation](agile/history.md)

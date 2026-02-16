@@ -39,6 +39,12 @@ When adding new reports to the repository:
      Summary paragraph describing the report's scope, what it covers, and what the reader will find.
      ```
    - Report titles must be self-explanatory without relying on the topic section for context. Avoid generic names like "Bibliography" or "Configuration files comparison" — use titles like "Agile methodology: sources and references" or "LLM coding agent configuration files: comparing Claude Code, Codex, Copilot, and OpenCode."
+   - Update the topic nav links in the intro section. These are anchor links to each `##` heading, separated by ` ∙ ` (middle dot with spaces), with the first entry having no leading separator:
+     ```
+     [Topic A](#topic-a)
+     ∙ [Topic B](#topic-b)
+     ∙ [Topic C](#topic-c)
+     ```
 
 ## Report Style
 
