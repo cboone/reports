@@ -12,7 +12,7 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 ∙ [LLM Agents](#llm-coding-agents)
 ∙ [Programming Languages](#programming-languages)
 ∙ [Self](#self)
-∙ [Terminal](#terminal)
+∙ [Terminals](#terminals)
 
 ## Ethics
 
@@ -126,7 +126,9 @@ Chronological timeline from Smalltalk's creation at Xerox PARC in 1972 through S
 
 Key academic papers and resources on Self and its technical legacy, including the foundational OOPSLA and ECOOP papers by Ungar, Smith, Chambers, and Hölzle, doctoral theses, implementation guides, and the Self language website and community resources.
 
-## Terminal
+## Terminals
+
+See also: [LLM Coding Agents](#llm-coding-agents)
 
 ### [macOS terminal emulators in 2026: a comprehensive review](terminal/macos-terminal-emulators.md)
 

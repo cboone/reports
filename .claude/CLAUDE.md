@@ -46,8 +46,12 @@ When adding new reports to the repository:
      ∙ [Topic C](#topic-c)
      ```
 
+## Cross-References
+
+- Companion reports within a topic should cross-reference each other with relative links.
+- When topics overlap (e.g., Terminals and LLM Coding Agents), add a "See also" link under the `##` topic heading in the README pointing to related topics. Look for these opportunities whenever adding or reorganizing reports.
+
 ## Report Style
 
 - Reports are comprehensive, long-form Markdown documents.
 - Use standard Markdown formatting: headings, tables, lists, code blocks.
-- Companion reports should cross-reference each other with relative links.
