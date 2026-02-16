@@ -37,6 +37,10 @@ Primary sources, foundational documents, and further reading for the history of 
 
 How Apple's Containerization framework uses a VM-per-container architecture on Apple Silicon to provide hardware-level isolation with sub-second startup times. Covers the three-layer stack (Container CLI, Containerization framework, Virtualization.framework), the minimal Swift-based vminitd init system, performance benchmarks against Docker Desktop and OrbStack, the security model, OCI compliance, and the ecosystem maturity trade-offs at version 0.6.0.
 
+### [macOS terminal emulators in 2026: a comprehensive review](apple/macos-terminal-emulators.md)
+
+Evaluation of nine macOS terminal emulators -- Terminal.app, iTerm2, Alacritty, Kitty, Ghostty, WezTerm, Warp, Rio, and Wave -- across performance benchmarks, graphics protocol support (Sixel, Kitty Graphics, iTerm2 inline images), Unicode handling, native macOS integration, configuration philosophies, AI features, latency measurements, and standards compliance, with use-case recommendations by developer profile.
+
 ## Fonts
 
 ### [Programming fonts in 2026: a comprehensive survey](fonts/programming-fonts-survey.md)
