@@ -1,6 +1,5 @@
 ---
 created: 2026-02-15
-updated: 2026-02-15
 ---
 
 # Parallel LLM coding agents with tmux and git worktrees

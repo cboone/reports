@@ -1,6 +1,5 @@
 ---
 created: 2026-01-23
-updated: 2026-01-23
 ---
 
 # Timeline: The History of Self and Its Legacy

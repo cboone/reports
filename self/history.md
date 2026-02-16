@@ -1,6 +1,5 @@
 ---
 created: 2026-01-23
-updated: 2026-01-23
 ---
 
 # Self: The invisible language that powers modern computing

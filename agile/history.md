@@ -1,6 +1,5 @@
 ---
 created: 2026-01-23
-updated: 2026-01-23
 ---
 
 # The complete history of agile: from Toyota to transformation

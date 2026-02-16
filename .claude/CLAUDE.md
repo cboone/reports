@@ -18,25 +18,17 @@ When adding new reports to the repository:
 
 1. Place files in the appropriate topic directory, creating it if needed. Use lowercase kebab-case for directory names.
 2. Each report file needs two date indicators:
-   - **YAML frontmatter** with `created` and `updated` dates in `YYYY-MM-DD` format:
+   - **YAML frontmatter** with a `created` date in `YYYY-MM-DD` format:
      ```
      ---
      created: 2026-02-15
-     updated: 2026-02-15
      ---
      ```
-   - **Inline datestamp** in italics immediately below the `#` title, using `_Month Day, Year_` format. Show only the created date; add "Updated: ..." on a second line only if the updated date differs:
+   - **Inline datestamp** in italics immediately below the `#` title, using `_Month Day, Year_` format:
      ```
      # Report title
 
      _February 15, 2026_
-     ```
-     Or when updated:
-     ```
-     # Report title
-
-     _February 15, 2026_
-     _Updated: March 1, 2026_
      ```
 3. Update `README.md`:
    - Topics are listed alphabetically as `##` headings. No per-topic intro paragraph — the report summaries cover that.

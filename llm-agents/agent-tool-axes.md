@@ -1,6 +1,5 @@
 ---
 created: 2026-02-10
-updated: 2026-02-10
 ---
 
 # Axes for Reasoning About LLM Agent Tool Use

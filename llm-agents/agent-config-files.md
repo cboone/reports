@@ -1,6 +1,5 @@
 ---
 created: 2026-02-15
-updated: 2026-02-15
 ---
 
 # LLM coding agent configuration files: comparing Claude Code, Codex, Copilot, and OpenCode
