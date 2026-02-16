@@ -96,6 +96,10 @@ Comprehensive survey of tools at the intersection of LLM coding agents, tmux ses
 
 ## Programming Languages
 
+### [The intellectual foundations of computing: from logic to programming languages](programming-languages/intellectual-foundations-of-computing.md)
+
+How computer science emerged from mathematics and logic between 1879 and 1948. Traces the path from Frege's predicate logic through Hilbert's program and Godel's incompleteness theorems to the independent invention of computation by Church, Turing, and Post, then forward through Shannon's information theory, functional programming (LISP, ML, Haskell), object-oriented programming (Simula, Smalltalk), logic programming (Prolog), the Curry-Howard correspondence, formal verification, and modern proof assistants, with links to seminal papers.
+
 ### [Three algorithms, dozens of languages: an overview](programming-languages/three-algorithms-overview.md)
 
 Introduces and connects three companion studies that each implement a single algorithm across dozens of programming languages. Includes a summary table rating every language family across all three problems and analysis of cross-cutting themes: how data shape determines paradigm fit, the abstraction spectrum from APL to C, and how mainstream languages borrow from specialized paradigms over time.
