@@ -16,24 +16,6 @@ Chronological timeline from Toyota's factory floors in the 1940s to today's glob
 
 Primary sources, foundational documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
 
-## Programming Languages
-
-### [Three algorithms, dozens of languages: an overview](programming-languages/three-algorithms-overview.md)
-
-Introduces and connects three companion studies that each implement a single algorithm across dozens of programming languages. Includes a summary table rating every language family across all three problems and analysis of cross-cutting themes: how data shape determines paradigm fit, the abstraction spectrum from APL to C, and how mainstream languages borrow from specialized paradigms over time.
-
-### [Finding indices of elements above the mean: a cross-language study](programming-languages/indices-above-mean.md)
-
-A single array-transformation algorithm implemented in over 30 languages organized by family: APL, ML, Lisp, BEAM, JVM, C, modern systems languages, scripting languages, proof assistants, and historical languages. Reveals how languages differ in explicitness vs. implicitness, static vs. dynamic typing, functional vs. imperative style, and memory management approaches.
-
-### [Evaluating expression trees: a cross-language study](programming-languages/expression-tree-evaluation.md)
-
-A recursive expression tree evaluator implemented across the same language families, showcasing algebraic data types, pattern matching, and the expression problem. The ML family excels here where array languages struggle, inverting the results of the first study and demonstrating that language strengths are fundamentally problem-dependent.
-
-### [Concurrent producer-consumer pipeline: a cross-language study](programming-languages/concurrent-producer-consumer.md)
-
-A concurrent producer-consumer pipeline with bounded buffering, backpressure, and shutdown coordination implemented across language families. Compares message passing (Erlang, Go channels), shared memory with locks (C, C++), and transactional memory (Haskell STM), revealing how each language's concurrency model reflects the problems it was designed to solve.
-
 ## LLM Coding Agents
 
 ### [Every LLM coding agent for the terminal in early 2026](llm-agents/coding-agent-clis.md)
@@ -59,6 +41,24 @@ Every notable tool available as of mid-February 2026 for monitoring LLM coding a
 ### [Parallel LLM coding agents with tmux and git worktrees](llm-agents/tmux-worktree-tools.md)
 
 Comprehensive survey of tools at the intersection of LLM coding agents, tmux session management, and git worktree isolation. Profiles every significant tool from full-featured TUI session managers (claude-squad, ccmanager, agent-deck) through opinionated workflow tools (workmux, dmux, barrel) to lightweight shell scripts, with architectural analysis of the core pattern, the containerization gap, worktree conventions, and community discussion.
+
+## Programming Languages
+
+### [Three algorithms, dozens of languages: an overview](programming-languages/three-algorithms-overview.md)
+
+Introduces and connects three companion studies that each implement a single algorithm across dozens of programming languages. Includes a summary table rating every language family across all three problems and analysis of cross-cutting themes: how data shape determines paradigm fit, the abstraction spectrum from APL to C, and how mainstream languages borrow from specialized paradigms over time.
+
+### [Finding indices of elements above the mean: a cross-language study](programming-languages/indices-above-mean.md)
+
+A single array-transformation algorithm implemented in over 30 languages organized by family: APL, ML, Lisp, BEAM, JVM, C, modern systems languages, scripting languages, proof assistants, and historical languages. Reveals how languages differ in explicitness vs. implicitness, static vs. dynamic typing, functional vs. imperative style, and memory management approaches.
+
+### [Evaluating expression trees: a cross-language study](programming-languages/expression-tree-evaluation.md)
+
+A recursive expression tree evaluator implemented across the same language families, showcasing algebraic data types, pattern matching, and the expression problem. The ML family excels here where array languages struggle, inverting the results of the first study and demonstrating that language strengths are fundamentally problem-dependent.
+
+### [Concurrent producer-consumer pipeline: a cross-language study](programming-languages/concurrent-producer-consumer.md)
+
+A concurrent producer-consumer pipeline with bounded buffering, backpressure, and shutdown coordination implemented across language families. Compares message passing (Erlang, Go channels), shared memory with locks (C, C++), and transactional memory (Haskell STM), revealing how each language's concurrency model reflects the problems it was designed to solve.
 
 ## Self
 
