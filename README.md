@@ -6,6 +6,7 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 ∙ [Agile](#agile)
 ∙ [Apple](#apple)
 ∙ [Fonts](#fonts)
+∙ [Go](#go)
 ∙ [Hacker News](#hacker-news)
 ∙ [LLM Agents](#llm-coding-agents)
 ∙ [Programming Languages](#programming-languages)
@@ -47,6 +48,12 @@ Evaluation of nine macOS terminal emulators -- Terminal.app, iTerm2, Alacritty, 
 
 Survey of the programming font landscape covering established standards (Consolas, Fira Code, JetBrains Mono, Iosevka), recent innovations (Monaspace's texture healing, Intel One Mono's accessibility-first design, Commit Mono's smart kerning), premium options (PragmataPro, Operator Mono, Berkeley Mono), the unresolved ligature debate, accessibility and CJK fonts, and academic research on font effectiveness including the finding that individual variation matters more than font choice.
 
+## Go
+
+### [Go: the cloud's native language](go/go-cloud-native-language.md)
+
+Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became the dominant language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of foundational papers, talks, and books.
+
 ## Hacker News
 
 ### [How to craft a Show HN post that resonates](hacker-news/show-hn-post-guide.md)
@@ -80,10 +87,6 @@ Every notable tool available as of mid-February 2026 for monitoring LLM coding a
 Comprehensive survey of tools at the intersection of LLM coding agents, tmux session management, and git worktree isolation. Profiles every significant tool from full-featured TUI session managers (claude-squad, ccmanager, agent-deck) through opinionated workflow tools (workmux, dmux, barrel) to lightweight shell scripts, with architectural analysis of the core pattern, the containerization gap, worktree conventions, and community discussion.
 
 ## Programming Languages
-
-### [Go: the cloud's native language](programming-languages/go-cloud-native-language.md)
-
-Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became the dominant language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of foundational papers, talks, and books.
 
 ### [Three algorithms, dozens of languages: an overview](programming-languages/three-algorithms-overview.md)
 
