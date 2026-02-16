@@ -3,6 +3,7 @@
 Detailed reports on various topics, created by LLMs, usually the latest version of Claude. Everything in here was written by an LLM (other than this intro). Often multiple LLMs, or at least multiple rounds without preserving context, were used to fact-check, increase accuracy, and fill in gaps. I did my best to encourage real references, citations, etc. But you know how this works. Double check anything important.
 
 [Agile](#agile)
+∙ [Buddhism](#buddhism)
 ∙ [Containers and VMs](#containers-and-virtual-machines)
 ∙ [Data Formats](#data-formats)
 ∙ [Ethics](#ethics)
@@ -27,6 +28,12 @@ Chronological timeline from Toyota's factory floors in the 1940s to today's glob
 ### [The complete history of agile: from Toyota to transformation](agile/history.md)
 
 How agile methodology emerged from three tributaries — Toyota's production system, early iterative experiments at NASA and IBM, and mounting evidence of waterfall's failures — and what happened after 17 practitioners met in Utah's Wasatch Mountains in February 2001. Covers the pre-history through lean manufacturing, the methodology wars of the 1990s, the Snowbird meeting, the explosion of frameworks (Scrum, XP, Kanban), enterprise adoption, and the ongoing debates about whether mainstream agile has preserved or diluted its original values.
+
+## Buddhism
+
+### [Timeline of early Buddhism: major events and written texts](buddhism/early-buddhism-timeline.md)
+
+Chronological timeline from the Buddha's life through the oral-to-written transition of Buddhist texts. Covers the early councils, Ashoka's patronage, the Pali Canon's first written recording in Sri Lanka (c. 100 BCE), the Gandhara manuscripts, the development of Mahayana literature, Chinese transmission from An Shigao through Xuanzang, Tibetan translation projects, and the geographic spread of written Buddhist traditions.
 
 ## Containers and Virtual Machines
 
