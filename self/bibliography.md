@@ -3,6 +3,10 @@ created: 2026-01-23
 updated: 2026-01-23
 ---
 
+# The Self programming language: key papers and resources
+
+_January 23, 2026_
+
 ## Key academic papers and resources
 
 **Foundational Papers**

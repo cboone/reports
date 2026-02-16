@@ -1,4 +1,11 @@
+---
+created: 2026-02-10
+updated: 2026-02-10
+---
+
 # Axes for Reasoning About LLM Agent Tool Use
+
+_February 10, 2026_
 
 When we work with LLM-powered agents that use tools, we're navigating a design space with many independent dimensions. Understanding these dimensions — and how they interact — helps us make better decisions about architecture, security, trust, and user experience.
 

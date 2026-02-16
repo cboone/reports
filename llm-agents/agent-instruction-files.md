@@ -1,6 +1,11 @@
-# LLM Coding Agent Instruction Files: Complete Comparison & Recommendations
+---
+created: 2026-02-15
+updated: 2026-02-15
+---
 
-*Last updated: February 15, 2026*
+# LLM coding agent instruction files: comparing CLAUDE.md, AGENTS.md, copilot-instructions.md, and SKILL.md
+
+_February 15, 2026_
 
 ## The Landscape
 

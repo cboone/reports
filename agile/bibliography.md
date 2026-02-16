@@ -3,7 +3,9 @@ created: 2026-01-23
 updated: 2026-01-23
 ---
 
-# Bibliography: The Complete History of Agile Programming
+# Agile methodology: sources and references
+
+_January 23, 2026_
 
 This bibliography accompanies the comprehensive history of agile methodology, organized by category for easier navigation. All links were verified as of January 2025.
 

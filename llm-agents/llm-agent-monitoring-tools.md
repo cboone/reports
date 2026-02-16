@@ -1,6 +1,11 @@
-# LLM Agent Monitoring, Session Management & Notification Tools
+---
+created: 2026-02-15
+updated: 2026-02-15
+---
 
-**Comprehensive Survey — February 2026**
+# LLM coding agent monitoring, session management, and notification tools
+
+_February 15, 2026_
 
 This document catalogs every notable tool available (as of mid-February 2026) for monitoring LLM coding agent activity, managing sessions, receiving notifications, and tracking usage/costs. Tools are grouped by category, with links, platform support, and key features.
 

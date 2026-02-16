@@ -5,6 +5,8 @@ updated: 2026-01-23
 
 # The complete history of agile: from Toyota to transformation
 
+_January 23, 2026_
+
 Agile methodology represents one of software development’s most significant paradigm shifts, yet its origins extend far beyond the famous 2001 Snowbird meeting. The movement synthesized decades of iterative development practices, Japanese manufacturing philosophy, and hard-won lessons from waterfall’s failures into a coherent alternative that has since reshaped how software gets built worldwide. **Over 95% of organizations now use agile practices**,  though debates persist about whether mainstream adoption has preserved or diluted its original values.
 
 The intellectual DNA of agile traces through three distinct tributaries: the Toyota Production System’s emphasis on continuous improvement and respect for workers, early iterative development experiments at NASA and IBM in the 1960s-70s, and the mounting evidence that sequential “waterfall” development consistently produced failed projects. When 17 practitioners gathered in Utah’s Wasatch Mountains in February 2001, they crystallized these converging insights into four values and twelve principles that launched a revolution. 

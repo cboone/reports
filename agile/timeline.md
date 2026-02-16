@@ -5,6 +5,8 @@ updated: 2026-01-23
 
 # Complete Timeline: The History of Agile Programming
 
+_January 23, 2026_
+
 From Toyota's factory floors to today's global software industry, this timeline traces the full evolution of agile methodology—its intellectual roots, key breakthroughs, influential figures, landmark publications, and organizational milestones.
 
 ---

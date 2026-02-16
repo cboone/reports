@@ -1,6 +1,11 @@
-# LLM Agent Coding Tools × tmux × Git Worktrees: A Comprehensive Survey
+---
+created: 2026-02-15
+updated: 2026-02-15
+---
 
-**Last updated: February 2026**
+# Parallel LLM coding agents with tmux and git worktrees
+
+_February 15, 2026_
 
 The intersection of LLM-powered coding agents, tmux session management, and git worktree isolation has become one of the most active categories in developer tooling. The core pattern is simple: git worktrees provide filesystem isolation so multiple agents don't collide, tmux provides persistent and observable terminal sessions, and an orchestration layer ties the lifecycle together — from spinning up an agent on a feature branch to merging the result and cleaning up.
 

@@ -1,8 +1,13 @@
-# LLM Coding Agent Configuration Files: Complete Comparison & Recommendations
+---
+created: 2026-02-15
+updated: 2026-02-15
+---
 
-*Last updated: February 15, 2026*
+# LLM coding agent configuration files: comparing Claude Code, Codex, Copilot, and OpenCode
 
-*Companion to: [Agent Instruction Files Comparison](agent-instruction-files.md)*
+_February 15, 2026_
+
+Companion to: [LLM coding agent instruction files](agent-instruction-files.md)
 
 ## Overview
 

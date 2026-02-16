@@ -5,6 +5,8 @@ updated: 2026-01-23
 
 # Timeline: The History of Self and Its Legacy
 
+_January 23, 2026_
+
 ## Predecessors
 
 **1972** — Smalltalk created at Xerox PARC by Alan Kay, Dan Ingalls, and Adele Goldstein

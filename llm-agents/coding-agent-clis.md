@@ -1,4 +1,11 @@
+---
+created: 2026-02-10
+updated: 2026-02-10
+---
+
 # Every LLM coding agent for the terminal in early 2026
+
+_February 10, 2026_
 
 **The CLI/TUI AI coding tool landscape has exploded from a handful of experiments to over 90 actively maintained tools in under two years.** The category barely existed before mid-2024; today, every major AI lab ships a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools dominate real-world usage — Claude Code, Aider, and OpenAI's Codex CLI — but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become the universal extensibility standard, local model support via Ollama is table stakes, and multi-agent orchestration is the fastest-growing sub-category.
 
