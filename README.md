@@ -2,21 +2,21 @@
 
 Detailed reports on various topics, created by LLMs, usually the latest version of Claude. Everything in here was written by an LLM (other than this intro). Often multiple LLMs, or at least multiple rounds without preserving context, were used to fact-check, increase accuracy, and fill in gaps. I did my best to encourage real references, citations, etc. But you know how this works. Double check anything important.
 
-[AI Ethics](#ai-ethics)
-∙ [Agile](#agile)
-∙ [Apple](#apple)
+[Agile](#agile)
+∙ [Containers and VMs](#containers-and-virtual-machines)
 ∙ [Data Formats](#data-formats)
+∙ [Ethics](#ethics)
 ∙ [Fonts](#fonts)
 ∙ [Go](#go)
 ∙ [Hacker News](#hacker-news)
 ∙ [LLM Agents](#llm-coding-agents)
 ∙ [Programming Languages](#programming-languages)
 ∙ [Self](#self)
-∙ [tmux](#tmux)
+∙ [Terminal](#terminal)
 
-## AI Ethics
+## Ethics
 
-### [Moral philosophy confronts generative AI: mapping the ethical landscape](ai-ethics/moral-philosophy-generative-ai.md)
+### [Moral philosophy confronts generative AI: mapping the ethical landscape](ethics/moral-philosophy-generative-ai.md)
 
 How virtue ethics, care ethics, Rawlsian justice, and non-Western frameworks like Ubuntu and Confucian ethics are competing to shape the evaluation of generative AI in early 2026. Covers the shift from principalism toward structural analysis, the four main impact domains (social, political, economic, environmental), key fault lines dividing the field, and the gap between philosophical sophistication and practical governance.
 
@@ -34,15 +34,11 @@ Chronological timeline from Toyota's factory floors in the 1940s to today's glob
 
 Primary sources, foundational documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
 
-## Apple
+## Containers and Virtual Machines
 
-### [Apple's native container revolution in macOS 26 Tahoe](apple/macos-native-containers.md)
+### [Apple's native container revolution in macOS 26 Tahoe](containers-and-vms/macos-native-containers.md)
 
 How Apple's Containerization framework uses a VM-per-container architecture on Apple Silicon to provide hardware-level isolation with sub-second startup times. Covers the three-layer stack (Container CLI, Containerization framework, Virtualization.framework), the minimal Swift-based vminitd init system, performance benchmarks against Docker Desktop and OrbStack, the security model, OCI compliance, and the ecosystem maturity trade-offs at version 0.6.0.
-
-### [macOS terminal emulators in 2026: a comprehensive review](apple/macos-terminal-emulators.md)
-
-Evaluation of nine macOS terminal emulators -- Terminal.app, iTerm2, Alacritty, Kitty, Ghostty, WezTerm, Warp, Rio, and Wave -- across performance benchmarks, graphics protocol support (Sixel, Kitty Graphics, iTerm2 inline images), Unicode handling, native macOS integration, configuration philosophies, AI features, latency measurements, and standards compliance, with use-case recommendations by developer profile.
 
 ## Data Formats
 
@@ -130,8 +126,12 @@ Chronological timeline from Smalltalk's creation at Xerox PARC in 1972 through S
 
 Key academic papers and resources on Self and its technical legacy, including the foundational OOPSLA and ECOOP papers by Ungar, Smith, Chambers, and Hölzle, doctoral theses, implementation guides, and the Self language website and community resources.
 
-## tmux
+## Terminal
 
-### [The complete history of tmux: from OpenBSD project to industry standard](tmux/history.md)
+### [macOS terminal emulators in 2026: a comprehensive review](terminal/macos-terminal-emulators.md)
+
+Evaluation of nine macOS terminal emulators -- Terminal.app, iTerm2, Alacritty, Kitty, Ghostty, WezTerm, Warp, Rio, and Wave -- across performance benchmarks, graphics protocol support (Sixel, Kitty Graphics, iTerm2 inline images), Unicode handling, native macOS integration, configuration philosophies, AI features, latency measurements, and standards compliance, with use-case recommendations by developer profile.
+
+### [The complete history of tmux: from OpenBSD project to industry standard](terminal/tmux-history.md)
 
 How Nicholas Marriott created tmux in 2007 as a BSD-licensed alternative to GNU Screen, earned Theo de Raadt's endorsement through exceptional code quality, and built the terminal multiplexer into an industry standard. Covers the complete version history from 0.1 through 3.6, the client-server architecture, major feature milestones (control mode, format strings, true color, SIXEL graphics, scrollbars), the plugin ecosystem around TPM, and primary sources including the original OpenBSD Journal interviews.
