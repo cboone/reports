@@ -58,8 +58,6 @@ Survey of the programming font landscape covering established standards (Consola
 
 ## Go
 
-See also: [Programming Languages](#programming-languages)
-
 ### [Go: the cloud's native language](go/go-cloud-native-language.md)
 
 Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became the dominant language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of foundational papers, talks, and books.
@@ -121,8 +119,6 @@ A recursive expression tree evaluator implemented across the same language famil
 A concurrent producer-consumer pipeline with bounded buffering, backpressure, and shutdown coordination implemented across language families. Compares message passing (Erlang, Go channels), shared memory with locks (C, C++), and transactional memory (Haskell STM), revealing how each language's concurrency model reflects the problems it was designed to solve.
 
 ## Self
-
-See also: [Programming Languages](#programming-languages)
 
 ### [Self: the invisible language that powers modern computing](self/history.md)
 
