@@ -11,6 +11,7 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 ∙ [LLM Agents](#llm-coding-agents)
 ∙ [Programming Languages](#programming-languages)
 ∙ [Self](#self)
+∙ [tmux](#tmux)
 
 ## AI Ethics
 
@@ -117,3 +118,9 @@ Chronological timeline from Smalltalk's creation at Xerox PARC in 1972 through S
 ### [The Self programming language: key papers and resources](self/bibliography.md)
 
 Key academic papers and resources on Self and its technical legacy, including the foundational OOPSLA and ECOOP papers by Ungar, Smith, Chambers, and Hölzle, doctoral theses, implementation guides, and the Self language website and community resources.
+
+## tmux
+
+### [The complete history of tmux: from OpenBSD project to industry standard](tmux/history.md)
+
+How Nicholas Marriott created tmux in 2007 as a BSD-licensed alternative to GNU Screen, earned Theo de Raadt's endorsement through exceptional code quality, and built the terminal multiplexer into an industry standard. Covers the complete version history from 0.1 through 3.6, the client-server architecture, major feature milestones (control mode, format strings, true color, SIXEL graphics, scrollbars), the plugin ecosystem around TPM, and primary sources including the original OpenBSD Journal interviews.
