@@ -120,7 +120,7 @@ Information theory connects to computability through **algorithmic information t
 
 ## Functional programming: from lambda calculus to Haskell
 
-The translation of lambda calculus into practical programming languages represents one of the most direct transfers from theory to practice in computer science history.
+The translation of lambda calculus into practical programming languages represents a notably direct transfer from theory to practice in computer science history.
 
 ### McCarthy's LISP: theory becomes practice
 

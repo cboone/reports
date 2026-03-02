@@ -121,7 +121,7 @@ This is trivially simple as mathematics. What makes it interesting as a programm
 
 Languages with algebraic data types (the ML family, Rust, Swift) can define the tree type directly and pattern-match on its variants. Lisp languages represent the tree as nested lists, making the data structure trivial but the dispatch manual. Object-oriented languages represent each node type as a class and use polymorphic dispatch. C-family languages use tagged unions or struct hierarchies. Array languages, designed for flat rectangular data, find recursive trees fundamentally awkward.
 
-This algorithm also serves as a miniature interpreter, and interpreters are one of the most important programs in computer science — from compilers to web browsers to AI inference engines, much of computing is evaluating tree-shaped structures.
+This algorithm also serves as a miniature interpreter, and interpreters are core programs in computer science. From compilers to web browsers to AI inference engines, much of computing is evaluating tree-shaped structures.
 
 Throughout this document, we use the same example expression: `(3 + 4) × 5 = 35`.
 

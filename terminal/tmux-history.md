@@ -224,7 +224,7 @@ Shell frameworks embraced tmux through plugins like the **oh-my-zsh tmux plugin*
 
 ## Conclusion
 
-tmux's trajectory from Nicholas Marriott's personal project in 2007 to one of the most widely used terminal multiplexers reveals how strong code quality and clear design can overcome entrenched alternatives. The decision to import tmux into OpenBSD's base system, validated by Theo de Raadt's rigorous code audit, provided credibility that accelerated adoption.
+tmux's trajectory from Nicholas Marriott's personal project in 2007 to a widely used terminal multiplexer reveals how strong code quality and clear design can overcome entrenched alternatives. The decision to import tmux into OpenBSD's base system, validated by Theo de Raadt's rigorous code audit, provided credibility that accelerated adoption.
 
 Three factors likely distinguished tmux's success: **technical advantages** over GNU Screen's aging codebase, **community investment** through influential tutorials and the plugin ecosystem, and **sustained development** with regular releases adding meaningful features without breaking compatibility. The recent additions of SIXEL graphics and scrollbars demonstrate that even after 17 years, tmux continues evolving to meet modern developer needs.
 
