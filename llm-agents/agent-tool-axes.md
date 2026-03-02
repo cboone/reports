@@ -79,7 +79,7 @@ This axis describes *what capabilities* the agent has access to and *how those c
   ● = granted    ○ = denied
 ```
 
-The security surface is best understood as a matrix: on one side, the *types of resources* (filesystem, network, environment variables, secrets, subprocesses, external services); on the other, the *operations* permitted on each (read, write, execute, delete). Orthogonal to this matrix is the *isolation mechanism*: is the agent running in a container, a VM, a sandbox with seccomp filters, a capability-restricted process, or just on your bare host OS with your user permissions?
+The security surface is often usefully understood as a matrix: on one side, the *types of resources* (filesystem, network, environment variables, secrets, subprocesses, external services); on the other, the *operations* permitted on each (read, write, execute, delete). Orthogonal to this matrix is the *isolation mechanism*: is the agent running in a container, a VM, a sandbox with seccomp filters, a capability-restricted process, or just on your bare host OS with your user permissions?
 
 The tighter the security surface, the less damage a misbehaving agent (or a prompt injection) can do, but also the less useful the agent is. This tension is common and has no single universal answer; it depends on the task, the trust level, and the consequences of failure.
 
@@ -223,7 +223,7 @@ These axes are largely independent, but they're not completely orthogonal. Some 
         Autonomy          Surface
 ```
 
-When an agent has broad permissions, high autonomy, and the ability to make irreversible changes, you are in a high-risk zone. Constraining any one of these dimensions can meaningfully reduce risk. This is why a common safety pattern is to allow high autonomy for read-only operations, or to allow write operations with human approval.
+When an agent has broad permissions, high autonomy, and the ability to make irreversible changes, you are likely in a high-risk zone. Constraining any one of these dimensions can meaningfully reduce risk. This is why a common safety pattern is to allow high autonomy for read-only operations, or to allow write operations with human approval.
 
 ### The Efficiency Triangle: Context Cost × Topology × Determinism
 
@@ -275,6 +275,6 @@ Axis                    Spectrum                         Key Question
                          delegation                          executed?
 ```
 
-When designing or evaluating an agent-tool system, walk through each axis and ask where your system sits. The axes where you're furthest toward the "risky" end are the ones that deserve the most design attention. And pay special attention to the interactions — it's rarely a single axis that causes problems, but combinations that create emergent risk or emergent capability.
+When designing or evaluating an agent-tool system, walk through each axis and ask where your system sits. The axes where you're furthest toward the "risky" end are the ones that deserve additional design attention. And pay special attention to the interactions: it is rarely a single axis that causes problems, but combinations that create emergent risk or emergent capability.
 
 The goal is not to minimize every axis (that would produce a system with little practical utility). It is to make *conscious, informed decisions* about tradeoffs, and to make sure axes set to "wide open" are balanced by axes set to "constrained."
