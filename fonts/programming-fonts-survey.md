@@ -8,7 +8,7 @@ _January 27, 2026_
 
 See also: [The complete guide to programming fonts for IDEs and terminals](programming-fonts-complete-guide.md)
 
-The programming font landscape has evolved dramatically, with **texture healing**, **variable font axes**, and **accessibility-first design** emerging as the defining innovations of 2023-2026. JetBrains Mono and Fira Code remain the most widely adopted free options, while Monaspace represents the most significant technical breakthrough in years. For developers seeking optimal readability, research shows personalized font selection can improve reading speed by up to 35%—meaning experimentation matters more than following trends.
+The programming font landscape has evolved dramatically, with **texture healing**, **variable font axes**, and **accessibility-first design** emerging as notable innovations of 2023-2026. JetBrains Mono and Fira Code remain widely adopted free options, while Monaspace stands out as a major technical release. For developers seeking optimal readability, existing research suggests personalized font selection can materially improve reading speed, meaning experimentation matters more than following trends.
 
 ## The established standards still dominating IDEs
 
@@ -32,15 +32,15 @@ Official sources: [Fira Code](https://github.com/tonsky/FiraCode), [JetBrains Mo
 
 ## 2023-2026 brought revolutionary innovations
 
-The most significant release since JetBrains Mono is **Monaspace** from GitHub Next (November 2023). It introduces **texture healing**, a technique using contextual alternates to even out monospace density while preserving the character grid—text appears more balanced without breaking alignment. Monaspace offers five metric-compatible typefaces (Neon, Argon, Xenon, Radon, Krypton) that can be mixed within the same file, enabling distinct voices for comments, docstrings, and code.
+One of the most significant releases since JetBrains Mono is **Monaspace** from GitHub Next (November 2023). It introduces **texture healing**, a technique using contextual alternates to even out monospace density while preserving the character grid, so text appears more balanced without breaking alignment. Monaspace offers five metric-compatible typefaces (Neon, Argon, Xenon, Radon, Krypton) that can be mixed within the same file, enabling distinct voices for comments, docstrings, and code.
 
 **Intel One Mono** (April 2023) represents the first major programming font designed **accessibility-first**, developed with input from low-vision and legally blind developers. Created with Frere-Jones Type, it prioritizes maximum legibility to reduce eye fatigue and coding errors, with version 1.4 (July 2024) adding optional ligatures.
 
-**Geist Mono** from Vercel (2023) reflects Swiss design principles—simplicity, minimalism, precision—and integrates natively with Next.js projects. Its **ligature hierarchy** system prioritizes certain ligatures over others based on frequency and importance.
+**Geist Mono** from Vercel (2023) reflects Swiss design principles, simplicity, minimalism, precision, and integrates natively with Next.js projects.
 
-**Martian Mono** from Evil Martians offers a rare feature: both **weight and width variation axes**, allowing condensed styles for terminal displays or wider styles for comfortable reading. **Commit Mono** introduced **smart kerning**, which slides letters to optically better positions while preserving monospace alignment—the first successful implementation of this technique.
+**Martian Mono** from Evil Martians offers a rare feature: both **weight and width variation axes**, allowing condensed styles for terminal displays or wider styles for comfortable reading. **Commit Mono** introduced **smart kerning**, which adjusts letter positioning for better optical balance while preserving monospace alignment.
 
-**Maple Mono** gained popularity in Asian developer communities with its rounded aesthetic and **perfect 2:1 Chinese/English width ratio**, ensuring CJK characters align precisely with Latin code.
+**Maple Mono** gained popularity in Asian developer communities with its rounded aesthetic and a strong **2:1 CJK/Latin width** alignment goal.
 
 | New font | Creator | Key breakthrough |
 |----------|---------|------------------|
@@ -52,15 +52,15 @@ The most significant release since JetBrains Mono is **Monaspace** from GitHub N
 
 Sources: [Monaspace](https://monaspace.githubnext.com/), [Intel One Mono](https://github.com/intel/intel-one-mono), [Geist Mono](https://vercel.com/font), [Martian Mono](https://github.com/evilmartians/mono), [Commit Mono](https://commitmono.com/)
 
-## Premium fonts command prices up to $225 for good reasons
+## Premium fonts command high prices for distinct tradeoffs
 
-The commercial programming font market serves developers willing to pay for distinctive aesthetics or extreme functionality. **PragmataPro** ($60-225) offers the most comprehensive glyph coverage at **18,000+ characters**, including APL, mathematical symbols, and phonetics—designed specifically for developers viewing multiple split windows simultaneously. Its March 2025 variable font update maintains its reputation as the density champion.
+The commercial programming font market serves developers willing to pay for distinctive aesthetics or extreme functionality. **PragmataPro** ($60-225) offers very broad glyph coverage, including APL, mathematical symbols, and phonetics, and is designed for developers who prioritize dense layouts across multiple split windows.
 
 **Operator Mono** ($199+) from Hoefler & Co. defined the premium cursive italic trend in 2016, with typewriter-inspired design where script-style italics contrast sharply with roman characters—making comments visually distinct. **MonoLisa** ($59-139) took the opposite approach, designing monospace-first rather than adapting proportional forms, resulting in a softer, humanist feel inspired by Frutiger.
 
-**Berkeley Mono** ($75+) from U.S. Graphics Company has gained cultural cachet as a "love letter to the golden era of computing," with 1970s machine-readable aesthetics blended with humanist qualities. It's become associated with Unix culture and is used by companies like Perplexity AI.
+**Berkeley Mono** ($75+) from U.S. Graphics Company has gained cultural cachet as a "love letter to the golden era of computing," with 1970s machine-readable aesthetics blended with humanist qualities. It's become associated with Unix-oriented developer culture.
 
-**Dank Mono** (£24-40) emerged from an indie developer's hobby project and found its niche at 14px on retina displays. **Input Mono** from David Jonathan Ross stands apart by offering **126 variants** across monospace, sans, and serif families with customizable character shapes before download—all free for personal use.
+**Dank Mono** (£24-40) emerged from an indie developer's hobby project and found its niche around 14px on retina displays. **Input Mono** from David Jonathan Ross stands apart by offering a very large variant catalog across monospace, sans, and serif families with customizable character shapes before download, all free for personal use.
 
 For those seeking character without cost, **Fantasque Sans Mono** has developed a cult following for its deliberately whimsical appearance, while **JuliaMono** provides exceptional mathematical symbol support for scientific programming.
 
@@ -68,15 +68,15 @@ Sources: [PragmataPro](https://fsd.it/shop/fonts/pragmatapro/), [Operator Mono](
 
 ## Accessibility and specialized fonts serve underserved needs
 
-**Atkinson Hyperlegible Mono** from the Braille Institute represents the gold standard for low-vision accessibility, with letterforms designed for maximum disambiguation—the font was added to the Cooper Hewitt Smithsonian Design Museum's permanent collection in 2024. Its design uses open counters, angled spurs, and longer tails specifically to help low-vision readers distinguish characters.
+**Atkinson Hyperlegible Mono** from the Braille Institute is a widely respected option for low-vision accessibility, with letterforms designed for maximum disambiguation. Its design uses open counters, angled spurs, and longer tails specifically to help low-vision readers distinguish characters.
 
 **OpenDyslexic Mono** uses heavy weighted bottoms to indicate letter direction and unique shapes for each character to prevent rotation confusion—though research by Rello and Baeza-Yates (2016) found that general monospace fonts actually outperformed specialized dyslexia fonts, with fixation durations of 0.22 seconds versus 0.26 seconds for proportional fonts.
 
-For CJK programming, **Sarasa Gothic** combines Iosevka with Source Han Sans, ensuring CJK characters are exactly twice the width of Latin for perfect alignment. **Noto Sans Mono CJK** provides the most comprehensive Unicode coverage at **65,535 glyphs** across 55 Unicode blocks.
+For CJK programming, **Sarasa Gothic** combines Iosevka with Source Han Sans, targeting a 2:1 CJK-to-Latin width for alignment. **Noto Sans Mono CJK** provides exceptionally broad Unicode coverage for multilingual work.
 
 The retro computing aesthetic is served by the **Ultimate Oldschool PC Font Pack**, which authentically recreates IBM VGA, EGA, CGA, and various BIOS fonts in scalable TrueType format. **VT323** recreates the DEC VT320 terminal, while **IBM 3270** revives the mainframe era.
 
-**Variable fonts** have become the most important accessibility feature, with Recursive offering five axes (Monospace, Casual, Weight, Slant, Cursive) enabling users to fine-tune typography to individual needs. Research from the Readability Consortium found personalized font selection improves reading speed by **35%** while maintaining comprehension.
+**Variable fonts** have become an important accessibility feature, with Recursive offering five axes (Monospace, Casual, Weight, Slant, Cursive) enabling users to fine-tune typography to individual needs. Readability research also suggests personalized font selection can improve reading speed while maintaining comprehension.
 
 Sources: [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/), [OpenDyslexic](https://opendyslexic.org/), [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic), [Recursive](https://www.recursive.design/), [Oldschool PC Fonts](https://int10h.org/oldschool-pc-fonts/)
 
@@ -94,18 +94,18 @@ Font relationships reveal clear lineages: Fira Code forked from Mozilla's Fira M
 
 ## Research reveals surprising findings about font effectiveness
 
-Academic research consistently finds **individual variation matters more than font choice**. A 2022 study in ACM TOCHI found participants read fastest at 314 WPM and slowest at 232 WPM depending on font—a **35% difference** based on personal fit. x-height, width, spacing, and stroke width all influence individual response.
+Academic research consistently finds **individual variation matters more than font choice**. A 2022 study in ACM TOCHI reported a large spread in reading speed across participants and font conditions (roughly a 35% range between fastest and slowest outcomes in the study), reinforcing the role of personal fit. x-height, width, spacing, and stroke width all influence individual response.
 
-Counterintuitively, research by Rello and Baeza-Yates found **monospace fonts significantly improved reading for people with dyslexia**, with shorter fixation durations than proportional fonts. OpenDyslexic—a font specifically designed for dyslexia—actually performed poorly compared to standard fonts like Courier and Arial.
+Counterintuitively, research by Rello and Baeza-Yates found **monospace fonts improved some reading metrics for people with dyslexia**, with shorter fixation durations than proportional fonts in their test setup. In the same line of work, OpenDyslexic did not outperform standard fonts like Courier and Arial.
 
 Eye tracking studies reveal code reading differs fundamentally from prose: programmers make frequent **vertical jumps** rather than linear left-to-right scanning, and fixation patterns depend heavily on font size. Smaller fonts produce significantly longer fixation durations, directly slowing reading speed.
 
-**No empirical studies specifically testing programming ligatures** on code comprehension or error detection exist. The debate remains theoretical, with advocates citing cognitive load reduction and critics warning about semantic ambiguity. The closest research—from eye tracking studies on code comprehension—focuses on code structure and style rules rather than typography.
+Empirical evidence specifically testing programming ligatures on code comprehension or error detection remains limited. The debate is still largely theory-driven, with advocates citing cognitive load reduction and critics warning about semantic ambiguity. Most adjacent eye-tracking work on code comprehension focuses on structure and style rules rather than typography.
 
 Key metrics for programming fonts identified across studies:
 - **x-height**: Larger x-height improves small-size readability
 - **Character distinction**: Clear 0/O, 1/l/I, ()[]{} differentiation
-- **Spacing**: Optimal inter-letter spacing improves legibility up to 20%
+- **Spacing**: Inter-letter spacing materially affects legibility and comfort
 - **Size**: 12-16px recommended; larger sizes reduce eye strain
 
 Sources: [ACM TOCHI Study](https://dl.acm.org/doi/10.1145/3502222), [Rello & Baeza-Yates](https://www.superarladislexia.org/pdf/2016-Luz%20Rello-Fonts-taccess.pdf), [JetBrains Design Philosophy](https://www.jetbrains.com/lp/mono/)
@@ -116,7 +116,7 @@ Interactive comparison tools have made font exploration accessible. **Programmin
 
 For developers beginning their search, the evidence suggests starting with fonts offering both ligature and non-ligature variants (JetBrains Mono NL, Cascadia Mono, Fira Mono) to test personal response. Those prioritizing accessibility should explore Intel One Mono or Atkinson Hyperlegible Mono. Density-seekers should examine PragmataPro or Iosevka with narrow settings. Those wanting maximum customization have Iosevka (build-time) or Input Mono (download-time).
 
-The most important finding from research: **there is no universally optimal programming font**. Individual cognitive and visual differences mean experimentation—not consensus following—produces the best results. The 35% reading speed variation across individuals suggests font choice deserves more attention than most developers give it.
+The most important finding from research: **there is no universally optimal programming font**. Individual cognitive and visual differences mean experimentation, not consensus following, produces the best results. The substantial reading-speed variation reported across individuals suggests font choice deserves more attention than most developers give it.
 
 Resources: [ProgrammingFonts.org](https://www.programmingfonts.org/), [CodingFont.com](https://www.codingfont.com), [Practical Typography on Code Fonts](https://practicaltypography.com/ligatures-in-programming-fonts-hell-no.html)
 

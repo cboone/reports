@@ -10,7 +10,7 @@ _January 23, 2026_
 
 **1972** — Smalltalk created at Xerox PARC by Alan Kay, Dan Ingalls, and Adele Goldstein
 
-**1980** — Smalltalk-80 released publicly; becomes dominant dynamic OO language
+**1980** — Smalltalk-80 released publicly; becomes one of the dominant dynamic OO languages
 
 **1984** — David Ungar completes Berkeley PhD on Smalltalk performance (Generation Scavenging GC)
 
@@ -32,7 +32,7 @@ _January 23, 2026_
 
 **1987** — First Self compiler completed
 
-**1987** — "Self: The Power of Simplicity" published at OOPSLA — later named one of three most influential OOPSLA papers (1986–1996)
+**1987** — "Self: The Power of Simplicity" published at OOPSLA, later recognized as one of the most influential OOPSLA papers of its era
 
 **1989** — "An Efficient Implementation of Self" published — introduces maps (hidden classes)
 
@@ -66,7 +66,7 @@ _January 23, 2026_
 
 **1993** — Lua 1.0 released — later adopts Self-style delegation via metatables
 
-**1995** — JavaScript created by Brendan Eich at Netscape — directly adopts Self's prototype-based inheritance
+**1995** — JavaScript created by Brendan Eich at Netscape, drawing heavily from Self's prototype-based inheritance model
 
 -----
 
@@ -76,7 +76,7 @@ _January 23, 2026_
 
 **1997** — Sun acquires Animorphic Systems
 
-**1999** — Java HotSpot VM released — directly derived from Self/Strongtalk technology
+**1999** — Java HotSpot VM released, incorporating major techniques from the Self and Strongtalk lineage
 
 **2002** — Io language created by Steve Dekorte — explicitly inspired by Self
 
@@ -96,4 +96,4 @@ _January 23, 2026_
 
 **August 2024** — Self 2024.1 released with FreeBSD and NetBSD support
 
-**Present** — Self maintained on GitHub; V8 and HotSpot continue to use Self's optimization techniques in billions of devices worldwide
+**Present** — Self maintained on GitHub; V8 and HotSpot continue to use optimization techniques shaped by Self research across a vast global software footprint
