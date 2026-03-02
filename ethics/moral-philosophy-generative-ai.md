@@ -54,7 +54,7 @@ Economic AI ethics shows the clearest framework competition. **Utilitarian appro
 
 Environmental AI ethics has emerged as what Aimee van Wynsberghe (University of Bonn) calls the "third wave of AI ethics." Her framework distinguishes between "AI for sustainability" (using AI to achieve environmental goals) and "sustainability of AI" (reducing AI's own footprint).
 
-**Intergenerational justice** frameworks examine what present AI developers owe future generations. Current decisions create "temporal power asymmetry", today's choices about AI infrastructure will affect environmental conditions for generations who cannot consent. Training GPT-3 consumed an estimated **1,287 MWh** of electricity and generated **552 tons of CO2**, while the largest data centers can consume millions of gallons of water daily.
+**Intergenerational justice** frameworks examine what present AI developers owe future generations. Current decisions create "temporal power asymmetry": today's choices about AI infrastructure will affect environmental conditions for generations who cannot consent. Training GPT-3 consumed an estimated **1,287 MWh** of electricity and generated **552 tons of CO2**, while the largest data centers can consume millions of gallons of water daily.
 
 The debate features a spectrum from **strong anthropocentrism** (environment matters only for human welfare) to **ecocentrism** (ecosystems have intrinsic value). An MDPI scoping review of 146 AI ethics standards found most embed anthropocentric assumptions. The radical "Biospheric AI" proposal suggests AI systems should align with planetary ecosystem well-being rather than just human interests.
 
@@ -92,7 +92,7 @@ Despite institutional maturation, several fundamental disagreements persist:
 
 The field now has established centers: Oxford's Institute for Ethics in AI (Stephen A. Schwarzman Centre), Edinburgh's Centre for Technomoral Futures (Vallor), Harvard's Berkman Klein Center, Carnegie Mellon's K&L Gates Endowment, and the Chinese Academy of Sciences' International Research Center for AI Ethics. Think tanks like the Montreal AI Ethics Institute, AI Now Institute, and Carnegie Endowment for International Peace produce influential policy-oriented work.
 
-Key recurring conferences include UNESCO's Global Forum on Ethics of AI, the AAAI/ACM Conference on AI, Ethics, and Society (AIES), and the AI4People Summit. The *AI and Ethics* journal (founded by van Wynsberghe) has become a primary venue alongside *Science and Engineering Ethics* and *Ethics and Information Technology*.
+Key recurring conferences include UNESCO's Global Forum on Ethics of AI, the AAAI/ACM Conference on AI, Ethics, and Society (AIES), and the AI4People Summit. The *AI and Ethics* journal (founded by van Wynsberghe) has become a major venue alongside *Science and Engineering Ethics* and *Ethics and Information Technology*.
 
 Regulatory frameworks, particularly the EU AI Act and UNESCO's Recommendation on the Ethics of AI (adopted by nearly all UNESCO member states), provide increasingly important scaffolding for practical implementation, though a significant "implementation gap" persists between "beautiful principles and messy implementation."
 
@@ -104,6 +104,6 @@ The ethical evaluation of generative AI in early 2026 reveals a field in product
 
 Virtue ethics, particularly Vallor's technomoral framework, offers a philosophically sophisticated alternative to the utilitarian/deontological binary, emphasizing practical wisdom (*phronesis*) over rule-following. Care ethics and relational approaches (including Ubuntu and Confucian frameworks) address AI's distinctive capacity to reshape human relationships, a dimension often poorly captured by rights-based or consequentialist reasoning.
 
-The emerging consensus favors **human rights-based governance** with genuine multi-stakeholder engagement, though disagreement persists over pace, scope, and whether current AI trajectories require fundamental reconsideration or merely course correction. Notably, the field increasingly recognizes that AI ethics cannot remain a Western philosophical conversation; global technology requires global philosophical resources.
+A growing view favors **human rights-based governance** with genuine multi-stakeholder engagement, though disagreement persists over pace, scope, and whether current AI trajectories require fundamental reconsideration or merely course correction. Notably, the field increasingly recognizes that AI ethics cannot remain a Western philosophical conversation; global technology requires global philosophical resources.
 
 What remains contested is whether these frameworks will translate into effective governance before AI's social, political, economic, and environmental consequences become irreversible. The gap between philosophical sophistication and practical implementation remains the field's central challenge.
