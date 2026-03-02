@@ -609,7 +609,7 @@ Idris syntax resembles Haskell but with strict evaluation and dependent types. T
 
 ### Coq (Rocq)
 
-Coq (recently renamed Rocq) is one of the oldest and most established proof assistants, used extensively in verified software like CompCert and mathematical proofs like the four-color theorem.
+Coq (recently renamed Rocq) is an older and well-established proof assistant, used extensively in verified software like CompCert and mathematical proofs like the four-color theorem.
 
 ```coq
 Require Import List Floats.
@@ -1078,7 +1078,7 @@ Scripting languages prioritize developer productivity and rapid iteration, often
 
 ### Python
 
-Python emphasizes readability and simplicity, becoming one of the most popular languages worldwide.
+Python emphasizes readability and simplicity, becoming one of the most widely used languages worldwide.
 
 ```python
 def above_mean(xs):
