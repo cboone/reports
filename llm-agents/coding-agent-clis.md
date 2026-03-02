@@ -27,7 +27,7 @@ An agentic coding tool that lives in your terminal, understands your codebase, a
 - **Language:** TypeScript (distributed as compiled binary)
 - **License:** Proprietary (repo is for plugins/issue tracking)
 - **Agent type:** Multi-agent (built-in sub-agents)
-- **Status:** Extremely active, multiple releases per week
+- **Status:** Very active, often multiple releases per week
 - **Distinguishing:** Often cited for strong reasoning on complex refactors and architectural changes. Plan mode enables deliberate multi-step work. Locked to Anthropic models natively. Community discussions often frame it as an "escalation path when other tools fail." Frequently praised in HN and Reddit discussions. Main downside is cost ($15+ per complex session).
 
 ### Aider
@@ -612,11 +612,11 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### The market has consolidated around three tiers
 
-**Tier 1 — Lab-backed flagships** (Claude Code, Codex CLI, Gemini CLI, Copilot CLI): Most major AI labs now ship a terminal coding agent. These tools serve as both products and model showcases. Claude Code is often cited for reasoning quality, Codex CLI for sandboxing, Gemini CLI for free access, and Copilot CLI for GitHub ecosystem integration.
+**Tier 1 — Lab-backed flagships** (Claude Code, Codex CLI, Gemini CLI, Copilot CLI): Many major AI labs now ship a terminal coding agent. These tools serve as both products and model showcases. Claude Code is often cited for reasoning quality, Codex CLI for sandboxing, Gemini CLI for free access, and Copilot CLI for GitHub ecosystem integration.
 
-**Tier 2 — Model-agnostic open-source** (Aider, OpenCode, Goose, Crush, Continue): These tools deliberately avoid model lock-in. Aider is among the most mature, OpenCode among the more provider-diverse, and Goose highly extensible. This tier often benefits when new models launch; it can adopt quickly while lab tools are locked to their own models.
+**Tier 2 — Model-agnostic open-source** (Aider, OpenCode, Goose, Crush, Continue): These tools deliberately avoid model lock-in. Aider is among the more mature options, OpenCode among the more provider-diverse, and Goose highly extensible. This tier often benefits when new models launch; it can adopt quickly while lab tools are locked to their own models.
 
-**Tier 3 — Specialized and emerging** (Plandex, AIChat, Droid, Kimi CLI, multi-agent frameworks): Tools that differentiate through unique architecture (Plandex's 2M token context, Droid's specialized sub-agents, Kimi's dual-mode shell) rather than trying to be general-purpose.
+**Tier 3 — Specialized and emerging** (Plandex, AIChat, Droid, Kimi CLI, multi-agent frameworks): Tools that differentiate through distinctive architecture (Plandex's 2M token context, Droid's specialized sub-agents, Kimi's dual-mode shell) rather than trying to be general-purpose.
 
 ### Seven key trends shaping the landscape
 
@@ -636,7 +636,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Most mature tools
 
-**Aider** is one of the more battle-tested open-source tools, with 40,000+ stars, 4.1M installs, vendor-reported very high weekly token volume, and 230+ contributors. **Claude Code** is widely viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
+**Aider** is a battle-tested open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported very high weekly token volume, and 230+ contributors. **Claude Code** is widely viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
 
 ### Most promising tools
 

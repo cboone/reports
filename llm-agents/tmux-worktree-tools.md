@@ -6,7 +6,7 @@ created: 2026-02-15
 
 _February 15, 2026_
 
-The intersection of LLM-powered coding agents, tmux session management, and git worktree isolation has become one of the most active categories in developer tooling. The core pattern is simple: git worktrees provide filesystem isolation so multiple agents don't collide, tmux provides persistent and observable terminal sessions, and an orchestration layer ties the lifecycle together — from spinning up an agent on a feature branch to merging the result and cleaning up.
+The intersection of LLM-powered coding agents, tmux session management, and git worktree isolation has become a highly active category in developer tooling. The core pattern is simple: git worktrees provide filesystem isolation so multiple agents don't collide, tmux provides persistent and observable terminal sessions, and an orchestration layer ties the lifecycle together — from spinning up an agent on a feature branch to merging the result and cleaning up.
 
 This document catalogs a broad set of significant tools, scripts, and workflows in the space, with feature comparisons, architectural analysis, and links to the community commentary that has shaped the ecosystem.
 
@@ -240,7 +240,7 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 | **Language** | (See repo) |
 | **Install** | See repo |
 | **Supported Agents** | Claude Code, Codex (OpenAI), OpenCode, Antigravity (Google) |
-| **Maturity** | Active development; unique agent portability angle |
+| **Maturity** | Active development; distinctive agent portability angle |
 
 **Overview.** barrel's pitch is "portable agents across LLMs, reproducible terminal workspaces." The project repository is now `txtx/axel`, but the barrel terminology and commands below reflect the workflow described in the original writeups. The core insight is that you should write agent definitions once and have them work across any LLM-powered coding tool. barrel handles the symlinking and configuration so that a single `agents/` directory gets picked up by Claude Code, Codex, OpenCode, or Antigravity.
 

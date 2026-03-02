@@ -48,7 +48,7 @@ This is the emerging industry standard, now stewarded by the Agentic AI Foundati
 
 The adoption is broad and growing. Among the tools covered here: Codex uses it as the primary instruction file (having migrated from `codex.md`), Copilot reads it alongside its own format, and OpenCode uses it natively. Public repository counts suggest that tens of thousands of open-source projects already have an `AGENTS.md`.
 
-**Codex's implementation** is one of the most sophisticated among the tools compared here: it walks from the project root down to your current working directory, checking each directory for `AGENTS.override.md` first, then `AGENTS.md`, concatenating them in order. The 32 KiB default limit (`project_doc_max_bytes`) can be raised in config. You can also add fallback filenames in `config.toml` so Codex will read your existing `CLAUDE.md` or `TEAM_GUIDE.md`.
+**Codex's implementation** is a sophisticated approach among the tools compared here: it walks from the project root down to your current working directory, checking each directory for `AGENTS.override.md` first, then `AGENTS.md`, concatenating them in order. The 32 KiB default limit (`project_doc_max_bytes`) can be raised in config. You can also add fallback filenames in `config.toml` so Codex will read your existing `CLAUDE.md` or `TEAM_GUIDE.md`.
 
 **OpenCode's implementation** reads `AGENTS.md` as its primary instruction file. The first matching file wins in each category; if you have both `AGENTS.md` and `CLAUDE.md`, `AGENTS.md` takes precedence. OpenCode also supports custom instruction file paths via the `instructions` array in `opencode.json`, including glob patterns like `packages/*/AGENTS.md`.
 
@@ -109,9 +109,9 @@ One major trend is the convergence around `AGENTS.md` as a cross-tool standard. 
 
 ## Concrete Recommendations
 
-### 1. Make AGENTS.md your single source of truth
+### 1. Make AGENTS.md your primary source of truth
 
-Put your core project instructions in `AGENTS.md` at the repo root. This is the one file that works across Codex, Copilot, and OpenCode natively. Structure it with clear Markdown headings:
+Put your core project instructions in `AGENTS.md` at the repo root. This is the primary file that works natively across Codex, Copilot, and OpenCode. Structure it with clear Markdown headings:
 
 ```markdown
 # AGENTS.md
@@ -204,7 +204,7 @@ OpenCode reads `AGENTS.md` natively. If you want it to also pull in docs from el
 
 ### 6. Global (user-level) instructions
 
-For personal cross-project preferences, maintain one canonical file and symlink it:
+For personal cross-project preferences, maintain one primary file and symlink it:
 
 ```bash
 mkdir -p ~/.agents
@@ -241,7 +241,7 @@ ln -sfn ~/.agents/AGENTS.md ~/.config/opencode/AGENTS.md
 
 **Don't stuff everything into one file.** Instruction-following quality tends to degrade as instruction count increases. Claude Code's system prompt typically includes dozens of instructions before project-specific content is added. Keep your files focused on what the agent cannot infer from the codebase.
 
-**Don't duplicate across formats.** If you maintain both AGENTS.md and CLAUDE.md with different content, they will drift. Use symlinks or a single source of truth.
+**Don't duplicate across formats.** If you maintain both AGENTS.md and CLAUDE.md with different content, they will drift. Use symlinks or a single shared source.
 
 **Don't include large code examples.** LLMs pick up patterns from your existing codebase via search. Use instruction files for things the agent *can't* infer: commands to run, workflow rules, business domain context.
 

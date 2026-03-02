@@ -20,10 +20,10 @@ Beyond the instruction/context files (CLAUDE.md, AGENTS.md, etc.), most AI codin
 |---|---|---|---|
 | **Claude Code** | `CLAUDE.md`, `.mcp.json` | `.claude/settings.json`, `.claude/settings.local.json`, `.claude/rules/*.md`, `.claude/skills/*/SKILL.md`, `.claude/commands/*.md` | 2 root + many in `.claude/` |
 | **OpenAI Codex** | `AGENTS.md` | `.codex/config.toml`, `.agents/skills/*/SKILL.md` | 1 root + few in `.codex/` and `.agents/` |
-| **GitHub Copilot** | *(none)* | `.github/copilot-instructions.md`, `.github/instructions/*.instructions.md`, `.github/chatmodes/*.chatmode.md`, `.github/agents/*.agent.md`, `.github/prompts/*.prompt.md` | 0 root, all in `.github/` |
+| **GitHub Copilot** | *(none)* | `.github/copilot-instructions.md`, `.github/instructions/*.instructions.md`, `.github/chatmodes/*.chatmode.md`, `.github/agents/*.agent.md`, `.github/prompts/*.prompt.md` | 0 root, primarily in `.github/` |
 | **OpenCode** | `AGENTS.md`, `opencode.json` | *(none)* | 2 root |
 
-With the symlink strategy (CLAUDE.md → AGENTS.md), your realistic root footprint across all four tools is: `AGENTS.md`, `CLAUDE.md` (symlink), `.mcp.json` (if using MCP servers), and `opencode.json` (if using OpenCode). Three or four visible files.
+With the symlink strategy (CLAUDE.md → AGENTS.md), your realistic root footprint across these four tools is: `AGENTS.md`, `CLAUDE.md` (symlink), `.mcp.json` (if using MCP servers), and `opencode.json` (if using OpenCode). Three or four visible files.
 
 ---
 
@@ -31,7 +31,7 @@ With the symlink strategy (CLAUDE.md → AGENTS.md), your realistic root footpri
 
 ### Claude Code
 
-Claude Code has one of the most layered configuration systems in this space. There are five distinct levels of precedence, from highest to lowest:
+Claude Code has a layered configuration system in this space. There are five distinct levels of precedence, from highest to lowest:
 
 1. **Managed settings** (enterprise IT) — `managed-settings.json` and `managed-mcp.json` deployed to system directories (`/etc/claude-code/`, `/Library/Application Support/ClaudeCode/`, etc.). Requires admin privileges. Constrains what users and projects can override.
 2. **CLI flags** (and equivalent runtime overrides) — temporary overrides for the current session.
@@ -320,7 +320,7 @@ The `applyTo` glob determines which files trigger these instructions. The option
 - **Agent definitions** (`.agent.md`) — custom agent configurations for specialized tasks.
 - **Prompt files** (`.prompt.md`) — reusable prompt templates with `#file:path` references.
 - **Organization-level instructions** — enterprise teams can set instructions at the GitHub org level that apply to all repos.
-- **Near-zero root footprint** — most configuration artifacts live in `.github/`, which already exists in most repos.
+- **Low root footprint** — most configuration artifacts live in `.github/`, which already exists in most repos.
 
 ---
 
@@ -468,7 +468,7 @@ Use `.mcp.json` at the project root for MCP servers the whole team needs (Shadcn
 
 ### 5. Global config sync via dotfiles
 
-For personal preferences that span all projects and all tools, maintain a dotfiles repo:
+For personal preferences that span many projects and tools, maintain a dotfiles repo:
 
 ```bash
 # In your dotfiles repo:

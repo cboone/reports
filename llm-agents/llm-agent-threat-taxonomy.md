@@ -40,7 +40,7 @@ A prompt injection in a source code comment was [shown to cause the Windsurf dev
 
 **Research:**
 
-A joint paper from researchers at OpenAI, Anthropic, and Google DeepMind (["The Attacker Moves Second,"](https://simonwillison.net/2025/Nov/2/new-prompt-injection-papers/) October 2025) tested 12 published defenses against prompt injection using adaptive attacks. They bypassed all 12 with attack success rates above 90%. Most of those defenses had originally reported near-zero attack success rates. This is some of the strongest published evidence that prompt injection defenses are not currently reliable.
+A joint paper from researchers at OpenAI, Anthropic, and Google DeepMind (["The Attacker Moves Second,"](https://simonwillison.net/2025/Nov/2/new-prompt-injection-papers/) October 2025) tested 12 published defenses against prompt injection using adaptive attacks. They bypassed all 12 with attack success rates above 90%. Most of those defenses had originally reported near-zero attack success rates. This is strong published evidence that prompt injection defenses are not currently reliable.
 
 [OWASP's 2025 Top 10 for LLM Applications](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) ranks prompt injection as the #1 critical vulnerability. Their guidance explicitly acknowledges the fundamental limitation: LLMs cannot reliably separate instructions from data.
 
@@ -204,11 +204,11 @@ The [Tea dating app](https://techcrunch.com/2025/07/26/dating-safety-app-tea-bre
 
 **Many mitigations are not LLM-specific.** The security practices that protect against these threats — code review, dependency auditing, secret scanning, least privilege, environment separation, automated testing, infrastructure-as-code — are the same practices that protect against human-introduced vulnerabilities. The main difference is that AI-assisted development increases the volume and speed of code production, making it more important to have these practices automated and enforced rather than relying on manual discipline.
 
-**The most novel threat currently lacks a broadly reliable defense.** Prompt injection (categories 1 and 2) exploits a fundamental architectural property of LLMs and has no known complete mitigation in current mainstream practice. The ["Attacker Moves Second" paper](https://arxiv.org/abs/2510.17342) (October 2025) demonstrated that all 12 tested defenses could be bypassed with >90% success rates. A practical framework, [Meta's Agents Rule of Two](https://ai.meta.com/blog/practical-ai-agent-security/), is a risk-reduction strategy rather than a complete solution. Organizations and individual developers still need to account for residual risk and choose autonomy levels that match their threat model.
+**The novel threat class currently lacks a broadly reliable defense.** Prompt injection (categories 1 and 2) exploits a fundamental architectural property of LLMs and has no known complete mitigation in current mainstream practice. The ["Attacker Moves Second" paper](https://arxiv.org/abs/2510.17342) (October 2025) demonstrated that all 12 tested defenses could be bypassed with >90% success rates. A practical framework, [Meta's Agents Rule of Two](https://ai.meta.com/blog/practical-ai-agent-security/), is a risk-reduction strategy rather than a complete solution. Organizations and individual developers still need to account for residual risk and choose autonomy levels that match their threat model.
 
 **The gap between "demonstrated in research" and "exploited in the wild" may be narrowing.** As of early 2026, many prompt injection attacks have been demonstrated by security researchers against real products (the Summer of Johann), while much of the documented real-world damage has come from the "boring" categories (accidental database deletion, leaked secrets, insecure generated code). However, the operationalization infrastructure is being built: dark web playbooks for slopsquatting, offensive LLM tools like Hexstrike-AI, and documented attack chains that combine prompt injection with supply chain compromise. The transition from research to exploitation appears to be accelerating.
 
-**The human remains the weakest and strongest link simultaneously.** Every mitigation strategy ultimately relies on human judgment at some point — reviewing code, approving actions, configuring permissions, maintaining security hygiene. The irony of AI-assisted development is that it generates code fast enough to overwhelm human review capacity, while the security of that code depends on human review. This tension is not resolved by any current tool or framework. The practical reality is that developers using AI agents need to be more disciplined about review, not less, at exactly the moment when the tools are making it easier to skip review entirely.
+**Human judgment remains a central link in both failure and defense.** Every mitigation strategy ultimately relies on human judgment at some point — reviewing code, approving actions, configuring permissions, maintaining security hygiene. The irony of AI-assisted development is that it generates code fast enough to overwhelm human review capacity, while the security of that code depends on human review. This tension is not resolved by any current tool or framework. The practical reality is that developers using AI agents need to be more disciplined about review, not less, at exactly the moment when the tools are making it easier to skip review entirely.
 
 ## Further Reading
 
@@ -222,8 +222,8 @@ For ongoing monitoring of this rapidly evolving space, the following sources are
 
 [Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025) provides a practical framework for reasoning about agent security.
 
-["The Attacker Moves Second"](https://arxiv.org/abs/2510.17342) (Nasr et al., October 2025) provides some of the strongest evidence that prompt injection defenses are unreliable.
+["The Attacker Moves Second"](https://arxiv.org/abs/2510.17342) (Nasr et al., October 2025) provides strong evidence that prompt injection defenses are unreliable.
 
-["We Have a Package for You!"](https://arxiv.org/abs/2406.10279) (Spracklen et al., 2025) provides one of the most comprehensive analyses of package hallucination / slopsquatting.
+["We Have a Package for You!"](https://arxiv.org/abs/2406.10279) (Spracklen et al., 2025) provides a comprehensive analysis of package hallucination / slopsquatting.
 
 [Veracode's 2025 GenAI Code Security Report](https://www.veracode.com/resources/ai-generated-code-security) provides extensive data on vulnerability rates in AI-generated code.
