@@ -120,9 +120,9 @@ Physical projects that users can see and touch—even virtually through detailed
 
 Threads with 200+ comments share common discussion drivers:
 
-**Technical architecture questions** dominate productive discussions. Commenters want to understand: "How does this compare to existing solutions?" "What's the performance at scale?" "Why did you choose this technology over alternatives?" Projects that can answer these questions with depth and specificity sustain engagement.
+**Technical architecture questions** often drive productive discussions. Commenters want to understand: "How does this compare to existing solutions?" "What's the performance at scale?" "Why did you choose this technology over alternatives?" Projects that can answer these questions with depth and specificity sustain engagement.
 
-**Pricing and business model transparency** either generates positive sentiment or triggers criticism—never indifference. Free and open-source positioning resonates strongly. Hidden pricing or "contact us" models reliably generate negative comments.
+**Pricing and business model transparency** often generates strong sentiment, either positive or critical. Free and open-source positioning resonates strongly. Hidden pricing or "contact us" models frequently generate negative comments.
 
 **Personal backstory elements** create emotional investment. Explaining why you built something, the challenges you faced, and the time invested transforms commenters from critics into supporters. The most successful creators share their journey authentically.
 
