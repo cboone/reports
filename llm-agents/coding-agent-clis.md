@@ -6,7 +6,7 @@ created: 2026-02-10
 
 _February 10, 2026_
 
-**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with recent activity in under two years.** The category barely existed before mid-2024; today, many major AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a common extensibility standard, local model support via Ollama is common, and multi-agent orchestration is a growing sub-category.
+**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with recent activity in under two years.** The category barely existed before mid-2024; today, several major AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a common extensibility standard, local model support via Ollama is common, and multi-agent orchestration is a growing sub-category.
 
 This document catalogs a broad set of CLI and TUI coding tools that use large language models to assist with software development, organized into logical categories with comparison tables and landscape analysis.
 
@@ -42,7 +42,7 @@ The original open-source AI pair programming tool for the terminal. **~40,500 Gi
 - **License:** Apache 2.0
 - **Agent type:** Single-agent with architect+editor dual-model mode
 - **Status:** Very active, 230+ contributors
-- **Distinguishing:** A broad model support set in this category. Git-first philosophy means AI changes are usually captured as clean commits. Competitive SWE-Bench results in published materials. Well-established and mature in practice. Repo map feature gives strong codebase understanding. Steep learning curve but powerful once mastered.
+- **Distinguishing:** A broad model support set in this category. Git-first philosophy means AI changes are usually captured as clean commits. Competitive SWE-Bench results in published materials. Well-established and mature in practice. Repo map feature gives useful codebase understanding. Steep learning curve but powerful once mastered.
 
 ### OpenAI Codex CLI
 
@@ -56,7 +56,7 @@ Lightweight coding agent from OpenAI with built-in sandboxed execution. **~50,50
 - **License:** Apache 2.0
 - **Agent type:** Single-agent with code review sub-agent
 - **Status:** Very active, $1M open-source grant initiative
-- **Distinguishing:** **A comparatively robust sandboxing/security model** among CLI agents, including network isolation in full-auto mode. Rust performance. Works with ChatGPT subscription. HN consensus: better for greenfield solo projects and parallel agents; weaker on documentation tasks where it can hallucinate.
+- **Distinguishing:** **A comparatively mature sandboxing/security model** among CLI agents, including network isolation in full-auto mode. Rust performance. Works with ChatGPT subscription. HN consensus: better for greenfield solo projects and parallel agents; weaker on documentation tasks where it can hallucinate.
 
 ### OpenCode (formerly SST project)
 
@@ -69,7 +69,7 @@ Model-agnostic terminal-first AI coding agent supporting **75+ LLM providers**. 
 - **Language:** Go/TypeScript
 - **License:** Apache 2.0
 - **Agent type:** Multi-session parallel agents
-- **Status:** Rapidly growing, very active
+- **Status:** Growing, active
 - **Distinguishing:** Can reuse existing GitHub Copilot or ChatGPT Plus subscriptions for authentication, a notable cost advantage. One of the broadest LLM provider catalogs in this category. Community opinion is divided, praised for flexibility but often considered less polished than Aider.
 
 ### Gemini CLI (Google)
@@ -189,7 +189,7 @@ Open-source AI code assistant with CLI, TUI, headless modes, and CI/CD agent wor
 
 ### Droid (Factory AI)
 
-Enterprise-grade terminal coding agent with specialized sub-agents. **Vendor-reported leading Terminal-Bench result (58.75%).**
+Enterprise-grade terminal coding agent with specialized sub-agents. **Vendor-reported high Terminal-Bench result (58.75%).**
 
 - **Homepage:** factory.ai
 - **Models:** BYOK — Claude Opus, Sonnet, GPT-5, any frontier model, local via Ollama
@@ -199,7 +199,7 @@ Enterprise-grade terminal coding agent with specialized sub-agents. **Vendor-rep
 - **License:** Proprietary (commercial)
 - **Agent type:** Multi-agent (specialized Droids)
 - **Status:** Active
-- **Distinguishing:** **Vendor-reported leading Terminal-Bench performer.** Unique architecture, not a single generalist but a system of domain-specific Droids. Enterprise-focused with incident response and PM capabilities.
+- **Distinguishing:** **Vendor-reported high Terminal-Bench performer.** Unique architecture, not a single generalist but a system of domain-specific Droids. Enterprise-focused with incident response and PM capabilities.
 
 ### Kiro CLI (AWS)
 
@@ -239,7 +239,7 @@ Open-source CLI coding agent optimized for Qwen3-Coder, forked from Gemini CLI. 
 - **Language:** TypeScript
 - **License:** Apache 2.0
 - **Status:** Active (launched July 2025)
-- **Distinguishing:** A notable free tier from a major lab (1,000 req/day). Open-source model weights. Qwen3-Coder-480B posts competitive coding benchmark results against frontier models.
+- **Distinguishing:** A notable free tier from a large lab (1,000 req/day). Open-source model weights. Qwen3-Coder-480B posts competitive coding benchmark results against frontier models.
 
 ### Kimi Code CLI (Moonshot AI)
 
@@ -612,7 +612,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### The market has consolidated around three tiers
 
-**Tier 1 — Lab-backed flagships** (Claude Code, Codex CLI, Gemini CLI, Copilot CLI): Many major AI labs now ship a terminal coding agent. These tools serve as both products and model showcases. Claude Code is often cited for reasoning quality, Codex CLI for sandboxing, Gemini CLI for free access, and Copilot CLI for GitHub ecosystem integration.
+**Tier 1 — Lab-backed flagships** (Claude Code, Codex CLI, Gemini CLI, Copilot CLI): Many AI labs now ship a terminal coding agent. These tools serve as both products and model showcases. Claude Code is often cited for reasoning quality, Codex CLI for sandboxing, Gemini CLI for free access, and Copilot CLI for GitHub ecosystem integration.
 
 **Tier 2 — Model-agnostic open-source** (Aider, OpenCode, Goose, Crush, Continue): These tools deliberately avoid model lock-in. Aider is among the more mature options, OpenCode among the more provider-diverse, and Goose highly extensible. This tier often benefits when new models launch; it can adopt quickly while lab tools are locked to their own models.
 
@@ -620,7 +620,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Seven key trends shaping the landscape
 
-**MCP as broadly adopted standard.** Model Context Protocol has become a widely used extensibility mechanism. Many major tools now support MCP, creating a shared ecosystem of tools and integrations. This is a meaningful structural development; it means tools are becoming more interoperable rather than fully siloed.
+**MCP as increasingly adopted standard.** Model Context Protocol has become a widely used extensibility mechanism. Many major tools now support MCP, creating a shared ecosystem of tools and integrations. This is a meaningful structural development; it means tools are becoming more interoperable rather than fully siloed.
 
 **Multi-agent orchestration is a growing category.** Six months ago, Claude Squad didn't exist. Now there are many tools for managing multiple agents simultaneously. This reflects a workflow shift: developers increasingly run 2-3 agents on different tasks in parallel rather than using one agent sequentially.
 
@@ -630,13 +630,13 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 **Local model support is now common but rarely primary.** Many tools support Ollama, but community discussions often report that local models underperform cloud models for complex coding tasks. Local support matters for privacy-sensitive environments and experimentation, but frontier cloud models remain the primary productivity drivers for many teams.
 
-**Terminal-Bench is emerging as an important benchmark.** Just as SWE-bench standardized evaluation for research agents, Terminal-Bench (where Droid has a reported leading score at 58.75%) is becoming a key benchmark for CLI coding tools in real-world terminal scenarios.
+**Terminal-Bench is emerging as an important benchmark.** Just as SWE-bench standardized evaluation for research agents, Terminal-Bench (where Droid has a reported high score at 58.75%) is becoming a key benchmark for CLI coding tools in real-world terminal scenarios.
 
 **The "why CLI over IDE?" question is often answered in favor of CLI for certain workflows.** HN and Reddit discussions converge on recurring advantages: cost savings (no IDE subscription), better separation of concerns (agent in separate worktree), higher-quality interactions (deliberate prompting vs. autocomplete), SSH compatibility, and composability (terminal is the natural interface for tool use).
 
 ### Most mature tools
 
-**Aider** is a well-established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported very high weekly token volume, and 230+ contributors. **Claude Code** is often viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
+**Aider** is a well-established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported high weekly token volume, and 230+ contributors. **Claude Code** is often viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
 
 ### Most promising tools
 
@@ -644,7 +644,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Gaps in the market
 
-**Few tools currently combine all three dimensions well: reasoning quality + model flexibility + strong sandboxing.** Claude Code is strong on reasoning but locked to Anthropic. Codex CLI is strong on sandboxing but tied closely to OpenAI. Aider has strong model flexibility but no built-in sandboxing. A tool that combines all three could become category-defining.
+**Few tools currently combine all three dimensions well: reasoning quality + model flexibility + strong sandboxing.** Claude Code is often strong on reasoning but locked to Anthropic. Codex CLI is often strong on sandboxing but tied closely to OpenAI. Aider has flexible model options but no built-in sandboxing. A tool that combines all three could become category-defining.
 
 **Code review is underserved.** While several tools offer code review features, few CLI tools are purpose-built for AI-assisted code review workflows. Devin's `npx devin-review` and Codex's review agent are early entries but neither is comprehensive.
 

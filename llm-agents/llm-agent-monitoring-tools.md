@@ -213,7 +213,7 @@ Full desktop applications focused on running multiple agent sessions with visual
   - Asynchronous execution — delegate tasks and walk away
   - Detailed dashboards and task tracking
   - Also has a VS Code extension variant
-- **Notes:** Commercial product. One of the few paid standalone desktop apps in this space. Public materials claim competitive SWE-bench Verified performance among production agents.
+- **Notes:** Commercial product. One of the few paid standalone desktop apps in this space. Public materials claim competitive SWE-bench Verified performance in production-agent benchmarks.
 
 ---
 
@@ -426,7 +426,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 - **GitHub:** [langfuse/langfuse](https://github.com/langfuse/langfuse)
 - **Website:** [langfuse.com](https://langfuse.com)
 - **Pricing:** Free (self-hosted), Cloud from $29/mo
-- **Key Strengths:** Open source, self-hostable, active community, prompt versioning, session-based analysis, human annotation queues
+- **Key Strengths:** Open source, self-hostable, broad community, prompt versioning, session-based analysis, human annotation queues
 - **Best For:** Teams wanting full data control with self-hosting
 
 ### LangSmith
@@ -483,7 +483,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 | Platform | Focus | Notes |
 |----------|-------|-------|
 | **Lunary** | Prompt management + monitoring | Self-hostable, user-friendly |
-| **Agenta** | Prompt experimentation | Exploring strong prompt×model combinations |
+| **Agenta** | Prompt experimentation | Exploring effective prompt×model combinations |
 | **TruLens** (Snowflake) | Evaluation + tracing | Open-source library, acquired by Snowflake |
 | **Evidently AI** | Testing + monitoring | Built on open-source Evidently library |
 
@@ -585,7 +585,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - Claude Code's built-in hooks are often sufficient in straightforward cases and can often be configured in a few minutes.
 - **code-notify** if you want voice announcements and cross-agent support.
 
-**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a core concern for platform vendors, which may consolidate some of this fragmented tooling over time.
+**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a priority area for platform vendors, which may consolidate some of this fragmented tooling over time.
 
 ---
 

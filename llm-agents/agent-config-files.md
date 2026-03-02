@@ -10,7 +10,7 @@ Companion to: [LLM coding agent instruction files](agent-instruction-files.md)
 
 ## Overview
 
-Beyond the instruction/context files (CLAUDE.md, AGENTS.md, etc.), most AI coding agents have their own configuration systems for things like model selection, permissions, sandboxing, MCP servers, and tool policies. These config files control the *behavior* of the tool itself, whereas instruction files control the *context* the LLM receives. This document maps out where common config files live, what they control, which files should be committed to version control, and how it all fits together.
+Beyond the instruction/context files (CLAUDE.md, AGENTS.md, etc.), many AI coding agents have their own configuration systems for things like model selection, permissions, sandboxing, MCP servers, and tool policies. These config files control the *behavior* of the tool itself, whereas instruction files control the *context* the LLM receives. This document maps out where common config files live, what they control, which files should be committed to version control, and how it all fits together.
 
 ---
 
@@ -320,7 +320,7 @@ The `applyTo` glob determines which files trigger these instructions. The option
 - **Agent definitions** (`.agent.md`) — custom agent configurations for specialized tasks.
 - **Prompt files** (`.prompt.md`) — reusable prompt templates with `#file:path` references.
 - **Organization-level instructions** — enterprise teams can set instructions at the GitHub org level that apply to all repos.
-- **Low root footprint** — most configuration artifacts live in `.github/`, which already exists in most repos.
+- **Low root footprint** — many configuration artifacts live in `.github/`, which already exists in most repos.
 
 ---
 
@@ -507,6 +507,6 @@ One place to edit, version-controlled, portable across machines.
 
 ## Summary
 
-The instruction file ecosystem is converging around AGENTS.md. The configuration file ecosystem is less converged and may remain tool-specific. Each tool's config manages materially different capabilities: Claude Code's hook system has no close equivalent in Codex, Codex's named profiles have no close equivalent in Claude Code, and Copilot's configuration lives mainly in VS Code's settings framework rather than standalone files.
+The instruction file ecosystem is moving toward convergence around AGENTS.md. The configuration file ecosystem is less converged and may remain tool-specific. Each tool's config manages materially different capabilities: Claude Code's hook system has no close equivalent in Codex, Codex's named profiles have no close equivalent in Claude Code, and Copilot's configuration lives mainly in VS Code's settings framework rather than standalone files.
 
-The pragmatic approach: accept tool-specific config in hidden directories while converging on shared instruction files at the root. Hidden directories keep the clutter less visible. Each tool's config is usually independent enough that conflicts remain limited. The global dotfiles strategy (section 5) keeps your personal preferences in sync across tools and machines.
+The pragmatic approach: accept tool-specific config in hidden directories while converging on shared instruction files at the root. Hidden directories keep the clutter less visible. Each tool's config is often independent enough that conflicts remain limited. The global dotfiles strategy (section 5) keeps your personal preferences in sync across tools and machines.

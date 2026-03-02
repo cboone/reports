@@ -87,9 +87,9 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 | **Language** | TypeScript (Node.js) |
 | **Install** | `npx ccmanager` |
 | **Supported Agents** | Claude Code, Gemini CLI, Codex CLI, Cursor Agent, Copilot CLI, Cline CLI, OpenCode, Kimi CLI |
-| **Maturity** | Feature-rich; broad agent support among listed tools |
+| **Maturity** | Rich feature set; broad agent support among listed tools |
 
-**Overview.** ccmanager is a feature-dense tool in this category, supporting a wide range of coding agents while being completely self-contained, and it does not require tmux to be installed. It manages sessions, worktrees, and the full agent lifecycle with an extensive set of advanced capabilities.
+**Overview.** ccmanager is a feature-rich tool in this category, supporting a wide range of coding agents while being completely self-contained, and it does not require tmux to be installed. It manages sessions, worktrees, and the full agent lifecycle with a wide set of advanced capabilities.
 
 **Key Features:**
 
@@ -610,7 +610,7 @@ Running AI coding agents with broad filesystem and shell access is inherently ri
 
 The per-session model (agent-of-empires) provides fine-grained isolation, one container per agent, and can reduce host exposure when using high-autonomy settings such as `--dangerously-skip-permissions`. The devcontainer model (ccmanager) is coarser but more familiar to teams already using devcontainers, and it preserves host-level automation (notifications, hooks) that would be lost inside a container. The full-environment model generally provides deeper isolation, but requires substantial setup and means your entire development workflow lives inside Docker.
 
-This remains a notable gap in the ecosystem. As agents gain more autonomy (auto-approval, background execution, `--dangerously-skip-permissions`), the argument for sandboxing grows. Anthropic's own Claude Code devcontainer exists but is separate from the agent teams feature, leaving the integration to the user.
+This remains an ongoing gap in the ecosystem. As agents gain more autonomy (auto-approval, background execution, `--dangerously-skip-permissions`), the argument for sandboxing grows. Anthropic's own Claude Code devcontainer exists but is separate from the agent teams feature, leaving the integration to the user.
 
 ### The Worktree Convention Question
 
@@ -717,7 +717,7 @@ An early writeup of the pattern, predating many of the tools above. Describes an
 
 ### "I want a proper mission control TUI for many concurrent sessions"
 
-**→ agent-deck** if you want a polished TUI with session forking, MCP management, and tmux status bar integration. **→ ccmanager** if you need broad agent support (8+ agents), devcontainer sandboxing, or AI-powered auto-approval. **→ claude-squad** if you want a well-established option with a large community.
+**→ agent-deck** if you want a polished TUI with session forking, MCP management, and tmux status bar integration. **→ ccmanager** if you need broad agent support (8+ agents), devcontainer sandboxing, or AI-powered auto-approval. **→ claude-squad** if you want an established option with a large community.
 
 ### "I need Docker/container isolation for security"
 
@@ -749,7 +749,7 @@ Most of the other tools in this survey do not include built-in sandboxing, which
 
 ### "I want to try Anthropic's official approach"
 
-**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has direct vendor support and active development resources in this list.
+**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has direct vendor support and ongoing development resources in this list.
 
 ---
 

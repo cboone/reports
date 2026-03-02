@@ -48,7 +48,7 @@ A joint paper from researchers at OpenAI, Anthropic, and Google DeepMind (["The 
 
 **Mitigations:**
 
-No generally reliable mitigation is yet established for prompt injection as a general problem. A commonly used practical framework is [Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025), which states that an AI agent should satisfy no more than two of three properties in a single session: [A] processing untrustworthy inputs, [B] accessing sensitive systems or private data, [C] changing state or communicating externally. If all three are required, the agent should not operate autonomously and should include human-in-the-loop approval or equivalent oversight.
+No generally reliable mitigation is yet established for prompt injection as a general problem. A practical framework that is often referenced is [Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025), which states that an AI agent should satisfy no more than two of three properties in a single session: [A] processing untrustworthy inputs, [B] accessing sensitive systems or private data, [C] changing state or communicating externally. If all three are required, the agent should not operate autonomously and should include human-in-the-loop approval or equivalent oversight.
 
 In practice, for a developer using a coding agent, this means: be deliberate about which MCP servers and tools are enabled for a given session. Don't leave credentials in the environment that the agent doesn't need for the current task. Prefer agents that require explicit approval for network requests, package installations, and file modifications outside the project directory. Be especially cautious when the agent is reading untrusted content (dependency code, web pages, issue trackers) and simultaneously has the ability to execute commands or modify files. Context isolation, keeping untrusted content processing separate from privileged action execution, is a promising architectural direction, but is not yet available in mainstream tools.
 
@@ -70,7 +70,7 @@ This is distinguished from accidental "orphaned intermediate states" (see catego
 
 ### 3. Helpful but Accidentally Harmful
 
-**What it is:** The agent is trying to do what you asked, but causes damage through poor judgment, misunderstanding of the task, or failure to appreciate the consequences of its actions. This is a common failure mode in practice and one that has caused substantial documented real-world damage.
+**What it is:** The agent is trying to do what you asked, but causes damage through poor judgment, misunderstanding of the task, or failure to appreciate the consequences of its actions. This is a common failure mode in practice and one that has caused meaningful documented real-world damage.
 
 **Why it matters:** The agent's actions are not malicious and not influenced by external injection — they're simply wrong or disproportionate. The damage comes from the combination of the agent's ability to take destructive actions and its lack of genuine understanding of the consequences. This is amplified by the fact that AI-generated output looks confident and correct, creating a false sense of security.
 
@@ -118,7 +118,7 @@ Google's AI Overview (the search feature) was caught suggesting a malicious npm 
 
 **Real incidents:**
 
-[Wiz research](https://www.wiz.io/blog/forbes-ai-50-leaking-secrets) (November 2025) found that 65% of the Forbes AI 50 companies had leaked verified secrets on GitHub, including API keys, tokens, and credentials. The most common leak sources were Jupyter Notebook files (.ipynb), Python files (.py), and environment files (.env), with keys primarily from Hugging Face, AzureOpenAI, and WeightsAndBiases. One leaked Hugging Face token could have exposed access to approximately 1,000 private models at a single company. Wiz attributed the problem partly to AI-assisted development practices and attributed secret leakage specifically to "vibe coding" workflows.
+[Wiz research](https://www.wiz.io/blog/forbes-ai-50-leaking-secrets) (November 2025) found that 65% of the Forbes AI 50 companies had leaked verified secrets on GitHub, including API keys, tokens, and credentials. Common leak sources were Jupyter Notebook files (.ipynb), Python files (.py), and environment files (.env), with keys primarily from Hugging Face, AzureOpenAI, and WeightsAndBiases. One leaked Hugging Face token could have exposed access to approximately 1,000 private models at a single company. Wiz attributed the problem partly to AI-assisted development practices and attributed secret leakage specifically to "vibe coding" workflows.
 
 In July 2025, [Krebs on Security reported](https://krebsonsecurity.com/2025/07/doge-denizen-marko-elez-leaked-api-key-for-xai/) that a DOGE employee published a private API key for xAI's language models on GitHub, embedded in a script called `agent.py`, granting access to more than 50 xAI LLMs. The exposure was flagged by GitGuardian, an external scanning tool. The key reportedly remained live after initial disclosure.
 
@@ -204,7 +204,7 @@ The [Tea dating app](https://techcrunch.com/2025/07/26/dating-safety-app-tea-bre
 
 **Many mitigations are not LLM-specific.** The security practices that protect against these threats — code review, dependency auditing, secret scanning, least privilege, environment separation, automated testing, infrastructure-as-code — are the same practices that protect against human-introduced vulnerabilities. The main difference is that AI-assisted development increases the volume and speed of code production, making it more important to have these practices automated and enforced rather than relying on manual discipline.
 
-**The novel threat class appears to still lack a broadly reliable defense in practice.** Prompt injection (categories 1 and 2) exploits a fundamental architectural property of LLMs, and no broadly accepted complete mitigation has yet been demonstrated in mainstream practice. The ["Attacker Moves Second" paper](https://arxiv.org/abs/2510.17342) (October 2025) demonstrated that all 12 tested defenses could be bypassed with >90% success rates. A practical framework, [Meta's Agents Rule of Two](https://ai.meta.com/blog/practical-ai-agent-security/), is a risk-reduction strategy rather than a complete solution. Organizations and individual developers still need to account for residual risk and choose autonomy levels that match their threat model.
+**The novel threat class appears to still lack a broadly reliable defense in practice.** Prompt injection (categories 1 and 2) exploits a core architectural property of LLMs, and no broadly accepted complete mitigation has yet been demonstrated in mainstream practice. The ["Attacker Moves Second" paper](https://arxiv.org/abs/2510.17342) (October 2025) demonstrated that all 12 tested defenses could be bypassed with >90% success rates. A practical framework, [Meta's Agents Rule of Two](https://ai.meta.com/blog/practical-ai-agent-security/), is a risk-reduction strategy rather than a complete solution. Organizations and individual developers still need to account for residual risk and choose autonomy levels that match their threat model.
 
 **The gap between "demonstrated in research" and "exploited in the wild" may be narrowing.** As of early 2026, many prompt injection attacks have been demonstrated by security researchers against real products (the Summer of Johann), while much of the documented real-world damage has come from the "boring" categories (accidental database deletion, leaked secrets, insecure generated code). However, the operationalization infrastructure is being built: dark web playbooks for slopsquatting, offensive LLM tools like Hexstrike-AI, and documented attack chains that combine prompt injection with supply chain compromise. The transition from research to exploitation may be accelerating.
 
@@ -214,9 +214,9 @@ The [Tea dating app](https://techcrunch.com/2025/07/26/dating-safety-app-tea-bre
 
 For ongoing monitoring of this quickly evolving space, the following sources are recommended:
 
-[Simon Willison's blog](https://simonwillison.net/tags/prompt-injection/) provides extensive ongoing coverage of prompt injection and LLM security, including the "lethal trifecta" framework, coverage of the Summer of Johann, and analysis of the Rule of Two and Attacker Moves Second papers. His prompt injection tag collects over 140 posts on the topic.
+[Simon Willison's blog](https://simonwillison.net/tags/prompt-injection/) provides substantial ongoing coverage of prompt injection and LLM security, including the "lethal trifecta" framework, coverage of the Summer of Johann, and analysis of the Rule of Two and Attacker Moves Second papers. His prompt injection tag collects over 140 posts on the topic.
 
-[Johann Rehberger's Embrace The Red blog](https://embracethered.com/blog/) publishes a prolific stream of original security research against production AI tools, including the CVE-2025-53773 Copilot RCE and the Month of AI Bugs series.
+[Johann Rehberger's Embrace The Red blog](https://embracethered.com/blog/) publishes a steady stream of original security research against production AI tools, including the CVE-2025-53773 Copilot RCE and the Month of AI Bugs series.
 
 [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/) provides a common industry framework for LLM security risks.
 
@@ -224,6 +224,6 @@ For ongoing monitoring of this quickly evolving space, the following sources are
 
 ["The Attacker Moves Second"](https://arxiv.org/abs/2510.17342) (Nasr et al., October 2025) provides evidence that prompt injection defenses are unreliable.
 
-["We Have a Package for You!"](https://arxiv.org/abs/2406.10279) (Spracklen et al., 2025) provides a comprehensive analysis of package hallucination / slopsquatting.
+["We Have a Package for You!"](https://arxiv.org/abs/2406.10279) (Spracklen et al., 2025) provides a broad analysis of package hallucination / slopsquatting.
 
 [Veracode's 2025 GenAI Code Security Report](https://www.veracode.com/resources/ai-generated-code-security) provides extensive data on vulnerability rates in AI-generated code.

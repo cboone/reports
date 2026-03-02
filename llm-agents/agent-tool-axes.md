@@ -151,7 +151,7 @@ Opaque failure                                     Full observability
 
 Any tool call can fail: the file might not exist, the API might time out, the command might return an error code. The question is what happens next. At one extreme, the agent gives up and surfaces a vague error. At the other extreme, the agent inspects the error, reasons about what went wrong, tries an alternative approach, and logs every step of this process for human review.
 
-Observability is the often-neglected partner of error recovery. Even if the agent recovers gracefully, you want to know *that* it had to recover, *what* it tried, and *why*. This is especially important in multi-agent systems where a failure in one sub-agent might cascade or be masked by another agent's workaround.
+Observability is the often-neglected partner of error recovery. Even if the agent recovers gracefully, you want to know *that* it had to recover, *what* it tried, and *why*. This is particularly important in multi-agent systems where a failure in one sub-agent might cascade or be masked by another agent's workaround.
 
 **Example.** An agent running tests on your code might encounter a compilation error. A low-recovery, low-observability agent would say "I couldn't run the tests." A high-recovery, high-observability agent would read the compiler error, attempt to fix the code, re-run the tests, and present you with a log of everything it tried — including the approaches that didn't work — so you can evaluate not just the outcome but the process.
 
@@ -223,7 +223,7 @@ These axes are largely independent, but they're not completely orthogonal. Some 
         Autonomy          Surface
 ```
 
-When an agent has broad permissions, high autonomy, and the ability to make irreversible changes, you are in a high-risk zone. Constraining any one of these dimensions can substantially reduce risk. This is why a common safety pattern is to allow high autonomy for read-only operations, or to allow write operations with human approval.
+When an agent has broad permissions, high autonomy, and the ability to make irreversible changes, you are in a high-risk zone. Constraining any one of these dimensions can meaningfully reduce risk. This is why a common safety pattern is to allow high autonomy for read-only operations, or to allow write operations with human approval.
 
 ### The Efficiency Triangle: Context Cost × Topology × Determinism
 
@@ -251,11 +251,11 @@ Complex multi-agent topologies generate a lot of intermediate results. If the to
   = very hard to audit, very hard to trust
 ```
 
-As topology grows more complex and trust chains lengthen, observability becomes more critical, not less. The tragedy is that complex systems are also the ones where observability is hardest to implement well. If you're building a multi-agent system with MCP server integration, invest in observability infrastructure proportional to the complexity of your trust chains.
+As topology grows more complex and trust chains lengthen, observability becomes more important, not less. The tragedy is that complex systems are also the ones where observability is hardest to implement well. If you're building a multi-agent system with MCP server integration, invest in observability infrastructure proportional to the complexity of your trust chains.
 
 ### Autonomy × Error Recovery
 
-Higher autonomy makes error recovery more important, because the human is not there to notice and correct failures in real time. An agent running autonomously usually needs more robust detection, diagnosis, and recovery behavior than one where a human reviews every step. This is another reason fully autonomous operation is harder than it looks: it is not just about the happy path, it is also about how unhappy-path failures can compound when nobody is watching.
+Higher autonomy makes error recovery more important, because the human is not there to notice and correct failures in real time. An agent running autonomously usually needs more resilient detection, diagnosis, and recovery behavior than one where a human reviews every step. This is another reason fully autonomous operation is harder than it looks: it is not just about the happy path, it is also about how unhappy-path failures can compound when nobody is watching.
 
 ---
 
