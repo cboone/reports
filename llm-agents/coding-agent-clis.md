@@ -58,11 +58,11 @@ Lightweight coding agent from OpenAI with built-in sandboxed execution. **~50,50
 - **Status:** Very active, $1M open-source grant initiative
 - **Distinguishing:** **Best sandboxing/security model** of any CLI agent — network isolation in full-auto mode. Rust performance. Works with ChatGPT subscription. HN consensus: better for greenfield solo projects and parallel agents; weaker on documentation tasks where it can hallucinate.
 
-### OpenCode (SST)
+### OpenCode (formerly SST project)
 
-Model-agnostic terminal-first AI coding agent supporting **75+ LLM providers**. Built by the SST team.
+Model-agnostic terminal-first AI coding agent supporting **75+ LLM providers**. Originally launched by the SST team and now maintained under the Anomaly organization.
 
-- **GitHub:** github.com/sst/opencode
+- **GitHub:** github.com/anomalyco/opencode
 - **Models:** 75+ providers via Models.dev — Anthropic, OpenAI, Google, AWS Bedrock, Ollama, plus authentication via existing Copilot/ChatGPT subscriptions
 - **Features:** LSP auto-configuration, multi-session parallel agents, session sharing via links, client/server architecture, privacy-first (no code storage), vim-like editor, SQLite storage, MCP support
 - **Interface:** TUI (Bubble Tea, Neovim-inspired)
@@ -258,7 +258,6 @@ Terminal agent with unique dual shell/agent mode and Agent Swarm capability.
 
 | Tool | GitHub | Stars | Language | License | Models | Key differentiator |
 |------|--------|-------|----------|---------|--------|--------------------|
-| **ANON KODE** | github.com/dnakov/anon-kode | ~2,000 | TypeScript | Open | Any OpenAI-compatible | Fork of Claude Code concept, works with any API |
 | **Codel** | Referenced in awesome-agents | ~2,000 | Go | Open | Multiple | Fully autonomous with terminal, browser, and editor |
 | **o1-engineer** | github.com/Doriandarko/o1-engineer | ~3,000 | Python | Open | OpenAI o1 | CLI focused on o1 reasoning model capabilities |
 | **Claude Engineer** | Referenced in lists | ~2,000 | Python | Open | Anthropic | Interactive CLI leveraging Claude for development |
@@ -381,7 +380,6 @@ Tools primarily focused on helping with shell commands, scripting, and terminal 
 | **Gorilla CLI** | github.com/gorilla-llm/gorilla-cli | ~1,300 | Python | Apache 2.0 | Multi-LLM aggregation | UC Berkeley research; aggregates multiple LLM responses |
 | **tgpt** | github.com/aandrew-me/tgpt | ~2,000 | Go | GPL-3.0 | Free providers (no API key needed) | Zero-config, cross-platform binary, image generation |
 | **Amazon Q CLI** | github.com/aws/amazon-q-developer-cli | ~5,000 | Rust | MIT/Apache 2.0 | Amazon models | Autocomplete for 500+ CLIs, now deprecated → Kiro CLI |
-| **comandi** | github.com/datavorous/comandi | ~200 | Python | Open | Free APIs | API-keyless AI CLI for programming support |
 | **OpenCommit** | github.com/di-sukharev/opencommit | ~8,000+ | TypeScript | Open | OpenAI, Ollama, Mistral | `oco` generates conventional commit messages |
 | **AICommits** | github.com/Nutlope/aicommits | ~8,000 | TypeScript | Open | OpenAI | AI-powered git commit message generation |
 
@@ -472,7 +470,7 @@ A rapidly growing sub-category: tools that manage multiple AI coding agents runn
 | Tool | GitHub | Stars | Language | Description |
 |------|--------|-------|----------|-------------|
 | **Claude Squad** | github.com/smtg-ai/claude-squad | ~5,000 | Go | Manage multiple AI agents (Claude Code, Aider, Codex, OpenCode, Amp) in separate workspaces simultaneously |
-| **Claude-Flow** | github.com/ruvnet/claude-flow | ~3,000 | TypeScript | Agent orchestration platform for Claude — multi-agent swarms, distributed intelligence |
+| **Ruflo (formerly Claude-Flow)** | github.com/ruvnet/ruflo | ~3,000 | TypeScript | Agent orchestration platform for Claude — multi-agent swarms, distributed intelligence |
 | **Agent Deck** | github.com/asheshgoplani/agent-deck | ~500 | Go | Terminal session manager TUI for Claude, Gemini, OpenCode, Codex with smart status detection |
 | **Floki** | github.com/FinnaAI/floki | ~300 | TypeScript | Work with multiple AI coding agents in parallel |
 | **Conduit** | github.com/lostintangent/conduit-release | ~186 | TypeScript | Terminal-centric workspace manager for task parallelization |
@@ -493,7 +491,7 @@ Tools designed primarily for software engineering research, particularly benchma
 |------|--------|-------|----------|---------|-----------------|----------------|
 | **SWE-agent** | github.com/SWE-agent/SWE-agent | ~15,000 | Python | MIT | SOTA (open source) | Custom Agent-Computer Interface, Docker execution |
 | **mini-swe-agent** | github.com/SWE-agent/mini-swe-agent | New | Python | MIT | >74% verified | **100 lines of code**, bash-only, Princeton/Stanford |
-| **OpenHands** | github.com/All-Hands-AI/OpenHands | ~67,000 | Python | MIT | Competitive | Full platform with web GUI, CLI, cloud; Docker-sandboxed |
+| **OpenHands** | github.com/OpenHands/OpenHands | ~67,000 | Python | MIT | Competitive | Full platform with web GUI, CLI, cloud; Docker-sandboxed |
 | **AutoCodeRover** | github.com/AutoCodeRoverSG/auto-code-rover | ~2,500 | Python | GPL-3.0 | 46.2% verified | AST-aware code search, <$0.7/task |
 | **Agentless** | github.com/OpenAutoCoder/Agentless | ~2,000 | Python | MIT | 50.8% (Claude) | No agent scaffolding — simple localize→repair→validate |
 | **Open SWE** | github.com/langchain-ai/open-swe | ~2,000 | Python | Open | N/A | Async coding agent built with LangGraph |
@@ -509,7 +507,7 @@ Smaller, focused tools for specific use cases rather than general-purpose coding
 
 | Tool | GitHub | Stars | Language | License | Purpose |
 |------|--------|-------|----------|---------|---------|
-| **Rawdog** | github.com/AbanteAI/rawdog | ~3,000 | Python | Permissive | Generates and auto-executes Python scripts |
+| **Rawdog** | github.com/granawkins/rawdog | ~3,000 | Python | Permissive | Generates and auto-executes Python scripts |
 | **Pieces CLI** | github.com/pieces-app/cli-agent | ~200 | Python | MIT | AI-powered code snippet manager |
 | **agent-cli** | github.com/basnijholt/agent-cli | ~200 | Python | Open | Local AI suite (chat, autocorrect, transcribe, RAG) |
 | **Vibe Compiler (vibec)** | Referenced | ~200 | Rust | Open | Self-compiling markdown prompt stacks → code |
@@ -534,7 +532,7 @@ Neovim and Emacs plugins that bring AI coding to terminal-based editors.
 | **chatgpt.nvim** | github.com/jackmort/chatgpt.nvim | ~1,000 | ChatGPT in Neovim |
 | **gp.nvim** | github.com/Robitx/gp.nvim | ~1,000 | GPT prompt plugin with chat sessions |
 | **gen.nvim** | github.com/David-Kunz/gen.nvim | ~1,000 | Generate text with LLMs and custom prompts |
-| **VimLM** | github.com/JosefAlbers/VimLM | ~500 | Copilot/Cursor-inspired local LLM companion |
+| **VimLM** | github.com/JosefAlbers/Vim-LM | ~500 | Copilot/Cursor-inspired local LLM companion |
 
 **Emacs plugins:**
 

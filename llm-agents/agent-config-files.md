@@ -34,10 +34,10 @@ With the symlink strategy (CLAUDE.md → AGENTS.md), your realistic root footpri
 Claude Code has the most layered configuration system of any tool in this space. There are five distinct levels of precedence, from highest to lowest:
 
 1. **Managed settings** (enterprise IT) — `managed-settings.json` and `managed-mcp.json` deployed to system directories (`/etc/claude-code/`, `/Library/Application Support/ClaudeCode/`, etc.). Requires admin privileges. Constrains what users and projects can override.
-2. **User settings** — `~/.claude/settings.json`. Personal defaults that apply to all projects.
-3. **Project shared settings** — `.claude/settings.json` in the project directory. Checked into version control. Shared with the team.
-4. **Project local settings** — `.claude/settings.local.json` in the project directory. Auto-gitignored by Claude Code. Personal overrides for this project.
-5. **CLI flags and `/config` commands** — runtime overrides for the current session.
+2. **CLI flags** (and equivalent runtime overrides) — temporary overrides for the current session.
+3. **Project local settings** — `.claude/settings.local.json` in the project directory. Auto-gitignored by Claude Code. Personal overrides for this project.
+4. **Project shared settings** — `.claude/settings.json` in the project directory. Checked into version control. Shared with the team.
+5. **User settings** — `~/.claude/settings.json`. Personal defaults that apply to all projects.
 
 All levels combine; they don't replace each other. More specific settings override on conflicts.
 
@@ -82,7 +82,7 @@ The `settings.json` files accept these key settings:
 
 ```json
 {
-  "$schema": "https://cdn.claude.ai/claude-code/settings.schema.json",
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "allow": ["Read", "Grep", "Bash(npm test*)"],
     "deny": ["Edit(/secrets/*)"]

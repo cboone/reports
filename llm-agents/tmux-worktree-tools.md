@@ -38,7 +38,7 @@ The tools in this space fall into six broad categories, though some straddle bou
 | Category | Philosophy | Examples |
 |---|---|---|
 | **TUI Session Managers** | General-purpose "mission control" for multiple agent sessions | claude-squad, ccmanager, agent-deck, agent-of-empires |
-| **Opinionated Workflow Tools** | End-to-end lifecycle management with strong conventions | workmux, dmux, barrel, forestui, multi-agent-workflow-kit |
+| **Opinionated Workflow Tools** | End-to-end lifecycle management with strong conventions | workmux, dmux, barrel (now axel), forestui, multi-agent-workflow-kit |
 | **Tmux-Focused** | Enhance the tmux experience specifically for agent workflows | claude-tmux, vscode-ext-tmux-worktree |
 | **Worktree-Focused** | Center the workflow around git worktree management | agenttools/worktree, worktree-manager-skill |
 | **Lightweight Scripts** | Minimal shell scripts or slash commands for quick parallelism | andynu's gist, worksfornow's /delegate |
@@ -211,8 +211,8 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 
 | | |
 |---|---|
-| **Repository** | [github.com/formkit/dmux](https://github.com/formkit/dmux) |
-| **Language** | TypeScript (from the FormKit team) |
+| **Repository** | [github.com/standardagents/dmux](https://github.com/standardagents/dmux) |
+| **Language** | TypeScript |
 | **Install** | See repo |
 | **Supported Agents** | Claude Code, OpenCode |
 | **Maturity** | Newer; simpler and more focused than workmux |
@@ -232,17 +232,17 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 
 ---
 
-#### barrel
+#### barrel (now axel)
 
 | | |
 |---|---|
-| **Repository** | [github.com/txtx/barrel](https://github.com/txtx/barrel) |
+| **Repository** | [github.com/txtx/axel](https://github.com/txtx/axel) |
 | **Language** | (See repo) |
 | **Install** | See repo |
 | **Supported Agents** | Claude Code, Codex (OpenAI), OpenCode, Antigravity (Google) |
 | **Maturity** | Active development; unique agent portability angle |
 
-**Overview.** barrel's pitch is "portable agents across LLMs, reproducible terminal workspaces." The core insight is that you should write agent definitions once and have them work across any LLM-powered coding tool. barrel handles the symlinking and configuration so that a single `agents/` directory gets picked up by Claude Code, Codex, OpenCode, or Antigravity.
+**Overview.** barrel's pitch is "portable agents across LLMs, reproducible terminal workspaces." The project repository is now `txtx/axel`, but the barrel terminology and commands below reflect the workflow described in the original writeups. The core insight is that you should write agent definitions once and have them work across any LLM-powered coding tool. barrel handles the symlinking and configuration so that a single `agents/` directory gets picked up by Claude Code, Codex, OpenCode, or Antigravity.
 
 **Key Features:**
 
@@ -287,7 +287,7 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 
 | | |
 |---|---|
-| **Repository** | [github.com/laris-co/multi-agent-workflow-kit](https://github.com/laris-co/multi-agent-workflow-kit) |
+| **Repository** | [github.com/Soul-Brews-Studio/multi-agent-workflow-kit](https://github.com/Soul-Brews-Studio/multi-agent-workflow-kit) *(active fork of `laris-co/multi-agent-workflow-kit`)* |
 | **Language** | Shell scripts (via uvx) |
 | **Install** | `uvx --no-cache --from git+https://github.com/Soul-Brews-Studio/multi-agent-workflow-kit.git@v0.5.1 multi-agent-kit init` |
 | **Supported Agents** | Any CLI agent |
@@ -519,7 +519,7 @@ These are minimal, copy-paste-ready implementations of the core pattern.
 
 ### Opinionated Workflow Tools
 
-| Feature | workmux | dmux | barrel | forestui | maw |
+| Feature | workmux | dmux | barrel/axel | forestui | maw |
 |---|:---:|:---:|:---:|:---:|:---:|
 | **Language** | TypeScript | TypeScript | (See repo) | Python | Shell |
 | **tmux model** | Windows in existing session | Session per project | Configurable layout | Named windows | Split panes |
@@ -549,7 +549,7 @@ This matrix compares all tools across the most commonly needed capabilities.
 | agent-of-empires | TUI Manager | ✅ | ✅ | 5 agents | Basic | ✅ | Docker | Rust |
 | workmux | Workflow | ✅ | ✅ | Any CLI | Full (merge+cleanup) | ✅ (status icons) | ❌ | TypeScript |
 | dmux | Workflow | ✅ | ✅ | 2 agents | Full (smart merge) | Basic | ❌ | TypeScript |
-| barrel | Workflow | ✅ | ✅ | 4+ agents | Session only | ❌ | ❌ | — |
+| barrel/axel | Workflow | ✅ | ✅ | 4+ agents | Session only | ❌ | ❌ | — |
 | forestui | Workflow | ✅ | ✅ | Claude only | Session tracking | ✅ | ❌ | Python |
 | maw | Workflow | ✅ | ✅ | Any CLI | Basic | ❌ | ❌ | Shell |
 | claude-tmux | Tmux | ✅ | ✅ | Claude only | Session + PR | ✅ (live preview) | ❌ | Rust |
@@ -733,7 +733,7 @@ Most of the other tools in this survey do not address sandboxing at all, which i
 
 ### "I want agent portability across Claude Code, Codex, OpenCode, etc."
 
-**→ barrel.** Its core feature is writing agent definitions once and symlinking them into each tool's expected location. If you're regularly switching between LLM providers or want to compare outputs, this is the tool designed for that.
+**→ barrel (now axel).** Its core feature is writing agent definitions once and symlinking them into each tool's expected location. If you're regularly switching between LLM providers or want to compare outputs, this is the tool designed for that.
 
 ### "I want to tie agent work to GitHub issues"
 
@@ -762,10 +762,10 @@ Most of the other tools in this survey do not address sandboxing at all, which i
 | agent-deck | [github.com/asheshgoplani/agent-deck](https://github.com/asheshgoplani/agent-deck) |
 | agent-of-empires | [github.com/njbrake/agent-of-empires](https://github.com/njbrake/agent-of-empires) |
 | workmux | [github.com/raine/workmux](https://github.com/raine/workmux) |
-| dmux | [github.com/formkit/dmux](https://github.com/formkit/dmux) |
-| barrel | [github.com/txtx/barrel](https://github.com/txtx/barrel) |
+| dmux | [github.com/standardagents/dmux](https://github.com/standardagents/dmux) |
+| barrel (now axel) | [github.com/txtx/axel](https://github.com/txtx/axel) |
 | forestui | [github.com/flipbit03/forestui](https://github.com/flipbit03/forestui) |
-| multi-agent-workflow-kit | [github.com/laris-co/multi-agent-workflow-kit](https://github.com/laris-co/multi-agent-workflow-kit) |
+| multi-agent-workflow-kit | [github.com/Soul-Brews-Studio/multi-agent-workflow-kit](https://github.com/Soul-Brews-Studio/multi-agent-workflow-kit) |
 | claude-tmux | [github.com/nielsgroen/claude-tmux](https://github.com/nielsgroen/claude-tmux) |
 | vscode-ext-tmux-worktree | [github.com/kargnas/vscode-ext-tmux-worktree](https://github.com/kargnas/vscode-ext-tmux-worktree) |
 | agenttools/worktree | [github.com/agenttools/worktree](https://github.com/agenttools/worktree) |

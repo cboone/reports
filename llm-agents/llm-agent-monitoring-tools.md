@@ -296,7 +296,7 @@ Lightweight tools and configurations specifically for getting desktop or system 
 
 ### ai-agents-notifier (claude-code-notifier)
 
-- **GitHub:** [hta218/ai-agents-notifier](https://github.com/hta218/claude-code-notifier)
+- **GitHub:** [hta218/ai-agents-notifier](https://github.com/hta218/ai-agents-notifier)
 - **Platform:** macOS, Linux, Windows
 - **Agents:** Claude Code, GitHub Copilot CLI
 - **Features:**
