@@ -473,7 +473,7 @@ For personal preferences that span many projects and tools, maintain a dotfiles 
 ```bash
 # In your dotfiles repo:
 agents/
-├── AGENTS.md                  # Global instructions (all tools)
+├── AGENTS.md                  # Global instructions (cross-tool)
 ├── claude-settings.json       # → ~/.claude/settings.json
 └── codex-config.toml          # → ~/.codex/config.toml
 

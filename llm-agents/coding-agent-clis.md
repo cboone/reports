@@ -42,7 +42,7 @@ The original open-source AI pair programming tool for the terminal. **~40,500 Gi
 - **License:** Apache 2.0
 - **Agent type:** Single-agent with architect+editor dual-model mode
 - **Status:** Very active, 230+ contributors
-- **Distinguishing:** One of the broadest model support sets in this category. Git-first philosophy means AI changes are usually captured as clean commits. Strong SWE-Bench results in published materials. Battle-tested and mature. Repo map feature gives strong codebase understanding. Steep learning curve but powerful once mastered.
+- **Distinguishing:** One of the broadest model support sets in this category. Git-first philosophy means AI changes are usually captured as clean commits. Strong SWE-Bench results in published materials. Well-established and mature in practice. Repo map feature gives strong codebase understanding. Steep learning curve but powerful once mastered.
 
 ### OpenAI Codex CLI
 
@@ -636,7 +636,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Most mature tools
 
-**Aider** is a battle-tested open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported very high weekly token volume, and 230+ contributors. **Claude Code** is widely viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
+**Aider** is a well-established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported very high weekly token volume, and 230+ contributors. **Claude Code** is widely viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
 
 ### Most promising tools
 

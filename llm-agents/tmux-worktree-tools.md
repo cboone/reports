@@ -663,7 +663,7 @@ The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) r
 
 **URL:** [richsnapp.com/article/2025/12-14-git-worktrees-tmux-claude-code-oh-my-zsh](https://www.richsnapp.com/article/2025/12-14-git-worktrees-tmux-claude-code-oh-my-zsh)
 
-One of the more comprehensive single writeups of a complete workflow. Snapp describes a Docker container-based approach where tmux provides the persistent session layer, worktrees provide filesystem isolation, and a custom `gwtmux` script ties everything together. Key insights:
+One of the more detailed single writeups of a complete workflow. Snapp describes a Docker container-based approach where tmux provides the persistent session layer, worktrees provide filesystem isolation, and a custom `gwtmux` script ties everything together. Key insights:
 
 > "Just as git worktrees give you multiple workspaces in the codebase within which to work, tmux gives you multiple workspaces for the agents, shells, IDE instances, and various tools that you will be using during development."
 
@@ -749,7 +749,7 @@ Most of the other tools in this survey do not include built-in sandboxing, which
 
 ### "I want to try Anthropic's official approach"
 
-**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has the most direct first-party support and development resources in this list.
+**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has direct first-party support and development resources in this list.
 
 ---
 

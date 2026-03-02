@@ -8,7 +8,7 @@ _February 15, 2026_
 
 ## The Landscape
 
-Many major AI coding agents read some form of Markdown instruction file from your project. The idea is simple: instead of repeating "we use pnpm, not npm" and "always run tests before committing" in every prompt, you write it once and the agent reads it automatically at session start. The ecosystem has fragmented into several distinct formats with varying degrees of cross-tool compatibility. This document maps the territory across four widely used tools, Claude Code, OpenAI Codex, GitHub Copilot, and OpenCode, and gives you a concrete strategy.
+Many major AI coding agents read some form of Markdown instruction file from your project. The idea is simple: instead of repeating "we use pnpm, not npm" and "run tests before committing" in every prompt, you write it once and the agent reads it automatically at session start. The ecosystem has fragmented into several distinct formats with varying degrees of cross-tool compatibility. This document maps the territory across four widely used tools, Claude Code, OpenAI Codex, GitHub Copilot, and OpenCode, and gives you a concrete strategy.
 
 ---
 
@@ -60,7 +60,7 @@ GitHub Copilot's approach is more structured than many alternatives. There are t
 
 First, the repo-wide `.github/copilot-instructions.md` applies to most interactions. Second, path-specific `*.instructions.md` files in `.github/instructions/` use YAML frontmatter with an `applyTo` glob to scope instructions to specific file types or directories. Third, organization-level instructions can be set on GitHub.com for enterprise teams.
 
-A unique feature: Copilot's coding agent will auto-suggest generating a `copilot-instructions.md` on your first PR in a repository. The path-specific `.instructions.md` system is powerful for monorepos — you can have different rules for your Python backend vs. your React frontend, triggered automatically by file glob matches.
+A notable feature: Copilot's coding agent will auto-suggest generating a `copilot-instructions.md` on your first PR in a repository. The path-specific `.instructions.md` system is powerful for monorepos — you can have different rules for your Python backend vs. your React frontend, triggered automatically by file glob matches.
 
 Copilot also supports several related file types in `.github/`:
 - **Prompt files** (`.github/prompts/*.prompt.md`) — reusable prompt templates that can reference files with `#file:path` syntax.
@@ -253,4 +253,4 @@ AGENTS.md is increasingly becoming the cross-tool standard, with backing from th
 
 The practical strategy is a hub-and-spoke model: AGENTS.md is the hub containing core project instructions, and tool-specific locations (`.claude/rules/`, `.github/instructions/`, skills directories) are spokes that add capabilities the hub can't express. Skills handle context bloat by loading detailed instructions on demand rather than eagerly.
 
-One of the most impactful things you can do today is create an AGENTS.md in each active repo with your build commands, conventions, and workflow rules. Everything else is optimization on top of that foundation.
+A high-impact step you can take today is creating an AGENTS.md in each active repo with your build commands, conventions, and workflow rules. Everything else is optimization on top of that foundation.
