@@ -2,11 +2,11 @@
 created: 2026-01-27
 ---
 
-# The Complete History of tmux: From OpenBSD Project to Industry Standard
+# The Complete History of tmux: From OpenBSD Project to Widely Adopted Tool
 
 _January 27, 2026_
 
-**tmux, a terminal multiplexer that helped reshape command-line workflows, was created by Nicholas Marriott in 2007 as a cleaner, BSD-licensed alternative to GNU Screen.** What began as a personal project driven by frustration with Screen's unreadable codebase became one of the more influential developer tools of the 2010s. After OpenBSD founder Theo de Raadt personally audited the code and found it "high quality," tmux was imported into the OpenBSD base system on June 1, 2009, a rare honor that signaled production readiness. Today, with **40,000+ GitHub stars** and inclusion in most Unix-like operating systems, tmux has become a de facto standard for terminal multiplexing.
+**tmux, a terminal multiplexer that helped reshape command-line workflows, was created by Nicholas Marriott in 2007 as a cleaner, BSD-licensed alternative to GNU Screen.** What began as a personal project driven by frustration with Screen's unreadable codebase became one of the more influential developer tools of the 2010s. After OpenBSD founder Theo de Raadt personally audited the code and found it "high quality," tmux was imported into the OpenBSD base system on June 1, 2009, a rare honor that signaled production readiness. Today, with **40,000+ GitHub stars** and inclusion in most Unix-like operating systems, tmux is a widely adopted standard choice for terminal multiplexing.
 
 ---
 
@@ -152,7 +152,7 @@ The most recent versions brought visual capabilities that were once uncommon in 
 
 ## Community adoption and the plugin ecosystem
 
-tmux's rise from OpenBSD utility to industry standard occurred through several key inflection points.
+tmux's rise from OpenBSD utility to widely used tool occurred through several key inflection points.
 
 ### The Thoughtbot era (2011-2015)
 
@@ -160,7 +160,7 @@ The **"A tmux Crash Course"** blog post by Thoughtbot became one of the most inf
 
 In **February 2012**, Brian P. Hogan published **"tmux: Productive Mouse-Free Development"** through Pragmatic Programmers—the first book dedicated to tmux. A second edition covering tmux 2.3 followed in 2016, and a third edition covering modern features is in development.
 
-Thoughtbot further cemented tmux's prominence by launching a **dedicated tmux course on Upcase** in 2015, taught by Chris Toomey, whose `vim-tmux-navigator` plugin had already become essential for vim users.
+Thoughtbot further cemented tmux's prominence by launching a **dedicated tmux course on Upcase** in 2015, taught by Chris Toomey, whose `vim-tmux-navigator` plugin had already become popular with vim users.
 
 ### The plugin ecosystem emerges
 

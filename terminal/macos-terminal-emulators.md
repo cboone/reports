@@ -69,7 +69,7 @@ Ghostty's native Swift/SwiftUI implementation provides genuine macOS-native beha
 | Scripting | Python API | Apple Shortcuts | Python kittens | IPC only | Lua | Workflows |
 | Search | ✓ | Evolving | ✓ | ✓ | ✓ | ✓ |
 
-Terminal.app's **absence of split panes** remains a major UX gap; users must rely on separate windows or tmux. macOS Tahoe will finally bring true color and Powerline font support to Terminal.app, representing "a long-overdue modernization" after two decades of stagnation.
+Terminal.app's **absence of split panes** remains a major UX gap; users must rely on separate windows or tmux. macOS Tahoe will finally bring true color and Powerline font support to Terminal.app, representing "a long-overdue modernization" after years of comparatively slow feature evolution.
 
 ## Configuration philosophies define user experience
 
@@ -174,12 +174,12 @@ Ghostty transitioned to **nonprofit status via Hack Club fiscal sponsorship**, e
 
 Kitty's maintainer Kovid Goyal (also creator of Calibre) maintains strong opinions—opposing tmux integration and Sixel support—that shape the project's direction. Regular monthly releases demonstrate sustained commitment.
 
-Alacritty's 452+ contributors and dual Apache/MIT licensing make it the most permissively licensed option. The project maintains beta status acknowledging "a few missing features and bugs to be fixed."
+Alacritty's 452+ contributors and dual Apache/MIT licensing make it among the most permissively licensed options. The project maintains beta status acknowledging "a few missing features and bugs to be fixed."
 
 ## Conclusion
 
 The macOS terminal landscape in 2026 offers genuinely distinct choices rather than marginal variations. **Performance-focused users often prefer Alacritty**; **feature-maximalists often choose iTerm2**; **AI-forward developers may find Warp compelling**; **protocol-complete needs often point to WezTerm**; and **native-experience seekers should evaluate Ghostty** as it matures through its v1.x releases.
 
-Ghostty's emergence validates demand for native implementations prioritizing platform conventions, while Warp's commercial success demonstrates appetite for AI-integrated terminals despite open-source alternatives. The graphics protocol fragmentation—Sixel vs. Kitty Graphics vs. iTerm2—will likely consolidate around Kitty Graphics as more terminals adopt it, though Sixel's broader legacy support ensures continued relevance.
+Ghostty's emergence validates demand for native implementations prioritizing platform conventions, while Warp's commercial success demonstrates appetite for AI-integrated terminals despite open-source alternatives. The graphics protocol fragmentation—Sixel vs. Kitty Graphics vs. iTerm2—may gradually consolidate around Kitty Graphics as more terminals adopt it, though Sixel's broader legacy support ensures continued relevance.
 
 Terminal.app's macOS Tahoe updates finally address its most glaring limitation with true color support, potentially satisfying casual users who previously needed third-party alternatives. For serious development work, however, the third-party ecosystem's decade-plus advancement in features, performance, and customization remains difficult to match through incremental improvements to Apple's built-in offering.
