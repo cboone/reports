@@ -6,11 +6,11 @@ created: 2026-01-25
 
 _January 25, 2026_
 
-**JSON's dominance remains unchallenged for APIs, but TOML has emerged as the clear winner for configuration files** in modern toolchains. Performance benchmarks reveal that JSON parsers are consistently **5-650x faster** than human-readable alternatives—yet for config files parsed once at startup, this gap is irrelevant. The real driver of adoption is reduced syntax friction: TOML's explicit typing avoids YAML's infamous gotchas, while newer formats like **KDL** and **Pkl** (Apple, 2024) are gaining traction for document-heavy and type-safe configurations respectively.
+**JSON remains dominant for APIs, while TOML has become a widely preferred format for configuration files** in modern toolchains. Performance benchmarks reveal that JSON parsers are consistently **5-650x faster** than human-readable alternatives, yet for config files parsed once at startup, this gap is often less important. The real driver of adoption is reduced syntax friction: TOML's explicit typing avoids many of YAML's gotchas, while newer formats like **KDL** and **Pkl** (Apple, 2024) are gaining traction for document-heavy and type-safe configurations respectively.
 
-The ecosystem has settled into distinct niches rather than crowning a single successor. YAML dominates DevOps (Kubernetes, GitHub Actions), TOML owns package management (Cargo.toml, pyproject.toml), and JSON holds firm for machine-to-machine APIs. Emerging formats target specialized needs: KDL for human-friendly documents, RON for Rust type safety, and Dhall for programmable configs that can never crash or hang.
+The ecosystem has settled into distinct niches rather than crowning a single successor. YAML is widely used in DevOps (Kubernetes, GitHub Actions), TOML is widely used in package management (Cargo.toml, pyproject.toml), and JSON holds firm for machine-to-machine APIs. Emerging formats target specialized needs: KDL for human-friendly documents, RON for Rust type safety, and Dhall for programmable configs designed to avoid non-termination.
 
-## Performance benchmarks show JSON still reigns for speed
+## Performance benchmarks show JSON still leads for speed
 
 The performance gap between JSON and its alternatives is substantial but context-dependent. Native JSON parsers benefit from decades of optimization and, in JavaScript/Python, C-level implementations.
 
@@ -119,7 +119,7 @@ GameConfig(
 )
 ```
 
-With **~2.8 million monthly downloads** on crates.io, RON dominates Rust game development (Bevy, Amethyst). However, it's deliberately Rust-centric—other language implementations are experimental at best.
+With **~2.8 million monthly downloads** on crates.io, RON is widely used in Rust ecosystems, including game development circles around projects like Bevy and Amethyst. However, it's deliberately Rust-centric, and implementations in other languages are generally less mature.
 
 ### Dhall and Pkl bring programming to configuration
 
