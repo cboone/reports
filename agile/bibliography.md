@@ -6,7 +6,7 @@ created: 2026-01-23
 
 _January 23, 2026_
 
-This bibliography accompanies the comprehensive history of agile methodology, organized by category for easier navigation. All links were verified as of January 2025.
+This bibliography accompanies the comprehensive history of agile methodology, organized by category for easier navigation. Links were refreshed for availability in March 2026.
 
 ---
 
@@ -30,7 +30,7 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 **Scrum**
 - Schwaber, Ken, and Mike Beedle. *Agile Software Development with Scrum*. Prentice Hall, 2001. [https://www.amazon.com/Agile-Software-Development-Scrum/dp/0130676349](https://www.amazon.com/Agile-Software-Development-Scrum/dp/0130676349)
-- Schwaber, Ken. *Agile Project Management with Scrum*. Microsoft Press, 2004. [https://www.agileleanhouse.com/lib/lib/People/KenSchwaber/Agile%20Project%20Management%20With%20Scrum%20-www.itworkss.com.pdf](https://www.agileleanhouse.com/lib/lib/People/KenSchwaber/Agile%20Project%20Management%20With%20Scrum%20-www.itworkss.com.pdf)
+- Schwaber, Ken. *Agile Project Management with Scrum*. Microsoft Press, 2004. [https://www.amazon.com/Agile-Project-Management-Scrum-Developer/dp/073561993X](https://www.amazon.com/Agile-Project-Management-Scrum-Developer/dp/073561993X)
 - Sutherland, Jeff. *Scrum: The Art of Doing Twice the Work in Half the Time*. Crown Business, 2014. [https://www.goodreads.com/book/show/19288230-scrum](https://www.goodreads.com/book/show/19288230-scrum)
 
 **Lean Software Development**
@@ -45,7 +45,7 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 - Humble, Jez, and David Farley. *Continuous Delivery* (Goodreads page). [https://www.goodreads.com/book/show/8686650-continuous-delivery](https://www.goodreads.com/book/show/8686650-continuous-delivery)
 
 **User Stories and Estimation**
-- Cohn, Mike. *User Stories Applied: For Agile Software Development*. Addison-Wesley, 2004. [https://www.barnesandnoble.com/w/user-stories-applied-mike-cohn/1100352104](https://www.barnesandnoble.com/w/user-stories-applied-mike-cohn/1100352104)
+- Cohn, Mike. *User Stories Applied: For Agile Software Development*. Addison-Wesley, 2004. [https://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685](https://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685)
 
 ---
 
@@ -57,7 +57,7 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 - WebSeitz Wiki. "(2003-06-30) Iterative and Incremental Development: A Brief History." [http://webseitz.fluxent.com/wiki/2003-06-30-IterativeAndIncrementalDevelopmentABriefHistory](http://webseitz.fluxent.com/wiki/2003-06-30-IterativeAndIncrementalDevelopmentABriefHistory)
 
 **Toyota Production System**
-- ScienceDirect. "Toyota Production System - An Overview." [https://www.sciencedirect.com/topics/computer-science/toyota-production-system](https://www.sciencedirect.com/topics/computer-science/toyota-production-system)
+- Lean Enterprise Institute. "Toyota Production System (TPS)." [https://www.lean.org/lexicon-terms/toyota-production-system/](https://www.lean.org/lexicon-terms/toyota-production-system/)
 
 ---
 
@@ -70,8 +70,8 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 - "Spiral Model." Wikipedia. [https://en.wikipedia.org/wiki/Spiral_model](https://en.wikipedia.org/wiki/Spiral_model)
 - "Winston W. Royce." Wikipedia. [https://en.wikipedia.org/wiki/Winston_W._Royce](https://en.wikipedia.org/wiki/Winston_W._Royce)
 - "Git." Wikipedia. [https://en.wikipedia.org/wiki/Git](https://en.wikipedia.org/wiki/Git)
-- "Jira (software)." Wikipedia. [https://en.wikipedia.org/wiki/Jira_(software)](https://en.wikipedia.org/wiki/Jira_(software))
-- "Martin Fowler (software engineer)." Wikipedia. [https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer)](https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer))
+- "Jira (software)." Wikipedia. [https://en.wikipedia.org/wiki/Jira_%28software%29](https://en.wikipedia.org/wiki/Jira_%28software%29)
+- "Martin Fowler (software engineer)." Wikipedia. [https://en.wikipedia.org/wiki/Martin_Fowler_%28software_engineer%29](https://en.wikipedia.org/wiki/Martin_Fowler_%28software_engineer%29)
 - "Pivotal Labs." Wikipedia. [https://en.wikipedia.org/wiki/Pivotal_Labs](https://en.wikipedia.org/wiki/Pivotal_Labs)
 - "Craig Larman." Wikipedia. [https://en.wikipedia.org/wiki/Craig_Larman](https://en.wikipedia.org/wiki/Craig_Larman)
 
@@ -96,9 +96,8 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 - Agile42. "The History of Scrum." [https://www.agile42.com/en/blog/scrum-history](https://www.agile42.com/en/blog/scrum-history)
 - Kaizenko. "A Historical Look at The Scrum Guide From 1986 to 2020." [https://www.kaizenko.com/the-scrum-guide-history/](https://www.kaizenko.com/the-scrum-guide-history/)
 - Kaizenko. "A Behind the Scenes Look at the Writing of the Agile Manifesto." [https://www.kaizenko.com/a-behind-the-scenes-look-at-the-writing-of-the-agile-manifesto/](https://www.kaizenko.com/a-behind-the-scenes-look-at-the-writing-of-the-agile-manifesto/)
-- Scrum Inc. "How The Agile Manifesto Came To Be." [https://www.scruminc.com/how-the-agile-manifesto-came-to-be/](https://www.scruminc.com/how-the-agile-manifesto-came-to-be/)
 - Teaching Agile. "Scrum Origins & Agile Principles: Complete Foundation Guide." [https://teachingagile.com/scrum/psm-1/scrum-theory-principles/scrum-history](https://teachingagile.com/scrum/psm-1/scrum-theory-principles/scrum-history)
-- Benzne Consulting. "Scrum Guide: Versions & Its Implications Over The Years." [https://benzne.com/blogs/agile/scrum-guide-versions-and-implications/](https://benzne.com/blogs/agile/scrum-guide-versions-and-implications/)
+- Next Agile. "Scrum Guide: Versions & Its Implications Over The Years." [https://nextagile.ai/blogs/agile/scrum-guide-versions-and-implications/](https://nextagile.ai/blogs/agile/scrum-guide-versions-and-implications/)
 - ZenTao. "A Brief History of Agile: Ken Schwaber - A Brave Warrior (Part 1)." [https://www.zentao.pm/blog/a-brief-history-of-agile-ken-schwaber-a-brave-warrior-1-1101.html](https://www.zentao.pm/blog/a-brief-history-of-agile-ken-schwaber-a-brave-warrior-1-1101.html)
 
 ---
@@ -114,15 +113,15 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 ## Extreme Programming History
 
-- Medium (Pavol Kutaj). "The History Of Extreme Programming." [https://pavolkutaj.medium.com/the-history-of-extreme-programming-dcf6e234cb54](https://pavolkutaj.medium.com/the-history-of-extreme-programming-dcf6e234cb54)
+- C2 Wiki. "ExtremeProgramming." [https://wiki.c2.com/?ExtremeProgramming](https://wiki.c2.com/?ExtremeProgramming)
 
 ---
 
 ## DevOps History
 
-- New Relic. "The Incredible True Story of How DevOps Got Its Name." [https://newrelic.com/blog/nerd-life/devops-name](https://newrelic.com/blog/nerd-life/devops-name)
+- New Relic. "The Incredible True Story of How DevOps Got Its Name." [https://newrelic.com/blog/news/devops-name](https://newrelic.com/blog/news/devops-name)
 - KnowledgeHut. "A Brief History of DevOps." [https://www.knowledgehut.com/blog/devops/history-of-devops](https://www.knowledgehut.com/blog/devops/history-of-devops)
-- Medium (Muhammad Fahad). "Brief History of DevOps." [https://medium.com/@mfahad1667/brief-history-of-devops-c295d54d099d](https://medium.com/@mfahad1667/brief-history-of-devops-c295d54d099d)
+- Atlassian. "History of DevOps." [https://www.atlassian.com/devops/what-is-devops/history-of-devops](https://www.atlassian.com/devops/what-is-devops/history-of-devops)
 - CircleCI. "A Brief History of DevOps, Part III: Automated Testing and Continuous Integration." [https://circleci.com/blog/a-brief-history-of-devops-part-iii-automated-testing-and-continuous-integration/](https://circleci.com/blog/a-brief-history-of-devops-part-iii-automated-testing-and-continuous-integration/)
 
 ---
@@ -131,12 +130,11 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 **SAFe (Scaled Agile Framework)**
 - Scaled Agile. "A Decade in Adaptation: The Scaled Agile Framework, 10 Years Later." [https://scaledagile.com/blog/a-decade-in-adaptation-the-scaled-agile-framework-10-years-later/](https://scaledagile.com/blog/a-decade-in-adaptation-the-scaled-agile-framework-10-years-later/)
-- Medium (Tom Boswell). "A Brief History of the Scaled Agile Framework." [https://medium.com/lean-agile-mindset/a-brief-history-of-the-scaled-agile-framework-633665a73a37](https://medium.com/lean-agile-mindset/a-brief-history-of-the-scaled-agile-framework-633665a73a37)
 - LinkedIn (Daniel Michael). "The Evolution of SAFe: A Look at the Framework's Adaptations and Innovations Over Time." [https://www.linkedin.com/pulse/evolution-safe-look-frameworks-adaptations-over-time-daniel-michael](https://www.linkedin.com/pulse/evolution-safe-look-frameworks-adaptations-over-time-daniel-michael)
-- KMS Technology. "SAFe: The Fundamentals of Scaled Agile Framework." [https://kms-technology.com/blog/essentials-of-scaled-agile/](https://kms-technology.com/blog/essentials-of-scaled-agile/)
+- Scaled Agile. "What Is SAFe?" [https://scaledagile.com/what-is-safe/](https://scaledagile.com/what-is-safe/)
 
 **LeSS (Large-Scale Scrum)**
-- Nimble. "Large Scale Scrum: Comprehensive Overview Of LeSS." [https://www.nimblework.com/agile/large-scale-scrum-less/](https://www.nimblework.com/agile/large-scale-scrum-less/)
+- LeSS. "What is LeSS?" [https://less.works/less/framework](https://less.works/less/framework)
 
 **Spotify Model**
 - Product School. "What Is The Spotify Model?" [https://productschool.com/blog/product-fundamentals/spotify-model-scaling-agile](https://productschool.com/blog/product-fundamentals/spotify-model-scaling-agile)
@@ -155,7 +153,7 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 **Git**
 - GeeksforGeeks. "History of Git." [https://www.geeksforgeeks.org/git/history-of-git/](https://www.geeksforgeeks.org/git/history-of-git/)
-- Medium (Pamuditha Gangana). "History of Git." [https://medium.com/@learning9241/history-of-git-6059c5653704](https://medium.com/@learning9241/history-of-git-6059c5653704)
+- Git SCM. "A Short History of Git." [https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git)
 
 **Jira**
 - Atlassian Community. "Evolution of Jira Design - Part 1." [https://community.atlassian.com/forums/Jira-articles/Evolution-of-Jira-Design-Part-1/ba-p/1304571](https://community.atlassian.com/forums/Jira-articles/Evolution-of-Jira-Design-Part-1/ba-p/1304571)
@@ -207,4 +205,4 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 ---
 
-*Bibliography compiled January 2025. Some links may require institutional access or may have changed since compilation.*
+*Bibliography compiled January 2025, refreshed March 2026. Some links may require institutional access.*

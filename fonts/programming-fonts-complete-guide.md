@@ -211,7 +211,7 @@ For high-DPI displays, traditional hinting becomes less important (sufficient pi
 ### Classic free fonts
 
 - **Inconsolata**: https://fonts.google.com/specimen/Inconsolata
-- **Anonymous Pro**: https://www.marksimonson.com/fonts/view/anonymous-pro
+- **Anonymous Pro**: https://www.marksimonson.com/fonts/view/anonymous/
 - **Ubuntu Mono**: https://fonts.google.com/specimen/Ubuntu+Mono
 - **DejaVu Sans Mono**: https://dejavu-fonts.github.io/
 - **Liberation Mono**: https://github.com/liberationfonts/liberation-fonts
@@ -226,7 +226,7 @@ For high-DPI displays, traditional hinting becomes less important (sufficient pi
 | MonoLisa | €59-119 | Marcus Sterz | https://www.monolisa.dev/ |
 | Berkeley Mono | $75+ | Neil Panchal | https://berkeleygraphics.com/typefaces/berkeley-mono/ |
 | Dank Mono | £40-75 | Phil Plückthun | https://philpl.gumroad.com/l/dank-mono |
-| Cartograph CF | $59-200 | Connary Fagen | https://connary.com/cartograph.html |
+| Cartograph CF | $59-200 | Connary Fagen | https://connary.com/fonts/cartograph/ |
 | Gintronic | €50-150 | Mark Frömberg | https://markfromberg.com/projects/gintronic |
 
 ---
@@ -235,7 +235,6 @@ For high-DPI displays, traditional hinting becomes less important (sufficient pi
 
 **Font testing tools** let you preview fonts with your own code:
 - Programming Fonts: https://www.programmingfonts.org/
-- Coding Fonts (CSS-Tricks): https://coding-fonts.css-tricks.com/
 
 **Project repositories**:
 - Nerd Fonts: https://github.com/ryanoasis/nerd-fonts

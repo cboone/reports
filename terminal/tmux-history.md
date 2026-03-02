@@ -191,7 +191,7 @@ Shell frameworks embraced tmux through plugins like the **oh-my-zsh tmux plugin*
 - **GitHub repository**: https://github.com/tmux/tmux
 - **Official website**: http://tmux.github.io/
 - **GitHub Wiki**: https://github.com/tmux/tmux/wiki
-- **OpenBSD CVS**: http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/tmux/
+- **OpenBSD CVS**: https://cvsweb.openbsd.org/src/usr.bin/tmux/
 - **OpenBSD man page**: https://man.openbsd.org/tmux
 - **CHANGES file** (complete changelog): https://raw.githubusercontent.com/tmux/tmux/master/CHANGES
 
