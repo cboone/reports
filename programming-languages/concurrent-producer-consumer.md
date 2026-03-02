@@ -79,7 +79,7 @@ The algorithm decomposes into these concurrent coordination problems:
 4. **Shutdown signaling**: Producers must signal when they are done. Consumers must know when to stop — not when the buffer is momentarily empty, but when all producers are finished *and* the buffer is empty.
 5. **Result collection**: Consumers write results to a shared collection, which must also be concurrent-safe.
 
-Different languages have radically different primitives for these tasks. Actor-model languages (Erlang, Elixir) use message passing between lightweight processes and never share memory. Channel-based languages (Go) use typed channels for communication. Systems languages (Rust, C) use mutexes, condition variables, and atomic operations. Functional languages (Haskell) offer Software Transactional Memory or async abstractions. Scripting languages are often constrained by global interpreter locks.
+Different languages have meaningfully different primitives for these tasks. Actor-model languages (Erlang, Elixir) use message passing between lightweight processes and avoid shared mutable state in core patterns. Channel-based languages (Go) use typed channels for communication. Systems languages (Rust, C) use mutexes, condition variables, and atomic operations. Functional languages (Haskell) offer Software Transactional Memory or async abstractions. Scripting languages are often constrained by global interpreter locks.
 
 This problem reveals how languages think about coordination, safety, and the fundamental question of concurrent programming: how do independent units of computation communicate?
 
@@ -289,11 +289,11 @@ Gleam's typed message channels (`Subject(ConsumerMsg)`) ensure at compile time t
 
 ### BEAM Family Comparison
 
-The BEAM family treats concurrency as its native element. Processes are cheap (millions can run simultaneously), message passing is the only coordination mechanism, and there is no shared mutable state to cause data races. The buffer process in Erlang manages all synchronization through its message-handling loop — there are no mutexes, no condition variables, and no atomics.
+The BEAM family treats concurrency as a native element. Processes are cheap (often scaling to very large counts), message passing is the primary coordination mechanism, and there is no shared mutable state in the core actor model to cause data races. The buffer process in Erlang manages all synchronization through its message-handling loop — there are no mutexes, no condition variables, and no atomics.
 
 The progression from Erlang to Elixir to Gleam adds layers of abstraction and safety: Elixir adds ergonomic syntax and high-level combinators; Gleam adds compile-time message type checking. But the underlying model — lightweight processes, message passing, no shared state — is the same throughout.
 
-This is the family's home turf. Erlang was designed for telephone switches that handle millions of concurrent connections. The producer-consumer pipeline is a toy version of problems Erlang solves in production at WhatsApp, Discord, and telecom infrastructure worldwide.
+This is a core BEAM use case. Erlang was designed for telephone switches that handle very high concurrency. The producer-consumer pipeline is a simplified version of problems Erlang-style systems solve in production at large internet and telecom scale.
 
 ---
 
@@ -1101,7 +1101,7 @@ int main() {
 
 This is the baseline implementation against which all higher-level abstractions can be measured. Every lock acquisition, every condition variable wait, every signal is explicit. The bounded buffer is a circular array protected by a mutex and two condition variables. The shutdown protocol requires `broadcast` (not `signal`) to wake all consumers when the last producer finishes.
 
-The code is roughly 100 lines for what Go expresses in 30 and Erlang in a different paradigm entirely. Every line is necessary — remove a lock and you get a data race, remove a signal and you get a deadlock, remove the broadcast and consumers may never wake up. This is why higher-level concurrency primitives were invented.
+The code is roughly 100 lines for what Go expresses in about 30 and Erlang in a different paradigm entirely. Most of these lines are structural requirements of the model: remove a lock and you risk a data race, remove a signal and you risk deadlock, remove the broadcast and consumers may never wake up. This helps explain why higher-level concurrency primitives were invented.
 
 ### C++ (std::thread)
 
@@ -1883,7 +1883,7 @@ The C family works but requires significant engineering. The scripting languages
 
 The concurrent producer-consumer pipeline reveals a different dimension of language design than the previous two algorithms. The array transformation showcased data-parallel thinking. The expression tree evaluator showcased algebraic data types and recursive structure. This algorithm showcases coordination — how independent computational units communicate, synchronize, and shut down safely.
 
-The results upend the previous rankings. The BEAM family, which was merely adequate for arrays and trees, is perfectly at home with concurrent processes. Go, which was verbose for tree evaluation, is clean and idiomatic for channel-based pipelines. The APL family, which excelled at array transformations, has almost nothing to contribute to explicit concurrency. Haskell, which excelled at expression trees, offers a unique perspective through STM but is not as natural for concurrency as Erlang or Go.
+The results significantly reorder the previous rankings. The BEAM family, which was merely adequate for arrays and trees, is very much at home with concurrent processes. Go, which was verbose for tree evaluation, is clean and idiomatic for channel-based pipelines. The APL family, which excelled at array transformations, contributes less to explicit task coordination. Haskell, which excelled at expression trees, offers a unique perspective through STM but is generally less natural for this style of concurrency than Erlang or Go.
 
 An important insight is that concurrency safety can be achieved through very different mechanisms. Rust prevents data races through compile-time ownership analysis. Erlang prevents them by eliminating shared mutable state. Go and Kotlin prevent many issues through channel abstractions. Ada prevents them through monitor-based protected objects. C provides minimal built-in prevention, leaving safety largely to programmer discipline.
 
