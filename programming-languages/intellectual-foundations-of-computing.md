@@ -76,7 +76,7 @@ At **Göttingen**, then the world's premier mathematics center, David Hilbert re
 
 The *Entscheidungsproblem* (decision problem), formalized by Hilbert and Ackermann in 1928, captured the fourth requirement: is there a general procedure to determine whether any mathematical statement is true? Hilbert expected—and hoped—the answer was yes.
 
-In 1931, **Kurt Gödel** at the University of Vienna destroyed most of this program in a single paper. At 25 years old, he proved his incompleteness theorems: any consistent formal system capable of expressing basic arithmetic contains true statements that cannot be proved within the system, and no such system can prove its own consistency. Gödel's technique—*Gödel numbering*—encoded formulas as numbers, allowing mathematical systems to "talk about themselves." This self-referential method became fundamental to later computability theory.
+In 1931, **Kurt Gödel** at the University of Vienna dealt a major blow to this program in a single paper. At 25 years old, he proved his incompleteness theorems: any consistent formal system capable of expressing basic arithmetic contains true statements that cannot be proved within the system, and no such system can prove its own consistency. Gödel's technique, *Gödel numbering*, encoded formulas as numbers, allowing mathematical systems to "talk about themselves." This self-referential method became foundational to later computability theory.
 
 ---
 
@@ -124,13 +124,13 @@ The translation of lambda calculus into practical programming languages represen
 
 ### McCarthy's LISP: theory becomes practice
 
-In 1958, **John McCarthy** at MIT began developing LISP specifically to implement Church's ideas. His landmark 1960 paper "Recursive Functions of Symbolic Expressions and Their Computation by Machine" introduced features that remain revolutionary: **recursive functions** as the primary control mechanism, **conditional expressions** that return values, **first-class functions** that can be passed and returned, **garbage collection** for automatic memory management, and **S-expressions** providing unified syntax for code and data.
+In 1958, **John McCarthy** at MIT began developing LISP specifically to implement Church's ideas. His landmark 1960 paper "Recursive Functions of Symbolic Expressions and Their Computation by Machine" introduced features that remain central in modern language design: **recursive functions** as the primary control mechanism, **conditional expressions** that return values, **first-class functions** that can be passed and returned, **garbage collection** for automatic memory management, and **S-expressions** providing unified syntax for code and data.
 
 McCarthy's insight that LISP could interpret itself—through the `eval` function—emerged when his graduate student Steve Russell simply implemented McCarthy's theoretical description directly. This demonstrated that a language's core semantics could be captured in the language itself, echoing Turing's universal machine.
 
 ### ML and type inference at Edinburgh
 
-At the **University of Edinburgh** in the 1970s, **Robin Milner** created ML (Meta Language) as a tool for the LCF theorem prover. While ML inherited functional features from LISP, its revolutionary contribution was **polymorphic type inference**—the Hindley-Milner type system.
+At the **University of Edinburgh** in the 1970s, **Robin Milner** created ML (Meta Language) as a tool for the LCF theorem prover. While ML inherited functional features from LISP, its major contribution was **polymorphic type inference**, the Hindley-Milner type system.
 
 Milner's Algorithm W infers the most general type for any expression without requiring programmer annotations. The type ∀α. α → α for the identity function says it works for any type—genuine polymorphism without sacrificing type safety. **Roger Hindley** had independently discovered principal types in combinatory logic in 1969; Milner's contribution was making this practical for programming.
 
@@ -234,9 +234,9 @@ The **state explosion problem**—exponential growth of state spaces—drove inn
 
 ### The LCF architecture
 
-**Robin Milner's** Edinburgh LCF (1970s) established the dominant architecture for proof assistants. Theorems are represented as an **abstract data type** whose only constructors are inference rules. Users write arbitrary ML programs to find proofs, but validity is guaranteed by the type system—no matter how complex the proof search, only genuine proofs can have type `theorem`.
+**Robin Milner's** Edinburgh LCF (1970s) established a highly influential architecture for proof assistants. Theorems are represented as an **abstract data type** whose constructors are inference rules. Users write arbitrary ML programs to find proofs, but validity is guaranteed by the type system; no matter how complex the proof search, only genuine proofs can have type `theorem`.
 
-This **LCF approach** influenced most subsequent systems: Cambridge LCF, HOL, HOL Light, and Isabelle. The architecture trades efficiency for trustworthiness, keeping the trusted computing base minimal.
+This **LCF approach** influenced many subsequent systems: Cambridge LCF, HOL, HOL Light, and Isabelle. The architecture trades efficiency for trustworthiness, keeping the trusted computing base minimal.
 
 ### Coq and the Calculus of Constructions
 
@@ -254,13 +254,13 @@ Coq enabled unprecedented formalizations: Georges Gonthier's proof of the **Four
 
 The geography of computing theory reflects the concentration of talent at specific institutions during critical periods.
 
-**Princeton** (1930s–40s): Church's lambda calculus; Turing's PhD; Gödel after emigrating; the center of computability theory.
+**Princeton** (1930s–40s): Church's lambda calculus; Turing's PhD; Gödel after emigrating; a major center of computability theory.
 
 **Cambridge** (1930s–50s, 1980s–present): Turing's original work; later, Gordon's HOL, Paulson's Isabelle, Milner's later career.
 
 **Göttingen** (1900s–1930s): Hilbert's program; the mathematical establishment before Nazi persecution dispersed it.
 
-**Edinburgh** (1970s–80s): Milner's ML and LCF; Burstall and Plotkin's semantics; the Logic for Computable Functions project; a golden age of programming language theory.
+**Edinburgh** (1970s–80s): Milner's ML and LCF; Burstall and Plotkin's semantics; the Logic for Computable Functions project; an especially productive period in programming language theory.
 
 **INRIA** (1980s–present): Coq proof assistant; OCaml; French formal methods tradition.
 
@@ -356,6 +356,6 @@ The intellectual history of computer science reveals a discipline built on profo
 
 The **Curry-Howard correspondence** unified two seemingly unrelated fields: a proof is a program, a proposition is a type, and proof normalization is computation. This insight transformed type systems from error-catching mechanisms into tools for verifying program correctness, enabling proof assistants that have now formalized major mathematical theorems.
 
-**Functional programming** descended directly from lambda calculus through LISP, ML, and Haskell—perhaps the clearest case of mathematical theory becoming practical technology. **Type theory** evolved from Russell's paradox-prevention into sophisticated systems guaranteeing properties ranging from memory safety to full functional correctness.
+**Functional programming** descended directly from lambda calculus through LISP, ML, and Haskell, one of the clearest cases of mathematical theory becoming practical technology. **Type theory** evolved from Russell's paradox-prevention into sophisticated systems guaranteeing properties ranging from memory safety to full functional correctness.
 
 The field continues evolving: dependent types move from proof assistants into languages like Idris; linear types appear in Rust; gradual typing bridges static and dynamic worlds. But these innovations rest on foundations laid between 1879 and 1948—a remarkable period when mathematicians asking abstract questions about logic, proof, and decidability inadvertently created the theoretical basis for the computational world we inhabit.
