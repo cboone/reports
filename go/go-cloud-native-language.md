@@ -6,7 +6,7 @@ created: 2026-01-30
 
 _January 30, 2026_
 
-Go emerged from Google in 2009 as a deliberate answer to software engineering at scale—born from **45-minute C++ compilation times** and the realization that mainstream languages forced an impossible choice between fast compilation, efficient execution, and ease of programming. Created by three computing legends—Ken Thompson (Unix co-creator, Turing Award winner), Rob Pike (Plan 9, UTF-8 co-creator), and Robert Griesemer (V8, HotSpot JVM)—Go combined C's efficiency with garbage collection and built-in concurrency primitives based on Tony Hoare's Communicating Sequential Processes. The result transformed cloud infrastructure: **over 75% of Cloud Native Computing Foundation projects** are now written in Go, including Docker, Kubernetes, and Terraform. Go 1.0's 2012 compatibility promise remains unbroken, and the language continues evolving with generics arriving in 2022 and performance optimizations like the Green Tea garbage collector in 2025.
+Go emerged from Google in 2009 as a deliberate answer to software engineering at scale, born from **45-minute C++ compilation times** and the realization that mainstream languages forced an impossible choice between fast compilation, efficient execution, and ease of programming. Created by three computing legends, Ken Thompson (Unix co-creator, Turing Award winner), Rob Pike (Plan 9, UTF-8 co-creator), and Robert Griesemer (V8, HotSpot JVM), Go combined C's efficiency with garbage collection and built-in concurrency primitives based on Tony Hoare's Communicating Sequential Processes. The result transformed cloud infrastructure: Go now powers a large share of the Cloud Native Computing Foundation ecosystem, including Docker, Kubernetes, and Terraform. Go 1.0's 2012 compatibility promise remains unbroken, and the language continues evolving with generics arriving in 2022 and ongoing runtime work such as the experimental Green Tea garbage collector path in 2025.
 
 ---
 
@@ -38,7 +38,7 @@ Go uniquely bridges European and American programming language traditions. From 
 
 The concurrency model traces through Rob Pike's own prior languages. **Newsqueak** (1989) contributed the `<-` channel operator and `:=` declaration syntax. **Limbo** (1995), created for the Inferno operating system, provided the channel-based concurrency model and garbage collection. **Alef** (1992), Plan 9's concurrent language, demonstrated CSP concurrency for systems programming but failed because, as Pike noted, "Alef proved too difficult to maintain. Concurrency is hard without garbage collection."
 
-The theoretical foundation came from **Tony Hoare's 1978 CSP paper**, "Communicating Sequential Processes"—the third most-cited computer science paper ever published. Go's famous proverb captures its essence: "Don't communicate by sharing memory; share memory by communicating."
+The theoretical foundation came from **Tony Hoare's 1978 CSP paper**, "Communicating Sequential Processes," one of the most influential papers in concurrent programming. Go's famous proverb captures its essence: "Don't communicate by sharing memory; share memory by communicating."
 
 What Go explicitly rejected proved as important as what it adopted: no type hierarchy or inheritance (composition instead), no exceptions (explicit error returns), no implicit numeric conversions, no pointer arithmetic, no default function arguments, no method overloading. These omissions were deliberate design choices, not oversights.
 
@@ -66,8 +66,8 @@ What Go explicitly rejected proved as important as what it adopted: no type hier
 | February 6, 2024 | Go 1.22: Loop variable fix, improved HTTP routing |
 | August 13, 2024 | Go 1.23: Iterators (range over functions) |
 | September 1, 2024 | Austin Clements becomes Tech Lead (Russ Cox steps down) |
-| **February 2025** | **Go 1.24: Swiss Tables maps (60% faster), post-quantum crypto** |
-| August 2025 | Go 1.25: Green Tea GC (10-40% overhead reduction) |
+| **February 2025** | **Go 1.24: Swiss Tables map implementation, post-quantum crypto support** |
+| August 2025 | Go 1.25: Experimental Green Tea GC path (10-40% overhead reduction reported in release notes) |
 
 ---
 
@@ -120,13 +120,13 @@ The scheduler evolved significantly: Go 1.1 introduced the GMP model, Go 1.2 add
 
 ## Garbage collection: From stop-the-world to sub-millisecond
 
-Go's garbage collector has transformed from a liability into an engineering achievement. Early versions used stop-the-world mark-and-sweep with pauses of **hundreds of milliseconds**. Today's collector achieves **sub-100-microsecond pauses**.
+Go's garbage collector has transformed from a liability into an engineering achievement. Early versions used stop-the-world mark-and-sweep with pauses of **hundreds of milliseconds**. Modern releases routinely keep pauses in the sub-millisecond range under typical production workloads.
 
 The turning point came in **Go 1.5 (2015)** with a concurrent tri-color mark-and-sweep algorithm. Objects are classified as white (candidates for collection), gray (reachable but children not yet scanned), or black (fully scanned). The collector works concurrently with the mutator (application code), requiring only two brief stop-the-world phases for setup and termination.
 
 **Go 1.8 (2017)** introduced the hybrid write barrier, combining insertion and deletion barriers to eliminate stack rescanning and reduce pauses below **500 microseconds**. Subsequent releases refined the pacer (which determines when to trigger collection) and improved memory management.
 
-**Go 1.25 (2025)** introduced the experimental **Green Tea algorithm**, achieving 10-40% reduction in GC overhead through span-based collection. The `GOGC` environment variable controls collection frequency—the default value of 100 triggers GC when heap size doubles, while `GOMEMLIMIT` (Go 1.19+) sets a hard memory ceiling.
+**Go 1.25 (2025)** introduced the experimental **Green Tea** path (`GOEXPERIMENT=greenteagc`), with release notes citing 10-40% reduction in GC overhead for GC-heavy programs. The `GOGC` environment variable controls collection frequency, the default value of 100 triggers GC when heap size doubles, while `GOMEMLIMIT` (Go 1.19+) sets a hard memory ceiling.
 
 Go's GC is non-generational (no young/old heap split) and non-compacting (objects aren't moved), trading some throughput for implementation simplicity and predictable pointer behavior.
 
@@ -311,7 +311,7 @@ The **race detector** (`-race` flag) instruments code to detect data races at ru
 
 ## Where Go dominates: Cloud infrastructure
 
-Go has become the lingua franca of cloud infrastructure. **Over 75% of CNCF projects** are written in Go, including the foundational tools that define modern deployment.
+Go has become a lingua franca of cloud infrastructure, with many CNCF projects and core platform tools written in Go.
 
 **Docker** (2013) made Go's reputation. The container platform's need for fast development of distributed systems, easy packaging, and minimal dependencies matched Go's strengths perfectly.
 
@@ -341,7 +341,7 @@ The monitoring ecosystem followed: **Prometheus** (metrics), **Grafana** (visual
 
 Go follows a "batteries included" approach. The `net/http` package provides production-ready HTTP client and server capabilities—many companies use it directly in production without frameworks. Built-in `encoding/json`, `database/sql`, and comprehensive `crypto` packages reduce external dependencies.
 
-Web frameworks exist—**Gin** (~80k GitHub stars, ~48% adoption), **Echo**, **Fiber**, **Chi**—but the community generally prefers stdlib first. **Go 1.22** enhanced `http.ServeMux` with pattern routing, reducing the need for external routers.
+Web frameworks exist, including **Gin**, **Echo**, **Fiber**, and **Chi**, but the community generally prefers stdlib-first designs for many services. **Go 1.22** enhanced `http.ServeMux` with pattern routing, reducing the need for external routers in straightforward cases.
 
 For CLI applications, **Cobra** (used by Docker, Kubernetes, GitHub CLI) and **Viper** (configuration management) form the de facto standard stack.
 
@@ -373,7 +373,7 @@ Error handling differs fundamentally: Go uses explicit return values that must b
 
 ### Go versus Python
 
-Go runs **10-40x faster** than Python for CPU-bound tasks and uses **4-5x less memory**. In web service benchmarks, Go handled 2,584 requests/second versus Python's 341. Go's deployment story—single binary, no dependencies—eliminates Python's virtualenv complexity.
+Go often runs dramatically faster than Python for CPU-bound tasks and typically uses less memory in production services. In web and API workloads, exact speedups vary by framework, payload, and deployment model, but Go's native compilation and lightweight concurrency are usually advantageous. Go's deployment story, single binary with minimal runtime dependencies, also avoids much of Python's environment-management overhead.
 
 Python's Global Interpreter Lock limits true parallelism; Go's goroutines utilize all available cores. However, Python dominates data science, machine learning, and rapid prototyping where its ecosystem has no peer.
 
@@ -389,7 +389,7 @@ Robert Griesemer studied under Wirth at ETH Zurich. The Oberon motto "Make thing
 
 Go's development continues under new leadership. **Austin Clements** became Tech Lead in September 2024, with Russ Cox stepping down after 12+ years. Cherry Mui leads Go Core (compiler, runtime, releases), Roland Shoemaker leads Go Security.
 
-**Go 1.24 (February 2025)** delivered significant performance improvements: Swiss Tables map implementation achieving up to **60% faster** operations, **2-3% CPU overhead reduction** across benchmarks, and first post-quantum cryptography support (`crypto/mlkem`).
+**Go 1.24 (February 2025)** delivered significant runtime and library improvements: a Swiss Tables-inspired map implementation, an average **2-3% CPU overhead reduction** across representative benchmarks, and first-class post-quantum cryptography support (`crypto/mlkem`).
 
 **Go 1.25 (August 2025)** introduced the experimental Green Tea garbage collector with **10-40% overhead reduction** and container-aware GOMAXPROCS that automatically detects container CPU limits.
 
@@ -401,7 +401,7 @@ The Go team definitively closed one debate: syntactic error handling. After the 
 
 ### Market position
 
-Go reached **#7 on the TIOBE Index** in November 2024—its all-time high. GitHub's Octoverse 2024 reported Go as the third fastest-growing language. JetBrains estimates **4.1-5.8 million Go developers** worldwide. According to Cloudflare Radar 2024, Go overtook Node.js for automated API traffic, handling **12% of all API requests**.
+Go reached **#7 on the TIOBE Index** in November 2024, its all-time high at that point. GitHub's Octoverse 2024 reported Go as one of the faster-growing languages, and JetBrains estimated **4.1-5.8 million Go developers** worldwide. Cloudflare Radar trend data also highlighted Go's growing share in automated API traffic.
 
 ---
 

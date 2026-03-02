@@ -10,7 +10,7 @@ Terminal emulators on macOS have evolved dramatically, with **GPU-accelerated re
 
 ## Performance leaders differ by metric
 
-Raw throughput and input latency tell different stories. **Alacritty leads in raw throughput** at 2.5-9× faster scrolling than competitors on vtebench, while **Kitty achieves the lowest latency** at 29.2ms on macOS with proper tuning. Ghostty's SIMD-optimized UTF-8 processing delivers **4× faster plain text reading than iTerm2** and matches Alacritty's speed.
+Raw throughput and input latency tell different stories. Alacritty often leads raw throughput in vtebench-style workloads, while tuned Kitty and Alacritty configurations frequently lead interactive latency measurements. Ghostty's SIMD-focused text pipeline has shown strong UTF-8 throughput in project and independent benchmarks.
 
 Memory efficiency varies substantially across implementations:
 
@@ -25,7 +25,7 @@ Memory efficiency varies substantially across implementations:
 | Warp | 100-600MB | Metal | ~150ms |
 | Rio | ~48MB (optimized) | WebGPU/Metal | <100ms |
 
-iTerm2's architectural limitation—reading and writing data on the main thread—causes throughput bottlenecks during heavy output, taking nearly an hour for operations that Alacritty completes in three minutes. Warp's benchmarks show **90% faster scrolling than iTerm2** but trails Alacritty in dense cell rendering. Rio's v0.2.x releases achieved **83% GPU memory reduction** and **96% text shaping overhead reduction** through aggressive caching.
+iTerm2's architectural limitation, reading and writing data on the main thread, can create throughput bottlenecks during sustained heavy output. Warp's published benchmarks show clear gains over iTerm2 in scrolling-heavy scenarios, while still trailing Alacritty in dense-cell rendering tests. Rio's v0.2.x release notes report substantial reductions in GPU memory use and text-shaping overhead through aggressive caching.
 
 ## Graphics protocol adoption defines capability tiers
 
@@ -42,13 +42,13 @@ Three competing protocols fragment the terminal graphics ecosystem. **WezTerm un
 | Warp | ✗ | Partial | ✗ | ✓ |
 | Terminal.app | ✗ | ✗ | ✗ | Coming macOS 26 |
 
-Kitty's maintainer Kovid Goyal explicitly refuses Sixel support, calling it "an ancient protocol that is inferior" to the Kitty Graphics Protocol's full RGBA transparency, GPU acceleration, and animation capabilities. Ghostty similarly declined Sixel, citing "fundamental issues" and recommending Kitty Graphics instead. The **Kitty Graphics Protocol** now enjoys support in Kitty, WezTerm, Ghostty, and Konsole—increasingly becoming the modern standard despite narrower adoption than legacy Sixel.
+Kitty's maintainer Kovid Goyal explicitly refuses Sixel support, calling it "an ancient protocol that is inferior" to the Kitty Graphics Protocol's full RGBA transparency, GPU acceleration, and animation capabilities. Ghostty similarly declined Sixel, citing "fundamental issues" and recommending Kitty Graphics instead. The **Kitty Graphics Protocol** now enjoys support in Kitty, WezTerm, Ghostty, and Konsole, increasingly becoming a modern default among fast-moving terminals even though Sixel still has legacy reach.
 
 Terminal.app's **lack of 24-bit true color until macOS 26 (Tahoe)** remains its most significant limitation, constraining users to 256-color palettes while every third-party terminal supports 16.7 million colors.
 
 ## Unicode and emoji handling reveals implementation quality
 
-Proper grapheme cluster handling—essential for emoji sequences with skin tone modifiers, flags, and ZWJ combinations—separates mature implementations from basic compliance. **Kitty's v0.40 text sizing protocol** allows programs to control character cell widths, "solving the issue of character width once and for all" according to its documentation.
+Proper grapheme cluster handling, essential for emoji sequences with skin tone modifiers, flags, and ZWJ combinations, separates mature implementations from basic compliance. Kitty's text sizing protocol lets programs negotiate character cell metrics to reduce width mismatches across terminals and fonts.
 
 Alacritty added **Unicode 17 support** in v0.16.0 (October 2025) but struggles with emoji modifiers requiring careful font configuration. Ghostty implements grapheme-aware terminal emulation with proper break detection, rendering multi-codepoint emoji correctly as single characters. iTerm2 offers selectable Unicode version tables (8 or 9) via escape sequences, supporting combining marks, full-width characters, and HFS+ normalization.
 
@@ -58,7 +58,7 @@ Rio's built-in Twemoji rendering and **Unicode 16 support** (v0.2.3+) includes a
 
 **iTerm2 remains the most deeply integrated** with macOS-specific features: native tmux control mode converting tmux windows to native tabs, 1Password and KeePassXC integration, Touch Bar customization, and a Python scripting API with 15+ modules. Its v3.6.x releases added **Liquid Glass effects** for macOS Tahoe and support for self-hosted AI models.
 
-Ghostty's native Swift/SwiftUI implementation provides genuine macOS-native behavior: Quick Terminal (Quake-style dropdown), Force Touch support, proxy icons, and **undo/redo for closed windows**—keeping terminals running hidden for configurable periods. Its **Apple Shortcuts integration** enables automation without scripting. However, Ghostty still lacks scrollback search and scrollbars, both planned for v1.3 (March 2026).
+Ghostty's native Swift/SwiftUI implementation provides genuine macOS-native behavior: Quick Terminal (Quake-style dropdown), Force Touch support, proxy icons, and **undo/redo for closed windows** that can keep terminals running hidden for configurable periods. Its **Apple Shortcuts integration** enables automation without scripting. Search and full scrollback ergonomics have historically lagged iTerm2 and Kitty in stable releases.
 
 | Feature | iTerm2 | Ghostty | Kitty | Alacritty | WezTerm | Warp |
 |---------|--------|---------|-------|-----------|---------|------|
@@ -67,7 +67,7 @@ Ghostty's native Swift/SwiftUI implementation provides genuine macOS-native beha
 | Hotkey Window | ✓ | ✓ | ✓ (v0.42+) | ✗ | ✓ | ✓ |
 | tmux Integration | Control mode | Passthrough | Opposed | Recommended | SSH domains | Warpify |
 | Scripting | Python API | Apple Shortcuts | Python kittens | IPC only | Lua | Workflows |
-| Search | ✓ | Coming v1.3 | ✓ | ✓ | ✓ | ✓ |
+| Search | ✓ | Evolving | ✓ | ✓ | ✓ | ✓ |
 
 Terminal.app's **absence of split panes** remains its most significant UX gap—users must rely on separate windows or tmux. macOS Tahoe will finally bring true color and Powerline font support to Terminal.app, representing "a long-overdue modernization" after two decades of stagnation.
 
@@ -91,7 +91,7 @@ Ghostty targets zero-configuration usability with sensible defaults, hundreds of
 
 ## Warp's AI integration reshapes terminal workflows
 
-Warp stands apart with **native AI integration** transforming terminal interaction. Natural language queries prefixed with `#` translate to commands, Agent Mode executes multi-step tasks autonomously, and error explanation happens inline. The June 2025 "Warp 2.0" release introduced full terminal capabilities for AI agents, achieving **52% task completion** on Terminal-Bench (state-of-the-art) and ranking #5 on SWE-bench Verified.
+Warp stands apart with **native AI integration** transforming terminal interaction. Natural language queries prefixed with `#` translate to commands, Agent Mode executes multi-step tasks autonomously, and error explanation happens inline. The June 2025 "Warp 2.0" release introduced fuller terminal capabilities for AI agents, and Warp reports competitive results on Terminal-Bench and SWE-bench-style evaluations.
 
 The **block-based interface** groups commands and outputs into discrete units with permalinks for sharing, sticky headers for context, and filtering capabilities. Warp Drive provides cloud-synchronized workflows, notebooks, and team collaboration features.
 
@@ -117,7 +117,7 @@ Input latency measurements using Typometer reveal that **GPU acceleration doesn'
 | WezTerm | ~30-35ms |
 | Hyper | ~40ms |
 
-Kitty achieves near-xterm latency when tuned with `input_delay=0`, `repaint_delay=2`, and `sync_to_monitor=no`, becoming **twice as fast as iTerm2 and Alacritty** in some configurations. Alacritty's OpenGL initialization overhead slightly increases cold-start latency compared to pure CPU-based terminals, though its daemon mode (`--daemon` flag since v0.14.0) mitigates subsequent launches.
+Kitty achieves near-xterm latency when tuned with `input_delay=0`, `repaint_delay=2`, and `sync_to_monitor=no`, often outperforming iTerm2 and sometimes matching or beating Alacritty depending on the workload and measurement setup. Alacritty's OpenGL initialization overhead can slightly increase cold-start latency compared to pure CPU-based terminals, though its daemon mode (`--daemon` flag since v0.14.0) mitigates subsequent launches.
 
 Ghostty's 13ms latency—comparable to VS Code's integrated terminal—reflects its balance between features and performance rather than pure speed optimization. Mitchell Hashimoto's stated goal: being "in the same class as the fastest terminal emulators" while prioritizing real-world optimizations over synthetic benchmarks.
 
@@ -170,7 +170,7 @@ All reviewed terminals except Warp and Terminal.app are fully open source:
 | Rio | MIT | v0.2.38 (Jan 2026) | ~5,900 |
 | Warp | Proprietary | Weekly updates | — |
 
-Ghostty transitioned to **nonprofit status via Hack Club fiscal sponsorship**, explicitly avoiding VC funding and commercialization. Mitchell Hashimoto remains the primary developer working on it as a passion project. The project reached 1.2.0 with 149 contributors and 2,676 commits in September 2025.
+Ghostty transitioned to **nonprofit status via Hack Club fiscal sponsorship**, explicitly avoiding VC funding and commercialization. Mitchell Hashimoto remains the primary driver, supported by a growing open-source contributor base and a rapid release cadence.
 
 Kitty's maintainer Kovid Goyal (also creator of Calibre) maintains strong opinions—opposing tmux integration and Sixel support—that shape the project's direction. Regular monthly releases demonstrate sustained commitment.
 
