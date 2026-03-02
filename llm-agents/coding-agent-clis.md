@@ -630,13 +630,13 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 **Local model support is now common but rarely primary.** Many tools support Ollama, but community discussions often report that local models underperform cloud models for complex coding tasks. Local support matters for privacy-sensitive environments and experimentation, but frontier cloud models remain the primary productivity drivers for many teams.
 
-**Terminal-Bench is emerging as an important benchmark.** Just as SWE-bench standardized evaluation for research agents, Terminal-Bench (where Droid has a reported high score at 58.75%) is becoming a key benchmark for CLI coding tools in real-world terminal scenarios.
+**Terminal-Bench is emerging as a useful benchmark.** Just as SWE-bench standardized evaluation for research agents, Terminal-Bench (where Droid has a reported high score at 58.75%) is becoming a key benchmark for CLI coding tools in real-world terminal scenarios.
 
 **The "why CLI over IDE?" question is often answered in favor of CLI for certain workflows.** HN and Reddit discussions converge on recurring advantages: cost savings (no IDE subscription), better separation of concerns (agent in separate worktree), higher-quality interactions (deliberate prompting vs. autocomplete), SSH compatibility, and composability (terminal is the natural interface for tool use).
 
 ### Most mature tools
 
-**Aider** is a well-established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported high weekly token volume, and 230+ contributors. **Claude Code** is often viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
+**Aider** is a well-established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported large weekly token volume, and 230+ contributors. **Claude Code** is often viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
 
 ### Most promising tools
 
@@ -644,7 +644,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Gaps in the market
 
-**Few tools currently combine all three dimensions well: reasoning quality + model flexibility + strong sandboxing.** Claude Code is often strong on reasoning but locked to Anthropic. Codex CLI is often strong on sandboxing but tied closely to OpenAI. Aider has flexible model options but no built-in sandboxing. A tool that combines all three could become category-defining.
+**Few tools currently combine all three dimensions well: reasoning quality + model flexibility + strong sandboxing.** Claude Code is often strong on reasoning but locked to Anthropic. Codex CLI is often strong on sandboxing but tied closely to OpenAI. Aider has flexible model options but no built-in sandboxing. A tool that combines all three could become a major differentiator.
 
 **Code review is underserved.** While several tools offer code review features, few CLI tools are purpose-built for AI-assisted code review workflows. Devin's `npx devin-review` and Codex's review agent are early entries but neither is comprehensive.
 

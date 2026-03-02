@@ -109,9 +109,9 @@ One notable trend is the convergence around `AGENTS.md` as a cross-tool standard
 
 ## Concrete Recommendations
 
-### 1. Make AGENTS.md your primary source of truth
+### 1. Make AGENTS.md your main shared source of truth
 
-Put your core project instructions in `AGENTS.md` at the repo root. This is the primary file that works natively across Codex, Copilot, and OpenCode. Structure it with clear Markdown headings:
+Put your core project instructions in `AGENTS.md` at the repo root. This is the main file that works natively across Codex, Copilot, and OpenCode. Structure it with clear Markdown headings:
 
 ```markdown
 # AGENTS.md
@@ -249,7 +249,7 @@ ln -sfn ~/.agents/AGENTS.md ~/.config/opencode/AGENTS.md
 
 ## Summary
 
-AGENTS.md is increasingly used as a cross-tool standard, with backing from the Linux Foundation and native support in Codex, Copilot, and OpenCode. Claude Code is the one tool in this comparison that requires its own filename, but a symlink or Codex fallback config can bridge the gap.
+AGENTS.md is increasingly used as a cross-tool convention, with backing from the Linux Foundation and native support in Codex, Copilot, and OpenCode. Claude Code is the one tool in this comparison that requires its own filename, but a symlink or Codex fallback config can bridge the gap.
 
 The practical strategy is a hub-and-spoke model: AGENTS.md is the hub containing core project instructions, and tool-specific locations (`.claude/rules/`, `.github/instructions/`, skills directories) are spokes that add capabilities the hub can't express. Skills handle context bloat by loading detailed instructions on demand rather than eagerly.
 

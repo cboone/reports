@@ -717,7 +717,7 @@ An early writeup of the pattern, predating many of the tools above. Describes an
 
 ### "I want a proper mission control TUI for many concurrent sessions"
 
-**→ agent-deck** if you want a polished TUI with session forking, MCP management, and tmux status bar integration. **→ ccmanager** if you need broad agent support (8+ agents), devcontainer sandboxing, or AI-powered auto-approval. **→ claude-squad** if you want an established option with a large community.
+**→ agent-deck** if you want a polished TUI with session forking, MCP management, and tmux status bar integration. **→ ccmanager** if you need broad multi-agent support (8+ agents), devcontainer sandboxing, or AI-powered auto-approval. **→ claude-squad** if you want an established option with a large community.
 
 ### "I need Docker/container isolation for security"
 

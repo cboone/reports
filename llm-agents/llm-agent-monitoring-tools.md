@@ -213,7 +213,7 @@ Full desktop applications focused on running multiple agent sessions with visual
   - Asynchronous execution — delegate tasks and walk away
   - Detailed dashboards and task tracking
   - Also has a VS Code extension variant
-- **Notes:** Commercial product. One of the few paid standalone desktop apps in this space. Public materials claim competitive SWE-bench Verified performance in production-agent benchmarks.
+- **Notes:** Commercial product and a paid standalone desktop app in this space. Public materials claim competitive SWE-bench Verified performance in production-agent benchmarks.
 
 ---
 
