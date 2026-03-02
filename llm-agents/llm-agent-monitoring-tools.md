@@ -199,7 +199,7 @@ Full desktop applications focused on running multiple agent sessions with visual
   - Desktop notifications when sessions need input
   - Multiple agents per worktree support
   - Nimbalyst integration
-- **Notes:** Self-described as the first "IVE" (Integrated Vibe Environment). Very actively developed with frequent releases.
+- **Notes:** Self-described as the first "IVE" (Integrated Vibe Environment). Actively developed with frequent releases.
 
 ### Verdent Deck
 
@@ -211,7 +211,7 @@ Full desktop applications focused on running multiple agent sessions with visual
   - DiffLens for code diffs, timelines, and causal flows
   - Plan-first alignment with verification
   - Asynchronous execution — delegate tasks and walk away
-  - Comprehensive dashboards and task tracking
+  - Detailed dashboards and task tracking
   - Also has a VS Code extension variant
 - **Notes:** Commercial product. One of the few paid standalone desktop apps in this space. Public materials claim strong SWE-bench Verified performance among production agents.
 
@@ -426,13 +426,13 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 - **GitHub:** [langfuse/langfuse](https://github.com/langfuse/langfuse)
 - **Website:** [langfuse.com](https://langfuse.com)
 - **Pricing:** Free (self-hosted), Cloud from $29/mo
-- **Key Strengths:** Open source, self-hostable, strong community, prompt versioning, session-based analysis, human annotation queues
+- **Key Strengths:** Open source, self-hostable, active community, prompt versioning, session-based analysis, human annotation queues
 - **Best For:** Teams wanting full data control with self-hosting
 
 ### LangSmith
 
 - **Website:** [smith.langchain.com](https://smith.langchain.com)
-- **Key Strengths:** Deep LangChain integration, low overhead in vendor benchmarks, strong tracing
+- **Key Strengths:** Deep LangChain integration, low overhead in vendor benchmarks, detailed tracing
 - **Best For:** Teams building with LangChain/LangGraph
 
 ### LangWatch
@@ -444,7 +444,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 ### Braintrust
 
 - **Website:** [braintrust.dev](https://www.braintrust.dev)
-- **Key Strengths:** CI/CD integration for evals, dataset versioning, webhook alerts, strong cost attribution
+- **Key Strengths:** CI/CD integration for evals, dataset versioning, webhook alerts, granular cost attribution
 - **Best For:** Teams focused on continuous quality and evaluation
 
 ### Helicone (Open Source)
@@ -463,7 +463,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 ### Arize AI (Phoenix)
 
 - **Website:** [arize.com](https://arize.com)
-- **Key Strengths:** Advanced drift detection for embeddings/LLM outputs, strong ML monitoring pedigree, enterprise-grade
+- **Key Strengths:** Advanced drift detection for embeddings/LLM outputs, established ML monitoring pedigree, enterprise-grade
 - **Best For:** Enterprises with existing ML infrastructure
 
 ### Datadog LLM Observability

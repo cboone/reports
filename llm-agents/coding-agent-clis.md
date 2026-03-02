@@ -42,7 +42,7 @@ The original open-source AI pair programming tool for the terminal. **~40,500 Gi
 - **License:** Apache 2.0
 - **Agent type:** Single-agent with architect+editor dual-model mode
 - **Status:** Very active, 230+ contributors
-- **Distinguishing:** One of the broadest model support sets in this category. Git-first philosophy means AI changes are usually captured as clean commits. Strong SWE-Bench results in published materials. Well-established and mature in practice. Repo map feature gives strong codebase understanding. Steep learning curve but powerful once mastered.
+- **Distinguishing:** One of the broadest model support sets in this category. Git-first philosophy means AI changes are usually captured as clean commits. Competitive SWE-Bench results in published materials. Well-established and mature in practice. Repo map feature gives strong codebase understanding. Steep learning curve but powerful once mastered.
 
 ### OpenAI Codex CLI
 
@@ -56,7 +56,7 @@ Lightweight coding agent from OpenAI with built-in sandboxed execution. **~50,50
 - **License:** Apache 2.0
 - **Agent type:** Single-agent with code review sub-agent
 - **Status:** Very active, $1M open-source grant initiative
-- **Distinguishing:** **A strong sandboxing/security model** among CLI agents, including network isolation in full-auto mode. Rust performance. Works with ChatGPT subscription. HN consensus: better for greenfield solo projects and parallel agents; weaker on documentation tasks where it can hallucinate.
+- **Distinguishing:** **A comparatively strong sandboxing/security model** among CLI agents, including network isolation in full-auto mode. Rust performance. Works with ChatGPT subscription. HN consensus: better for greenfield solo projects and parallel agents; weaker on documentation tasks where it can hallucinate.
 
 ### OpenCode (formerly SST project)
 
@@ -239,7 +239,7 @@ Open-source CLI coding agent optimized for Qwen3-Coder, forked from Gemini CLI. 
 - **Language:** TypeScript
 - **License:** Apache 2.0
 - **Status:** Active (launched July 2025)
-- **Distinguishing:** One of the stronger free tiers from a major lab (1,000 req/day). Open-source model weights. Qwen3-Coder-480B posts competitive coding benchmark results against frontier models.
+- **Distinguishing:** A strong free tier from a major lab (1,000 req/day). Open-source model weights. Qwen3-Coder-480B posts competitive coding benchmark results against frontier models.
 
 ### Kimi Code CLI (Moonshot AI)
 
@@ -620,7 +620,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Seven key trends shaping the landscape
 
-**MCP as broadly adopted standard.** Model Context Protocol has become a leading extensibility mechanism. Many major tools now support MCP, creating a shared ecosystem of tools and integrations. This is a major structural development; it means tools are becoming more interoperable rather than fully siloed.
+**MCP as broadly adopted standard.** Model Context Protocol has become a widely used extensibility mechanism. Many major tools now support MCP, creating a shared ecosystem of tools and integrations. This is a major structural development; it means tools are becoming more interoperable rather than fully siloed.
 
 **Multi-agent orchestration is a growing category.** Six months ago, Claude Squad didn't exist. Now there are many tools for managing multiple agents simultaneously. This reflects a workflow shift: developers increasingly run 2-3 agents on different tasks in parallel rather than using one agent sequentially.
 

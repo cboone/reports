@@ -26,7 +26,7 @@ Many major AI coding agents read some form of Markdown instruction file from you
 | **Override mechanism** | Subdirectory files supplement parent | `AGENTS.override.md` in any dir; later files override earlier | Path-specific instructions supplement repo-wide | Invocation control: user-only, model-invokable, or both |
 | **Init command** | `/init` generates starter file | `/init` in OpenCode and Codex scans project | Copilot coding agent auto-suggests on first PR; `/init` in VS Code | `/skills` or `$skill-installer` |
 | **Live editing** | Ask Claude to edit the file directly | Manual editing | Manual editing | Direct file editing |
-| **Cross-tool support** | Claude Code only (but Copilot reads it as a fallback at root) | **Very broad**: Codex, Copilot, OpenCode, plus Gemini CLI, Cursor, Zed, Roo Code, Kilo Code, Amp, Jules, and many more | Copilot ecosystem (VS Code, JetBrains, GitHub.com); also reads `AGENTS.md` | Claude Code + Codex (open standard) |
+| **Cross-tool support** | Claude Code only (but Copilot reads it as a fallback at root) | **Broad**: Codex, Copilot, OpenCode, plus Gemini CLI, Cursor, Zed, Roo Code, Kilo Code, Amp, Jules, and many more | Copilot ecosystem (VS Code, JetBrains, GitHub.com); also reads `AGENTS.md` | Claude Code + Codex (open standard) |
 | **Recommended length** | Under 300 lines; fewer is better | No official limit; same general "keep it lean" advice | Short, self-contained statements; 10–20 instructions to start | Focused per-skill; reference files loaded on-demand |
 | **Version control** | Yes, commit to repo | Yes, commit to repo | Yes, in `.github/` | Yes, in `.claude/skills/` or `.agents/skills/` |
 
@@ -44,7 +44,7 @@ Key limitation: Claude Code-specific. None of the other tools in this comparison
 
 ### AGENTS.md (Linux Foundation — Open Standard)
 
-This is the emerging industry standard, now stewarded by the Agentic AI Foundation under the Linux Foundation. It originated from collaborative efforts by OpenAI (Codex), Google (Jules), Cursor, Amp, and Factory. The format is intentionally minimal: just Markdown with whatever headings you want. No special syntax, no required frontmatter, no schema to validate against.
+This is an emerging cross-tool standard, now stewarded by the Agentic AI Foundation under the Linux Foundation. It originated from collaborative efforts by OpenAI (Codex), Google (Jules), Cursor, Amp, and Factory. The format is intentionally minimal: just Markdown with whatever headings you want. No special syntax, no required frontmatter, no schema to validate against.
 
 The adoption is broad and growing. Among the tools covered here: Codex uses it as the primary instruction file (having migrated from `codex.md`), Copilot reads it alongside its own format, and OpenCode uses it natively. Public repository counts suggest that tens of thousands of open-source projects already have an `AGENTS.md`.
 

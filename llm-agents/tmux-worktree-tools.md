@@ -87,7 +87,7 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 | **Language** | TypeScript (Node.js) |
 | **Install** | `npx ccmanager` |
 | **Supported Agents** | Claude Code, Gemini CLI, Codex CLI, Cursor Agent, Copilot CLI, Cline CLI, OpenCode, Kimi CLI |
-| **Maturity** | Feature-rich; one of the broadest agent support sets among listed tools |
+| **Maturity** | Feature-rich; broad agent support among listed tools |
 
 **Overview.** ccmanager is a feature-dense tool in this category, supporting a wide range of coding agents while being completely self-contained, and it does not require tmux to be installed. It manages sessions, worktrees, and the full agent lifecycle with an extensive set of advanced capabilities.
 
@@ -114,7 +114,7 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 | **Language** | Go (Bubble Tea TUI framework) |
 | **Install** | Installer script or `make build` |
 | **Supported Agents** | Claude Code, Gemini CLI, OpenCode, Codex CLI, and more |
-| **Maturity** | Active development; comprehensive documentation |
+| **Maturity** | Active development; detailed documentation |
 
 **Overview.** agent-deck brands itself as "mission control for your AI coding agents" and focuses on the experience of managing many concurrent sessions efficiently. It adds AI-specific intelligence on top of tmux: smart status detection that knows when Claude is thinking vs. waiting, session forking with context inheritance, MCP management, and organized groups.
 
@@ -160,7 +160,7 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 
 ### 2. Opinionated Workflow Tools
 
-These tools take a stronger stance on how the agent-worktree-tmux lifecycle should work, embedding conventions for branching, merging, environment setup, and cleanup.
+These tools take a clearer stance on how the agent-worktree-tmux lifecycle should work, embedding conventions for branching, merging, environment setup, and cleanup.
 
 ---
 
@@ -172,7 +172,7 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 | **Language** | TypeScript |
 | **Install** | npm (see repo) |
 | **Supported Agents** | Claude Code, Codex, Gemini, and any CLI agent via config |
-| **Maturity** | Well-designed; author also maintains a constellation of related tmux tools |
+| **Maturity** | Active; author also maintains a constellation of related tmux tools |
 
 **Overview.** workmux is self-described as a "giga opinionated zero-friction workflow tool for managing git worktrees and tmux windows as isolated development environments." Rather than providing a separate TUI, workmux maps each worktree to a tmux window within your existing tmux session. This makes it a natural fit for developers who already live in tmux.
 
@@ -610,7 +610,7 @@ Running AI coding agents with broad filesystem and shell access is inherently ri
 
 The per-session model (agent-of-empires) provides fine-grained isolation, one container per agent, and can reduce host exposure when using high-autonomy settings such as `--dangerously-skip-permissions`. The devcontainer model (ccmanager) is coarser but more familiar to teams already using devcontainers, and it preserves host-level automation (notifications, hooks) that would be lost inside a container. The full-environment model generally provides deeper isolation, but requires substantial setup and means your entire development workflow lives inside Docker.
 
-This remains a notable gap in the ecosystem. As agents gain more autonomy (auto-approval, background execution, `--dangerously-skip-permissions`), the argument for sandboxing grows stronger. Anthropic's own Claude Code devcontainer exists but is separate from the agent teams feature, leaving the integration to the user.
+This remains a notable gap in the ecosystem. As agents gain more autonomy (auto-approval, background execution, `--dangerously-skip-permissions`), the argument for sandboxing grows. Anthropic's own Claude Code devcontainer exists but is separate from the agent teams feature, leaving the integration to the user.
 
 ### The Worktree Convention Question
 
