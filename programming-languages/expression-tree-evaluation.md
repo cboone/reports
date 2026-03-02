@@ -200,7 +200,7 @@ OCaml requires `let rec` for recursive functions and uses `function` to introduc
 
 ### F#
 
-F# brings ML-family algebraic data types to the .NET ecosystem. It is the most natural of the .NET languages for this task.
+F# brings ML-family algebraic data types to the .NET ecosystem. It is among the most natural .NET languages for this task.
 
 ```fsharp
 type Expr =
@@ -469,7 +469,7 @@ Coq uses `Inductive` and `Fixpoint` (for recursive functions) with explicit type
 
 ### Proof Assistant Comparison
 
-For the basic evaluator, proof assistants look like slightly more verbose versions of Haskell. Their power becomes apparent in what they can do *beyond* evaluation: proving that optimizations preserve semantics, that two different evaluators agree, or that certain expression patterns never arise. The expression tree evaluator is the canonical introductory example in proof assistant tutorials for good reason — it is simple enough to be approachable but structured enough to support interesting proofs.
+For the basic evaluator, proof assistants look like slightly more verbose versions of Haskell. Their power becomes apparent in what they can do *beyond* evaluation: proving that optimizations preserve semantics, that two different evaluators agree, or that certain expression patterns never arise. The expression tree evaluator is a common introductory example in proof assistant tutorials for good reason; it is simple enough to be approachable but structured enough to support interesting proofs.
 
 ---
 
@@ -620,7 +620,7 @@ Example query:
 Result = 35.
 ```
 
-The remarkable thing about Prolog's approach is that the relation can sometimes be run in reverse. While we cannot easily ask "what expression evaluates to 35?" with this definition (due to `is` requiring ground arithmetic), a pure relational version using constraint logic programming (CLP) could enumerate expressions that produce a given result. This bidirectionality has no equivalent in any other paradigm.
+The remarkable thing about Prolog's approach is that the relation can sometimes be run in reverse. While we cannot easily ask "what expression evaluates to 35?" with this definition (due to `is` requiring ground arithmetic), a pure relational version using constraint logic programming (CLP) could enumerate expressions that produce a given result. This bidirectionality is uncommon in most other mainstream paradigms.
 
 Prolog's representation of expressions uses compound terms like `add(lit(3), lit(4))`, which are tree-shaped by nature. Prolog was designed for symbolic reasoning over tree structures, making this problem a natural fit.
 
@@ -951,7 +951,7 @@ Zig's tagged unions are similar to Rust's enums but with C-level control over me
 
 ### Systems Language Comparison
 
-Rust is the clear winner for this problem among systems languages, providing ML-family ergonomics with the `Box` indirection as the only visible cost. Go's interface approach is clean but loses the closed-world guarantee. Zig's tagged unions are powerful but more verbose. All three are practical; the differences reflect their positions on the safety-control spectrum.
+Rust is often the strongest fit for this problem among systems languages, providing ML-family ergonomics with the `Box` indirection as the primary visible cost. Go's interface approach is clean but loses the closed-world guarantee. Zig's tagged unions are powerful but more verbose. All three are practical; the differences reflect their positions on the safety-control spectrum.
 
 ---
 
