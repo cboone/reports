@@ -6,7 +6,7 @@ created: 2026-01-27
 
 _January 27, 2026_
 
-**tmux, the terminal multiplexer that revolutionized command-line workflows, was created by Nicholas Marriott in 2007 as a cleaner, BSD-licensed alternative to GNU Screen.** What began as a personal project driven by frustration with Screen's unreadable codebase became one of the most influential developer tools of the 2010s. After OpenBSD founder Theo de Raadt personally audited the code and found it "high quality," tmux was imported into the OpenBSD base system on June 1, 2009—a rare honor that signaled production readiness. Today, with **40,000+ GitHub stars** and inclusion in virtually every Unix-like operating system, tmux has become the de facto standard for terminal multiplexing.
+**tmux, a terminal multiplexer that helped reshape command-line workflows, was created by Nicholas Marriott in 2007 as a cleaner, BSD-licensed alternative to GNU Screen.** What began as a personal project driven by frustration with Screen's unreadable codebase became one of the more influential developer tools of the 2010s. After OpenBSD founder Theo de Raadt personally audited the code and found it "high quality," tmux was imported into the OpenBSD base system on June 1, 2009, a rare honor that signaled production readiness. Today, with **40,000+ GitHub stars** and inclusion in most Unix-like operating systems, tmux has become a de facto standard for terminal multiplexing.
 
 ---
 
@@ -55,7 +55,7 @@ Marriott later reflected that he hadn't expected the inclusion: *"Paul Irofti br
 
 ## Complete version history and milestones
 
-The following timeline documents every major tmux release from inception through 2025:
+The following timeline documents major tmux releases from inception through 2025:
 
 ### The foundational years (2007-2012)
 
@@ -141,7 +141,7 @@ The **3.0 release** (November 2019) represented a major architectural change: co
 
 ### Recent innovations
 
-The most recent versions brought visual capabilities previously thought impossible in terminals:
+The most recent versions brought visual capabilities that were once uncommon in terminals:
 
 - **3.2** (2021): Popup windows via `display-popup`
 - **3.4** (2024): **SIXEL graphics support** for inline images
@@ -156,7 +156,7 @@ tmux's rise from OpenBSD utility to industry standard occurred through several k
 
 ### The Thoughtbot era (2011-2015)
 
-The **"A tmux Crash Course"** blog post by Thoughtbot became arguably the most influential tmux tutorial ever written, appearing on Hacker News multiple times between 2011 and 2018. This single article introduced thousands of developers to tmux's capabilities.
+The **"A tmux Crash Course"** blog post by Thoughtbot became one of the most influential tmux tutorials, appearing on Hacker News multiple times between 2011 and 2018. This single article introduced thousands of developers to tmux's capabilities.
 
 In **February 2012**, Brian P. Hogan published **"tmux: Productive Mouse-Free Development"** through Pragmatic Programmers—the first book dedicated to tmux. A second edition covering tmux 2.3 followed in 2016, and a third edition covering modern features is in development.
 
@@ -166,7 +166,7 @@ Thoughtbot further cemented tmux's prominence by launching a **dedicated tmux co
 
 **Bruno Sutic** (GitHub: @bruno-) created the **Tmux Plugin Manager (TPM)** around 2014-2015, establishing a standardized plugin architecture. TPM now has **13,800+ GitHub stars** and supports tmux 1.9+.
 
-The most popular plugins, all from the tmux-plugins organization:
+Widely used plugins, all from the tmux-plugins organization:
 
 - **tmux-resurrect** (~12,400 stars): Persist sessions across restarts
 - **tmux-continuum** (~3,800 stars): Automatic saving/restoration
@@ -224,8 +224,8 @@ Shell frameworks embraced tmux through plugins like the **oh-my-zsh tmux plugin*
 
 ## Conclusion
 
-tmux's trajectory from Nicholas Marriott's personal project in 2007 to the dominant terminal multiplexer reveals how exceptional code quality and clear design can overcome entrenched alternatives. The decision to import tmux into OpenBSD's base system—validated by Theo de Raadt's rigorous code audit—provided the credibility that accelerated adoption.
+tmux's trajectory from Nicholas Marriott's personal project in 2007 to one of the dominant terminal multiplexers reveals how exceptional code quality and clear design can overcome entrenched alternatives. The decision to import tmux into OpenBSD's base system, validated by Theo de Raadt's rigorous code audit, provided credibility that accelerated adoption.
 
-Three factors distinguished tmux's success: **technical superiority** over GNU Screen's aging codebase, **community investment** through influential tutorials and the plugin ecosystem, and **sustained development** with regular releases adding meaningful features without breaking compatibility. The recent additions of SIXEL graphics and scrollbars demonstrate that even after 17 years, tmux continues evolving to meet modern developer needs.
+Three factors likely distinguished tmux's success: **technical advantages** over GNU Screen's aging codebase, **community investment** through influential tutorials and the plugin ecosystem, and **sustained development** with regular releases adding meaningful features without breaking compatibility. The recent additions of SIXEL graphics and scrollbars demonstrate that even after 17 years, tmux continues evolving to meet modern developer needs.
 
 The original SourceForge repository is now historical; development has moved to GitHub where the project maintains an active ~6-month release cycle coordinated with OpenBSD releases. With control mode enabling native integration in tools like iTerm2, true color support for modern terminals, and a robust plugin ecosystem for customization, tmux has transcended its origins as "a better Screen" to become infrastructure that developers build their workflows upon.

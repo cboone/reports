@@ -29,7 +29,7 @@ iTerm2's architectural limitation, reading and writing data on the main thread, 
 
 ## Graphics protocol adoption defines capability tiers
 
-Three competing protocols fragment the terminal graphics ecosystem. **WezTerm uniquely supports all three**—Sixel, Kitty Graphics Protocol, and iTerm2 inline images—making it the most versatile choice for users requiring broad compatibility.
+Three competing protocols fragment the terminal graphics ecosystem. **In this comparison, WezTerm supports all three**—Sixel, Kitty Graphics Protocol, and iTerm2 inline images—making it a versatile choice for users requiring broad compatibility.
 
 | Terminal | Sixel | Kitty Graphics | iTerm2 Images | True Color |
 |----------|-------|----------------|---------------|------------|
@@ -44,7 +44,7 @@ Three competing protocols fragment the terminal graphics ecosystem. **WezTerm un
 
 Kitty's maintainer Kovid Goyal explicitly refuses Sixel support, calling it "an ancient protocol that is inferior" to the Kitty Graphics Protocol's full RGBA transparency, GPU acceleration, and animation capabilities. Ghostty similarly declined Sixel, citing "fundamental issues" and recommending Kitty Graphics instead. The **Kitty Graphics Protocol** now enjoys support in Kitty, WezTerm, Ghostty, and Konsole, increasingly becoming a modern default among fast-moving terminals even though Sixel still has legacy reach.
 
-Terminal.app's **lack of 24-bit true color until macOS 26 (Tahoe)** remains its most significant limitation, constraining users to 256-color palettes while every third-party terminal supports 16.7 million colors.
+Terminal.app's **lack of 24-bit true color until macOS 26 (Tahoe)** remains a significant limitation, constraining users to 256-color palettes while third-party terminals support 16.7 million colors.
 
 ## Unicode and emoji handling reveals implementation quality
 
@@ -56,7 +56,7 @@ Rio's built-in Twemoji rendering and **Unicode 16 support** (v0.2.3+) includes a
 
 ## Native macOS integration varies from minimal to comprehensive
 
-**iTerm2 remains the most deeply integrated** with macOS-specific features: native tmux control mode converting tmux windows to native tabs, 1Password and KeePassXC integration, Touch Bar customization, and a Python scripting API with 15+ modules. Its v3.6.x releases added **Liquid Glass effects** for macOS Tahoe and support for self-hosted AI models.
+**iTerm2 remains among the most deeply integrated** with macOS-specific features: native tmux control mode converting tmux windows to native tabs, 1Password and KeePassXC integration, Touch Bar customization, and a Python scripting API with 15+ modules. Its v3.6.x releases added **Liquid Glass effects** for macOS Tahoe and support for self-hosted AI models.
 
 Ghostty's native Swift/SwiftUI implementation provides genuine macOS-native behavior: Quick Terminal (Quake-style dropdown), Force Touch support, proxy icons, and **undo/redo for closed windows** that can keep terminals running hidden for configurable periods. Its **Apple Shortcuts integration** enables automation without scripting. Search and full scrollback ergonomics have historically lagged iTerm2 and Kitty in stable releases.
 
@@ -69,11 +69,11 @@ Ghostty's native Swift/SwiftUI implementation provides genuine macOS-native beha
 | Scripting | Python API | Apple Shortcuts | Python kittens | IPC only | Lua | Workflows |
 | Search | ✓ | Evolving | ✓ | ✓ | ✓ | ✓ |
 
-Terminal.app's **absence of split panes** remains its most significant UX gap—users must rely on separate windows or tmux. macOS Tahoe will finally bring true color and Powerline font support to Terminal.app, representing "a long-overdue modernization" after two decades of stagnation.
+Terminal.app's **absence of split panes** remains a major UX gap; users must rely on separate windows or tmux. macOS Tahoe will finally bring true color and Powerline font support to Terminal.app, representing "a long-overdue modernization" after two decades of stagnation.
 
 ## Configuration philosophies define user experience
 
-**WezTerm's Lua configuration** offers the most powerful customization, embedding Lua 5.4 with 15+ API crates for window management, color manipulation, and event callbacks. Configuration hot-reloads instantly, and the 900+ built-in color schemes provide immediate personalization.
+**WezTerm's Lua configuration** offers very powerful customization, embedding Lua 5.4 with 15+ API crates for window management, color manipulation, and event callbacks. Configuration hot-reloads instantly, and the 900+ built-in color schemes provide immediate personalization.
 
 ```lua
 local wezterm = require 'wezterm'
@@ -140,9 +140,9 @@ WezTerm uniquely **recognizes both 7-bit and 8-bit C1 control sequences**—a ra
 
 ## Use case recommendations by user profile
 
-**For maximum performance with minimal features**: Alacritty delivers unmatched throughput and responsive scrolling. Pair with tmux for multiplexing and accept the absence of graphics protocols. Ideal for users running primarily text-based workflows who prioritize speed above all else.
+**For maximum performance with minimal features**: Alacritty often delivers leading throughput and responsive scrolling. Pair with tmux for multiplexing and accept the absence of graphics protocols. Ideal for users running primarily text-based workflows who prioritize speed above all else.
 
-**For comprehensive features and macOS integration**: iTerm2 remains the most complete option with tmux control mode, Python scripting, shell integration, and every graphics protocol. Accept higher memory usage and occasional throughput limitations. Best for power users wanting a single tool that does everything.
+**For comprehensive features and macOS integration**: iTerm2 remains a very complete option with tmux control mode, Python scripting, shell integration, and every graphics protocol. Accept higher memory usage and occasional throughput limitations. Best for power users wanting a single tool that does everything.
 
 **For modern development with AI assistance**: Warp's block-based interface, AI integration, and collaboration features suit teams adopting AI-augmented workflows. Budget for subscription costs and accept privacy tradeoffs. Ideal for developers who want IDE-like terminal experiences.
 
@@ -178,8 +178,8 @@ Alacritty's 452+ contributors and dual Apache/MIT licensing make it the most per
 
 ## Conclusion
 
-The macOS terminal landscape in 2026 offers genuinely distinct choices rather than marginal variations. **Performance-focused users should choose Alacritty**; **feature-maximalists belong with iTerm2**; **AI-forward developers will find Warp compelling**; **protocol-complete needs point to WezTerm**; and **native-experience seekers should evaluate Ghostty** as it matures through its v1.x releases.
+The macOS terminal landscape in 2026 offers genuinely distinct choices rather than marginal variations. **Performance-focused users often prefer Alacritty**; **feature-maximalists often choose iTerm2**; **AI-forward developers may find Warp compelling**; **protocol-complete needs often point to WezTerm**; and **native-experience seekers should evaluate Ghostty** as it matures through its v1.x releases.
 
 Ghostty's emergence validates demand for native implementations prioritizing platform conventions, while Warp's commercial success demonstrates appetite for AI-integrated terminals despite open-source alternatives. The graphics protocol fragmentation—Sixel vs. Kitty Graphics vs. iTerm2—will likely consolidate around Kitty Graphics as more terminals adopt it, though Sixel's broader legacy support ensures continued relevance.
 
-Terminal.app's macOS Tahoe updates finally address its most glaring limitation with true color support, potentially satisfying casual users who previously needed third-party alternatives. For serious development work, however, the third-party ecosystem's decade-plus advancement in features, performance, and customization remains insurmountable by incremental improvements to Apple's built-in offering.
+Terminal.app's macOS Tahoe updates finally address its most glaring limitation with true color support, potentially satisfying casual users who previously needed third-party alternatives. For serious development work, however, the third-party ecosystem's decade-plus advancement in features, performance, and customization remains difficult to match through incremental improvements to Apple's built-in offering.
