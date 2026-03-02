@@ -266,7 +266,7 @@ Lightweight tools and configurations specifically for getting desktop or system 
   - macOS: `osascript -e 'display notification...'`
   - Linux: `notify-send`
   - Windows: PowerShell MessageBox
-- **Notes:** First-party solution with zero dependencies. A good starting point for many teams.
+- **Notes:** First-party solution with no additional dependencies. A good starting point for many teams.
 
 ### CCNotify
 
@@ -439,7 +439,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 
 - **Website:** [langwatch.ai](https://langwatch.ai)
 - **Key Strengths:** Integrated monitoring, evaluation, and experimentation in one platform, with quick setup claims
-- **Best For:** Teams wanting comprehensive all-in-one solution
+- **Best For:** Teams wanting an all-in-one monitoring and evaluation solution
 
 ### Braintrust
 
@@ -582,10 +582,10 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - **Datadog** or **Grafana** if you already have infrastructure monitoring in place.
 
 **For simple notifications (just tell me when Claude is done):**
-- Claude Code's built-in hooks are sufficient for most cases and often take only a few minutes to configure.
+- Claude Code's built-in hooks are often sufficient for many cases and usually take only a few minutes to configure.
 - **code-notify** if you want voice announcements and cross-agent support.
 
-**The ecosystem is evolving rapidly.** Most of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is becoming a first-party concern for platform vendors, which may consolidate some of this fragmented tooling over time.
+**The ecosystem is evolving rapidly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is becoming a first-party concern for platform vendors, which may consolidate some of this fragmented tooling over time.
 
 ---
 
