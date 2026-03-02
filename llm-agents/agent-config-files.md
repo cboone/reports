@@ -254,7 +254,7 @@ The `#:schema` comment at the top enables autocomplete in editors with the "Even
 
 ### GitHub Copilot
 
-Copilot's configuration is split between in-editor settings (VS Code/JetBrains `settings.json`) and GitHub.com organization-level settings. It typically does not use a dedicated root-level standalone config file, and most project-level artifacts live in `.github/`.
+Copilot's configuration is split between in-editor settings (VS Code/JetBrains `settings.json`) and GitHub.com organization-level settings. It typically does not use a dedicated root-level standalone config file, and many project-level artifacts live in `.github/`.
 
 #### Project-level files
 

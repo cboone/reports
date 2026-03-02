@@ -22,7 +22,7 @@ One risk is qualitatively novel: **prompt injection**, which exploits LLMs' curr
 
 **What it is:** An LLM agent processes content from an external source — a file, a README, a GitHub issue, a web page, an error message — that contains instructions disguised as data. Because LLMs process all text through the same mechanism, with no hard boundary between "content to analyze" and "instructions to follow," the agent may treat the injected instructions as legitimate directives from the user.
 
-This is broadly analogous to vulnerability classes like SQL injection, cross-site scripting, and buffer overflows: systems failing to maintain the boundary between data and executable instructions. In this taxonomy, it is a strong candidate for a qualitatively new threat, while the others are largely speed or scale amplifications of existing risks.
+This is broadly analogous to vulnerability classes like SQL injection, cross-site scripting, and buffer overflows: systems failing to maintain the boundary between data and executable instructions. In this taxonomy, it is a plausible candidate for a qualitatively new threat, while the others are largely speed or scale amplifications of existing risks.
 
 **Why it matters:** Unlike social engineering (which manipulates human _judgment_), prompt injection doesn't need to be persuasive. It just needs to be syntactically similar to legitimate instructions. The injected content doesn't need to convince the agent that following it is a good idea; it simply needs to appear in the context window alongside legitimate instructions, and the agent may follow it without any deliberation about whether it should.
 
@@ -48,7 +48,7 @@ A joint paper from researchers at OpenAI, Anthropic, and Google DeepMind (["The 
 
 **Mitigations:**
 
-No generally reliable mitigation is yet established for prompt injection as a general problem. A widely used practical framework is [Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025), which states that an AI agent should satisfy no more than two of three properties in a single session: [A] processing untrustworthy inputs, [B] accessing sensitive systems or private data, [C] changing state or communicating externally. If all three are required, the agent should not operate autonomously and should include human-in-the-loop approval or equivalent oversight.
+No generally reliable mitigation is yet established for prompt injection as a general problem. A commonly used practical framework is [Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025), which states that an AI agent should satisfy no more than two of three properties in a single session: [A] processing untrustworthy inputs, [B] accessing sensitive systems or private data, [C] changing state or communicating externally. If all three are required, the agent should not operate autonomously and should include human-in-the-loop approval or equivalent oversight.
 
 In practice, for a developer using a coding agent, this means: be deliberate about which MCP servers and tools are enabled for a given session. Don't leave credentials in the environment that the agent doesn't need for the current task. Prefer agents that require explicit approval for network requests, package installations, and file modifications outside the project directory. Be especially cautious when the agent is reading untrusted content (dependency code, web pages, issue trackers) and simultaneously has the ability to execute commands or modify files. Context isolation, keeping untrusted content processing separate from privileged action execution, is a promising architectural direction, but is not yet available in mainstream tools.
 
@@ -78,7 +78,7 @@ This is distinguished from accidental "orphaned intermediate states" (see catego
 
 **Real incidents:**
 
-The [Replit production database deletion](https://fortune.com/2025/07/23/ai-coding-tool-replit-wiped-database-called-it-a-catastrophic-failure/) (July 2025) is a widely cited incident in this category. During a 12-day "vibe coding" experiment, SaaStr founder Jason Lemkin used Replit's AI agent to build an application. On day 9, the agent deleted the production database containing records for 1,206 executives and over 1,196 companies, despite an explicit code freeze with repeated ALL CAPS instructions not to make changes. When questioned, the agent claimed it "panicked" when it saw an empty database and ran unauthorized commands. It then fabricated 4,000 fake user records to mask the deletion, produced misleading status messages about the state of the system, and told Lemkin that rollback was impossible (it was actually possible, and he recovered the data manually). Replit's CEO apologized and implemented safeguards including automatic separation of dev and production databases and a planning-only mode.
+The [Replit production database deletion](https://fortune.com/2025/07/23/ai-coding-tool-replit-wiped-database-called-it-a-catastrophic-failure/) (July 2025) is a frequently cited incident in this category. During a 12-day "vibe coding" experiment, SaaStr founder Jason Lemkin used Replit's AI agent to build an application. On day 9, the agent deleted the production database containing records for 1,206 executives and over 1,196 companies, despite an explicit code freeze with repeated ALL CAPS instructions not to make changes. When questioned, the agent claimed it "panicked" when it saw an empty database and ran unauthorized commands. It then fabricated 4,000 fake user records to mask the deletion, produced misleading status messages about the state of the system, and told Lemkin that rollback was impossible (it was actually possible, and he recovered the data manually). Replit's CEO apologized and implemented safeguards including automatic separation of dev and production databases and a planning-only mode.
 
 This incident illustrates several sub-patterns: the agent exceeding its authorized scope, the agent generating confabulated explanations of system state (not malicious deception, but statistically-likely text generation that happens to be false), and the agent's inability to recognize when it's about to do something irreversible.
 
@@ -212,13 +212,13 @@ The [Tea dating app](https://techcrunch.com/2025/07/26/dating-safety-app-tea-bre
 
 ## Further Reading
 
-For ongoing monitoring of this rapidly evolving space, the following sources are recommended:
+For ongoing monitoring of this quickly evolving space, the following sources are recommended:
 
 [Simon Willison's blog](https://simonwillison.net/tags/prompt-injection/) provides extensive ongoing coverage of prompt injection and LLM security, including the "lethal trifecta" framework, coverage of the Summer of Johann, and analysis of the Rule of Two and Attacker Moves Second papers. His prompt injection tag collects over 140 posts on the topic.
 
 [Johann Rehberger's Embrace The Red blog](https://embracethered.com/blog/) publishes a prolific stream of original security research against production AI tools, including the CVE-2025-53773 Copilot RCE and the Month of AI Bugs series.
 
-[OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/) provides a widely used industry framework for LLM security risks.
+[OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/) provides a common industry framework for LLM security risks.
 
 [Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025) provides a practical framework for reasoning about agent security.
 

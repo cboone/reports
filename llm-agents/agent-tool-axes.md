@@ -255,7 +255,7 @@ As topology grows more complex and trust chains lengthen, observability becomes 
 
 ### Autonomy × Error Recovery
 
-Higher autonomy makes error recovery more important, because the human is not there to notice and correct failures in real time. An agent running autonomously usually needs stronger detection, diagnosis, and recovery behavior than one where a human reviews every step. This is another reason fully autonomous operation is harder than it looks: it is not just about the happy path, it is also about how unhappy-path failures can compound when nobody is watching.
+Higher autonomy makes error recovery more important, because the human is not there to notice and correct failures in real time. An agent running autonomously usually needs more robust detection, diagnosis, and recovery behavior than one where a human reviews every step. This is another reason fully autonomous operation is harder than it looks: it is not just about the happy path, it is also about how unhappy-path failures can compound when nobody is watching.
 
 ---
 

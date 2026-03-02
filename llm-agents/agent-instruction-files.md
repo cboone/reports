@@ -58,7 +58,7 @@ The adoption is broad and growing. Among the tools covered here: Codex uses it a
 
 GitHub Copilot's approach is more structured than many alternatives. There are three layers:
 
-First, the repo-wide `.github/copilot-instructions.md` applies to most interactions. Second, path-specific `*.instructions.md` files in `.github/instructions/` use YAML frontmatter with an `applyTo` glob to scope instructions to specific file types or directories. Third, organization-level instructions can be set on GitHub.com for enterprise teams.
+First, the repo-wide `.github/copilot-instructions.md` applies to many interactions. Second, path-specific `*.instructions.md` files in `.github/instructions/` use YAML frontmatter with an `applyTo` glob to scope instructions to specific file types or directories. Third, organization-level instructions can be set on GitHub.com for enterprise teams.
 
 A notable feature: Copilot's coding agent will auto-suggest generating a `copilot-instructions.md` on your first PR in a repository. The path-specific `.instructions.md` system is powerful for monorepos — you can have different rules for your Python backend vs. your React frontend, triggered automatically by file glob matches.
 
@@ -144,7 +144,7 @@ Claude Code doesn't natively read `AGENTS.md`, so create a symlink:
 ln -s AGENTS.md CLAUDE.md
 ```
 
-Claude Code reads it as `CLAUDE.md` while most other tools in this comparison read `AGENTS.md`. Both point to the same content. Git preserves symlinks on macOS/Linux.
+Claude Code reads it as `CLAUDE.md` while many other tools in this comparison read `AGENTS.md`. Both point to the same content. Git preserves symlinks on macOS/Linux.
 
 If you need Claude Code-specific instructions (MCP server hints, subagent patterns), put those in `.claude/rules/claude-specific.md` — that directory is primarily Claude Code-specific and helps avoid polluting your cross-tool instructions.
 

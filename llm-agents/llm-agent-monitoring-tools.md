@@ -147,7 +147,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Worktree hooks for post-creation automation
   - Auto-generated worktree directory paths
   - Devcontainer support for sandboxed environments
-- **Notes:** Supports one of the broadest ranges of agents. The auto-approval and context-transfer features are notable differentiators.
+- **Notes:** Supports a broad range of agents. The auto-approval and context-transfer features are notable differentiators.
 
 ### Agent Viewer
 
@@ -213,7 +213,7 @@ Full desktop applications focused on running multiple agent sessions with visual
   - Asynchronous execution — delegate tasks and walk away
   - Detailed dashboards and task tracking
   - Also has a VS Code extension variant
-- **Notes:** Commercial product. One of the few paid standalone desktop apps in this space. Public materials claim strong SWE-bench Verified performance among production agents.
+- **Notes:** Commercial product. One of the few paid standalone desktop apps in this space. Public materials claim competitive SWE-bench Verified performance among production agents.
 
 ---
 
@@ -585,7 +585,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - Claude Code's built-in hooks are often sufficient in straightforward cases and can often be configured in a few minutes.
 - **code-notify** if you want voice announcements and cross-agent support.
 
-**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a first-party concern for platform vendors, which may consolidate some of this fragmented tooling over time.
+**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a core concern for platform vendors, which may consolidate some of this fragmented tooling over time.
 
 ---
 

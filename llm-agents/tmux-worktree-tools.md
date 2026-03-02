@@ -38,7 +38,7 @@ The tools in this space fall into six broad categories, though some straddle bou
 | Category | Philosophy | Examples |
 |---|---|---|
 | **TUI Session Managers** | General-purpose "mission control" for multiple agent sessions | claude-squad, ccmanager, agent-deck, agent-of-empires |
-| **Opinionated Workflow Tools** | End-to-end lifecycle management with strong conventions | workmux, dmux, barrel (now axel), forestui, multi-agent-workflow-kit |
+| **Opinionated Workflow Tools** | End-to-end lifecycle management with clear conventions | workmux, dmux, barrel (now axel), forestui, multi-agent-workflow-kit |
 | **Tmux-Focused** | Enhance the tmux experience specifically for agent workflows | claude-tmux, vscode-ext-tmux-worktree |
 | **Worktree-Focused** | Center the workflow around git worktree management | agenttools/worktree, worktree-manager-skill |
 | **Lightweight Scripts** | Minimal shell scripts or slash commands for quick parallelism | andynu's gist, worksfornow's /delegate |
@@ -201,7 +201,7 @@ These tools take a clearer stance on how the agent-worktree-tmux lifecycle shoul
 | [tmux-bro](https://github.com/raine/tmux-bro) | Smart tmux session manager with project-specific sessions |
 | [git-surgeon](https://github.com/raine/git-surgeon) | Non-interactive hunk-level git staging for AI agents |
 | [claude-history](https://github.com/raine/claude-history) | Search and view Claude Code conversation history with fzf |
-| [consult-llm-mcp](https://github.com/raine/consult-llm-mcp) | MCP server that lets Claude Code consult stronger AI models (o3, Gemini, GPT-5.1 Codex) |
+| [consult-llm-mcp](https://github.com/raine/consult-llm-mcp) | MCP server that lets Claude Code consult higher-capability AI models (o3, Gemini, GPT-5.1 Codex) |
 
 **Limitations.** Requires buy-in to the "one window per worktree" model. All worktrees share the same tmux session, which means you can't easily isolate groups of worktrees across different tmux sessions. The TypeScript runtime adds some overhead compared to Go/Rust alternatives.
 
@@ -749,7 +749,7 @@ Most of the other tools in this survey do not include built-in sandboxing, which
 
 ### "I want to try Anthropic's official approach"
 
-**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has direct first-party support and active development resources in this list.
+**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has direct vendor support and active development resources in this list.
 
 ---
 
