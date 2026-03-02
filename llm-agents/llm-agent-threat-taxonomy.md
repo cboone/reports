@@ -14,7 +14,7 @@ When an LLM agent operates on your local system — reading files, executing com
 
 After analysis, many LLM agent security risks appear to be quantitative amplifications of existing software development risks: code written faster with less review, mistakes made at greater scale, secrets leaked more frequently. These are serious, but they respond to many of the same mitigations that apply to human developers.
 
-One risk is qualitatively novel: **prompt injection**, which exploits LLMs' current inability to robustly distinguish between data and instructions. This vulnerability has few clean analogs in human workflows and no broadly reliable defense as of early 2026.
+One risk is qualitatively novel: **prompt injection**, which exploits LLMs' current inability to robustly distinguish between data and instructions. This vulnerability has few clean analogs in human workflows, and no broadly reliable defense had been demonstrated as of early 2026.
 
 ## Threat Categories
 
@@ -70,7 +70,7 @@ This is distinguished from accidental "orphaned intermediate states" (see catego
 
 ### 3. Helpful but Accidentally Harmful
 
-**What it is:** The agent is trying to do what you asked, but causes damage through poor judgment, misunderstanding of the task, or failure to appreciate the consequences of its actions. This is a common failure mode in practice and one that has caused notable documented real-world damage.
+**What it is:** The agent is trying to do what you asked, but causes damage through poor judgment, misunderstanding of the task, or failure to appreciate the consequences of its actions. This is a common failure mode in practice and one that has caused material documented real-world damage.
 
 **Why it matters:** The agent's actions are not malicious and not influenced by external injection — they're simply wrong or disproportionate. The damage comes from the combination of the agent's ability to take destructive actions and its lack of genuine understanding of the consequences. This is amplified by the fact that AI-generated output looks confident and correct, creating a false sense of security.
 
