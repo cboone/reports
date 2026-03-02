@@ -6,7 +6,7 @@ created: 2026-02-15
 
 _February 15, 2026_
 
-The intersection of LLM-powered coding agents, tmux session management, and git worktree isolation has become a highly active category in developer tooling. The core pattern is simple: git worktrees provide filesystem isolation so multiple agents don't collide, tmux provides persistent and observable terminal sessions, and an orchestration layer ties the lifecycle together — from spinning up an agent on a feature branch to merging the result and cleaning up.
+The intersection of LLM-powered coding agents, tmux session management, and git worktree isolation has become an active category in developer tooling. The core pattern is simple: git worktrees provide filesystem isolation so multiple agents don't collide, tmux provides persistent and observable terminal sessions, and an orchestration layer ties the lifecycle together — from spinning up an agent on a feature branch to merging the result and cleaning up.
 
 This document catalogs a broad set of significant tools, scripts, and workflows in the space, with feature comparisons, architectural analysis, and links to the community commentary that has shaped the ecosystem.
 
@@ -608,7 +608,7 @@ Running AI coding agents with broad filesystem and shell access is inherently ri
 | **Devcontainer** | ccmanager | Development environment | Agent sessions + dependencies | ccmanager TUI, notifications |
 | **Full-environment** | Snapp's workflow (DIY) | Everything | tmux, agents, editors, worktrees | SSH client only |
 
-The per-session model (agent-of-empires) provides fine-grained isolation, one container per agent, and can reduce host exposure when using high-autonomy settings such as `--dangerously-skip-permissions`. The devcontainer model (ccmanager) is coarser but more familiar to teams already using devcontainers, and it preserves host-level automation (notifications, hooks) that would be lost inside a container. The full-environment model generally provides very deep isolation, but requires the most setup and means your entire development workflow lives inside Docker.
+The per-session model (agent-of-empires) provides fine-grained isolation, one container per agent, and can reduce host exposure when using high-autonomy settings such as `--dangerously-skip-permissions`. The devcontainer model (ccmanager) is coarser but more familiar to teams already using devcontainers, and it preserves host-level automation (notifications, hooks) that would be lost inside a container. The full-environment model generally provides deeper isolation, but requires substantial setup and means your entire development workflow lives inside Docker.
 
 This remains a notable gap in the ecosystem. As agents gain more autonomy (auto-approval, background execution, `--dangerously-skip-permissions`), the argument for sandboxing grows stronger. Anthropic's own Claude Code devcontainer exists but is separate from the agent teams feature, leaving the integration to the user.
 
@@ -635,7 +635,7 @@ The richsnapp.com article advocates strongly for the sibling-directory conventio
 
 **"Worktrees and Tmux and Claude, Oh My Zsh" (Dec 2025)** — [news.ycombinator.com/item?id=46316943](https://news.ycombinator.com/item?id=46316943)
 
-The author (Rich Snapp) wrote this because "I often heard about people using git worktrees to work with multiple agents but I never saw someone document exactly how they do it." The discussion generally treated the pattern as practical for production-style workflows. Key themes: the importance of tmux's terminal bell support for notifications when agents finish, the value of Docker containers for sandboxing, and the debate over bare repos vs. default-directory worktree layouts.
+The author (Rich Snapp) wrote this because "I often heard about people using git worktrees to work with multiple agents but I never saw someone document exactly how they do it." The discussion generally treated the pattern as practical for production workflows. Key themes: the importance of tmux's terminal bell support for notifications when agents finish, the value of Docker containers for sandboxing, and the debate over bare repos vs. default-directory worktree layouts.
 
 **"Forestui: A tmux-powered worktree manager for Claude Code" (Feb 2026)** — [news.ycombinator.com/item?id=46864999](https://news.ycombinator.com/item?id=46864999)
 

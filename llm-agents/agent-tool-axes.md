@@ -171,7 +171,7 @@ Lightweight                                              Heavyweight
                                                          data dumps
 ```
 
-LLM agents have a practical constraint that human tool users don't: every tool result occupies space in a finite context window, and that window is shared with the conversation history, system prompts, and the agent's own reasoning. This makes context cost an important design concern.
+LLM agents have a practical constraint that human tool users typically do not face in the same way: every tool result occupies space in a finite context window, and that window is shared with the conversation history, system prompts, and the agent's own reasoning. This makes context cost an important design concern.
 
 A tool that returns a 3-line JSON response is cheap. A tool that dumps an entire file or web page into context is expensive and might crowd out earlier conversation history or other tool results the agent needs. The design choices here include whether the tool should truncate or summarize its output, whether the agent should be able to request specific portions of a result (like line ranges from a file), and whether intermediate results can be compressed or discarded as the agent progresses.
 

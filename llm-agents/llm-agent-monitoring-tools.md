@@ -582,10 +582,10 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - **Datadog** or **Grafana** if you already have infrastructure monitoring in place.
 
 **For simple notifications (just tell me when Claude is done):**
-- Claude Code's built-in hooks are often sufficient for many cases and usually take only a few minutes to configure.
+- Claude Code's built-in hooks are often sufficient in straightforward cases and can take only a few minutes to configure.
 - **code-notify** if you want voice announcements and cross-agent support.
 
-**The ecosystem is evolving rapidly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is becoming a first-party concern for platform vendors, which may consolidate some of this fragmented tooling over time.
+**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a first-party concern for platform vendors, which may consolidate some of this fragmented tooling over time.
 
 ---
 
