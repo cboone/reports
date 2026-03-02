@@ -28,7 +28,7 @@ An agentic coding tool that lives in your terminal, understands your codebase, a
 - **License:** Proprietary (repo is for plugins/issue tracking)
 - **Agent type:** Multi-agent (built-in sub-agents)
 - **Status:** Very active, often multiple releases per week
-- **Distinguishing:** Often cited for solid reasoning on complex refactors and architectural changes. Plan mode enables deliberate multi-step work. Locked to Anthropic models natively. Community discussions often frame it as an "escalation path when other tools fail." Frequently praised in HN and Reddit discussions. Main downside is cost ($15+ per complex session).
+- **Distinguishing:** Often cited for solid reasoning on complex refactors and architectural changes. Plan mode enables deliberate multi-step work. Locked to Anthropic models natively. Community discussions often frame it as an "escalation path when other tools fail." Often praised in HN and Reddit discussions. Main downside is cost ($15+ per complex session).
 
 ### Aider
 
@@ -620,13 +620,13 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Seven key trends shaping the landscape
 
-**MCP as increasingly adopted protocol.** Model Context Protocol has become a widely used extensibility mechanism. Many tools now support MCP, creating a shared ecosystem of tools and integrations. This is a meaningful structural development; it means tools are becoming more interoperable rather than fully siloed.
+**MCP as increasingly adopted protocol.** Model Context Protocol has become a widely used extensibility mechanism. Many tools now support MCP, creating a shared ecosystem of tools and integrations. This is a structural development; it means tools are becoming more interoperable rather than fully siloed.
 
 **Multi-agent orchestration is a growing category.** Six months ago, Claude Squad didn't exist. Now there are many tools for managing multiple agents simultaneously. This reflects a workflow shift: developers increasingly run 2-3 agents on different tasks in parallel rather than using one agent sequentially.
 
 **Rust and Go are displacing Python for new tools.** While Python dominates older tools (Aider, Open Interpreter, MetaGPT, SWE-agent), many tools launched in 2025-2026 are written in Rust, Go, or TypeScript. Codex CLI's rewrite from TypeScript to Rust and Goose's Rust core suggest that **startup performance and binary distribution** are increasingly prioritized over Python's ecosystem advantages for CLI tools.
 
-**The free tier war.** Gemini CLI offers 60 req/min free, Qwen Code gives 1,000 req/day free, Amp provides $10/day ad-supported, and Grok CLI's model costs $0.20/1M tokens. The barrier to entry is collapsing. This commoditizes basic coding assistance and pushes differentiation toward reasoning quality, context management, and workflow integration.
+**The free tier war.** Gemini CLI offers 60 req/min free, Qwen Code gives 1,000 req/day free, Amp provides $10/day ad-supported, and Grok CLI's model costs $0.20/1M tokens. The barrier to entry is falling. This commoditizes basic coding assistance and pushes differentiation toward reasoning quality, context management, and workflow integration.
 
 **Local model support is now common but rarely primary.** Many tools support Ollama, but community discussions often report that local models underperform cloud models for complex coding tasks. Local support matters for privacy-sensitive environments and experimentation, but frontier cloud models remain significant productivity drivers for many teams.
 
@@ -636,7 +636,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Most mature tools
 
-**Aider** is an established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported large weekly token volume, and 230+ contributors. **Claude Code** is often viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
+**Aider** is an established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported large weekly token volume, and 230+ contributors. **Claude Code** is often viewed as a polished commercial tool for complex reasoning. **OpenHands** is one of the more established platforms for autonomous headless operation.
 
 ### Most promising tools
 

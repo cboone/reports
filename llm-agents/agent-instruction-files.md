@@ -36,7 +36,7 @@ Many AI coding agents read some form of Markdown instruction file from your proj
 
 ### CLAUDE.md (Anthropic — Claude Code)
 
-This is Claude Code's native instruction file. It is read as part of the system prompt with high priority, and Claude Code documentation describes its contents as elevated-priority project guidance relative to ad-hoc user prompts. The hierarchy is: enterprise policy → project `CLAUDE.md` → `.claude/rules/*.md` (auto-loaded) → user `~/.claude/CLAUDE.md`.
+This is Claude Code's native instruction file. It is read as part of the system prompt, and Claude Code documentation describes its contents as higher-priority project guidance relative to ad-hoc user prompts. The hierarchy is: enterprise policy → project `CLAUDE.md` → `.claude/rules/*.md` (auto-loaded) → user `~/.claude/CLAUDE.md`.
 
 Key strengths: the `@path/to/file` import syntax lets you keep the root file lean while referencing detailed docs elsewhere, and the `.claude/rules/` directory lets you split rules into focused topic files that all load automatically. Skills (see SKILL.md below) extend this further with on-demand loading.
 
@@ -48,7 +48,7 @@ This is an emerging cross-tool standard, now stewarded by the Agentic AI Foundat
 
 Adoption appears to continue growing. Among the tools covered here: Codex uses it as the primary instruction file (having migrated from `codex.md`), Copilot reads it alongside its own format, and OpenCode uses it natively. Public repository counts suggest that tens of thousands of open-source projects already have an `AGENTS.md`.
 
-**Codex's implementation** is a sophisticated approach among the tools compared here: it walks from the project root down to your current working directory, checking each directory for `AGENTS.override.md` first, then `AGENTS.md`, concatenating them in order. The 32 KiB default limit (`project_doc_max_bytes`) can be raised in config. You can also add fallback filenames in `config.toml` so Codex will read your existing `CLAUDE.md` or `TEAM_GUIDE.md`.
+**Codex's implementation** is a structured approach among the tools compared here: it walks from the project root down to your current working directory, checking each directory for `AGENTS.override.md` first, then `AGENTS.md`, concatenating them in order. The 32 KiB default limit (`project_doc_max_bytes`) can be raised in config. You can also add fallback filenames in `config.toml` so Codex will read your existing `CLAUDE.md` or `TEAM_GUIDE.md`.
 
 **OpenCode's implementation** reads `AGENTS.md` as its primary instruction file. The first matching file wins in each category; if you have both `AGENTS.md` and `CLAUDE.md`, `AGENTS.md` takes precedence. OpenCode also supports custom instruction file paths via the `instructions` array in `opencode.json`, including glob patterns like `packages/*/AGENTS.md`.
 
@@ -93,7 +93,7 @@ The core formats in this comparison support plain Markdown for instructions. In 
 
 ### The convergence toward AGENTS.md
 
-One notable trend is the convergence around `AGENTS.md` as a cross-tool standard. Codex migrated from `codex.md` to `AGENTS.md`. Copilot reads `AGENTS.md` alongside its own format. OpenCode uses `AGENTS.md` natively. Claude Code still reads `CLAUDE.md`, but a simple symlink can bridge the gap.
+A visible trend is the convergence around `AGENTS.md` as a cross-tool standard. Codex migrated from `codex.md` to `AGENTS.md`. Copilot reads `AGENTS.md` alongside its own format. OpenCode uses `AGENTS.md` natively. Claude Code still reads `CLAUDE.md`, but a simple symlink can bridge the gap.
 
 ### Where they diverge
 

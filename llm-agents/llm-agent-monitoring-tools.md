@@ -101,7 +101,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Telegram & Slack bridges for remote monitoring
   - Tmux status bar integration showing waiting sessions
   - Groups, profiles, configurable hotkeys
-- **Notes:** A full-featured terminal-based session manager. The "conductor" feature is a distinctive capability that lets a Claude Code instance supervise other sessions.
+- **Notes:** A feature-rich terminal-based session manager. The "conductor" feature is a distinctive capability that lets a Claude Code instance supervise other sessions.
 
 ### Agent of Empires (AoE)
 
@@ -585,7 +585,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - Claude Code's built-in hooks are often sufficient in straightforward cases and can often be configured in a few minutes.
 - **code-notify** if you want voice announcements and cross-agent support.
 
-**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly an investment area for platform vendors, which may consolidate some of this fragmented tooling over time.
+**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a focus area for platform vendors, which may consolidate some of this fragmented tooling over time.
 
 ---
 

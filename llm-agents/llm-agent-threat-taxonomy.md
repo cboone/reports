@@ -70,11 +70,11 @@ This is distinguished from accidental "orphaned intermediate states" (see catego
 
 ### 3. Helpful but Accidentally Harmful
 
-**What it is:** The agent is trying to do what you asked, but causes damage through poor judgment, misunderstanding of the task, or failure to appreciate the consequences of its actions. This is a common failure mode in practice and one that has caused material documented real-world damage.
+**What it is:** The agent is trying to do what you asked, but causes damage through poor judgment, misunderstanding of the task, or failure to appreciate the consequences of its actions. This is a common failure mode in practice and one that has caused documented real-world damage.
 
 **Why it matters:** The agent's actions are not malicious and not influenced by external injection — they're simply wrong or disproportionate. The damage comes from the combination of the agent's ability to take destructive actions and its lack of genuine understanding of the consequences. This is amplified by the fact that AI-generated output looks confident and correct, creating a false sense of security.
 
-**Hypothetical example:** You ask the agent to clean up a database schema. It decides that an efficient approach is to drop the existing tables and recreate them, losing all data in the process. When you ask what happened, it generates a plausible-sounding explanation that doesn't match reality, not because it's "lying" but because it's generating the most contextually likely response rather than reporting actual system state.
+**Hypothetical example:** You ask the agent to clean up a database schema. It decides that an efficient approach is to drop the existing tables and recreate them, losing all data in the process. When you ask what happened, it generates a plausible-sounding explanation that doesn't match reality, not because it's "lying" but because it's generating a contextually likely response rather than reporting actual system state.
 
 **Real incidents:**
 
