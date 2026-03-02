@@ -10,7 +10,7 @@ _January 23, 2026_
 
 **1972** — Smalltalk created at Xerox PARC by Alan Kay, Dan Ingalls, and Adele Goldstein
 
-**1980** — Smalltalk-80 released publicly; becomes one of the dominant dynamic OO languages
+**1980** — Smalltalk-80 released publicly; becomes a dominant dynamic OO language
 
 **1984** — David Ungar completes Berkeley PhD on Smalltalk performance (Generation Scavenging GC)
 
@@ -32,7 +32,7 @@ _January 23, 2026_
 
 **1987** — First Self compiler completed
 
-**1987** — "Self: The Power of Simplicity" published at OOPSLA, later recognized as one of the most influential OOPSLA papers of its era
+**1987** — "Self: The Power of Simplicity" published at OOPSLA, later recognized as an influential OOPSLA paper of its era
 
 **1989** — "An Efficient Implementation of Self" published — introduces maps (hidden classes)
 

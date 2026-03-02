@@ -6,7 +6,7 @@ created: 2026-01-23
 
 _January 23, 2026_
 
-Self may be one of the most influential programming languages that many developers have never heard of. Designed in **1986** by **David Ungar** and **Randall B. Smith** at Xerox PARC,  this prototype-based language pioneered several optimization techniques now central to JavaScript engines and Java virtual machines. Though Self never achieved mainstream adoption, its DNA runs through V8, HotSpot, SpiderMonkey, and JavaScript's object model, making it one of computing's most consequential "failures."
+Self is often cited as an influential programming language that many developers have never heard of. Designed in **1986** by **David Ungar** and **Randall B. Smith** at Xerox PARC, this prototype-based language pioneered several optimization techniques now central to JavaScript engines and Java virtual machines. Though Self never achieved mainstream adoption, its DNA runs through V8, HotSpot, SpiderMonkey, and JavaScript's object model, making it a consequential "failure" in computing history.
 
 The language emerged from frustration with Smalltalk's complexity. Ungar, fresh from his award-winning Berkeley dissertation on Smalltalk performance, joined Smith at PARC to explore a radical simplification: what if object-oriented programming didn't need classes at all?
 
@@ -22,7 +22,7 @@ The **Sun Microsystems era (1991-1995)** brought additional talent, including **
 
 Self's core insight was that classes are unnecessary for object-oriented programming.  Objects inherit directly from other objects through **prototype delegation**—when a message is sent, the system searches the receiver for a matching slot, then recursively searches parent objects.  Creating new objects requires only **cloning** existing ones, not instantiating from abstract class descriptions. 
 
-This simplicity created severe performance challenges that drove groundbreaking innovations. The most important was **maps** (now called "hidden classes" in V8): an implementation-level structure that transparently groups objects with identical slot layouts.   Since objects cloned from the same prototype typically share structure, maps enabled class-like optimization without language-level classes. V8's documentation explicitly acknowledges: "This basic idea is not new—the prototype-based programming language Self used maps to do something similar." 
+This simplicity created severe performance challenges that drove groundbreaking innovations. One of the most important was **maps** (now called "hidden classes" in V8): an implementation-level structure that transparently groups objects with identical slot layouts. Since objects cloned from the same prototype typically share structure, maps enabled class-like optimization without language-level classes. V8's documentation explicitly acknowledges: "This basic idea is not new—the prototype-based programming language Self used maps to do something similar." 
 
 **Polymorphic inline caches (PICs)**, introduced by Hölzle, Chambers, and Ungar in 1991, solved the problem of call sites that encounter multiple receiver types. Rather than falling back to slow dictionary lookups, PICs generate stub routines that test receiver types and branch directly to cached methods. Published results showed clear median speedups on representative workloads, and the technique became standard in modern JavaScript engines.
 
