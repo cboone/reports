@@ -331,7 +331,7 @@ The geography of computing theory reflects the concentration of talent at specif
 - [ACM Digital Library](https://dl.acm.org/doi/10.1145/363235.363259)
 
 **Dijkstra** — "Guarded Commands, Nondeterminacy and Formal Derivation" (1975)
-- [Toronto (PDF)](http://www.cs.toronto.edu/~chechik/courses05/csc410/readings/dijkstra.pdf)
+- [Toronto (PDF)](https://www.cs.toronto.edu/~chechik/courses05/csc410/readings/dijkstra.pdf)
 - [UT Austin Dijkstra Archive](https://www.cs.utexas.edu/~EWD/transcriptions/EWD04xx/EWD472.html)
 
 ### Other foundational papers

@@ -189,7 +189,7 @@ Shell frameworks embraced tmux through plugins like the **oh-my-zsh tmux plugin*
 ### Official repositories and documentation
 
 - **GitHub repository**: https://github.com/tmux/tmux
-- **Official website**: http://tmux.github.io/
+- **Official website**: https://tmux.github.io/
 - **GitHub Wiki**: https://github.com/tmux/tmux/wiki
 - **OpenBSD CVS**: https://cvsweb.openbsd.org/src/usr.bin/tmux/
 - **OpenBSD man page**: https://man.openbsd.org/tmux
@@ -198,8 +198,8 @@ Shell frameworks embraced tmux through plugins like the **oh-my-zsh tmux plugin*
 ### Key interviews and historical documents
 
 - **OpenBSD Journal interview with Nicholas Marriott** (July 12, 2009): https://undeadly.org/cgi?action=article;sid=20090712190402 — Primary source for creation motivations and early history
-- **OpenBSD imports tmux announcement** (July 7, 2009): http://undeadly.org/cgi?action=article;sid=20090707041154 — Contains Theo de Raadt's code audit statement
-- **LinuxTag 2012 speaker feature**: http://www.linuxtag.org/2012/en/program/speaker-features/featured/article/featured-nicholas-marriott-tmux.html
+- **OpenBSD imports tmux announcement** (July 7, 2009): https://undeadly.org/cgi?action=article;sid=20090707041154 — Contains Theo de Raadt's code audit statement
+- **LinuxTag 2012 speaker feature**: https://www.linuxtag.org/2012/en/program/speaker-features/featured/article/featured-nicholas-marriott-tmux.html
 
 ### Mailing lists
 
