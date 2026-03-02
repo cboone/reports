@@ -318,7 +318,7 @@ Lightweight tools and configurations specifically for getting desktop or system 
   - Works over SSH tunnels — remote EC2 agent sends notification to local desktop
   - Multi-window UUID-based terminal mapping
   - Task description extraction for context-rich notifications
-- **Notes:** A strong option for remote development environments.
+- **Notes:** A good option for remote development environments.
 
 ---
 
@@ -582,7 +582,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - **Datadog** or **Grafana** if you already have infrastructure monitoring in place.
 
 **For simple notifications (just tell me when Claude is done):**
-- Claude Code's built-in hooks are often sufficient in straightforward cases and can take only a few minutes to configure.
+- Claude Code's built-in hooks are often sufficient in straightforward cases and can often be configured in a few minutes.
 - **code-notify** if you want voice announcements and cross-agent support.
 
 **The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a first-party concern for platform vendors, which may consolidate some of this fragmented tooling over time.

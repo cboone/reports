@@ -705,7 +705,7 @@ The blog post behind the `/delegate` slash command. Framed as an actual message 
 
 **URL:** [claydon.co/code/practical-parallelism-with-claude-code](https://claydon.co/code/practical-parallelism-with-claude-code/)
 
-One of the earliest writeups of the pattern, predating most of the tools above. Describes an "ensemble" approach where Claude Opus generates three alternative implementations for the same task, each in its own worktree, and you pick the best one. Also demonstrates the simpler "divide and conquer" pattern of assigning different tasks to different agents.
+An early writeup of the pattern, predating many of the tools above. Describes an "ensemble" approach where Claude Opus generates three alternative implementations for the same task, each in its own worktree, and you pick the best one. Also demonstrates the simpler "divide and conquer" pattern of assigning different tasks to different agents.
 
 ---
 
@@ -723,7 +723,7 @@ One of the earliest writeups of the pattern, predating most of the tools above. 
 
 There are three tiers of containerization in this ecosystem, each drawing the isolation boundary at a different level:
 
-**Per-session sandboxing → agent-of-empires.** Each agent session can run in its own Docker container with `aoe add --sandbox .`, giving you highly granular isolation. A misbehaving agent is less likely to directly affect your host filesystem or other sessions. Shared auth credentials are passed through so the agent can still access APIs.
+**Per-session sandboxing → agent-of-empires.** Each agent session can run in its own Docker container with `aoe add --sandbox .`, giving you granular isolation. A misbehaving agent is less likely to directly affect your host filesystem or other sessions. Shared auth credentials are passed through so the agent can still access APIs.
 
 **Devcontainer-based environment isolation → ccmanager.** Rather than wrapping individual sessions, ccmanager can run agent sessions inside VS Code-style devcontainers while keeping the manager itself on the host machine. This enables sandboxed development environments with restricted network access while maintaining host-level notifications and automation. It's a coarser level of isolation than per-session sandboxing, but aligns well with teams that already use devcontainers for development and want to add `--dangerously-skip-permissions` inside a controlled environment.
 
@@ -749,7 +749,7 @@ Most of the other tools in this survey do not include built-in sandboxing, which
 
 ### "I want to try Anthropic's official approach"
 
-**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has direct first-party support and development resources in this list.
+**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has direct first-party support and active development resources in this list.
 
 ---
 

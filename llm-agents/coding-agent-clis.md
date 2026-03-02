@@ -6,7 +6,7 @@ created: 2026-02-10
 
 _February 10, 2026_
 
-**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with recent activity in under two years.** The category barely existed before mid-2024; today, many major AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a widely adopted extensibility standard, local model support via Ollama is common, and multi-agent orchestration is a growing sub-category.
+**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with recent activity in under two years.** The category barely existed before mid-2024; today, many major AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a common extensibility standard, local model support via Ollama is common, and multi-agent orchestration is a growing sub-category.
 
 This document catalogs a broad set of CLI and TUI coding tools that use large language models to assist with software development, organized into logical categories with comparison tables and landscape analysis.
 
@@ -98,7 +98,7 @@ The "glamorous" agentic coding TUI from the Charm ecosystem. Originally created 
 - **License:** Charm License (proprietary — not open source despite appearances)
 - **Agent type:** Single-agent
 - **Status:** Very active, ~12,000–19,000 stars
-- **Distinguishing:** **Widely regarded as highly polished for terminal UX.** Broad platform support including Android, FreeBSD, OpenBSD, NetBSD. Part of the Charm ecosystem (Bubble Tea, Lip Gloss, Glow). Not truly open-source — uses Charm's custom license.
+- **Distinguishing:** **Often praised for polished terminal UX.** Broad platform support including Android, FreeBSD, OpenBSD, NetBSD. Part of the Charm ecosystem (Bubble Tea, Lip Gloss, Glow). Not truly open-source — uses Charm's custom license.
 
 ### Goose (Block)
 
@@ -636,7 +636,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Most mature tools
 
-**Aider** is a well-established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported very high weekly token volume, and 230+ contributors. **Claude Code** is widely viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
+**Aider** is a well-established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported very high weekly token volume, and 230+ contributors. **Claude Code** is often viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
 
 ### Most promising tools
 
