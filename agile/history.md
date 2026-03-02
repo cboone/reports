@@ -128,7 +128,7 @@ The **Agile Alliance** has organized annual conferences since its founding, brin
 
 Version control evolved from CVS (1986) through Subversion to **Git** (2005), created by Linus Torvalds in response to a BitKeeper licensing dispute.  Torvalds began coding on April 3, 2005,  and released Git 1.0 on December 21, 2005. **GitHub** (2008) transformed Git from command-line tool to global collaboration platform, and Git became a widely adopted version-control standard across software teams.
 
-Continuous integration tools progressed from CruiseControl through Hudson (2005) to **Jenkins** (forked in 2011 after an Oracle trademark dispute),  which now has 1,500+ plugins and dominates the CI/CD landscape. **Travis CI** and **CircleCI** (both 2011) added cloud-based options.
+Continuous integration tools progressed from CruiseControl through Hudson (2005) to **Jenkins** (forked in 2011 after an Oracle trademark dispute), which now has 1,500+ plugins and remains one of the most widely used CI/CD tools. **Travis CI** and **CircleCI** (both 2011) added cloud-based options.
 
 **Jira** launched in 2002 from Atlassian, originally as bug-tracking software.  After acquiring GreenHopper in 2009, Jira gained agile boards, sprints, and burndown charts, becoming one of the most widely used tools for agile project management. Pivotal Tracker (2008) served XP-focused teams until Broadcom shut it down in April 2025.
 
@@ -148,7 +148,7 @@ The **Spotify Model**, documented in a 2012 whitepaper by Henrik Kniberg and And
 
 ## DevOps extended agile principles to operations
 
-**Patrick Debois**, frustrated by development/operations disconnect during a 2007 Belgian data center migration, became the catalyst for the DevOps movement.  In August 2008, he attended an “Agile Infrastructure” session at the Toronto Agile Conference—as the only attendee—and met Andrew Shafer, forming the Agile System Administration Group. 
+**Patrick Debois**, frustrated by development/operations disconnect during a 2007 Belgian data center migration, became a key catalyst for the DevOps movement. In August 2008, he attended an “Agile Infrastructure” session at the Toronto Agile Conference, as the only attendee, and met Andrew Shafer, forming the Agile System Administration Group.
 
 The pivotal moment came in June 2009 when John Allspaw and Paul Hammond presented “10+ Deploys a Day: Dev and Ops Cooperation at Flickr”  at O’Reilly’s Velocity Conference. Watching remotely, Debois organized the first **DevOpsDays** in Ghent, Belgium in October 2009.  Needing a Twitter hashtag, he combined “Dev” and “Ops” and “Days”—the #DevOps hashtag named the movement. Debois later admitted: “There never was a grand plan for DevOps as a word.” 
 
@@ -160,7 +160,7 @@ DevOps evolved naturally from agile, sharing values of collaboration, flexibilit
 
 As organizations sought to apply agile at scale, multiple frameworks emerged:
 
-**SAFe (Scaled Agile Framework)**, created by Dean Leffingwell and first released in 2011,   became one of the most commercially successful scaling approaches. Built on foundations from Leffingwell’s books *Scaling Software Agility* (2007) and *Agile Software Requirements* (2010),  SAFe organized work into Agile Release Trains at the program level, with team, solution, and portfolio layers above. Version 6.0 (2023) emphasizes flow-based principles and business agility. 
+**SAFe (Scaled Agile Framework)**, created by Dean Leffingwell and first released in 2011, became one of the more commercially successful scaling approaches. Built on foundations from Leffingwell’s books *Scaling Software Agility* (2007) and *Agile Software Requirements* (2010), SAFe organized work into Agile Release Trains at the program level, with team, solution, and portfolio layers above. Version 6.0 (2023) emphasizes flow-based principles and business agility.
 
 **LeSS (Large-Scale Scrum)**, created by Craig Larman and Bas Vodde  at Nokia Siemens Networks in 2005,  took the opposite approach—maintaining Scrum’s simplicity at scale rather than adding layers. Their philosophy of “descaling” emphasizes that large-scale Scrum IS Scrum, with basic LeSS supporting 2-8 teams and LeSS Huge organizing 8+ teams into requirement areas.
 
