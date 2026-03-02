@@ -53,7 +53,7 @@ Full human control                                    Full autonomy
                      within them
 ```
 
-This is distinct from topology. You can have a complex multi-agent system where a human must approve every tool call, or a single agent that runs completely unsupervised for hours. The axis captures the *locus of decision-making*: is the human deciding what to do and the agent executing, or is the agent deciding and the human merely informed?
+This is distinct from topology. You can have a complex multi-agent system where a human approves each tool call, or a single agent that runs completely unsupervised for hours. The axis captures the *locus of decision-making*: is the human deciding what to do and the agent executing, or is the agent deciding and the human merely informed?
 
 Most practical systems today sit in the middle: the agent operates freely for "safe" actions (reading files, running searches) but pauses for approval on "dangerous" ones (writing files, running shell commands, making API calls that cost money). The boundary between safe and dangerous is itself a design decision that interacts heavily with other axes.
 
@@ -100,7 +100,7 @@ Pure read                                              Irreversible write
                              with git)    reverse)     unsend)
 ```
 
-This axis is about side effects. A tool call that reads a file leaves the world unchanged. A tool call that writes a file changes the world but in a way that's easily reversible (especially under version control). A tool call that sends an email or posts to a public API changes the world in a way you cannot take back.
+This axis is about side effects. A tool call that reads a file leaves the world unchanged. A tool call that writes a file changes the world but in a way that's often reversible (especially under version control). A tool call that sends an email or posts to a public API changes the world in ways that may be hard to fully reverse.
 
 The position on this axis should directly influence your position on the autonomy axis: the more irreversible the mutation, the more human oversight you probably want. It also interacts with security surface — write access to the filesystem is less alarming if you have good version control than if you don't.
 
@@ -171,7 +171,7 @@ Lightweight                                              Heavyweight
                                                          data dumps
 ```
 
-LLM agents have a hard constraint that human tool users don't: every tool result occupies space in a finite context window, and that window is shared with the conversation history, system prompts, and the agent's own reasoning. This makes context cost a first-class design concern.
+LLM agents have a practical constraint that human tool users don't: every tool result occupies space in a finite context window, and that window is shared with the conversation history, system prompts, and the agent's own reasoning. This makes context cost a first-class design concern.
 
 A tool that returns a 3-line JSON response is cheap. A tool that dumps an entire file or web page into context is expensive and might crowd out earlier conversation history or other tool results the agent needs. The design choices here include whether the tool should truncate or summarize its output, whether the agent should be able to request specific portions of a result (like line ranges from a file), and whether intermediate results can be compressed or discarded as the agent progresses.
 

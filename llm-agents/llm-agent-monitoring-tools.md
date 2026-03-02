@@ -509,7 +509,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
   - Failure detection and error tracking
   - Cost control and analytics
   - Self-hostable via Docker (ClickHouse + OTEL collector backend)
-- **Notes:** A widely used agent-focused observability SDK. Open source dashboard was a recent addition.
+- **Notes:** A commonly used agent-focused observability SDK. Open source dashboard was a recent addition.
 
 ---
 

@@ -64,7 +64,7 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 | **Supported Agents** | Claude Code, Aider, Codex, OpenCode, Amp |
 | **Maturity** | One of the earliest tools in the space; well-established community |
 
-**Overview.** claude-squad was one of the first tools to formalize the tmux + worktree + agent pattern into a proper TUI. It uses tmux to create isolated terminal sessions for each agent and git worktrees to isolate codebases so each session works on its own branch. The binary is called `cs` and provides a clean terminal interface for creating, monitoring, and switching between agent sessions.
+**Overview.** claude-squad was an early tool to formalize the tmux + worktree + agent pattern into a proper TUI. It uses tmux to create isolated terminal sessions for each agent and git worktrees to isolate codebases so each session works on its own branch. The binary is called `cs` and provides a clean terminal interface for creating, monitoring, and switching between agent sessions.
 
 **Key Features:**
 
