@@ -8,7 +8,7 @@ _February 10, 2026_
 
 When we work with LLM-powered agents that use tools, we're navigating a design space with many independent dimensions. Understanding these dimensions — and how they interact — helps us make better decisions about architecture, security, trust, and user experience.
 
-This document describes eight axes that capture the most important aspects of agent-tool systems. Each axis is largely independent of the others, meaning you can be at any position on one axis regardless of where you are on another. That independence is what makes them useful as a reasoning framework: they give you a checklist of concerns that won't collapse into each other.
+This document describes eight axes that capture key aspects of agent-tool systems. Each axis is largely independent of the others, meaning you can be at any position on one axis regardless of where you are on another. That independence is what makes them useful as a reasoning framework: they give you a checklist of concerns that does not collapse into a single dimension.
 
 ---
 
@@ -81,7 +81,7 @@ This axis describes *what capabilities* the agent has access to and *how those c
 
 The security surface is best understood as a matrix: on one side, the *types of resources* (filesystem, network, environment variables, secrets, subprocesses, external services); on the other, the *operations* permitted on each (read, write, execute, delete). Orthogonal to this matrix is the *isolation mechanism*: is the agent running in a container, a VM, a sandbox with seccomp filters, a capability-restricted process, or just on your bare host OS with your user permissions?
 
-The tighter the security surface, the less damage a misbehaving agent (or a prompt injection) can do — but also the less useful the agent is. This tension is fundamental and doesn't have a universal answer; it depends on the task, the trust level, and the consequences of failure.
+The tighter the security surface, the less damage a misbehaving agent (or a prompt injection) can do, but also the less useful the agent is. This tension is common and has no single universal answer; it depends on the task, the trust level, and the consequences of failure.
 
 **Example.** An agent that helps you write documentation might need only filesystem read access to your source code and write access to a docs directory. An agent that deploys your application might need network access, secret access for credentials, and the ability to run arbitrary shell commands. These are very different security profiles, and ideally the tooling makes it easy to express and enforce that difference rather than giving both agents the same broad permissions.
 
@@ -149,7 +149,7 @@ Opaque failure                                     Full observability
                                                            human can replay
 ```
 
-Every tool call can fail: the file might not exist, the API might time out, the command might return an error code. The question is what happens next. At one extreme, the agent gives up and surfaces a vague error. At the other extreme, the agent inspects the error, reasons about what went wrong, tries an alternative approach, and logs every step of this process for human review.
+Any tool call can fail: the file might not exist, the API might time out, the command might return an error code. The question is what happens next. At one extreme, the agent gives up and surfaces a vague error. At the other extreme, the agent inspects the error, reasons about what went wrong, tries an alternative approach, and logs every step of this process for human review.
 
 Observability is the often-neglected partner of error recovery. Even if the agent recovers gracefully, you want to know *that* it had to recover, *what* it tried, and *why*. This is especially important in multi-agent systems where a failure in one sub-agent might cascade or be masked by another agent's workaround.
 
@@ -207,7 +207,7 @@ This axis interacts with both security surface and autonomy. Tighter security li
 
 ## How the Axes Interact
 
-These axes are largely independent, but they're not completely orthogonal. Some combinations create emergent properties — either dangerous synergies or useful design patterns. Here are the most important interactions.
+These axes are largely independent, but they're not completely orthogonal. Some combinations create emergent properties, either dangerous synergies or useful design patterns. Here are key interactions.
 
 ### The Risk Triangle: Mutation × Autonomy × Security
 
@@ -223,7 +223,7 @@ These axes are largely independent, but they're not completely orthogonal. Some 
         Autonomy          Surface
 ```
 
-When an agent has broad permissions, high autonomy, and the ability to make irreversible changes, you're in the danger zone. Any one of these being constrained dramatically reduces risk. This is why the most common safety pattern is to allow high autonomy only for read-only operations, or to allow write operations only with human approval.
+When an agent has broad permissions, high autonomy, and the ability to make irreversible changes, you are in a high-risk zone. Constraining any one of these dimensions can substantially reduce risk. This is why a common safety pattern is to allow high autonomy for read-only operations, or to allow write operations with human approval.
 
 ### The Efficiency Triangle: Context Cost × Topology × Determinism
 
@@ -255,7 +255,7 @@ As topology grows more complex and trust chains lengthen, observability becomes 
 
 ### Autonomy × Error Recovery
 
-Higher autonomy makes error recovery more important, because the human isn't there to notice and correct failures in real time. An agent running autonomously needs to be much better at detecting, diagnosing, and recovering from errors than one where a human is reviewing every step. This is another reason why fully autonomous operation is harder than it looks: it's not just about the happy path, it's about all the ways the unhappy path can compound when nobody's watching.
+Higher autonomy makes error recovery more important, because the human is not there to notice and correct failures in real time. An agent running autonomously usually needs stronger detection, diagnosis, and recovery behavior than one where a human reviews every step. This is another reason fully autonomous operation is harder than it looks: it is not just about the happy path, it is also about how unhappy-path failures can compound when nobody is watching.
 
 ---
 
@@ -277,4 +277,4 @@ Axis                    Spectrum                         Key Question
 
 When designing or evaluating an agent-tool system, walk through each axis and ask where your system sits. The axes where you're furthest toward the "risky" end are the ones that deserve the most design attention. And pay special attention to the interactions — it's rarely a single axis that causes problems, but combinations that create emergent risk or emergent capability.
 
-The goal isn't to minimize every axis (that would give you a useless system that can't do anything). It's to make *conscious, informed decisions* about the tradeoffs, and to make sure the axes that are set to "wide open" are balanced by axes that are set to "constrained."
+The goal is not to minimize every axis (that would produce a system with little practical utility). It is to make *conscious, informed decisions* about tradeoffs, and to make sure axes set to "wide open" are balanced by axes set to "constrained."

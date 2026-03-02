@@ -10,7 +10,7 @@ Companion to: [LLM coding agent instruction files](agent-instruction-files.md)
 
 ## Overview
 
-Beyond the instruction/context files (CLAUDE.md, AGENTS.md, etc.), every AI coding agent has its own configuration system for things like model selection, permissions, sandboxing, MCP servers, and tool policies. These config files control the *behavior* of the tool itself, whereas instruction files control the *context* the LLM receives. This document maps out where every config file lives, what it controls, which files should be committed to version control, and how it all fits together.
+Beyond the instruction/context files (CLAUDE.md, AGENTS.md, etc.), most AI coding agents have their own configuration systems for things like model selection, permissions, sandboxing, MCP servers, and tool policies. These config files control the *behavior* of the tool itself, whereas instruction files control the *context* the LLM receives. This document maps out where common config files live, what they control, which files should be committed to version control, and how it all fits together.
 
 ---
 
@@ -31,7 +31,7 @@ With the symlink strategy (CLAUDE.md → AGENTS.md), your realistic root footpri
 
 ### Claude Code
 
-Claude Code has the most layered configuration system of any tool in this space. There are five distinct levels of precedence, from highest to lowest:
+Claude Code has one of the most layered configuration systems in this space. There are five distinct levels of precedence, from highest to lowest:
 
 1. **Managed settings** (enterprise IT) — `managed-settings.json` and `managed-mcp.json` deployed to system directories (`/etc/claude-code/`, `/Library/Application Support/ClaudeCode/`, etc.). Requires admin privileges. Constrains what users and projects can override.
 2. **CLI flags** (and equivalent runtime overrides) — temporary overrides for the current session.
@@ -254,7 +254,7 @@ The `#:schema` comment at the top enables autocomplete in editors with the "Even
 
 ### GitHub Copilot
 
-Copilot's configuration is split between in-editor settings (VS Code/JetBrains `settings.json`) and GitHub.com organization-level settings. There are no standalone config files in the project directory — everything project-level goes in `.github/`.
+Copilot's configuration is split between in-editor settings (VS Code/JetBrains `settings.json`) and GitHub.com organization-level settings. It typically does not use a dedicated root-level standalone config file, and most project-level artifacts live in `.github/`.
 
 #### Project-level files
 
@@ -326,7 +326,7 @@ The `applyTo` glob determines which files trigger these instructions. The option
 
 ### OpenCode
 
-OpenCode uses a JSON config file and follows the AGENTS.md convention for instructions. It's the most straightforward config setup.
+OpenCode uses a JSON config file and follows the AGENTS.md convention for instructions. It is a relatively straightforward config setup.
 
 #### Project-level files
 
@@ -369,7 +369,7 @@ your-project/
 - **Custom instruction file paths with globs** — the `instructions` array in `opencode.json` can point to any Markdown files, including glob patterns. This is how you reference instruction files tucked away in `docs/` or spread across a monorepo without needing them at root.
 - **Provider-agnostic** — supports 75+ models from Claude, OpenAI, Gemini, and local models via Ollama/LM Studio. Configuration switches between them.
 - **LSP integration** — configurable Language Server Protocol servers give the LLM typed feedback from your codebase.
-- **Instruction file precedence** — if you have both `AGENTS.md` and `CLAUDE.md`, only `AGENTS.md` is used. Similarly, `~/.config/opencode/AGENTS.md` takes precedence over `~/.claude/CLAUDE.md`.
+- **Instruction file precedence** — if you have both `AGENTS.md` and `CLAUDE.md`, OpenCode documentation indicates `AGENTS.md` takes precedence. Similarly, `~/.config/opencode/AGENTS.md` takes precedence over `~/.claude/CLAUDE.md`.
 
 ---
 
@@ -507,6 +507,6 @@ One place to edit, version-controlled, portable across machines.
 
 ## Summary
 
-The instruction file ecosystem is converging around AGENTS.md. The configuration file ecosystem is not — and probably won't. Each tool's config manages fundamentally different capabilities: Claude Code's hook system has no equivalent in Codex, Codex's named profiles have no equivalent in Claude Code, and Copilot's configuration lives entirely in VS Code's settings framework rather than standalone files.
+The instruction file ecosystem is converging around AGENTS.md. The configuration file ecosystem is less converged and may remain tool-specific. Each tool's config manages materially different capabilities: Claude Code's hook system has no direct equivalent in Codex, Codex's named profiles have no direct equivalent in Claude Code, and Copilot's configuration lives mainly in VS Code's settings framework rather than standalone files.
 
-The pragmatic approach: accept tool-specific config in hidden directories while converging on shared instruction files at the root. Hidden directories keep the clutter invisible. Each tool's config is independent enough that they don't conflict with each other. The global dotfiles strategy (section 5) keeps your personal preferences in sync across tools and machines.
+The pragmatic approach: accept tool-specific config in hidden directories while converging on shared instruction files at the root. Hidden directories keep the clutter less visible. Each tool's config is usually independent enough that conflicts remain limited. The global dotfiles strategy (section 5) keeps your personal preferences in sync across tools and machines.

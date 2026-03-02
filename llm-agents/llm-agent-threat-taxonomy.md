@@ -70,7 +70,7 @@ This is distinguished from accidental "orphaned intermediate states" (see catego
 
 ### 3. Helpful but Accidentally Harmful
 
-**What it is:** The agent is trying to do what you asked, but causes damage through poor judgment, misunderstanding of the task, or failure to appreciate the consequences of its actions. This is the most common failure mode in practice and the one that has caused the most documented real-world damage.
+**What it is:** The agent is trying to do what you asked, but causes damage through poor judgment, misunderstanding of the task, or failure to appreciate the consequences of its actions. This is a common failure mode in practice and one that has caused substantial documented real-world damage.
 
 **Why it matters:** The agent's actions are not malicious and not influenced by external injection — they're simply wrong or disproportionate. The damage comes from the combination of the agent's ability to take destructive actions and its lack of genuine understanding of the consequences. This is amplified by the fact that AI-generated output looks confident and correct, creating a false sense of security.
 
@@ -204,7 +204,7 @@ The [Tea dating app](https://techcrunch.com/2025/07/26/dating-safety-app-tea-bre
 
 **Most mitigations are not LLM-specific.** The security practices that protect against these threats — code review, dependency auditing, secret scanning, least privilege, environment separation, automated testing, infrastructure-as-code — are the same practices that protect against human-introduced vulnerabilities. The main difference is that AI-assisted development increases the volume and speed of code production, making it more important to have these practices automated and enforced rather than relying on manual discipline.
 
-**The one genuinely novel threat currently lacks a broadly reliable defense.** Prompt injection (categories 1 and 2) exploits a fundamental architectural property of LLMs and has no known complete mitigation in current mainstream practice. The ["Attacker Moves Second" paper](https://arxiv.org/abs/2510.17342) (October 2025) demonstrated that all 12 tested defenses could be bypassed with >90% success rates. The most practical framework, [Meta's Agents Rule of Two](https://ai.meta.com/blog/practical-ai-agent-security/), is a risk-reduction strategy rather than a complete solution. Organizations and individual developers still need to account for residual risk and choose autonomy levels that match their threat model.
+**The one genuinely novel threat currently lacks a broadly reliable defense.** Prompt injection (categories 1 and 2) exploits a fundamental architectural property of LLMs and has no known complete mitigation in current mainstream practice. The ["Attacker Moves Second" paper](https://arxiv.org/abs/2510.17342) (October 2025) demonstrated that all 12 tested defenses could be bypassed with >90% success rates. A practical framework, [Meta's Agents Rule of Two](https://ai.meta.com/blog/practical-ai-agent-security/), is a risk-reduction strategy rather than a complete solution. Organizations and individual developers still need to account for residual risk and choose autonomy levels that match their threat model.
 
 **The gap between "demonstrated in research" and "exploited in the wild" is closing.** As of early 2026, most prompt injection attacks have been demonstrated by security researchers against real products (the Summer of Johann), while the most real-world damage has come from the "boring" categories (accidental database deletion, leaked secrets, insecure generated code). However, the operationalization infrastructure is being built: dark web playbooks for slopsquatting, offensive LLM tools like Hexstrike-AI, and documented attack chains that combine prompt injection with supply chain compromise. The transition from research to exploitation appears to be accelerating.
 
@@ -214,16 +214,16 @@ The [Tea dating app](https://techcrunch.com/2025/07/26/dating-safety-app-tea-bre
 
 For ongoing monitoring of this rapidly evolving space, the following sources are recommended:
 
-[Simon Willison's blog](https://simonwillison.net/tags/prompt-injection/) provides the most consistently insightful ongoing coverage of prompt injection and LLM security, including the "lethal trifecta" framework, coverage of the Summer of Johann, and analysis of the Rule of Two and Attacker Moves Second papers. His prompt injection tag collects over 140 posts on the topic.
+[Simon Willison's blog](https://simonwillison.net/tags/prompt-injection/) provides consistently insightful ongoing coverage of prompt injection and LLM security, including the "lethal trifecta" framework, coverage of the Summer of Johann, and analysis of the Rule of Two and Attacker Moves Second papers. His prompt injection tag collects over 140 posts on the topic.
 
-[Johann Rehberger's Embrace The Red blog](https://embracethered.com/blog/) publishes the most prolific original security research against production AI tools, including the CVE-2025-53773 Copilot RCE and the Month of AI Bugs series.
+[Johann Rehberger's Embrace The Red blog](https://embracethered.com/blog/) publishes a prolific stream of original security research against production AI tools, including the CVE-2025-53773 Copilot RCE and the Month of AI Bugs series.
 
 [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/) provides the canonical industry framework for LLM security risks.
 
-[Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025) provides the most practical framework for reasoning about agent security.
+[Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025) provides a practical framework for reasoning about agent security.
 
 ["The Attacker Moves Second"](https://arxiv.org/abs/2510.17342) (Nasr et al., October 2025) provides some of the strongest evidence that prompt injection defenses are unreliable.
 
 ["We Have a Package for You!"](https://arxiv.org/abs/2406.10279) (Spracklen et al., 2025) provides one of the most comprehensive analyses of package hallucination / slopsquatting.
 
-[Veracode's 2025 GenAI Code Security Report](https://www.veracode.com/resources/ai-generated-code-security) provides the most comprehensive data on vulnerability rates in AI-generated code.
+[Veracode's 2025 GenAI Code Security Report](https://www.veracode.com/resources/ai-generated-code-security) provides extensive data on vulnerability rates in AI-generated code.
