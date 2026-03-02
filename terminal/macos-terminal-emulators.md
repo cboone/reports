@@ -100,7 +100,7 @@ The **block-based interface** groups commands and outputs into discrete units wi
 - **Build ($20/month)**: 1,500 AI credits, BYOK support, 40 repos indexed
 - **Business ($50/month)**: SSO, Zero Data Retention, team features
 
-Privacy concerns persist despite Warp's assurances that command input/output never transmits to servers unless explicitly shared. The account login requirement (now optional for basic features) and closed-source nature generate community skepticism, though SOC 2 compliance addresses enterprise requirements.
+Privacy concerns persist despite Warp's assurances that command input/output does not transmit to servers by default unless explicitly shared. The account login requirement (now optional for basic features) and closed-source nature generate community skepticism, though SOC 2 compliance addresses enterprise requirements.
 
 **Wave Terminal** emerges as an open-source alternative with block-based display, inline rendering of images/Markdown/video, and ChatGPT integration—all without requiring account login.
 
