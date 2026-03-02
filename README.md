@@ -67,13 +67,13 @@ History and catalog of programming fonts from typewriters through CRT terminals 
 
 ### [Go: the cloud's native language](go/go-cloud-native-language.md)
 
-Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became the dominant language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of foundational papers, talks, and books.
+Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became a prominent language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of foundational papers, talks, and books.
 
 ## Hacker News
 
 ### [How to craft a Show HN post that resonates](hacker-news/show-hn-post-guide.md)
 
-What makes Show HN posts succeed, based on analysis of top-performing posts from 2024-2026. Covers title conventions, project types that resonate (DIY hardware and open-source outperform AI), description structure, timing strategy, comment engagement patterns, and anti-patterns that guarantee poor reception, with a checklist for launching developer tools.
+What makes Show HN posts succeed, based on analysis of top-performing posts from 2024-2026. Covers title conventions, project types that resonate (DIY hardware and open-source outperform AI), description structure, timing strategy, comment engagement patterns, and anti-patterns that often lead to poor reception, with a checklist for launching developer tools.
 
 ## LLM Coding Agents
 
@@ -91,7 +91,7 @@ Categorizes ten security risks specific to LLM-powered development tools, distin
 
 ### [LLM coding agent configuration files: comparing Claude Code, Codex, Copilot, and OpenCode](llm-agents/agent-config-files.md)
 
-Where every configuration file lives, what it controls, and which files should be committed to version control across the four major LLM coding agents. Covers permissions, sandboxing, MCP server configuration, hooks, model selection, named profiles, and admin enforcement, with a decision framework for what goes where and a dotfiles strategy for syncing preferences across tools and machines.
+Where key configuration files live, what they control, and which files should be committed to version control across the four major LLM coding agents. Covers permissions, sandboxing, MCP server configuration, hooks, model selection, named profiles, and admin enforcement, with a decision framework for what goes where and a dotfiles strategy for syncing preferences across tools and machines.
 
 ### [LLM coding agent instruction files: comparing CLAUDE.md, AGENTS.md, copilot-instructions.md, and SKILL.md](llm-agents/agent-instruction-files.md)
 
@@ -103,7 +103,7 @@ Every notable tool available as of mid-February 2026 for monitoring LLM coding a
 
 ### [Parallel LLM coding agents with tmux and git worktrees](llm-agents/tmux-worktree-tools.md)
 
-Comprehensive survey of tools at the intersection of LLM coding agents, tmux session management, and git worktree isolation. Profiles every significant tool from full-featured TUI session managers (claude-squad, ccmanager, agent-deck) through opinionated workflow tools (workmux, dmux, barrel/axel) to lightweight shell scripts, with architectural analysis of the core pattern, the containerization gap, worktree conventions, and community discussion.
+Comprehensive survey of tools at the intersection of LLM coding agents, tmux session management, and git worktree isolation. Profiles a broad set of significant tools from full-featured TUI session managers (claude-squad, ccmanager, agent-deck) through opinionated workflow tools (workmux, dmux, barrel/axel) to lightweight shell scripts, with architectural analysis of the core pattern, the containerization gap, worktree conventions, and community discussion.
 
 ## Programming Languages
 
@@ -115,7 +115,7 @@ A concurrent producer-consumer pipeline with bounded buffering, backpressure, an
 
 ### [Evaluating expression trees: a cross-language study](programming-languages/expression-tree-evaluation.md)
 
-A recursive expression tree evaluator implemented across the same language families, showcasing algebraic data types, pattern matching, and the expression problem. The ML family excels here where array languages struggle, inverting the results of the first study and demonstrating that language strengths are fundamentally problem-dependent.
+A recursive expression tree evaluator implemented across the same language families, showcasing algebraic data types, pattern matching, and the expression problem. The ML family excels here where array languages struggle, inverting the results of the first study and demonstrating that language strengths are strongly problem-dependent.
 
 ### [Finding indices of elements above the mean: a cross-language study](programming-languages/indices-above-mean.md)
 
@@ -127,13 +127,13 @@ How computer science emerged from mathematics and logic between 1879 and 1948. T
 
 ### [Three algorithms, dozens of languages: an overview](programming-languages/three-algorithms-overview.md)
 
-Introduces and connects three companion studies that each implement a single algorithm across dozens of programming languages. Includes a summary table rating every language family across all three problems and analysis of cross-cutting themes: how data shape determines paradigm fit, the abstraction spectrum from APL to C, and how mainstream languages borrow from specialized paradigms over time.
+Introduces and connects three companion studies that each implement a single algorithm across dozens of programming languages. Includes a summary table rating major language families across all three problems and analysis of cross-cutting themes: how data shape determines paradigm fit, the abstraction spectrum from APL to C, and how mainstream languages borrow from specialized paradigms over time.
 
 ## Self
 
 ### [Self: the invisible language that powers modern computing](self/history.md)
 
-How a radical simplification of Smalltalk — removing classes entirely in favor of prototypes — produced the optimization techniques that now power every major JavaScript engine and the Java Virtual Machine. Traces Self's journey from Xerox PARC through Stanford to Sun Microsystems, the breakthroughs in adaptive compilation and polymorphic inline caches, the direct lineage to Java HotSpot and V8, and Self's influence on JavaScript's prototype-based object model.
+How a radical simplification of Smalltalk — removing classes entirely in favor of prototypes — produced optimization techniques that now power major JavaScript engines and the Java Virtual Machine. Traces Self's journey from Xerox PARC through Stanford to Sun Microsystems, the breakthroughs in adaptive compilation and polymorphic inline caches, the direct lineage to Java HotSpot and V8, and Self's influence on JavaScript's prototype-based object model.
 
 ### [The Self programming language: key papers and resources](self/bibliography.md)
 
