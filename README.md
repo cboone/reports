@@ -85,6 +85,10 @@ A framework of eight independent axes for reasoning about the design space of ag
 
 Catalog of over 90 CLI and TUI coding tools that use large language models for software development. Organized into categories — full-featured agentic assistants, code-aware chat and REPL tools, shell and command assistants, multi-agent coding frameworks, orchestration and session management tools, research and SWE-bench tools, terminal editor plugins, and context preparation utilities — with cross-category comparison tables and landscape analysis covering market consolidation, key trends, and gaps.
 
+### [LLM agent security threat taxonomy](llm-agents/llm-agent-threat-taxonomy.md)
+
+Categorizes ten security risks specific to LLM-powered development tools, distinguishing the one qualitatively novel threat (prompt injection) from amplified versions of existing risks like secret leakage, insecure code patterns, and scope creep. Each category includes real-world incidents, academic research, and concrete mitigations grounded in current evidence through early 2026.
+
 ### [LLM coding agent configuration files: comparing Claude Code, Codex, Copilot, and OpenCode](llm-agents/agent-config-files.md)
 
 Where every configuration file lives, what it controls, and which files should be committed to version control across the four major LLM coding agents. Covers permissions, sandboxing, MCP server configuration, hooks, model selection, named profiles, and admin enforcement, with a decision framework for what goes where and a dotfiles strategy for syncing preferences across tools and machines.
