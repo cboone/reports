@@ -6,7 +6,7 @@ created: 2026-02-15
 
 _February 15, 2026_
 
-This document catalogs every notable tool available (as of mid-February 2026) for monitoring LLM coding agent activity, managing sessions, receiving notifications, and tracking usage/costs. Tools are grouped by category, with links, platform support, and key features.
+This document catalogs a broad set of notable tools (as of mid-February 2026) for monitoring LLM coding agent activity, managing sessions, receiving notifications, and tracking usage/costs. Tools are grouped by category, with links, platform support, and key features.
 
 ---
 
@@ -67,12 +67,12 @@ These are native or near-native desktop apps that give you a floating/dockable w
 - **Install:** `brew tap jazzyalex/agent-sessions && brew install --cask agent-sessions`
 - **Agents:** Codex CLI, Claude Code, OpenCode, Gemini CLI, Factory Droid, GitHub Copilot CLI
 - **Key Features:**
-  - Unified session browser across ALL supported agents
-  - Full-text search across all past sessions
+  - Unified session browser across supported agents
+  - Full-text search across past sessions
   - Rate limits tracker in real-time
   - Agents analytics dashboard
   - Filter by folder/repo, resume sessions instantly
-  - Read-only, local-only, zero telemetry
+  - Read-only design with local storage and no telemetry (per project documentation)
   - Image browser for inline thumbnails
   - Supports deleted session visibility (OpenClaw)
 
@@ -95,13 +95,13 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Fuzzy search across all sessions
   - Session forking (Claude Code conversations)
   - On-demand MCP server attachment per session or globally
-  - MCP Socket Pool — reduces MCP memory usage by 85-90%
+  - MCP Socket Pool — reported to reduce MCP memory usage by 85-90%
   - Git worktree support for parallel agents
   - Conductors — persistent Claude sessions that orchestrate/monitor other sessions
   - Telegram & Slack bridges for remote monitoring
   - Tmux status bar integration showing waiting sessions
   - Groups, profiles, configurable hotkeys
-- **Notes:** One of the most feature-rich terminal-based session managers. The "conductor" feature is unique — lets a Claude Code instance supervise other sessions.
+- **Notes:** One of the more feature-rich terminal-based session managers. The "conductor" feature is a distinctive capability that lets a Claude Code instance supervise other sessions.
 
 ### Agent of Empires (AoE)
 
@@ -147,7 +147,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Worktree hooks for post-creation automation
   - Auto-generated worktree directory paths
   - Devcontainer support for sandboxed environments
-- **Notes:** Supports the widest range of agents. The auto-approval and context-transfer features are unique.
+- **Notes:** Supports one of the broadest ranges of agents. The auto-approval and context-transfer features are notable differentiators.
 
 ### Agent Viewer
 
@@ -213,7 +213,7 @@ Full desktop applications focused on running multiple agent sessions with visual
   - Asynchronous execution — delegate tasks and walk away
   - Comprehensive dashboards and task tracking
   - Also has a VS Code extension variant
-- **Notes:** Commercial product. The only paid standalone desktop app in this space. Claims highest SWE-bench Verified results among production agents.
+- **Notes:** Commercial product. One of the few paid standalone desktop apps in this space. Public materials claim strong SWE-bench Verified performance among production agents.
 
 ---
 
@@ -239,7 +239,7 @@ Tools for monitoring and interacting with agents from your phone or remotely.
   - Access conversation history offline
   - File mentions, slash commands, custom agents on mobile
   - Open source (MIT)
-- **Notes:** The leading mobile companion for coding agents. Genuinely useful for monitoring long-running tasks on the go. Free and open source.
+- **Notes:** A prominent mobile companion for coding agents, useful for monitoring long-running tasks on the go. Free and open source.
 
 ### Agent Viewer (via Tailscale)
 
@@ -266,7 +266,7 @@ Lightweight tools and configurations specifically for getting desktop or system 
   - macOS: `osascript -e 'display notification...'`
   - Linux: `notify-send`
   - Windows: PowerShell MessageBox
-- **Notes:** First-party solution. Zero dependencies. Should be your starting point.
+- **Notes:** First-party solution with zero dependencies. A good starting point for many teams.
 
 ### CCNotify
 
@@ -318,7 +318,7 @@ Lightweight tools and configurations specifically for getting desktop or system 
   - Works over SSH tunnels — remote EC2 agent sends notification to local desktop
   - Multi-window UUID-based terminal mapping
   - Task description extraction for context-rich notifications
-- **Notes:** Best solution for remote development environments.
+- **Notes:** A strong option for remote development environments.
 
 ---
 
@@ -394,7 +394,7 @@ Terminal tools for tracking token consumption, costs, and billing windows for co
 - **Platform:** VS Code 1.109+
 - **Agents:** GitHub Copilot, Claude (Anthropic), Codex (OpenAI)
 - **Features:**
-  - Unified sidebar view for ALL agent sessions (local, cloud, background)
+  - Unified sidebar view for agent sessions (local, cloud, background)
   - Real-time status tracking
   - Chat editor tabs for monitoring/course-correcting agents mid-run
   - Delegate tasks between agent types
@@ -432,13 +432,13 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 ### LangSmith
 
 - **Website:** [smith.langchain.com](https://smith.langchain.com)
-- **Key Strengths:** Deep LangChain integration, virtually zero performance overhead, excellent tracing
+- **Key Strengths:** Deep LangChain integration, low overhead in vendor benchmarks, strong tracing
 - **Best For:** Teams building with LangChain/LangGraph
 
 ### LangWatch
 
 - **Website:** [langwatch.ai](https://langwatch.ai)
-- **Key Strengths:** Full monitoring + evaluation + experimentation in one platform, fast setup (5 min)
+- **Key Strengths:** Integrated monitoring, evaluation, and experimentation in one platform, with quick setup claims
 - **Best For:** Teams wanting comprehensive all-in-one solution
 
 ### Braintrust
@@ -483,7 +483,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 | Platform | Focus | Notes |
 |----------|-------|-------|
 | **Lunary** | Prompt management + monitoring | Self-hostable, user-friendly |
-| **Agenta** | Prompt experimentation | Finding best prompt×model combos |
+| **Agenta** | Prompt experimentation | Exploring strong prompt×model combinations |
 | **TruLens** (Snowflake) | Evaluation + tracing | Open-source library, acquired by Snowflake |
 | **Evidently AI** | Testing + monitoring | Built on open-source Evidently library |
 
@@ -509,7 +509,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
   - Failure detection and error tracking
   - Cost control and analytics
   - Self-hostable via Docker (ClickHouse + OTEL collector backend)
-- **Notes:** One of the most popular agent-focused observability SDKs. Open source dashboard was a recent addition.
+- **Notes:** A widely used agent-focused observability SDK. Open source dashboard was a recent addition.
 
 ---
 
@@ -572,7 +572,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 ## Summary & Recommendations
 
 **For individual developers on macOS wanting to monitor multiple coding agents:**
-- Start with **Agent Deck** (terminal TUI, most feature-rich) or **Crystal** (desktop GUI) depending on whether you prefer terminal or graphical workflows.
+- Start with **Agent Deck** (terminal TUI, feature-rich) or **Crystal** (desktop GUI) depending on whether you prefer terminal or graphical workflows.
 - Add **Happy Coder** if you want mobile push notifications.
 - Use **ccusage** for cost tracking.
 
@@ -582,7 +582,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - **Datadog** or **Grafana** if you already have infrastructure monitoring in place.
 
 **For simple notifications (just tell me when Claude is done):**
-- Claude Code's built-in hooks are sufficient for most cases. Takes 2 minutes to configure.
+- Claude Code's built-in hooks are sufficient for most cases and often take only a few minutes to configure.
 - **code-notify** if you want voice announcements and cross-agent support.
 
 **The ecosystem is evolving rapidly.** Most of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is becoming a first-party concern for platform vendors, which may consolidate some of this fragmented tooling over time.
