@@ -376,7 +376,7 @@ Go's solution is clean and idiomatic. The bounded channel `make(chan int, buffer
 
 The directional channel types (`chan<- int` for send-only, `<-chan int` for receive-only) provide compile-time enforcement that producers only send and consumers only receive. This is not as strong as Rust's ownership guarantees, but it catches common mistakes.
 
-Go's concurrency model — goroutines communicating over channels, with the motto "don't communicate by sharing memory; share memory by communicating" — makes this pattern almost trivial. The bounded channel handles backpressure, the close-on-done pattern handles shutdown, and WaitGroups coordinate completion. This is Go at its best.
+Go's concurrency model — goroutines communicating over channels, with the motto "don't communicate by sharing memory; share memory by communicating" — makes this pattern much more direct. The bounded channel handles backpressure, the close-on-done pattern handles shutdown, and WaitGroups coordinate completion. This is a strong example of Go's design goals.
 
 ### Rust
 
@@ -543,9 +543,9 @@ Zig requires building the bounded queue from primitives: a mutex, two condition 
 
 ### Systems Language Comparison
 
-The systems languages show a clear progression in abstraction level for concurrency. Zig and C require building bounded queues from mutexes and condition variables — the most explicit but most error-prone approach. Rust's standard library provides channels, and the ownership system prevents data races at compile time. Go provides channels as a language-level feature with goroutines that make spawning concurrent work trivial.
+The systems languages show a clear progression in abstraction level for concurrency. Zig and C require building bounded queues from mutexes and condition variables, among the most explicit approaches and often more error-prone in practice. Rust's standard library provides channels, and the ownership system prevents data races at compile time. Go provides channels as a language-level feature with goroutines that make spawning concurrent work straightforward.
 
-For this specific problem, Go is the most ergonomic: bounded channels, goroutines, and close semantics are all built into the language. Rust is safer: the compiler prevents data races, though the ergonomics are slightly worse with `Arc<Mutex<>>` wrappers. Zig is the most explicit: you see every mutex lock, every condition variable wait, every buffer index operation.
+For this specific problem, Go is among the most ergonomic: bounded channels, goroutines, and close semantics are all built into the language. Rust offers stronger race-safety guarantees because the compiler prevents data races, though the ergonomics are slightly worse with `Arc<Mutex<>>` wrappers. Zig is highly explicit: you see every mutex lock, every condition variable wait, every buffer index operation.
 
 ---
 
@@ -1480,13 +1480,13 @@ end
 table.sort(results)
 ```
 
-Lua's coroutines provide cooperative multitasking but not parallelism. A bounded queue can be simulated with yield points, but without OS threads, there is no true concurrency. This is Lua's most significant limitation for this problem — the language was designed as a lightweight embeddable scripting language, not for concurrent systems programming.
+Lua's coroutines provide cooperative multitasking but not parallelism. A bounded queue can be simulated with yield points, but without OS threads, there is no true parallel execution. This is a major limitation for this problem because the language was designed as a lightweight embeddable scripting language, not for concurrent systems programming.
 
 ### Scripting Language Comparison
 
-The scripting languages reveal a fundamental architectural limitation: the GIL/GVL (Python, Ruby) or single-threaded event loop (JavaScript, Lua) prevents true CPU parallelism within a single process. All four languages can simulate the producer-consumer pattern using queues and threads/tasks, but only Python and Ruby's threads (or multiprocessing) provide actual concurrent execution, and even then with significant overhead.
+The scripting languages reveal an important architectural limitation: the GIL/GVL (Python, Ruby) or single-threaded event loop (JavaScript, Lua) limits true CPU parallelism within a single process. All four languages can simulate the producer-consumer pattern using queues and threads/tasks, but only Python and Ruby's threads (or multiprocessing) provide substantial parallel execution, and even then often with significant overhead.
 
-This is the algorithm that most starkly separates systems languages from scripting languages. For the array transformation and expression tree problems, scripting languages were merely more verbose than their ideal counterparts. For concurrent pipelines, they are fundamentally constrained by their runtime architectures.
+This algorithm sharply separates systems languages from scripting languages. For the array transformation and expression tree problems, scripting languages were mostly more verbose than their ideal counterparts. For concurrent pipelines, they are much more constrained by runtime architecture choices.
 
 ---
 
@@ -1845,11 +1845,11 @@ The array language approach is to avoid explicit concurrency entirely — instea
 
 ### Communication Paradigms
 
-The most fundamental axis of variation is how concurrent units communicate. There are three primary paradigms.
+A fundamental axis of variation is how concurrent units communicate. There are three primary paradigms.
 
 **Message passing** (Erlang, Elixir, Go channels, Kotlin channels): concurrent units communicate by sending and receiving messages through typed or untyped channels. There is no shared mutable state. Safety comes from isolation — each unit owns its data and shares nothing.
 
-**Shared memory with locks** (C, C++, Java's early model): concurrent units share memory and coordinate access with mutexes, condition variables, and atomic operations. This is the most flexible approach but the most error-prone — forgetting a lock or acquiring locks in the wrong order causes data races or deadlocks.
+**Shared memory with locks** (C, C++, Java's early model): concurrent units share memory and coordinate access with mutexes, condition variables, and atomic operations. This is a highly flexible approach but often more error-prone; forgetting a lock or acquiring locks in the wrong order causes data races or deadlocks.
 
 **Transactional memory** (Haskell's STM): concurrent units share memory but access it through composable transactions that the runtime serializes. This avoids explicit locks while preserving shared-state semantics.
 
@@ -1863,7 +1863,7 @@ This cost difference is not just quantitative but qualitative. When concurrent u
 
 Shutdown — knowing when all producers are done and all consumers should stop — is surprisingly tricky. Languages handle it differently. Go uses channel close semantics, where `range` over a closed channel terminates. Erlang uses explicit shutdown messages in the actor protocol. Java uses poison pills or `CountDownLatch`. C uses condition variable broadcasts when producer counts reach zero.
 
-The cleanest shutdown mechanisms are those built into the coordination primitive itself (Go's `close`, Ada's entry guards). The most error-prone are those that require manual counting and signaling (C's condition variables, Java's poison pills).
+The cleanest shutdown mechanisms are usually those built into the coordination primitive itself (Go's `close`, Ada's entry guards). The approaches that require manual counting and signaling (C's condition variables, Java's poison pills) are often more error-prone.
 
 ### Safety Guarantees
 
@@ -1873,9 +1873,9 @@ Erlang and the BEAM family sidestep the problem entirely: since there is no shar
 
 ### Where Each Family Excels
 
-The BEAM family excels here because concurrency is their raison d'être — lightweight processes, message passing, and fault tolerance via supervision trees. Go excels because channels and goroutines were designed for exactly this pattern. Rust excels because the ownership system provides safety guarantees that no other systems language matches. Ada excels because its protected objects and tasking model, designed for safety-critical systems, handle synchronization with minimal boilerplate.
+The BEAM family excels here because concurrency is their raison d'etre: lightweight processes, message passing, and fault tolerance via supervision trees. Go excels because channels and goroutines align closely with this pattern. Rust excels because the ownership system provides strong safety guarantees that few systems languages match end to end. Ada excels because its protected objects and tasking model, designed for safety-critical systems, handle synchronization with minimal boilerplate.
 
-The C family works but requires significant engineering. The scripting languages are fundamentally limited by their runtime architectures. The APL family and Prolog are out of their element — concurrency is orthogonal to their core paradigms.
+The C family works but requires significant engineering. The scripting languages are materially limited by their runtime architectures. The APL family and Prolog are comparatively out of their element because explicit concurrency is orthogonal to their core paradigms.
 
 ---
 
@@ -1885,6 +1885,6 @@ The concurrent producer-consumer pipeline reveals a different dimension of langu
 
 The results upend the previous rankings. The BEAM family, which was merely adequate for arrays and trees, is perfectly at home with concurrent processes. Go, which was verbose for tree evaluation, is clean and idiomatic for channel-based pipelines. The APL family, which excelled at array transformations, has almost nothing to contribute to explicit concurrency. Haskell, which excelled at expression trees, offers a unique perspective through STM but is not as natural for concurrency as Erlang or Go.
 
-The most striking insight is that concurrency safety can be achieved through fundamentally different mechanisms. Rust prevents data races through compile-time ownership analysis. Erlang prevents them by eliminating shared mutable state. Go and Kotlin prevent many issues through channel abstractions. Ada prevents them through monitor-based protected objects. C prevents nothing, leaving safety entirely to the programmer's discipline.
+An important insight is that concurrency safety can be achieved through very different mechanisms. Rust prevents data races through compile-time ownership analysis. Erlang prevents them by eliminating shared mutable state. Go and Kotlin prevent many issues through channel abstractions. Ada prevents them through monitor-based protected objects. C provides minimal built-in prevention, leaving safety largely to programmer discipline.
 
 These are not points on a single spectrum but different answers to a philosophical question: should the language prevent concurrency errors by restricting what you can express, by checking what you express, or by trusting you to express it correctly? The diversity of answers reflects the diversity of contexts in which concurrent programs are written — from telephone switches to web servers to embedded controllers to financial trading systems. Each context has different requirements for safety, performance, and expressiveness, and each language's concurrency model reflects the context it was designed to serve.
