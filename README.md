@@ -103,7 +103,7 @@ Every notable tool available as of mid-February 2026 for monitoring LLM coding a
 
 ### [Parallel LLM coding agents with tmux and git worktrees](llm-agents/tmux-worktree-tools.md)
 
-Comprehensive survey of tools at the intersection of LLM coding agents, tmux session management, and git worktree isolation. Profiles every significant tool from full-featured TUI session managers (claude-squad, ccmanager, agent-deck) through opinionated workflow tools (workmux, dmux, barrel) to lightweight shell scripts, with architectural analysis of the core pattern, the containerization gap, worktree conventions, and community discussion.
+Comprehensive survey of tools at the intersection of LLM coding agents, tmux session management, and git worktree isolation. Profiles every significant tool from full-featured TUI session managers (claude-squad, ccmanager, agent-deck) through opinionated workflow tools (workmux, dmux, barrel/axel) to lightweight shell scripts, with architectural analysis of the core pattern, the containerization gap, worktree conventions, and community discussion.
 
 ## Programming Languages
 
