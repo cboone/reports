@@ -61,9 +61,9 @@ countries: [DK, NO, SE]  # NO becomes boolean false!
 version: 1.10  # Becomes float 1.1
 ```
 
-The "Norway problem" alone has caused production incidents. Other gotchas include `~` parsing as null, tabs being forbidden, and arbitrary code execution via `!python/object` tags (always use `safe_load()`).
+The "Norway problem" alone has caused production incidents. Other gotchas include `~` parsing as null, tabs being forbidden, and arbitrary code execution via `!python/object` tags (use `safe_load()` for untrusted input).
 
-**Despite these issues, YAML is entrenched in DevOps**: Kubernetes manifests, Docker Compose, GitHub Actions, Ansible, Helm charts, AWS CloudFormation. The ecosystem lock-in is total—no format is displacing YAML in cloud-native tooling.
+**Despite these issues, YAML is entrenched in DevOps**: Kubernetes manifests, Docker Compose, GitHub Actions, Ansible, Helm charts, AWS CloudFormation. The ecosystem lock-in is strong, and no other format is currently displacing YAML in cloud-native tooling.
 
 **Library quality varies dramatically:** Python's `PyYAML` with CLoader is 17x faster than pure Python. In Node.js, `js-yaml` takes 504ms where native JSON takes 94ms—but both dwarf `yaml@2` at 2,108ms.
 

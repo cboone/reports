@@ -86,7 +86,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **1997** — **Kent Beck** and **Erich Gamma** create **JUnit** on a flight to OOPSLA, making test-driven development practical and spawning the xUnit family of testing frameworks.
 
-**1998** — Daimler-Benz acquires Chrysler; the on-site customer at C3 resigns from burnout and cannot be replaced.
+**1998** — Daimler-Benz acquires Chrysler; the on-site customer at C3 resigns from burnout and could not be replaced at that time.
 
 **1999** — C3 development stops; DaimlerChrysler officially cancels the project in February 2000, but by then XP has spread to many other projects.
 
