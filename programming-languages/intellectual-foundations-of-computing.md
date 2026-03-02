@@ -324,7 +324,6 @@ The geography of computing theory reflects the concentration of talent at specif
 
 **Floyd** — "Assigning Meanings to Programs" (1967)
 - [UC Berkeley (PDF)](https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf)
-- [Tel Aviv University (PDF)](https://www.cs.tau.ac.il/~nachumd/term/FloydMeaning.pdf)
 
 **Hoare** — "An Axiomatic Basis for Computer Programming" (1969)
 - [CMU (PDF)](https://www.cs.cmu.edu/~crary/819-f09/Hoare69.pdf)
