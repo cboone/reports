@@ -726,9 +726,9 @@ F# leverages .NET's `BlockingCollection<T>`, which provides a bounded, thread-sa
 
 ### ML Family Comparison
 
-Each ML-family language brings a different concurrency philosophy. Haskell's STM offers composable transactions — a theoretically elegant model with no equivalent in other families. OCaml 5's effect-based concurrency is the newest approach, using algebraic effects to express concurrency as a composable, structured abstraction. F# pragmatically uses .NET's concurrent collections with async workflows.
+Each ML-family language brings a different concurrency philosophy. Haskell's STM offers composable transactions, a theoretically elegant model that remains relatively uncommon outside a few ecosystems. OCaml 5's effect-based concurrency is the newest approach, using algebraic effects to express concurrency as a composable, structured abstraction. F# pragmatically uses .NET's concurrent collections with async workflows.
 
-None of these is as natural for concurrency as the BEAM family, but each offers unique strengths: Haskell's STM prevents a class of bugs that channel-based systems cannot, OCaml's structured concurrency ensures resources are always cleaned up, and F# provides seamless access to .NET's mature concurrent data structures.
+None of these is typically as natural for concurrency as the BEAM family, but each offers unique strengths: Haskell's STM prevents classes of bugs that are harder to avoid in many channel-based systems, OCaml's structured concurrency helps ensure resources are cleaned up, and F# provides seamless access to .NET's mature concurrent data structures.
 
 ---
 
