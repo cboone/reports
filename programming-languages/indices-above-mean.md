@@ -121,7 +121,7 @@ Throughout this document, we will use zero-based indexing unless the language co
 
 ## The APL Family
 
-The APL family represents programming's most radical experiment in notation. These languages treat arrays as the fundamental unit of computation, making iteration implicit rather than explicit. A transformation that requires a loop in most languages is expressed as a single operation applied to an entire array.
+The APL family represents one of programming's most radical experiments in notation. These languages treat arrays as the fundamental unit of computation, making iteration implicit rather than explicit. A transformation that requires a loop in many languages is expressed as a single operation applied to an entire array.
 
 ### APL
 
@@ -314,7 +314,7 @@ PureScript's syntax closely mirrors Haskell's. The main differences are practica
 
 The ML family shares a commitment to strong static typing with inference, algebraic data types, and immutability by default. Within the family, the main variations are in strictness (Haskell is lazy, others are strict), purity (Haskell enforces purity, OCaml allows side effects), and standard library design.
 
-Haskell offers the most powerful abstraction mechanisms (type classes, monads, higher-kinded types) but has a steeper learning curve. OCaml and F# are more pragmatic, offering escape hatches to imperative code when needed. Elm deliberately restricts features to maintain simplicity and guarantee no runtime errors.
+Haskell offers especially powerful abstraction mechanisms (type classes, monads, higher-kinded types) but has a steeper learning curve. OCaml and F# are more pragmatic, offering escape hatches to imperative code when needed. Elm deliberately restricts features to maintain simplicity and avoid many classes of runtime errors.
 
 All these languages make the algorithm's structure explicit: we name the intermediate values (mean), explicitly map over the list to pair elements with indices, and explicitly filter. This verbosity compared to APL is the price paid for readability and type safety. The compensating benefit is that the code is self-documenting and errors are caught at compile time.
 
@@ -704,7 +704,7 @@ The JVM family shares the Java ecosystem, garbage collection, and JIT compilatio
 
 Java prioritizes backward compatibility and explicitness, resulting in verbose but predictable code. Scala offers powerful abstractions and type system features, appealing to those who want ML-family sophistication on the JVM. Kotlin targets pragmatic improvement over Java, popular for Android development and server-side work.
 
-Our algorithm shows the conciseness spectrum clearly: Java requires the most ceremony (stream setup, collectors, boxing), Kotlin is intermediate (built-in `indices`, simple `filter`), and Scala is most concise (pattern matching with guards).
+Our algorithm shows the conciseness spectrum clearly: Java requires the most ceremony (stream setup, collectors, boxing), Kotlin is intermediate (built-in `indices`, simple `filter`), and Scala is typically the most concise here (pattern matching with guards).
 
 ---
 
@@ -924,7 +924,7 @@ Zig requires explicit allocators, making memory allocation visible and testable.
 
 Modern systems languages share the goal of safe, efficient code without garbage collection. Within this group, they make different trade-offs.
 
-Rust has the most sophisticated safety system (ownership and borrowing) but the steepest learning curve. Go prioritizes simplicity and fast compilation, accepting more verbosity. Zig aims to replace C with minimal abstraction over the machine, explicit allocation, and compile-time execution.
+Rust has one of the most sophisticated safety systems (ownership and borrowing) and often a steep learning curve. Go prioritizes simplicity and fast compilation, accepting more verbosity. Zig aims to replace C with minimal abstraction over the machine, explicit allocation, and compile-time execution.
 
 Our algorithm shows these philosophies: Rust's iterators provide high-level composition with zero-cost abstraction. Go's explicit loops are simple but verbose. Zig's explicit allocation and two-pass approach is closest to C but with better error handling.
 
@@ -1066,7 +1066,7 @@ Ada separates specification (`.ads`) from body (`.adb`). It uses attributes like
 
 The Wirth family shares an emphasis on clarity, structure, and strong typing. Within the family, the main variations are in feature richness and application domain.
 
-Pascal is the simplest, designed for teaching. Modula-2 adds modules for larger programs. Ada is the most feature-rich, designed for mission-critical software with contracts, tasks, and extensive type checking.
+Pascal is the simplest of the three here, designed for teaching. Modula-2 adds modules for larger programs. Ada is the most feature-rich in this group, designed for mission-critical software with contracts, tasks, and extensive type checking.
 
 Our algorithm shows the family's characteristic verbosity: explicit variable declarations, BEGIN/END blocks, and separate passes for counting and filling. This explicitness aids understanding and review but requires more code than functional or array-oriented languages.
 
@@ -1574,6 +1574,6 @@ No single approach is universally best. APL's notation is powerful for array com
 
 The algorithm itself is simple enough that every language can express it, yet complex enough that different languages reveal their characters. We see how languages handle aggregation (sum), abstraction (computing mean), iteration (examining each element), filtering (keeping matches), and collection (gathering results). These operations recur throughout programming, and how a language handles them shapes what it's like to think and work in that language.
 
-Understanding multiple paradigms makes one a better programmer even when working in a single language. The APL programmer thinks about data transformations. The Haskell programmer thinks about types and composition. The C programmer thinks about memory and performance. Each perspective illuminates problems differently, and the best solutions often combine insights from multiple traditions.
+Understanding multiple paradigms often makes one a better programmer even when working in a single language. The APL programmer thinks about data transformations. The Haskell programmer thinks about types and composition. The C programmer thinks about memory and performance. Each perspective illuminates problems differently, and strong solutions often combine insights from multiple traditions.
 
 As programming languages continue to evolve, they borrow from each other. Python adds type hints. Java adds lambdas. Rust adds pattern matching. The boundaries between paradigms blur. Yet the diversity remains valuable: different problems call for different tools, and different minds resonate with different notations. The wealth of programming languages is not confusion but richness.
