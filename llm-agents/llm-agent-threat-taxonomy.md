@@ -224,6 +224,6 @@ For ongoing monitoring of this rapidly evolving space, the following sources are
 
 ["The Attacker Moves Second"](https://arxiv.org/abs/2510.17342) (Nasr et al., October 2025) provides some of the strongest evidence that prompt injection defenses are unreliable.
 
-["We Have a Package for You!"](https://arxiv.org/abs/2406.10279) (Spracklen et al., 2025) provides the definitive analysis of package hallucination / slopsquatting.
+["We Have a Package for You!"](https://arxiv.org/abs/2406.10279) (Spracklen et al., 2025) provides one of the most comprehensive analyses of package hallucination / slopsquatting.
 
 [Veracode's 2025 GenAI Code Security Report](https://www.veracode.com/resources/ai-generated-code-security) provides the most comprehensive data on vulnerability rates in AI-generated code.
