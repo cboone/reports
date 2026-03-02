@@ -259,7 +259,7 @@ The implementation uses "GC shape stenciling"—a hybrid approach generating spe
 
 ## From GOPATH to modules
 
-Go's dependency management evolved significantly. The original **GOPATH model** required all projects to live in `$GOPATH/src`, with only one version of each dependency globally available. Version conflicts between projects were unsolvable.
+Go's dependency management evolved significantly. The original **GOPATH model** required all projects to live in `$GOPATH/src`, with only one version of each dependency globally available. Version conflicts between projects were difficult to resolve cleanly.
 
 **Go 1.5 (2015)** introduced vendoring—copying dependencies into a `vendor/` directory—which provided isolation but caused repository bloat and required third-party tools like godep, glide, and dep.
 
@@ -369,7 +369,7 @@ Go deliberately rejects class hierarchies. Where Java uses `class Dog extends An
 
 Go compiles to native binaries requiring no runtime environment; Java requires the JVM, C# requires .NET. Go's single-binary deployment simplifies containerization dramatically.
 
-Error handling differs fundamentally: Go uses explicit return values that must be handled at call sites; Java/C# use exceptions that can propagate silently up the stack.
+Error handling differs significantly: Go uses explicit return values that must be handled at call sites; Java/C# use exceptions that can propagate up the stack.
 
 ### Go versus Python
 
@@ -412,11 +412,11 @@ Go reached **#7 on the TIOBE Index** in November 2024, its all-time high at that
 **"Communicating Sequential Processes" — C.A.R. Hoare (1978)**
 Communications of the ACM, Vol. 21, No. 8
 https://dl.acm.org/doi/10.1145/359576.359585
-One of the most-cited computer science papers, establishing the theoretical foundation for Go's concurrency model. Essential reading for understanding why goroutines and channels work the way they do.
+One of the most-cited computer science papers, establishing the theoretical foundation for Go's concurrency model. Highly recommended for understanding why goroutines and channels work the way they do.
 
 **The Go Memory Model**
 https://go.dev/ref/mem
-Official specification defining happens-before relationships for concurrent programming. Required reading for anyone writing concurrent Go beyond trivial cases.
+Official specification defining happens-before relationships for concurrent programming. Strongly recommended for anyone writing concurrent Go beyond trivial cases.
 
 ### Essential talks
 
@@ -487,6 +487,6 @@ Three principles define Go's philosophy: **simplicity** (25 keywords, one obviou
 
 The CSP concurrency model, garbage collection optimized for low latency rather than maximum throughput, implicit interface satisfaction, and explicit error handling all flow from these principles. Go traded expressiveness for maintainability, a trade-off that resonated with organizations building systems that power much of the modern internet.
 
-Looking ahead, Go continues refining performance (Green Tea GC, Swiss Tables maps), expanding cryptographic capabilities (post-quantum support), and improving developer experience through telemetry-driven decisions. Sum types remain the most-requested feature, though the Go team's conservative approach to language changes means any addition will be deliberate.
+Looking ahead, Go continues refining performance (Green Tea GC, Swiss Tables maps), expanding cryptographic capabilities (post-quantum support), and improving developer experience through telemetry-driven decisions. Sum types remain among the most-requested features, though the Go team's conservative approach to language changes means any addition will be deliberate.
 
 For engineers building networked services, infrastructure tools, CLI applications, or distributed systems—and who value deployment simplicity and long-term maintainability—Go remains a compelling choice. Its success demonstrates that a language designed around **"no"** can achieve more than languages designed around "yes."
