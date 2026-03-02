@@ -70,11 +70,11 @@ Model-agnostic terminal-first AI coding agent supporting **75+ LLM providers**. 
 - **License:** Apache 2.0
 - **Agent type:** Multi-session parallel agents
 - **Status:** Rapidly growing, very active
-- **Distinguishing:** Can reuse existing GitHub Copilot or ChatGPT Plus subscriptions for authentication — unique cost advantage. One of the broadest LLM provider catalogs of any tool. Community opinion is divided — praised for flexibility but considered less polished than Aider.
+- **Distinguishing:** Can reuse existing GitHub Copilot or ChatGPT Plus subscriptions for authentication, a notable cost advantage. One of the broadest LLM provider catalogs in this category. Community opinion is divided, praised for flexibility but often considered less polished than Aider.
 
 ### Gemini CLI (Google)
 
-Google's open-source terminal AI agent with **1M token context** and one of the most generous free tiers.
+Google's open-source terminal AI agent with **1M token context** and a comparatively generous free tier.
 
 - **GitHub:** github.com/google-gemini/gemini-cli
 - **Models:** Google Gemini models; **free tier: 60 requests/min, 1,000/day**
@@ -84,7 +84,7 @@ Google's open-source terminal AI agent with **1M token context** and one of the 
 - **License:** Apache 2.0
 - **Agent type:** Single-agent
 - **Status:** Very active
-- **Distinguishing:** **One of the most generous free tiers** among major CLI agents. Web search grounding means the agent can verify its own answers against Google Search. Privacy concern: Google uses prompts and code for model training. ~27,000 stars.
+- **Distinguishing:** **A generous free tier** among major CLI agents. Web search grounding means the agent can verify its own answers against Google Search. Privacy concern: Google uses prompts and code for model training. ~27,000 stars.
 
 ### Crush (Charmbracelet)
 
@@ -98,7 +98,7 @@ The "glamorous" agentic coding TUI from the Charm ecosystem. Originally created 
 - **License:** Charm License (proprietary — not open source despite appearances)
 - **Agent type:** Single-agent
 - **Status:** Very active, ~12,000–19,000 stars
-- **Distinguishing:** **Among the most aesthetically polished terminal coding agents.** Broad platform support including Android, FreeBSD, OpenBSD, NetBSD. Part of the Charm ecosystem (Bubble Tea, Lip Gloss, Glow). Not truly open-source — uses Charm's custom license.
+- **Distinguishing:** **Widely regarded as highly polished for terminal UX.** Broad platform support including Android, FreeBSD, OpenBSD, NetBSD. Part of the Charm ecosystem (Bubble Tea, Lip Gloss, Glow). Not truly open-source — uses Charm's custom license.
 
 ### Goose (Block)
 
@@ -185,11 +185,11 @@ Open-source AI code assistant with CLI, TUI, headless modes, and CI/CD agent wor
 - **Stars:** ~22,000
 - **Agent type:** Multi-agent (CI/CD workflow agents)
 - **Status:** Very active, recently pivoted to emphasize CLI
-- **Distinguishing:** Recently expanded from IDE-only to CLI + CI/CD agents. Can run agents as automated CI checks on pull requests. Strong local model support.
+- **Distinguishing:** Recently expanded from IDE-only to CLI + CI/CD agents. Can run agents as automated CI checks on pull requests. Solid local model support.
 
 ### Droid (Factory AI)
 
-Enterprise-grade terminal coding agent with specialized sub-agents. **Vendor-reported top Terminal-Bench score (58.75%).**
+Enterprise-grade terminal coding agent with specialized sub-agents. **Vendor-reported leading Terminal-Bench result (58.75%).**
 
 - **Homepage:** factory.ai
 - **Models:** BYOK — Claude Opus, Sonnet, GPT-5, any frontier model, local via Ollama
@@ -217,7 +217,7 @@ AWS's spec-driven development AI coding tool, successor to Amazon Q Developer CL
 
 ### Rovo Dev CLI (Atlassian)
 
-Enterprise CLI agent with native Jira, Confluence, and Bitbucket integration. Atlassian has claimed a top SWE-bench full leaderboard result (41.98%).
+Enterprise CLI agent with native Jira, Confluence, and Bitbucket integration. Atlassian has reported a high SWE-bench full leaderboard result (41.98%).
 
 - **Homepage:** atlassian.com/blog/announcements/rovo-dev-command-line-interface
 - **Models:** Frontier models (details not fully public)
@@ -290,7 +290,7 @@ These tools provide interactive Q&A with code context but are oriented more towa
 
 ### Open Interpreter
 
-Natural language interface for your computer — lets LLMs run code locally without restrictions. **~62,000 GitHub stars** — one of the most starred tools in this category.
+Natural language interface for your computer — lets LLMs run code locally with minimal restrictions in local mode. **~62,000 GitHub stars** — one of the higher-starred tools in this category.
 
 - **GitHub:** github.com/openinterpreter/open-interpreter
 - **Models:** OpenAI (default), Claude, all LiteLLM providers, Ollama, LM Studio
@@ -298,7 +298,7 @@ Natural language interface for your computer — lets LLMs run code locally with
 - **Interface:** CLI (interactive chat)
 - **Language:** Python
 - **License:** AGPL-3.0
-- **Distinguishing:** Essentially a local, unrestricted Code Interpreter. No file size limits, no timeout, no internet restrictions. Can control your computer's GUI.
+- **Distinguishing:** Essentially a local, unrestricted Code Interpreter. In typical local mode, there are no hard file-size or timeout caps, and internet use is broadly available. Can control your computer's GUI.
 
 ### AIChat
 
@@ -425,7 +425,7 @@ Virtual software company using communicative agents. **~26,000 stars.** ACL 2024
 - **Interface:** CLI + Web Console
 - **Language:** Python
 - **License:** Apache 2.0
-- **Distinguishing:** Strong academic backing (Tsinghua/OpenBMB). Communicative dehallucination. Among the most role-diverse multi-agent systems.
+- **Distinguishing:** Strong academic backing (Tsinghua/OpenBMB). Communicative dehallucination. Among the more role-diverse multi-agent systems in this survey.
 
 ### GPT-Engineer
 
@@ -614,15 +614,15 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 **Tier 1 — Lab-backed flagships** (Claude Code, Codex CLI, Gemini CLI, Copilot CLI): Most major AI labs now ship a terminal coding agent. These tools serve as both products and model showcases. Claude Code is often cited for reasoning quality, Codex CLI for sandboxing, Gemini CLI for free access, and Copilot CLI for GitHub ecosystem integration.
 
-**Tier 2 — Model-agnostic open-source** (Aider, OpenCode, Goose, Crush, Continue): These tools deliberately avoid model lock-in. Aider is one of the most mature, OpenCode among the most provider-diverse, and Goose highly extensible. This tier often benefits when new models launch — they can adopt quickly while lab tools are locked to their own models.
+**Tier 2 — Model-agnostic open-source** (Aider, OpenCode, Goose, Crush, Continue): These tools deliberately avoid model lock-in. Aider is among the most mature, OpenCode among the more provider-diverse, and Goose highly extensible. This tier often benefits when new models launch; it can adopt quickly while lab tools are locked to their own models.
 
 **Tier 3 — Specialized and emerging** (Plandex, AIChat, Droid, Kimi CLI, multi-agent frameworks): Tools that differentiate through unique architecture (Plandex's 2M token context, Droid's specialized sub-agents, Kimi's dual-mode shell) rather than trying to be general-purpose.
 
 ### Seven key trends shaping the landscape
 
-**MCP as broadly adopted standard.** Model Context Protocol has become a leading extensibility mechanism. Many major tools now support MCP, creating a shared ecosystem of tools and integrations. This is one of the most important structural developments; it means tools are becoming more interoperable rather than fully siloed.
+**MCP as broadly adopted standard.** Model Context Protocol has become a leading extensibility mechanism. Many major tools now support MCP, creating a shared ecosystem of tools and integrations. This is a major structural development; it means tools are becoming more interoperable rather than fully siloed.
 
-**Multi-agent orchestration is one of the fastest-growing categories.** Six months ago, Claude Squad didn't exist. Now there are many tools for managing multiple agents simultaneously. This reflects a workflow shift: developers increasingly run 2-3 agents on different tasks in parallel rather than using one agent sequentially.
+**Multi-agent orchestration is a fast-growing category.** Six months ago, Claude Squad didn't exist. Now there are many tools for managing multiple agents simultaneously. This reflects a workflow shift: developers increasingly run 2-3 agents on different tasks in parallel rather than using one agent sequentially.
 
 **Rust and Go are displacing Python for new tools.** While Python dominates older tools (Aider, Open Interpreter, MetaGPT, SWE-agent), many tools launched in 2025-2026 are written in Rust, Go, or TypeScript. Codex CLI's rewrite from TypeScript to Rust and Goose's Rust core suggest that **startup performance and binary distribution** are increasingly prioritized over Python's ecosystem advantages for CLI tools.
 
@@ -632,15 +632,15 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 **Terminal-Bench is emerging as an important benchmark.** Just as SWE-bench standardized evaluation for research agents, Terminal-Bench (where Droid has a reported leading score at 58.75%) is becoming a key benchmark for CLI coding tools in real-world terminal scenarios.
 
-**The "why CLI over IDE?" question is increasingly answered in favor of CLI for certain workflows.** HN and Reddit discussions converge on recurring advantages: cost savings (no IDE subscription), better separation of concerns (agent in separate worktree), higher-quality interactions (deliberate prompting vs. autocomplete), SSH compatibility, and composability (terminal is the natural interface for tool use).
+**The "why CLI over IDE?" question is often answered in favor of CLI for certain workflows.** HN and Reddit discussions converge on recurring advantages: cost savings (no IDE subscription), better separation of concerns (agent in separate worktree), higher-quality interactions (deliberate prompting vs. autocomplete), SSH compatibility, and composability (terminal is the natural interface for tool use).
 
 ### Most mature tools
 
-**Aider** is one of the most battle-tested open-source tools — 40,000+ stars, 4.1M installs, vendor-reported very high weekly token volume, and 230+ contributors. **Claude Code** is widely viewed as one of the most polished commercial tools for complex reasoning. **OpenHands** is among the most mature platforms for autonomous headless operation.
+**Aider** is one of the more battle-tested open-source tools, with 40,000+ stars, 4.1M installs, vendor-reported very high weekly token volume, and 230+ contributors. **Claude Code** is widely viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
 
 ### Most promising tools
 
-**Crush** (Charm ecosystem backing, beautiful UX, broad platform support), **OpenCode** (model-agnostic, growing rapidly), **Kimi Code CLI** (unique dual-mode shell, Agent Swarm), and **mini-swe-agent** (showing that compact implementations can post high SWE-bench scores) represent some of the most interesting new directions.
+**Crush** (Charm ecosystem backing, beautiful UX, broad platform support), **OpenCode** (model-agnostic, growing rapidly), **Kimi Code CLI** (unique dual-mode shell, Agent Swarm), and **mini-swe-agent** (showing that compact implementations can post high SWE-bench scores) represent several notable new directions.
 
 ### Gaps in the market
 
