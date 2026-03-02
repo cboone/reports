@@ -16,7 +16,7 @@ Programming fonts have evolved from mechanical typewriter constraints into a sop
 
 The monospaced font tradition predates computing entirely. The **1868 Sholes and Glidden typewriter** introduced fixed-width characters as a mechanical necessity—each keystroke moved the carriage by exactly the same distance. This constraint would shape computer typography for over a century.
 
-**Courier** (1955-1956), designed by Howard "Bud" Kettler for IBM, became the most influential monospaced typeface of the 20th century. Kettler chose the name because "a letter can be just an ordinary messenger, or it can be the courier, which radiates dignity, prestige, and stability." Critically, **IBM never trademarked Courier**, making both design and name public domain—a decision that established it as the dominant font for government documents, screenplays, and eventually computer systems.
+**Courier** (1955-1956), designed by Howard "Bud" Kettler for IBM, became one of the most influential monospaced typefaces of the 20th century. Kettler chose the name because "a letter can be just an ordinary messenger, or it can be the courier, which radiates dignity, prestige, and stability." Critically, **IBM never trademarked Courier**, making both design and name public domain, a decision that helped establish it as a widely used font for government documents, screenplays, and eventually computer systems.
 
 The DEC terminals of the late 1970s-1980s defined what "terminal fonts" looked like for a generation. The **VT100** (1978) established ANSI escape codes still used today, while the **VT220** (1983) shipped with glyphs formed in a 10×10 pixel grid. By 1986, DEC terminals commanded **42% market share** with 165,000 units shipped. Their fonts had distinctive characteristics influenced by CRT phosphor behavior—dot stretching and phosphor bleed contributed to the actual on-screen appearance beyond the raw bitmap data.
 
@@ -38,7 +38,7 @@ The open-source response came quickly. **Inconsolata** (2006), designed by Googl
 
 ## The Bitstream Vera family tree shaped Linux and macOS defaults
 
-The most prolific open-source font lineage began with **Bitstream Vera** (2003), commissioned by the GNOME Foundation for the Linux desktop. Designer Jim Lyles created a complete font family with full TrueType hinting optimized for low-resolution displays. The permissive license explicitly allowed derivatives—provided they were renamed.
+A prolific open-source font lineage began with **Bitstream Vera** (2003), commissioned by the GNOME Foundation for the Linux desktop. Designer Jim Lyles created a complete font family with full TrueType hinting optimized for low-resolution displays. The permissive license explicitly allowed derivatives, provided they were renamed.
 
 **DejaVu** (2004), started by Czech programmer Štěpán Roh, extended Vera with dramatically broader Unicode coverage including Latin, Cyrillic, Greek, Armenian, Georgian, and Hebrew scripts. The project absorbed contributions from multiple sources and expanded from 10 to 21 font styles. DejaVu Sans Mono became the default monospace font on Ubuntu, Debian, Fedora, OpenBSD, and numerous other systems.
 
@@ -64,7 +64,7 @@ The Fira family originated at Mozilla. **Fira Sans** (2012-2013) was commissione
 
 **Fira Code** (2015), created by Nikita Prokopov, took Hasklig's ligature concept and made it mainstream. Prokopov added **100+ ligatures** covering operators across all major programming languages, implemented using OpenType's contextual alternates (`calt`) feature rather than standard ligatures—allowing cursor movement through individual characters.
 
-With **81,000+ GitHub stars**, Fira Code is the most popular programming font repository on GitHub. Its innovations include character variants, stylistic sets, progress bar glyphs, and combinable arrow ligatures. The project explicitly credits Hasklig for inspiration, and notably, Hasklig later borrowed improved calt code back from Fira Code—demonstrating the collaborative nature of open-source font development.
+With **81,000+ GitHub stars**, Fira Code is one of the most popular programming font repositories on GitHub. Its innovations include character variants, stylistic sets, progress bar glyphs, and combinable arrow ligatures. The project explicitly credits Hasklig for inspiration, and notably, Hasklig later borrowed improved calt code back from Fira Code, demonstrating the collaborative nature of open-source font development.
 
 ---
 
@@ -88,7 +88,7 @@ Design features include right-angle interior counters contrasting with smooth ex
 
 ## GitHub's Monaspace introduced texture healing
 
-**Monaspace** (November 2023), created by Lettermatic for GitHub Next, represents the most innovative recent entry. Rather than one font, it comprises **five distinct typeface families** designed to work together: Neon (neo-grotesque), Argon (humanist), Xenon (slab serif), Radon (handwriting), and Krypton (mechanical).
+**Monaspace** (November 2023), created by Lettermatic for GitHub Next, represents an innovative recent entry. Rather than one font, it comprises **five distinct typeface families** designed to work together: Neon (neo-grotesque), Argon (humanist), Xenon (slab serif), Radon (handwriting), and Krypton (mechanical).
 
 The breakthrough feature is **texture healing**—a technology that adjusts individual character widths while maintaining overall monospace rhythm. In traditional monospace fonts, narrow characters like `i` and wide characters like `m` create uneven visual texture. Texture healing subtly varies widths to achieve better color (typographic term for visual density) while preserving alignment. With **15,000+ GitHub stars** in its first year, Monaspace has quickly gained adoption.
 
@@ -102,13 +102,13 @@ Every major operating system ships fonts suitable for programming:
 
 **Microsoft Windows** ships **Consolas** (2007, Luc(as) de Groot's ClearType-optimized design) and **Cascadia Code** (2019, open-source with ligatures). Consolas remains the default in Notepad and Visual Studio, while Cascadia Code is Windows Terminal's default. The legacy **Courier New** (1992) and **Lucida Console** (1993, default for Windows' Blue Screen of Death through Windows 7) remain available.
 
-**Linux distributions** typically default to **DejaVu Sans Mono** or **Liberation Mono** (2007, metrically compatible with Courier New for document interoperability). **Ubuntu Mono** (2010, Dalton Maag) provides the Ubuntu-specific aesthetic. Google's **Noto Sans Mono** offers the broadest Unicode coverage as part of the "No Tofu" project covering all scripts.
+**Linux distributions** typically default to **DejaVu Sans Mono** or **Liberation Mono** (2007, metrically compatible with Courier New for document interoperability). **Ubuntu Mono** (2010, Dalton Maag) provides the Ubuntu-specific aesthetic. Google's **Noto Sans Mono** offers very broad Unicode coverage as part of the "No Tofu" project covering all scripts.
 
 ---
 
 ## Commercial fonts offer premium features and design refinement
 
-**PragmataPro** (Fabrizio Schiavi, ~2010, €19-299) contains **18,000+ glyphs**—the most extensive programming font available. Its ultra-condensed design fits more code on screen, with specialized support for Haskell, APL, IPA phonetics, and extensive box-drawing characters. Hand-hinted TrueType ensures optimal rendering from 9-48pt.
+**PragmataPro** (Fabrizio Schiavi, ~2010, €19-299) contains **18,000+ glyphs**, one of the most extensive sets among programming fonts. Its ultra-condensed design fits more code on screen, with specialized support for Haskell, APL, IPA phonetics, and extensive box-drawing characters. Hand-hinted TrueType ensures strong rendering from 9-48pt.
 
 **Operator Mono** (Hoefler & Co., 2016, $199+) introduced **true cursive italics** that resemble handwriting rather than slanted roman letterforms. The typewriter-inspired aesthetic includes a distinctive descending `f` and small caps support. The cursive italics polarize developers—some find them elegant and personal, others difficult to read.
 
@@ -122,7 +122,7 @@ Every major operating system ships fonts suitable for programming:
 
 ## Lesser-known fonts serve specialized needs
 
-**Iosevka** (Belleve Invis, 2015, **19,000+ GitHub stars**) is the most customizable programming font available. Its build system generates fonts from configuration files, with 143 character variant features, 19 stylistic sets, and multiple subfamilies (Sans, Slab, Term). The narrow design fits more columns on screen.
+**Iosevka** (Belleve Invis, 2015, **19,000+ GitHub stars**) is one of the most customizable programming fonts available. Its build system generates fonts from configuration files, with 143 character variant features, 19 stylistic sets, and multiple subfamilies (Sans, Slab, Term). The narrow design fits more columns on screen.
 
 **Victor Mono** (Rune Bjørnerås, 2019) features **semi-connected cursive italics**—a middle ground between regular italics and Operator Mono's full cursive. Its slender, crisp design with large x-height has attracted 3,700+ GitHub stars.
 
@@ -259,6 +259,6 @@ For high-DPI displays, traditional hinting becomes less important (sufficient pi
 
 Programming fonts have evolved from mechanical necessity to deliberate craft. The Bitstream Vera → DejaVu → Menlo → Hack lineage demonstrates how open licensing enables decades of iterative improvement across organizations and continents. The Hasklig → Fira Code progression shows how a single innovation—programming ligatures—can reshape an entire category within years.
 
-For most developers, **JetBrains Mono** or **Fira Code** provide excellent defaults with ligature support, broad glyph coverage, and active maintenance. Those seeking maximum customization should explore **Iosevka**'s build system or **Recursive**'s variable font axes. Developers prioritizing density will find **PragmataPro**'s 18,000+ glyphs and condensed proportions worth the investment. And anyone running a powerline-enhanced terminal should install the corresponding **Nerd Font** patch.
+For many developers, **JetBrains Mono** or **Fira Code** provide excellent defaults with ligature support, broad glyph coverage, and active maintenance. Those seeking maximum customization should explore **Iosevka**'s build system or **Recursive**'s variable font axes. Developers prioritizing density may find **PragmataPro**'s 18,000+ glyphs and condensed proportions worth the investment. And anyone running a powerline-enhanced terminal should install the corresponding **Nerd Font** patch.
 
 The field continues to advance: Monaspace's texture healing represents genuine typographic innovation, Intel One Mono demonstrates accessibility-first design, and variable font technology enables previously impossible customization. The best programming font remains subjective—but the options have never been better.

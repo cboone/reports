@@ -125,7 +125,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **2002** — **Atlassian** founded in Sydney, Australia by Mike Cannon-Brookes and Scott Farquhar.
 
-**2002** — **Jira** launched by Atlassian as bug-tracking software; it will later become the dominant agile project management tool.
+**2002** — **Jira** launched by Atlassian as bug-tracking software; it later became a widely used agile project management tool.
 
 **2002** — **Ken Schwaber** co-founds the **Scrum Alliance** with Mike Cohn and Esther Derby, creating the Certified ScrumMaster (CSM) program.
 
@@ -145,7 +145,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **2004–2005** — **David Anderson** experiments with visual workflow management and work-in-progress limits at Microsoft's XIT Maintenance Engineering team, laying groundwork for Kanban.
 
-**2005** — **Mike Cohn** publishes *Agile Estimating and Planning*, becoming the definitive guide to story points and velocity.
+**2005** — **Mike Cohn** publishes *Agile Estimating and Planning*, becoming a widely cited guide to story points and velocity.
 
 **2005** — **LeSS (Large-Scale Scrum)** created by **Craig Larman** and **Bas Vodde** at Nokia Siemens Networks in Finland.
 
@@ -191,7 +191,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **2011** — **Robert C. Martin** publishes *The Clean Coder: A Code of Conduct for Professional Programmers*, addressing ethics and professionalism.
 
-**2011** — **Jenkins** forked from Hudson after an Oracle trademark dispute, becoming the dominant CI/CD tool with 1,500+ plugins.
+**2011** — **Jenkins** forked from Hudson after an Oracle trademark dispute, becoming a widely used CI/CD tool with 1,500+ plugins.
 
 **2011** — **Travis CI** and **CircleCI** founded, adding cloud-based continuous integration options.
 
@@ -213,7 +213,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **2016** — **Gene Kim**, Jez Humble, Patrick Debois, and John Willis publish *The DevOps Handbook*, providing comprehensive guidance on implementing DevOps practices.
 
-**2018** — **Microsoft acquires GitHub** for $7.5 billion, signaling Git's dominance in software development.
+**2018** — **Microsoft acquires GitHub** for $7.5 billion, signaling Git's broad adoption in software development.
 
 **2018** — **Martin Fowler** delivers influential keynote at Agile Australia identifying the "Agile Industrial Complex" as a key problem—criticizing imposition of processes on teams rather than letting teams choose their own approaches.
 

@@ -6,7 +6,7 @@ created: 2026-01-23
 
 _January 23, 2026_
 
-Self may be the most influential programming language that most developers have never heard of. Designed in **1986** by **David Ungar** and **Randall B. Smith** at Xerox PARC,  this prototype-based language pioneered several optimization techniques now central to JavaScript engines and Java virtual machines. Though Self never achieved mainstream adoption, its DNA runs through V8, HotSpot, SpiderMonkey, and JavaScript's object model, making it one of computing's most consequential "failures."
+Self may be one of the most influential programming languages that many developers have never heard of. Designed in **1986** by **David Ungar** and **Randall B. Smith** at Xerox PARC,  this prototype-based language pioneered several optimization techniques now central to JavaScript engines and Java virtual machines. Though Self never achieved mainstream adoption, its DNA runs through V8, HotSpot, SpiderMonkey, and JavaScript's object model, making it one of computing's most consequential "failures."
 
 The language emerged from frustration with Smalltalk's complexity. Ungar, fresh from his award-winning Berkeley dissertation on Smalltalk performance, joined Smith at PARC to explore a radical simplification: what if object-oriented programming didn't need classes at all?
 
@@ -14,7 +14,7 @@ The language emerged from frustration with Smalltalk's complexity. Ungar, fresh 
 
 Self's journey through three institutions shaped both the language and the engineers who would later transform the industry.  The **design phase at Xerox PARC (1985-1986)** established the conceptual foundations, with Smith bringing insights from his Alternate Reality Kit prototype system and Ungar contributing deep expertise in dynamic language implementation.
 
-When Ungar moved to Stanford as an assistant professor, **implementation began in earnest (1987-1990)**. His graduate students, including **Craig Chambers** and **Urs Hölzle**, built the first working compiler in 1987  and published "Self: The Power of Simplicity" at OOPSLA that year. The paper was later recognized as one of the most influential OOPSLA papers of that era. The team publicly released Self in 1990, demonstrating that a prototype-based language could achieve remarkable performance.
+When Ungar moved to Stanford as an assistant professor, **implementation began in earnest (1987-1990)**. His graduate students, including **Craig Chambers** and **Urs Hölzle**, built the first working compiler in 1987  and published "Self: The Power of Simplicity" at OOPSLA that year. The paper was later recognized as an influential OOPSLA paper of that era. The team publicly released Self in 1990, demonstrating that a prototype-based language could achieve remarkable performance.
 
 The **Sun Microsystems era (1991-1995)** brought additional talent, including **Lars Bak**  and Mario Wolczko. The team developed the Morphic UI framework  and released Version 4.0 in 1995 with a completely redesigned programming environment. But 1995 also marked Java's launch, and Sun redirected resources toward its new commercial priority.  The Self project officially ended that year.
 
@@ -26,7 +26,7 @@ This simplicity created severe performance challenges that drove groundbreaking 
 
 **Polymorphic inline caches (PICs)**, introduced by Hölzle, Chambers, and Ungar in 1991, solved the problem of call sites that encounter multiple receiver types. Rather than falling back to slow dictionary lookups, PICs generate stub routines that test receiver types and branch directly to cached methods. Published results showed clear median speedups on representative workloads, and the technique became standard in modern JavaScript engines.
 
-The team's work on **adaptive optimization** proved equally transformative. Urs Hölzle's 1994 PhD thesis demonstrated that compilers could use runtime type information collected by PICs to guide aggressive speculative optimization, then safely **deoptimize** when assumptions failed. This approach—compile quickly at first, then recompile hot code with full optimization—became the foundation of Java's HotSpot VM and every major JavaScript engine.  
+The team's work on **adaptive optimization** proved equally transformative. Urs Hölzle's 1994 PhD thesis demonstrated that compilers could use runtime type information collected by PICs to guide aggressive speculative optimization, then safely **deoptimize** when assumptions failed. This approach, compiling quickly at first and then recompiling hot code with full optimization, became a foundation of Java's HotSpot VM and major JavaScript engines.  
 
 ## Why Self remained a research curiosity
 
@@ -54,6 +54,6 @@ The official Self bibliography at https://bibliography.selflanguage.org/ provide
 
 ## Conclusion
 
-Self represents a fascinating paradox: a language that "failed" commercially yet became foundational to modern computing. The techniques Ungar, Smith, Chambers, Hölzle, and Bak developed at PARC, Stanford, and Sun are now embedded in mainstream JavaScript and JVM runtimes, as well as in modern JIT compiler design generally.  Self's vision of "simplicity, uniformity, concreteness, and liveness" lives on  not in Self programs but in the infrastructure that powers a vast share of modern software.
+Self represents a fascinating paradox: a language that "failed" commercially yet became foundational to modern computing. The techniques Ungar, Smith, Chambers, Hölzle, and Bak developed at PARC, Stanford, and Sun are now embedded in mainstream JavaScript and JVM runtimes, as well as in modern JIT compiler design generally.  Self's vision of "simplicity, uniformity, concreteness, and liveness" lives on  not in Self programs but in infrastructure that powers a large share of modern software.
 
 The language also demonstrated that radical simplification can drive innovation. By eliminating classes, Self forced its implementers to invent new optimization strategies—strategies that proved more powerful and general than the class-based approaches they replaced. Self's lesson for language designers: constraints can catalyze creativity, and today's research curiosity may become tomorrow's invisible foundation.
