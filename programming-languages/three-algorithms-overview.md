@@ -92,7 +92,7 @@ The key insight is that "expressiveness" is not a single axis. A language can be
 
 **Array transformation**: ★★★☆☆ — All three are explicit, iterative languages. Go is the most verbose (explicit loops, no generics for a long time). Rust's iterator chains are elegant. Zig is minimal and manual. None approaches APL's brevity.
 
-**Expression trees**: ★★★★☆ for Rust, ★★☆☆☆ for Go, ★★★☆☆ for Zig — Rust's `enum` and `match` are proper algebraic data types, nearly as clean as Haskell (with `Box` for indirection as the only systems-level artifact). Go has no sum types and uses interfaces, losing the closed-world guarantee. Zig's tagged unions work but are more verbose.
+**Expression trees**: ★★★★☆ for Rust, ★★☆☆☆ for Go, ★★★☆☆ for Zig — Rust's `enum` and `match` are proper algebraic data types, nearly as clean as Haskell (with `Box` for indirection as the primary systems-level artifact). Go has no sum types and uses interfaces, losing the closed-world guarantee. Zig's tagged unions work but are more verbose.
 
 **Concurrent pipeline**: ★★★★★ for Go, ★★★★☆ for Rust, ★★★☆☆ for Zig — Go's goroutines and channels align closely with this pattern. The bounded channel handles backpressure, close handles shutdown, and WaitGroups coordinate completion. Rust provides stronger safety (data races are compile errors) but requires more ceremony. Zig requires building concurrent primitives from mutexes and condition variables.
 
@@ -144,7 +144,7 @@ The key insight is that "expressiveness" is not a single axis. A language can be
 
 A central factor in how well a language handles each algorithm is whether the language's native data shape matches the problem's data shape. Array languages operate on flat, rectangular data (excellent for the first algorithm, weaker for trees). ML languages operate on recursive algebraic structures (excellent for trees, adequate for arrays). Actor languages operate on independent, communicating processes (excellent for concurrent pipelines, adequate for many other tasks).
 
-This is not a flaw in any language but a fundamental property of paradigm design. A paradigm that is good at everything is good at nothing in particular. The power of APL's notation comes precisely from its commitment to arrays; generalize it to trees and you lose what made it special.
+This is not a flaw in any language but a fundamental property of paradigm design. Paradigms that try to optimize equally for everything often lose some of the sharp advantages of specialization. The power of APL's notation comes precisely from its commitment to arrays; generalize it to trees and you lose what made it special.
 
 ### The Abstraction Spectrum
 
