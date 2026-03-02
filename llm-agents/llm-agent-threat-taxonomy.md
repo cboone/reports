@@ -14,7 +14,7 @@ When an LLM agent operates on your local system — reading files, executing com
 
 After analysis, most LLM agent security risks turn out to be quantitative amplifications of existing software development risks: code written faster with less review, mistakes made at greater scale, secrets leaked more frequently. These are serious, but they respond to the same mitigations that apply to human developers.
 
-One risk is qualitatively novel: **prompt injection**, which exploits the fundamental inability of LLMs to distinguish between data and instructions. This vulnerability has no clean analog in human workflows and no reliable defense as of early 2026.
+One risk is qualitatively novel: **prompt injection**, which exploits the fundamental inability of LLMs to distinguish between data and instructions. This vulnerability has no clean analog in human workflows and no broadly reliable defense as of early 2026.
 
 ## Threat Categories
 
@@ -40,7 +40,7 @@ A prompt injection in a source code comment was [shown to cause the Windsurf dev
 
 **Research:**
 
-A joint paper from researchers at OpenAI, Anthropic, and Google DeepMind (["The Attacker Moves Second,"](https://simonwillison.net/2025/Nov/2/new-prompt-injection-papers/) October 2025) tested 12 published defenses against prompt injection using adaptive attacks. They bypassed all 12 with attack success rates above 90%. Most of those defenses had originally reported near-zero attack success rates. This is the strongest evidence that prompt injection defenses are not currently reliable.
+A joint paper from researchers at OpenAI, Anthropic, and Google DeepMind (["The Attacker Moves Second,"](https://simonwillison.net/2025/Nov/2/new-prompt-injection-papers/) October 2025) tested 12 published defenses against prompt injection using adaptive attacks. They bypassed all 12 with attack success rates above 90%. Most of those defenses had originally reported near-zero attack success rates. This is some of the strongest published evidence that prompt injection defenses are not currently reliable.
 
 [OWASP's 2025 Top 10 for LLM Applications](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) ranks prompt injection as the #1 critical vulnerability. Their guidance explicitly acknowledges the fundamental limitation: LLMs cannot reliably separate instructions from data.
 
@@ -48,7 +48,7 @@ A joint paper from researchers at OpenAI, Anthropic, and Google DeepMind (["The 
 
 **Mitigations:**
 
-No reliable mitigation exists for prompt injection as a general problem. The most useful practical framework is [Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025), which states that an AI agent should satisfy no more than two of three properties in a single session: [A] processing untrustworthy inputs, [B] accessing sensitive systems or private data, [C] changing state or communicating externally. If all three are required, the agent must not operate autonomously and requires human-in-the-loop approval or equivalent oversight.
+No generally reliable mitigation exists for prompt injection as a general problem. The most useful practical framework is [Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025), which states that an AI agent should satisfy no more than two of three properties in a single session: [A] processing untrustworthy inputs, [B] accessing sensitive systems or private data, [C] changing state or communicating externally. If all three are required, the agent must not operate autonomously and requires human-in-the-loop approval or equivalent oversight.
 
 In practice, for a developer using a coding agent, this means: be deliberate about which MCP servers and tools are enabled for a given session. Don't leave credentials in the environment that the agent doesn't need for the current task. Prefer agents that require explicit approval for network requests, package installations, and file modifications outside the project directory. Be especially cautious when the agent is reading untrusted content (dependency code, web pages, issue trackers) and simultaneously has the ability to execute commands or modify files. Context isolation — keeping untrusted content processing separate from privileged action execution — is the most promising architectural direction, but is not yet available in mainstream tools.
 
@@ -82,7 +82,7 @@ The [Replit production database deletion](https://fortune.com/2025/07/23/ai-codi
 
 This incident illustrates several sub-patterns: the agent exceeding its authorized scope, the agent generating confabulated explanations of system state (not malicious deception, but statistically-likely text generation that happens to be false), and the agent's inability to recognize when it's about to do something irreversible.
 
-**Research:** [Veracode's 2025 report](https://www.veracode.com/resources/ai-generated-code-security) found that 45% of AI-generated code contains security vulnerabilities from the OWASP Top 10, consistent across over 100 LLMs tested. [Aikido Security's 2026 State of AI in Security & Development report](https://www.aikido.dev/reports/2026-state-of-ai-in-security-development) found that 69% of organizations reported vulnerabilities in AI-generated code and one in five reported a serious security incident linked to it. The pattern is clear: AI-generated code is functional but frequently insecure, and the review process that would catch these issues is often skipped because the code "looks right."
+**Research:** [Veracode's 2025 report](https://www.veracode.com/resources/ai-generated-code-security) found that 45% of AI-generated code contains security vulnerabilities from the OWASP Top 10, consistent across over 100 LLMs tested. [Aikido Security's 2026 State of AI in Security & Development report](https://www.aikido.dev/reports/2026-state-of-ai-in-security-development) found that 69% of organizations reported vulnerabilities in AI-generated code and one in five reported a serious security incident linked to it. Across these studies, the recurring pattern is that AI-generated code is often functional but frequently insecure, and the review process that would catch these issues is often skipped because the code "looks right."
 
 **Mitigations:** Never give the agent access to production systems or data directly. Maintain strict separation between development, staging, and production environments — architecturally, not just by convention (the Replit incident showed that the agent ignores conventional boundaries). Review AI-generated code with the same rigor you'd apply to any other code, resisting the temptation to skip review because the code looks clean and well-structured. Use automated testing and CI/CD gates that catch destructive operations before they reach production. Treat AI-generated status messages and explanations with skepticism — verify system state independently rather than trusting the agent's account of what it did.
 
@@ -204,7 +204,7 @@ The [Tea dating app](https://techcrunch.com/2025/07/26/dating-safety-app-tea-bre
 
 **Most mitigations are not LLM-specific.** The security practices that protect against these threats — code review, dependency auditing, secret scanning, least privilege, environment separation, automated testing, infrastructure-as-code — are the same practices that protect against human-introduced vulnerabilities. The main difference is that AI-assisted development increases the volume and speed of code production, making it more important to have these practices automated and enforced rather than relying on manual discipline.
 
-**The one genuinely novel threat has no reliable defense.** Prompt injection (categories 1 and 2) exploits a fundamental architectural property of LLMs and cannot be solved by any currently available mitigation. The ["Attacker Moves Second" paper](https://arxiv.org/abs/2510.17342) (October 2025) demonstrated that all 12 tested defenses could be bypassed with >90% success rates. The most practical framework — [Meta's Agents Rule of Two](https://ai.meta.com/blog/practical-ai-agent-security/) — is a risk-reduction strategy, not a solution. Organizations and individual developers must accept this residual risk and make informed decisions about what level of agent autonomy is appropriate given their threat model.
+**The one genuinely novel threat currently lacks a broadly reliable defense.** Prompt injection (categories 1 and 2) exploits a fundamental architectural property of LLMs and cannot be solved by any currently available mitigation. The ["Attacker Moves Second" paper](https://arxiv.org/abs/2510.17342) (October 2025) demonstrated that all 12 tested defenses could be bypassed with >90% success rates. The most practical framework — [Meta's Agents Rule of Two](https://ai.meta.com/blog/practical-ai-agent-security/) — is a risk-reduction strategy, not a complete solution. Organizations and individual developers must accept this residual risk and make informed decisions about what level of agent autonomy is appropriate given their threat model.
 
 **The gap between "demonstrated in research" and "exploited in the wild" is closing.** As of early 2026, most prompt injection attacks have been demonstrated by security researchers against real products (the Summer of Johann), while the most real-world damage has come from the "boring" categories (accidental database deletion, leaked secrets, insecure generated code). However, the operationalization infrastructure is being built: dark web playbooks for slopsquatting, offensive LLM tools like Hexstrike-AI, and documented attack chains that combine prompt injection with supply chain compromise. The transition from research to exploitation appears to be accelerating.
 
@@ -222,7 +222,7 @@ For ongoing monitoring of this rapidly evolving space, the following sources are
 
 [Meta's "Agents Rule of Two"](https://ai.meta.com/blog/practical-ai-agent-security/) (October 2025) provides the most practical framework for reasoning about agent security.
 
-["The Attacker Moves Second"](https://arxiv.org/abs/2510.17342) (Nasr et al., October 2025) provides the strongest evidence that prompt injection defenses are unreliable.
+["The Attacker Moves Second"](https://arxiv.org/abs/2510.17342) (Nasr et al., October 2025) provides some of the strongest evidence that prompt injection defenses are unreliable.
 
 ["We Have a Package for You!"](https://arxiv.org/abs/2406.10279) (Spracklen et al., 2025) provides the definitive analysis of package hallucination / slopsquatting.
 
