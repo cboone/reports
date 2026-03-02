@@ -6,7 +6,7 @@ created: 2026-02-10
 
 _February 10, 2026_
 
-**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with recent activity in under two years.** The category barely existed before mid-2024; today, several AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a common extensibility standard, local model support via Ollama is common, and multi-agent orchestration is a growing sub-category.
+**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with visible recent activity in under two years.** The category barely existed before mid-2024; today, several AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a common extensibility standard, local model support via Ollama is common, and multi-agent orchestration is a growing sub-category.
 
 This document catalogs a broad set of CLI and TUI coding tools that use large language models to assist with software development, organized into logical categories with comparison tables and landscape analysis.
 
@@ -624,7 +624,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 **Multi-agent orchestration is a growing category.** Six months ago, Claude Squad didn't exist. Now there are many tools for managing multiple agents simultaneously. This reflects a workflow shift: developers increasingly run 2-3 agents on different tasks in parallel rather than using one agent sequentially.
 
-**Rust and Go are displacing Python for new tools.** While Python dominates older tools (Aider, Open Interpreter, MetaGPT, SWE-agent), many tools launched in 2025-2026 are written in Rust, Go, or TypeScript. Codex CLI's rewrite from TypeScript to Rust and Goose's Rust core suggest that **startup performance and binary distribution** are increasingly prioritized over Python's ecosystem advantages for CLI tools.
+**Rust and Go are gaining ground relative to Python for new tools.** While Python dominates older tools (Aider, Open Interpreter, MetaGPT, SWE-agent), many tools launched in 2025-2026 are written in Rust, Go, or TypeScript. Codex CLI's rewrite from TypeScript to Rust and Goose's Rust core suggest that **startup performance and binary distribution** are increasingly prioritized over Python's ecosystem advantages for CLI tools.
 
 **The free tier war.** Gemini CLI offers 60 req/min free, Qwen Code gives 1,000 req/day free, Amp provides $10/day ad-supported, and Grok CLI's model costs $0.20/1M tokens. The barrier to entry is falling. This commoditizes basic coding assistance and pushes differentiation toward reasoning quality, context management, and workflow integration.
 
@@ -654,4 +654,4 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### The convergence pattern
 
-Many tools are converging toward a similar feature set: file editing + shell execution + git integration + MCP extensibility + multi-model support + sub-agents. The differentiation is increasingly about **default model quality, UX polish, context management strategy, and ecosystem integrations** rather than raw capabilities. The tools that win will likely be those that make common workflows effortless while supporting power-user customization, much like the text editor wars that preceded them.
+Many tools are converging toward a similar feature set: file editing + shell execution + git integration + MCP extensibility + multi-model support + sub-agents. The differentiation is increasingly about **default model quality, UX polish, context management strategy, and ecosystem integrations** rather than raw capabilities. Tools that gain long-term adoption will likely be those that make common workflows effortless while supporting power-user customization, much like the text editor wars that preceded them.
