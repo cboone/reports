@@ -27,7 +27,7 @@ This document catalogs a broad set of notable tools (as of mid-February 2026) fo
 
 ## 1. Desktop Session Managers (macOS)
 
-These are native or near-native desktop apps that give you a floating/dockable window to see all running coding agent sessions at a glance.
+These are native or near-native desktop apps that give you a floating/dockable window to see running coding agent sessions at a glance.
 
 ### Agent Manager X
 
@@ -54,7 +54,7 @@ These are native or near-native desktop apps that give you a floating/dockable w
 - **Tech:** Tauri 2.x + React + TypeScript (Rust backend)
 - **Agents:** Claude Code, OpenCode
 - **Key Features:**
-  - View all active sessions in one place
+  - View active sessions in one place
   - Real-time status detection (Thinking, Processing, Waiting, Idle)
   - Global hotkey to toggle visibility
   - Click to focus on a specific session's terminal
@@ -409,7 +409,7 @@ Terminal tools for tracking token consumption, costs, and billing windows for co
 - **Agents:** GitHub Copilot, Claude, Codex
 - **Features:**
   - Assign agent sessions directly to issues and PRs
-  - Mission Control dashboard for all active sessions
+  - Mission Control dashboard for active sessions
   - Live session logs with mid-run steering
   - Multi-agent comparison on same task
   - Mobile access via GitHub Mobile
@@ -439,7 +439,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 
 - **Website:** [langwatch.ai](https://langwatch.ai)
 - **Key Strengths:** Integrated monitoring, evaluation, and experimentation in one platform, with quick setup claims
-- **Best For:** Teams wanting an all-in-one monitoring and evaluation solution
+- **Best For:** Teams wanting an integrated monitoring and evaluation solution
 
 ### Braintrust
 
@@ -451,7 +451,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 
 - **Website:** [helicone.ai](https://helicone.ai)
 - **Pricing:** Free tier (10K requests/mo), Pro from $79/mo
-- **Key Strengths:** Proxy-based (just change base URL), zero code changes, fast setup
+- **Key Strengths:** Proxy-based (just change base URL), minimal code changes, fast setup
 - **Best For:** Quick visibility with minimal integration effort
 
 ### Maxim AI

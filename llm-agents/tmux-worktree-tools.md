@@ -89,7 +89,7 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 | **Supported Agents** | Claude Code, Gemini CLI, Codex CLI, Cursor Agent, Copilot CLI, Cline CLI, OpenCode, Kimi CLI |
 | **Maturity** | Feature-rich; one of the broadest agent support sets among listed tools |
 
-**Overview.** ccmanager is one of the most feature-dense tools in this category, supporting a wide range of coding agents while being completely self-contained, and it does not require tmux to be installed. It manages sessions, worktrees, and the full agent lifecycle with an extensive set of advanced capabilities.
+**Overview.** ccmanager is a feature-dense tool in this category, supporting a wide range of coding agents while being completely self-contained, and it does not require tmux to be installed. It manages sessions, worktrees, and the full agent lifecycle with an extensive set of advanced capabilities.
 
 **Key Features:**
 
@@ -293,7 +293,7 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 | **Supported Agents** | Any CLI agent |
 | **Maturity** | Self-described as "proof of concept"; exploratory |
 
-**Overview.** maw provides a reusable toolkit for tmux + git worktree multi-agent workflows, with a unique inter-agent communication system. Each agent gets its own git worktree and branch, and all agents are visible in a single tmux session with split panes.
+**Overview.** maw provides a reusable toolkit for tmux + git worktree multi-agent workflows, with a notable inter-agent communication system. Each agent gets its own git worktree and branch, and all agents are visible in a single tmux session with split panes.
 
 **Key Features:**
 
@@ -608,7 +608,7 @@ Running AI coding agents with broad filesystem and shell access is inherently ri
 | **Devcontainer** | ccmanager | Development environment | Agent sessions + dependencies | ccmanager TUI, notifications |
 | **Full-environment** | Snapp's workflow (DIY) | Everything | tmux, agents, editors, worktrees | SSH client only |
 
-The per-session model (agent-of-empires) provides fine-grained isolation, one container per agent, and can reduce host exposure when using high-autonomy settings such as `--dangerously-skip-permissions`. The devcontainer model (ccmanager) is coarser but more familiar to teams already using devcontainers, and it preserves host-level automation (notifications, hooks) that would be lost inside a container. The full-environment model generally provides the deepest isolation, but requires the most setup and means your entire development workflow lives inside Docker.
+The per-session model (agent-of-empires) provides fine-grained isolation, one container per agent, and can reduce host exposure when using high-autonomy settings such as `--dangerously-skip-permissions`. The devcontainer model (ccmanager) is coarser but more familiar to teams already using devcontainers, and it preserves host-level automation (notifications, hooks) that would be lost inside a container. The full-environment model generally provides very deep isolation, but requires the most setup and means your entire development workflow lives inside Docker.
 
 This remains a notable gap in the ecosystem. As agents gain more autonomy (auto-approval, background execution, `--dangerously-skip-permissions`), the argument for sandboxing grows stronger. Anthropic's own Claude Code devcontainer exists but is separate from the agent teams feature, leaving the integration to the user.
 
@@ -635,7 +635,7 @@ The richsnapp.com article advocates strongly for the sibling-directory conventio
 
 **"Worktrees and Tmux and Claude, Oh My Zsh" (Dec 2025)** — [news.ycombinator.com/item?id=46316943](https://news.ycombinator.com/item?id=46316943)
 
-The author (Rich Snapp) wrote this because "I often heard about people using git worktrees to work with multiple agents but I never saw someone document exactly how they do it." The discussion generally treated the pattern as production-viable. Key themes: the importance of tmux's terminal bell support for notifications when agents finish, the value of Docker containers for sandboxing, and the debate over bare repos vs. default-directory worktree layouts.
+The author (Rich Snapp) wrote this because "I often heard about people using git worktrees to work with multiple agents but I never saw someone document exactly how they do it." The discussion generally treated the pattern as practical for production-style workflows. Key themes: the importance of tmux's terminal bell support for notifications when agents finish, the value of Docker containers for sandboxing, and the debate over bare repos vs. default-directory worktree layouts.
 
 **"Forestui: A tmux-powered worktree manager for Claude Code" (Feb 2026)** — [news.ycombinator.com/item?id=46864999](https://news.ycombinator.com/item?id=46864999)
 
@@ -737,7 +737,7 @@ Most of the other tools in this survey do not include built-in sandboxing, which
 
 ### "I want to tie agent work to GitHub issues"
 
-**→ agenttools/worktree.** It creates a direct pipeline from GitHub issues to Claude Code sessions with auto-generated context. The archetype system for multi-worker setups is unique in this space.
+**→ agenttools/worktree.** It creates a direct pipeline from GitHub issues to Claude Code sessions with auto-generated context. The archetype system for multi-worker setups is distinctive in this space.
 
 ### "I just want a simple script I can understand and modify"
 
@@ -749,7 +749,7 @@ Most of the other tools in this survey do not include built-in sandboxing, which
 
 ### "I want to try Anthropic's official approach"
 
-**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it is the clearest option in this list with first-party support and development resources behind it.
+**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has the most direct first-party support and development resources in this list.
 
 ---
 

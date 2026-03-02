@@ -320,7 +320,7 @@ The `applyTo` glob determines which files trigger these instructions. The option
 - **Agent definitions** (`.agent.md`) — custom agent configurations for specialized tasks.
 - **Prompt files** (`.prompt.md`) — reusable prompt templates with `#file:path` references.
 - **Organization-level instructions** — enterprise teams can set instructions at the GitHub org level that apply to all repos.
-- **Zero root footprint** — everything lives in `.github/`, which already exists in most repos.
+- **Near-zero root footprint** — most configuration artifacts live in `.github/`, which already exists in most repos.
 
 ---
 
@@ -418,7 +418,7 @@ With the symlink strategy from the companion document (AGENTS.md as source of tr
 
 ```
 your-project/
-├── AGENTS.md                  # Single source of truth for all tools
+├── AGENTS.md                  # Cross-tool instruction baseline
 ├── CLAUDE.md → AGENTS.md      # Symlink for Claude Code
 ├── .mcp.json                  # MCP servers (if any)
 ├── opencode.json              # OpenCode config (if using)
@@ -507,6 +507,6 @@ One place to edit, version-controlled, portable across machines.
 
 ## Summary
 
-The instruction file ecosystem is converging around AGENTS.md. The configuration file ecosystem is less converged and may remain tool-specific. Each tool's config manages materially different capabilities: Claude Code's hook system has no direct equivalent in Codex, Codex's named profiles have no direct equivalent in Claude Code, and Copilot's configuration lives mainly in VS Code's settings framework rather than standalone files.
+The instruction file ecosystem is converging around AGENTS.md. The configuration file ecosystem is less converged and may remain tool-specific. Each tool's config manages materially different capabilities: Claude Code's hook system has no close equivalent in Codex, Codex's named profiles have no close equivalent in Claude Code, and Copilot's configuration lives mainly in VS Code's settings framework rather than standalone files.
 
 The pragmatic approach: accept tool-specific config in hidden directories while converging on shared instruction files at the root. Hidden directories keep the clutter less visible. Each tool's config is usually independent enough that conflicts remain limited. The global dotfiles strategy (section 5) keeps your personal preferences in sync across tools and machines.

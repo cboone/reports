@@ -6,7 +6,7 @@ created: 2026-02-10
 
 _February 10, 2026_
 
-**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with recent activity in under two years.** The category barely existed before mid-2024; today, most major AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a widely adopted extensibility standard, local model support via Ollama is common, and multi-agent orchestration is one of the faster-growing sub-categories.
+**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with recent activity in under two years.** The category barely existed before mid-2024; today, many major AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a widely adopted extensibility standard, local model support via Ollama is common, and multi-agent orchestration is a fast-growing sub-category.
 
 This document catalogs a broad set of CLI and TUI coding tools that use large language models to assist with software development, organized into logical categories with comparison tables and landscape analysis.
 
@@ -56,7 +56,7 @@ Lightweight coding agent from OpenAI with built-in sandboxed execution. **~50,50
 - **License:** Apache 2.0
 - **Agent type:** Single-agent with code review sub-agent
 - **Status:** Very active, $1M open-source grant initiative
-- **Distinguishing:** **One of the strongest sandboxing/security models** among CLI agents, including network isolation in full-auto mode. Rust performance. Works with ChatGPT subscription. HN consensus: better for greenfield solo projects and parallel agents; weaker on documentation tasks where it can hallucinate.
+- **Distinguishing:** **A strong sandboxing/security model** among CLI agents, including network isolation in full-auto mode. Rust performance. Works with ChatGPT subscription. HN consensus: better for greenfield solo projects and parallel agents; weaker on documentation tasks where it can hallucinate.
 
 ### OpenCode (formerly SST project)
 
@@ -243,7 +243,7 @@ Open-source CLI coding agent optimized for Qwen3-Coder, forked from Gemini CLI. 
 
 ### Kimi Code CLI (Moonshot AI)
 
-Terminal agent with unique dual shell/agent mode and Agent Swarm capability.
+Terminal agent with a distinctive dual shell/agent mode and Agent Swarm capability.
 
 - **GitHub:** github.com/MoonshotAI/kimi-cli
 - **Models:** Kimi K2/K2.5 (1T parameter MoE, 256K context)
@@ -252,7 +252,7 @@ Terminal agent with unique dual shell/agent mode and Agent Swarm capability.
 - **Language:** Python
 - **License:** Modified MIT
 - **Status:** Technical preview
-- **Distinguishing:** **Unique dual-mode shell** — seamlessly switch between regular terminal and AI agent. Agent Swarm coordinates up to 100 parallel sub-agents.
+- **Distinguishing:** **Distinctive dual-mode shell** — seamlessly switch between regular terminal and AI agent. Agent Swarm coordinates up to 100 parallel sub-agents.
 
 ### Additional full-featured agents
 
@@ -465,7 +465,7 @@ Minimal "junior developer" agent in **under 200 lines** of Python. ~12,200 stars
 
 ## Multi-agent orchestration and session management
 
-A rapidly growing sub-category: tools that manage multiple AI coding agents running simultaneously, rather than being agents themselves.
+A growing sub-category: tools that manage multiple AI coding agents running simultaneously, rather than being agents themselves.
 
 | Tool | GitHub | Stars | Language | Description |
 |------|--------|-------|----------|-------------|
@@ -640,11 +640,11 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Most promising tools
 
-**Crush** (Charm ecosystem backing, beautiful UX, broad platform support), **OpenCode** (model-agnostic, growing rapidly), **Kimi Code CLI** (unique dual-mode shell, Agent Swarm), and **mini-swe-agent** (showing that compact implementations can post high SWE-bench scores) represent several notable new directions.
+**Crush** (Charm ecosystem backing, beautiful UX, broad platform support), **OpenCode** (model-agnostic, growing rapidly), **Kimi Code CLI** (distinctive dual-mode shell, Agent Swarm), and **mini-swe-agent** (showing that compact implementations can post high SWE-bench scores) represent several notable new directions.
 
 ### Gaps in the market
 
-**Few tools currently stand out as clearly excelling at all three: reasoning quality + model flexibility + strong sandboxing.** Claude Code is strong on reasoning but locked to Anthropic. Codex CLI is strong on sandboxing but tied closely to OpenAI. Aider has strong model flexibility but no built-in sandboxing. A tool that combines all three could become category-defining.
+**Few tools currently combine all three dimensions strongly: reasoning quality + model flexibility + strong sandboxing.** Claude Code is strong on reasoning but locked to Anthropic. Codex CLI is strong on sandboxing but tied closely to OpenAI. Aider has strong model flexibility but no built-in sandboxing. A tool that combines all three could become category-defining.
 
 **Code review is underserved.** While several tools offer code review features, few CLI tools are purpose-built for AI-assisted code review workflows. Devin's `npx devin-review` and Codex's review agent are early entries but neither is comprehensive.
 
