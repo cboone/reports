@@ -99,7 +99,7 @@ A visible trend is the convergence around `AGENTS.md` as a cross-tool standard. 
 
 **Path-scoping granularity.** Copilot's `.instructions.md` with `applyTo` globs offers file-type-level scoping that AGENTS.md and CLAUDE.md don't have natively. You can say "these rules apply only when working on `*.tsx` files." AGENTS.md and CLAUDE.md only scope by directory.
 
-**On-demand loading.** SKILL.md (in both Claude Code and Codex) is the main format here that uses progressive disclosure, loading full instructions only when the task matches. The other compared formats load instructions eagerly at session start.
+**On-demand loading.** SKILL.md (in both Claude Code and Codex) is the clearest format in this comparison that uses progressive disclosure, loading full instructions only when the task matches. The other compared formats load instructions eagerly at session start.
 
 **Override semantics.** Codex's `AGENTS.override.md` is distinctive; it lets you temporarily override instructions in any directory without modifying the base file. None of the other tools in this comparison expose this exact mechanism.
 
@@ -239,7 +239,7 @@ ln -sfn ~/.agents/AGENTS.md ~/.config/opencode/AGENTS.md
 
 **Don't use instruction files for things linters do better.** Code formatting belongs in `.editorconfig`, `.prettierrc`, or `rustfmt.toml`.
 
-**Don't stuff everything into one file.** Instruction-following quality tends to degrade as instruction count increases. Claude Code's system prompt typically includes dozens of instructions before project-specific content is added. Keep your files focused on what the agent cannot infer from the codebase.
+**Don't stuff everything into one file.** Instruction-following quality can degrade as instruction count increases. Claude Code's system prompt typically includes dozens of instructions before project-specific content is added. Keep your files focused on what the agent cannot infer from the codebase.
 
 **Don't duplicate across formats.** If you maintain both AGENTS.md and CLAUDE.md with different content, they will drift. Use symlinks or a single shared source.
 
