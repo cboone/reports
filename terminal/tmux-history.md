@@ -156,7 +156,7 @@ tmux's rise from OpenBSD utility to widely used tool occurred through several ke
 
 ### The Thoughtbot era (2011-2015)
 
-The **"A tmux Crash Course"** blog post by Thoughtbot became one of the most influential tmux tutorials, appearing on Hacker News multiple times between 2011 and 2018. This single article introduced thousands of developers to tmux's capabilities.
+The **"A tmux Crash Course"** blog post by Thoughtbot became an influential tmux tutorial, appearing on Hacker News multiple times between 2011 and 2018. This single article introduced thousands of developers to tmux's capabilities.
 
 In **February 2012**, Brian P. Hogan published **"tmux: Productive Mouse-Free Development"** through Pragmatic Programmers—the first book dedicated to tmux. A second edition covering tmux 2.3 followed in 2016, and a third edition covering modern features is in development.
 

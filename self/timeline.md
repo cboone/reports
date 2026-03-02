@@ -10,7 +10,7 @@ _January 23, 2026_
 
 **1972** — Smalltalk created at Xerox PARC by Alan Kay, Dan Ingalls, and Adele Goldstein
 
-**1980** — Smalltalk-80 released publicly; becomes a dominant dynamic OO language
+**1980** — Smalltalk-80 released publicly; becomes an influential dynamic OO language
 
 **1984** — David Ungar completes Berkeley PhD on Smalltalk performance (Generation Scavenging GC)
 

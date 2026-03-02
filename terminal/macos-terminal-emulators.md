@@ -48,7 +48,7 @@ Terminal.app's **lack of 24-bit true color until macOS 26 (Tahoe)** remains a si
 
 ## Unicode and emoji handling reveals implementation quality
 
-Proper grapheme cluster handling, essential for emoji sequences with skin tone modifiers, flags, and ZWJ combinations, separates mature implementations from basic compliance. Kitty's text sizing protocol lets programs negotiate character cell metrics to reduce width mismatches across terminals and fonts.
+Proper grapheme cluster handling, important for emoji sequences with skin tone modifiers, flags, and ZWJ combinations, separates mature implementations from basic compliance. Kitty's text sizing protocol lets programs negotiate character cell metrics to reduce width mismatches across terminals and fonts.
 
 Alacritty added **Unicode 17 support** in v0.16.0 (October 2025) but struggles with emoji modifiers requiring careful font configuration. Ghostty implements grapheme-aware terminal emulation with proper break detection, rendering multi-codepoint emoji correctly as single characters. iTerm2 offers selectable Unicode version tables (8 or 9) via escape sequences, supporting combining marks, full-width characters, and HFS+ normalization.
 
@@ -182,4 +182,4 @@ The macOS terminal landscape in 2026 offers genuinely distinct choices rather th
 
 Ghostty's emergence validates demand for native implementations prioritizing platform conventions, while Warp's commercial success demonstrates appetite for AI-integrated terminals despite open-source alternatives. The graphics protocol fragmentation—Sixel vs. Kitty Graphics vs. iTerm2—may gradually consolidate around Kitty Graphics as more terminals adopt it, though Sixel's broader legacy support ensures continued relevance.
 
-Terminal.app's macOS Tahoe updates finally address its most glaring limitation with true color support, potentially satisfying casual users who previously needed third-party alternatives. For serious development work, however, the third-party ecosystem's decade-plus advancement in features, performance, and customization remains difficult to match through incremental improvements to Apple's built-in offering.
+Terminal.app's macOS Tahoe updates finally address a longstanding limitation with true color support, potentially satisfying casual users who previously needed third-party alternatives. For serious development work, however, the third-party ecosystem's decade-plus advancement in features, performance, and customization remains difficult to match through incremental improvements to Apple's built-in offering.
