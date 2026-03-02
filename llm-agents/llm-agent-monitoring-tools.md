@@ -101,7 +101,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Telegram & Slack bridges for remote monitoring
   - Tmux status bar integration showing waiting sessions
   - Groups, profiles, configurable hotkeys
-- **Notes:** One of the more feature-rich terminal-based session managers. The "conductor" feature is a distinctive capability that lets a Claude Code instance supervise other sessions.
+- **Notes:** One of the more full-featured terminal-based session managers. The "conductor" feature is a distinctive capability that lets a Claude Code instance supervise other sessions.
 
 ### Agent of Empires (AoE)
 
@@ -426,7 +426,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 - **GitHub:** [langfuse/langfuse](https://github.com/langfuse/langfuse)
 - **Website:** [langfuse.com](https://langfuse.com)
 - **Pricing:** Free (self-hosted), Cloud from $29/mo
-- **Key Strengths:** Open source, self-hostable, broad community, prompt versioning, session-based analysis, human annotation queues
+- **Key Strengths:** Open source, self-hostable, active community, prompt versioning, session-based analysis, human annotation queues
 - **Best For:** Teams wanting full data control with self-hosting
 
 ### LangSmith
@@ -572,7 +572,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 ## Summary & Recommendations
 
 **For individual developers on macOS wanting to monitor multiple coding agents:**
-- Start with **Agent Deck** (terminal TUI, feature-rich) or **Crystal** (desktop GUI) depending on whether you prefer terminal or graphical workflows.
+- Start with **Agent Deck** (terminal TUI, feature-rich) or **Crystal** (desktop GUI), depending on whether you prefer terminal or graphical workflows.
 - Add **Happy Coder** if you want mobile push notifications.
 - Use **ccusage** for cost tracking.
 
@@ -585,7 +585,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - Claude Code's built-in hooks are often sufficient in straightforward cases and can often be configured in a few minutes.
 - **code-notify** if you want voice announcements and cross-agent support.
 
-**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a priority area for platform vendors, which may consolidate some of this fragmented tooling over time.
+**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a focus area for platform vendors, which may consolidate some of this fragmented tooling over time.
 
 ---
 

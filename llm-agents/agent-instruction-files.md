@@ -36,7 +36,7 @@ Many AI coding agents read some form of Markdown instruction file from your proj
 
 ### CLAUDE.md (Anthropic — Claude Code)
 
-This is Claude Code's native instruction file. It is read as part of the system prompt with high priority, and Claude Code documentation describes its contents as high-priority guidance relative to ad-hoc user prompts. The hierarchy is: enterprise policy → project `CLAUDE.md` → `.claude/rules/*.md` (auto-loaded) → user `~/.claude/CLAUDE.md`.
+This is Claude Code's native instruction file. It is read as part of the system prompt with high priority, and Claude Code documentation describes its contents as high-priority project guidance relative to ad-hoc user prompts. The hierarchy is: enterprise policy → project `CLAUDE.md` → `.claude/rules/*.md` (auto-loaded) → user `~/.claude/CLAUDE.md`.
 
 Key strengths: the `@path/to/file` import syntax lets you keep the root file lean while referencing detailed docs elsewhere, and the `.claude/rules/` directory lets you split rules into focused topic files that all load automatically. Skills (see SKILL.md below) extend this further with on-demand loading.
 
@@ -60,7 +60,7 @@ GitHub Copilot's approach is more structured than many alternatives. There are t
 
 First, the repo-wide `.github/copilot-instructions.md` applies to many interactions. Second, path-specific `*.instructions.md` files in `.github/instructions/` use YAML frontmatter with an `applyTo` glob to scope instructions to specific file types or directories. Third, organization-level instructions can be set on GitHub.com for enterprise teams.
 
-A notable feature: Copilot's coding agent will auto-suggest generating a `copilot-instructions.md` on your first PR in a repository. The path-specific `.instructions.md` system is useful for monorepos; you can have different rules for your Python backend vs. your React frontend, triggered automatically by file glob matches.
+A useful feature: Copilot's coding agent will auto-suggest generating a `copilot-instructions.md` on your first PR in a repository. The path-specific `.instructions.md` system is useful for monorepos; you can have different rules for your Python backend vs. your React frontend, triggered automatically by file glob matches.
 
 Copilot also supports several related file types in `.github/`:
 - **Prompt files** (`.github/prompts/*.prompt.md`) — reusable prompt templates that can reference files with `#file:path` syntax.
@@ -109,9 +109,9 @@ One notable trend is the convergence around `AGENTS.md` as a cross-tool standard
 
 ## Concrete Recommendations
 
-### 1. Make AGENTS.md your main shared source of truth
+### 1. Make AGENTS.md your shared baseline source of truth
 
-Put your core project instructions in `AGENTS.md` at the repo root. This is the main file that works natively across Codex, Copilot, and OpenCode. Structure it with clear Markdown headings:
+Put your core project instructions in `AGENTS.md` at the repo root. This file works natively across Codex, Copilot, and OpenCode. Structure it with clear Markdown headings:
 
 ```markdown
 # AGENTS.md
@@ -249,7 +249,7 @@ ln -sfn ~/.agents/AGENTS.md ~/.config/opencode/AGENTS.md
 
 ## Summary
 
-AGENTS.md is increasingly used as a cross-tool convention, with backing from the Linux Foundation and native support in Codex, Copilot, and OpenCode. Claude Code is the one tool in this comparison that requires its own filename, but a symlink or Codex fallback config can bridge the gap.
+AGENTS.md is increasingly treated as a cross-tool convention, with backing from the Linux Foundation and native support in Codex, Copilot, and OpenCode. Claude Code is the one tool in this comparison that requires its own filename, but a symlink or Codex fallback config can bridge the gap.
 
 The practical strategy is a hub-and-spoke model: AGENTS.md is the hub containing core project instructions, and tool-specific locations (`.claude/rules/`, `.github/instructions/`, skills directories) are spokes that add capabilities the hub can't express. Skills handle context bloat by loading detailed instructions on demand rather than eagerly.
 

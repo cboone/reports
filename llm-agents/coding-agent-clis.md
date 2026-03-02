@@ -84,7 +84,7 @@ Google's open-source terminal AI agent with **1M token context** and a comparati
 - **License:** Apache 2.0
 - **Agent type:** Single-agent
 - **Status:** Very active
-- **Distinguishing:** **A generous free tier** among major CLI agents. Web search grounding means the agent can verify its own answers against Google Search. Privacy concern: Google uses prompts and code for model training. ~27,000 stars.
+- **Distinguishing:** **A relatively generous free tier** among mainstream CLI agents. Web search grounding means the agent can verify its own answers against Google Search. Privacy concern: Google uses prompts and code for model training. ~27,000 stars.
 
 ### Crush (Charmbracelet)
 
@@ -311,7 +311,7 @@ All-in-one LLM CLI featuring shell assistant, chat REPL, RAG, AI tools, and agen
 - **Language:** Rust
 - **License:** MIT/Apache 2.0 (dual)
 - **Stars:** ~6,000
-- **Distinguishing:** Very comprehensive multi-provider support in a single binary. Built-in LLM arena for model comparison. RAG support built in. Single Rust binary.
+- **Distinguishing:** Broad multi-provider support in a single binary. Built-in LLM arena for model comparison. RAG support built in. Single Rust binary.
 
 ### LLM (Simon Willison)
 
@@ -620,7 +620,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Seven key trends shaping the landscape
 
-**MCP as increasingly adopted standard.** Model Context Protocol has become a widely used extensibility mechanism. Many major tools now support MCP, creating a shared ecosystem of tools and integrations. This is a meaningful structural development; it means tools are becoming more interoperable rather than fully siloed.
+**MCP as increasingly adopted protocol.** Model Context Protocol has become a widely used extensibility mechanism. Many major tools now support MCP, creating a shared ecosystem of tools and integrations. This is a meaningful structural development; it means tools are becoming more interoperable rather than fully siloed.
 
 **Multi-agent orchestration is a growing category.** Six months ago, Claude Squad didn't exist. Now there are many tools for managing multiple agents simultaneously. This reflects a workflow shift: developers increasingly run 2-3 agents on different tasks in parallel rather than using one agent sequentially.
 
@@ -630,13 +630,13 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 **Local model support is now common but rarely primary.** Many tools support Ollama, but community discussions often report that local models underperform cloud models for complex coding tasks. Local support matters for privacy-sensitive environments and experimentation, but frontier cloud models remain the primary productivity drivers for many teams.
 
-**Terminal-Bench is emerging as a useful benchmark.** Just as SWE-bench standardized evaluation for research agents, Terminal-Bench (where Droid has a reported high score at 58.75%) is becoming a key benchmark for CLI coding tools in real-world terminal scenarios.
+**Terminal-Bench is emerging as a useful benchmark.** Just as SWE-bench standardized evaluation for research agents, Terminal-Bench (where Droid has a reported high score at 58.75%) is becoming a practical reference benchmark for CLI coding tools in real-world terminal scenarios.
 
 **The "why CLI over IDE?" question is often answered in favor of CLI for certain workflows.** HN and Reddit discussions converge on recurring advantages: cost savings (no IDE subscription), better separation of concerns (agent in separate worktree), higher-quality interactions (deliberate prompting vs. autocomplete), SSH compatibility, and composability (terminal is the natural interface for tool use).
 
 ### Most mature tools
 
-**Aider** is a well-established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported large weekly token volume, and 230+ contributors. **Claude Code** is often viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
+**Aider** is an established open-source tool, with 40,000+ stars, 4.1M installs, vendor-reported large weekly token volume, and 230+ contributors. **Claude Code** is often viewed as a polished commercial tool for complex reasoning. **OpenHands** is among the more mature platforms for autonomous headless operation.
 
 ### Most promising tools
 
@@ -644,7 +644,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 ### Gaps in the market
 
-**Few tools currently combine all three dimensions well: reasoning quality + model flexibility + strong sandboxing.** Claude Code is often strong on reasoning but locked to Anthropic. Codex CLI is often strong on sandboxing but tied closely to OpenAI. Aider has flexible model options but no built-in sandboxing. A tool that combines all three could become a major differentiator.
+**Few tools currently combine all three dimensions well: reasoning quality + model flexibility + strong sandboxing.** Claude Code is often strong on reasoning but locked to Anthropic. Codex CLI is often strong on sandboxing but tied closely to OpenAI. Aider has flexible model options but no built-in sandboxing. A tool that combines all three could become a meaningful differentiator.
 
 **Code review is underserved.** While several tools offer code review features, few CLI tools are purpose-built for AI-assisted code review workflows. Devin's `npx devin-review` and Codex's review agent are early entries but neither is comprehensive.
 
