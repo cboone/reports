@@ -624,7 +624,7 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 **Multi-agent orchestration is a growing category.** Six months ago, Claude Squad didn't exist. Now there are many tools for managing multiple agents simultaneously. This reflects a workflow shift: developers increasingly run 2-3 agents on different tasks in parallel rather than using one agent sequentially.
 
-**Rust and Go are gaining ground relative to Python for new tools.** While Python dominates older tools (Aider, Open Interpreter, MetaGPT, SWE-agent), many tools launched in 2025-2026 are written in Rust, Go, or TypeScript. Codex CLI's rewrite from TypeScript to Rust and Goose's Rust core suggest that **startup performance and binary distribution** are increasingly prioritized over Python's ecosystem advantages for CLI tools.
+**Rust and Go are gaining ground relative to Python for new tools.** While Python is still prominent among older tools (Aider, Open Interpreter, MetaGPT, SWE-agent), many tools launched in 2025-2026 are written in Rust, Go, or TypeScript. Codex CLI's rewrite from TypeScript to Rust and Goose's Rust core suggest that **startup performance and binary distribution** are increasingly prioritized over Python's ecosystem advantages for CLI tools.
 
 **The free tier war.** Gemini CLI offers 60 req/min free, Qwen Code gives 1,000 req/day free, Amp provides $10/day ad-supported, and Grok CLI's model costs $0.20/1M tokens. The barrier to entry is falling. This commoditizes basic coding assistance and pushes differentiation toward reasoning quality, context management, and workflow integration.
 
