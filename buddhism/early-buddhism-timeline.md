@@ -31,7 +31,7 @@ _September 15, 2025_
 - Traditional Theravada account of doctrinal purification
 
 ## 2nd Century BCE - 1st Century CE
-**c. 100 BCE** - Pali Canon first written down in Sri Lanka
+**c. 100 BCE** - Pali Canon traditionally considered written down in Sri Lanka
 - **Notable milestone**: End of purely oral tradition for Theravada Buddhism
 - Written in Pali on palm leaves during reign of King Vattagamani Abhaya
 - Includes Vinaya Pitaka, Sutta Pitaka, and Abhidhamma Pitaka
@@ -71,7 +71,7 @@ _September 15, 2025_
 ## Chinese Transmission
 
 **c. 148 CE** - An Shigao arrives in China
-- First systematic translation of Buddhist texts into Chinese
+- One of the first systematic translation efforts of Buddhist texts into Chinese
 - Focuses on meditation and Abhidharma texts
 
 **c. 179 CE** - Lokakshema's translations
@@ -123,12 +123,12 @@ _September 15, 2025_
 
 **c. 700-1000 CE** - Late Sanskrit Buddhist literature
 - Tantric texts (Guhyasamaja, Chakrasamvara, etc.)
-- Final major compositions in Indian Buddhism
+- Late major compositions in Indian Buddhism
 
 ## Key Observations
 
 **Oral to Written Transition Timeline:**
-1. **Pali (c. 100 BCE)** - First complete canonical collection written down
+1. **Pali (c. 100 BCE)** - Earliest complete canonical collection known to have been written down
 2. **Gandhari/Sanskrit (c. 50 BCE-200 CE)** - Gradual written recording
 3. **Chinese (c. 150-700 CE)** - Major translation period
 4. **Tibetan (c. 760-850 CE)** - Systematic translation from Sanskrit
@@ -138,6 +138,6 @@ _September 15, 2025_
 - **Central Asia**: Gandhari manuscripts, Silk Road transmission
 - **India**: Sanskrit composition and preservation (until c. 1200 CE)
 - **China**: Major translation hub for East Asian Buddhism
-- **Tibet**: Final major translation project, preservation of late Indian texts
+- **Tibet**: Late major translation project, preservation of late Indian texts
 
 **Note on Dating**: Many dates, especially for the Buddha's life and early councils, remain subjects of scholarly debate. The timeline represents commonly accepted scholarly estimates while noting traditional dating where it differs significantly.
