@@ -1101,7 +1101,7 @@ int main() {
 
 This is the baseline implementation against which all higher-level abstractions can be measured. Every lock acquisition, every condition variable wait, every signal is explicit. The bounded buffer is a circular array protected by a mutex and two condition variables. The shutdown protocol requires `broadcast` (not `signal`) to wake all consumers when the last producer finishes.
 
-The code is roughly 100 lines for what Go expresses in about 30 and Erlang in a different paradigm entirely. Most of these lines are structural requirements of the model: remove a lock and you risk a data race, remove a signal and you risk deadlock, remove the broadcast and consumers may fail to wake up. This helps explain why higher-level concurrency primitives were invented.
+The code is roughly 100 lines for what Go expresses in about 30 and Erlang in a different paradigm. Most of these lines are structural requirements of the model: remove a lock and you risk a data race, remove a signal and you risk deadlock, remove the broadcast and consumers may fail to wake up. This helps explain why higher-level concurrency primitives were invented.
 
 ### C++ (std::thread)
 
@@ -1837,7 +1837,7 @@ result ← {⍵*2}⌶ (3/⍳5)  ⍝ parallel square of replicated items
 result ← result[⍋result]  ⍝ sort
 ```
 
-The array language approach is to avoid explicit concurrency entirely — instead, operations on large arrays are implicitly parallelized by the runtime. This is a valid concurrency model for data-parallel problems but does not naturally express the task coordination that defines producer-consumer pipelines.
+The array language approach is to mostly avoid explicit concurrency — instead, operations on large arrays are implicitly parallelized by the runtime. This is a valid concurrency model for data-parallel problems but does not naturally express the task coordination that defines producer-consumer pipelines.
 
 ---
 
