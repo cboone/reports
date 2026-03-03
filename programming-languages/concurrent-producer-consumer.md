@@ -553,7 +553,7 @@ For this specific problem, Go is among the most ergonomic: bounded channels, gor
 
 ### Haskell
 
-Haskell offers Software Transactional Memory (STM), a fundamentally different concurrency primitive that composes transactional operations.
+Haskell offers Software Transactional Memory (STM), a distinct concurrency primitive that composes transactional operations.
 
 ```haskell
 import Control.Concurrent
@@ -1373,7 +1373,7 @@ async function runPipeline() {
 }
 ```
 
-This is not truly concurrent — all Promises resolve on the same event loop. JavaScript's concurrency model is fundamentally about managing I/O interleaving, not CPU parallelism.
+This is not truly concurrent — all Promises resolve on the same event loop. JavaScript's concurrency model is primarily about managing I/O interleaving, not CPU parallelism.
 
 ### TypeScript (Deno)
 
@@ -1828,7 +1828,7 @@ SWI-Prolog provides thread-based concurrency with message queues — essentially
 
 Array languages have minimal concurrency support. Their performance model relies on vectorized operations over arrays — implicit parallelism within operations, but no explicit concurrency between tasks.
 
-Some implementations provide parallel primitives: Dyalog APL has `∥` for parallel execution, and J has `t.` for threading modifiers. But the producer-consumer pattern, which requires coordination between independent tasks, is fundamentally outside the array programming model.
+Some implementations provide parallel primitives: Dyalog APL has `∥` for parallel execution, and J has `t.` for threading modifiers. But the producer-consumer pattern, which requires coordination between independent tasks, is largely outside the array programming model.
 
 ```apl
 ⍝ Dyalog APL: parallel each (⌶) can parallelize map operations

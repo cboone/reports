@@ -6,7 +6,7 @@ created: 2026-02-06
 
 _February 6, 2026_
 
-This document introduces and connects three companion studies, each implementing a single algorithm across dozens of programming languages. Together, they reveal how different language families are optimized for fundamentally different kinds of problems — and why no single paradigm is universally best.
+This document introduces and connects three companion studies, each implementing a single algorithm across dozens of programming languages. Together, they reveal how different language families are optimized for different kinds of problems — and why no single paradigm is universally best.
 
 ---
 
@@ -197,4 +197,4 @@ Together, the three documents demonstrate that programming language design invol
 | Logic (Prolog) | ★★★☆☆ | ★★★★☆ | ★★☆☆☆ | Relational reasoning |
 | Wirth | ★★☆☆☆ | ★★★☆☆ | ★★★★☆ (Ada) | Teaching & safety-critical |
 
-The empty cells and middle ratings are as informative as the extremes. A ★★★☆☆ means "competent but unremarkable" — the language can do it, but the code does not illuminate anything distinctive about the language's design philosophy. The extreme ratings — both high and low — are where the interesting lessons lie. A ★★★★★ means "this is what the language was designed for." A ★☆☆☆☆ means "this problem is fundamentally alien to the language's worldview." Both extremes teach us something important about how paradigms shape thinking.
+The empty cells and middle ratings are as informative as the extremes. A ★★★☆☆ means "competent but unremarkable" — the language can do it, but the code does not illuminate anything distinctive about the language's design philosophy. The extreme ratings — both high and low — are where the interesting lessons lie. A ★★★★★ means "this is what the language was designed for." A ★☆☆☆☆ means "this problem is largely alien to the language's worldview." Both extremes teach us something important about how paradigms shape thinking.

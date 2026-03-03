@@ -119,7 +119,7 @@ The algorithm is defined recursively:
 
 This is trivially simple as mathematics. What makes it interesting as a programming exercise is that it requires two things: a way to define a recursive data type (a tree with four kinds of nodes), and a way to dispatch on the node type (deciding what to do for each variant). Different language families have radically different answers to these two requirements, and those differences reveal deep design philosophies.
 
-Languages with algebraic data types (the ML family, Rust, Swift) can define the tree type directly and pattern-match on its variants. Lisp languages represent the tree as nested lists, making the data structure trivial but the dispatch manual. Object-oriented languages represent each node type as a class and use polymorphic dispatch. C-family languages use tagged unions or struct hierarchies. Array languages, designed for flat rectangular data, find recursive trees fundamentally awkward.
+Languages with algebraic data types (the ML family, Rust, Swift) can define the tree type directly and pattern-match on its variants. Lisp languages represent the tree as nested lists, making the data structure trivial but the dispatch manual. Object-oriented languages represent each node type as a class and use polymorphic dispatch. C-family languages use tagged unions or struct hierarchies. Array languages, designed for flat rectangular data, often find recursive trees comparatively awkward.
 
 This algorithm also serves as a miniature interpreter, and interpreters are core programs in computer science. From compilers to web browsers to AI inference engines, much of computing is evaluating tree-shaped structures.
 
@@ -270,7 +270,7 @@ This uniformity is not a coincidence. The ML family was designed at the intersec
 
 ## The Lisp Family
 
-The Lisp family takes a fundamentally different approach to the same problem. Rather than defining a new type for expressions, Lisp represents them as nested lists — the same data structure that Lisp programs themselves are made of. This property, called homoiconicity, means that the tree is already a native data structure, but the dispatch on node types must be done manually with conditionals.
+The Lisp family takes a meaningfully different approach to the same problem. Rather than defining a new type for expressions, Lisp represents them as nested lists — the same data structure that Lisp programs themselves are made of. This property, called homoiconicity, means that the tree is already a native data structure, but the dispatch on node types must be done manually with conditionals.
 
 ### Common Lisp
 
@@ -594,7 +594,7 @@ Unison's `cases` keyword introduces a pattern-matching lambda. The syntax is Has
 
 ### Prolog
 
-Prolog turns the evaluator into a logical relation between expressions and values. This is a fundamentally different approach — rather than computing a result, we declare what it means for a result to be correct.
+Prolog turns the evaluator into a logical relation between expressions and values. This is a meaningfully different approach — rather than computing a result, we declare what it means for a result to be correct.
 
 ```prolog
 eval(lit(N), N).
@@ -1267,7 +1267,7 @@ The `indirect` keyword tells Swift to heap-allocate the recursive cases (like Ru
 
 ## The APL Family
 
-Array languages are designed for flat, rectangular data. Recursive tree structures are fundamentally alien to the array paradigm. Representing and evaluating expression trees in APL-family languages requires encoding the tree as flat arrays — possible, but working against the grain.
+Array languages are designed for flat, rectangular data. Recursive tree structures are comparatively alien to the array paradigm. Representing and evaluating expression trees in APL-family languages requires encoding the tree as flat arrays — possible, but working against the grain.
 
 ### APL
 
@@ -1353,7 +1353,7 @@ Eval ← {
 }
 ```
 
-BQN uses a list of functions selected by the tag (using `◶`, the "choose" combinator). The tree is a pair of `⟨tag, payload⟩`. This is more idiomatic than the other array languages — BQN's first-class functions and combinators allow a table-dispatch approach — but it is still fundamentally non-array code.
+BQN uses a list of functions selected by the tag (using `◶`, the "choose" combinator). The tree is a pair of `⟨tag, payload⟩`. This is more idiomatic than the other array languages — BQN's first-class functions and combinators allow a table-dispatch approach — but it is still mostly non-array code.
 
 ### APL Family Comparison
 
@@ -1645,7 +1645,7 @@ The deepest variation is in how languages define the expression type. ML-family 
 
 ### Dispatch Mechanism
 
-Four fundamentally different dispatch mechanisms appear across language families: pattern matching (ML, Rust, Erlang), conditional chains (Lisp, scripting languages), polymorphic method dispatch (OOP languages), and logical unification (Prolog). Each corresponds to a different programming philosophy. Pattern matching is declarative and centralized. Conditionals are imperative and centralized. Method dispatch is declarative and distributed. Logical unification is relational and bidirectional.
+Four distinct dispatch mechanisms appear across language families: pattern matching (ML, Rust, Erlang), conditional chains (Lisp, scripting languages), polymorphic method dispatch (OOP languages), and logical unification (Prolog). Each corresponds to a different programming philosophy. Pattern matching is declarative and centralized. Conditionals are imperative and centralized. Method dispatch is declarative and distributed. Logical unification is relational and bidirectional.
 
 ### Recursion vs. Iteration
 
