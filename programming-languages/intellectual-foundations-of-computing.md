@@ -8,6 +8,12 @@ _January 21, 2026_
 
 **Computer science emerged not from engineering but from mathematics and logic.** The theoretical foundations—established between 1879 and 1948—define what computation *is*, what it *can* do, and what remains forever beyond its reach. This intellectual history traces how abstract mathematical ideas about logic, proof, and formal systems transformed into the programming languages and verification methods we use today, revealing a discipline built on deep theoretical insights rather than mere practical tinkering.
 
+## Method and source quality
+
+This historical synthesis emphasizes primary papers and archival copies, with DOI links where available.
+Some narrative framing about influence across eras is interpretive and based on cross-reading secondary histories.
+Specific dates for conceptual shifts can vary across historiography, so timelines should be read as approximate scholarly consensus.
+
 ---
 
 ## Timeline: Key dates in computing theory

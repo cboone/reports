@@ -10,6 +10,12 @@ _February 6, 2026_
 
 This document explores a single concurrent programming pattern implemented across dozens of programming languages, organized by language family. Where the companion documents showcased [array transformation](indices-above-mean.md) and [recursive data processing](expression-tree-evaluation.md), this algorithm — a concurrent producer-consumer pipeline — rewards languages with lightweight concurrency primitives, message passing, and safe shared-state abstractions.
 
+## Method and source quality
+
+Examples are designed for conceptual comparability rather than throughput benchmarking under identical runtime conditions.
+Concurrency primitives differ by runtime and scheduler, so qualitative conclusions should not be read as universal performance rankings.
+Implementation style is guided by common idioms but necessarily reflects editorial trade-offs for readability.
+
 ## Table of Contents
 
 1. [The Algorithm](#the-algorithm)

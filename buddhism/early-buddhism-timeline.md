@@ -6,6 +6,12 @@ created: 2025-09-15
 
 _September 15, 2025_
 
+## Evidence basis
+
+Chronology in early Buddhist history is contested across textual traditions and modern scholarship.
+This timeline uses approximate ranges and distinguishes traditional datings from critical historical estimates where possible.
+Composition, redaction, and translation milestones should be interpreted as scholarly windows rather than exact single-year events.
+
 ## 6th-5th Century BCE
 **c. 563-483 BCE** - Life of Siddhartha Gautama (the Buddha)
 - Traditional dates vary by tradition (Theravada: 563-483 BCE; some scholars: 490-410 BCE)
