@@ -40,9 +40,9 @@ This document introduces and connects three companion studies, each implementing
 
 ## The Design of the Triptych
 
-These three algorithms were chosen because each one makes a different language family look effortless while making others look labored. The combination ensures that every major paradigm gets its moment in the spotlight — and its moment of awkwardness.
+These three algorithms were chosen because each one makes a different language family look effortless while making others look labored. The combination helps ensure that major paradigms get both a moment in the spotlight and a moment of awkwardness.
 
-The key insight is that "expressiveness" is not a single axis. A language can be highly expressive for one class of problems and clumsy for another. APL expresses array transformations in a handful of characters but struggles with trees. Haskell expresses tree evaluation as a direct transliteration of the mathematical definition but requires more ceremony for concurrent coordination. Erlang makes concurrent pipelines straightforward but has no special notation for array operations. Each language optimizes for the problems its designers considered most important.
+The key insight is that "expressiveness" is not a single axis. A language can be highly expressive for one class of problems and clumsy for another. APL expresses array transformations in a handful of characters but struggles with trees. Haskell expresses tree evaluation as a direct transliteration of the mathematical definition but requires more ceremony for concurrent coordination. Erlang makes concurrent pipelines straightforward but has no special notation for array operations. Each language optimizes for the problems its designers considered highest priority.
 
 ---
 

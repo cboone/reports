@@ -749,7 +749,7 @@ double eval(Expr *e) {
 }
 ```
 
-The `Expr` struct contains a tag field and a union of possible payloads. The evaluator switches on the tag and accesses the appropriate union member. C provides no guarantee that the tag and the union member are consistent — accessing `e->lit` when the tag is `ADD` would read garbage without any compiler error. The programmer must maintain this invariant manually.
+The `Expr` struct contains a tag field and a union of possible payloads. The evaluator switches on the tag and accesses the appropriate union member. C provides limited built-in guarantees that the tag and the union member are consistent; accessing `e->lit` when the tag is `ADD` would read garbage without any compiler error. The programmer must maintain this invariant manually.
 
 Constructing expressions requires heap allocation:
 
@@ -1157,7 +1157,7 @@ function evalExpr(expr) {
 }
 ```
 
-JavaScript represents nodes as plain objects with a `type` string tag, which is the dynamic-language equivalent of a tagged union. Factory functions create nodes. The `switch` on the type string dispatches to each case. There is no structural guarantee that nodes have the right fields — this is entirely convention.
+JavaScript represents nodes as plain objects with a `type` string tag, which is the dynamic-language equivalent of a tagged union. Factory functions create nodes. The `switch` on the type string dispatches to each case. There is usually no structural guarantee that nodes have the right fields; this is largely convention.
 
 ### TypeScript
 
@@ -1653,7 +1653,7 @@ Most implementations use structural recursion — the evaluator calls itself on 
 
 ### Type Safety Spectrum
 
-The spectrum ranges from full compile-time safety (Haskell, Rust, Lean — which guarantee exhaustiveness and correct field access) through partial safety (TypeScript, Kotlin — which check some things statically) to no static checking (Python, JavaScript, Lua — where all guarantees are at runtime). The proof assistants go further, allowing proofs that the evaluator satisfies a specification.
+The spectrum ranges from strong compile-time safety (Haskell, Rust, Lean, which can enforce exhaustiveness and correct field access for typed representations) through partial safety (TypeScript, Kotlin, which check some things statically) to no static checking (Python, JavaScript, Lua, where guarantees are primarily runtime). The proof assistants go further, allowing proofs that the evaluator satisfies a specification.
 
 ### Where Each Family Excels
 
