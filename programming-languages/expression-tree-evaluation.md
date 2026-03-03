@@ -1576,11 +1576,11 @@ EVAL-NODE.
     STOP RUN.
 ```
 
-COBOL uses a flat table of nodes (since it lacks pointers and recursive types) and `EVALUATE` for case dispatch. The tree is stored as a table with index-based references to children. Recursive evaluation requires paragraph-level subroutines. This is an extremely poor fit — COBOL was designed for business record processing, and recursive tree evaluation is about as far from its intended domain as possible.
+COBOL uses a flat table of nodes (since it lacks pointers and recursive types) and `EVALUATE` for case dispatch. The tree is stored as a table with index-based references to children. Recursive evaluation requires paragraph-level subroutines. This is a poor fit — COBOL was designed for business record processing, and recursive tree evaluation is far from its intended domain.
 
 ### BASIC
 
-Classic BASIC lacks user-defined types and recursion entirely.
+Classic BASIC generally lacks user-defined types and recursion.
 
 ```basic
 10 REM Expression tree in parallel arrays

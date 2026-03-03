@@ -152,7 +152,7 @@ Alternatively, configure Codex to read `CLAUDE.md` directly by adding to `~/.cod
 ```toml
 project_doc_fallback_filenames = ["CLAUDE.md"]
 ```
-This approach avoids symlinks entirely if Claude Code is your primary tool.
+This approach can avoid symlinks if Claude Code is your primary tool.
 
 ### 3. Use .claude/rules/ and Skills for Claude Code power features
 

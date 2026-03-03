@@ -129,9 +129,9 @@ This axis describes *how predictable and repeatable* a tool call is.
 
 These are actually two sub-dimensions. Determinism asks: *will I get the same result if I call this again?* Idempotency asks: *will calling this again change the world further?* A web search is non-deterministic (results change over time) but roughly idempotent (searching doesn't change anything). Sending an email is deterministic in its execution (the same email goes out) but non-idempotent (each call sends another copy).
 
-This matters for agent design because it affects caching, retries, and parallelism. If a tool call is deterministic and idempotent, you can cache its result and skip redundant calls. If it's non-idempotent, you must be very careful about retries — an agent that retries a failed `send_email` call might send the email twice.
+This matters for agent design because it affects caching, retries, and parallelism. If a tool call is deterministic and idempotent, you can cache its result and skip redundant calls. If it's non-idempotent, you should be very careful about retries — an agent that retries a failed `send_email` call might send the email twice.
 
-**Example.** An agent that gathers information by searching the web and reading files can safely retry any failed step and even parallelize its work. An agent that creates cloud infrastructure resources needs careful idempotency handling — if it creates a VM and then crashes before recording the result, it must be able to detect the existing VM on retry rather than creating a duplicate.
+**Example.** An agent that gathers information by searching the web and reading files can safely retry many failed steps and even parallelize its work. An agent that creates cloud infrastructure resources needs careful idempotency handling — if it creates a VM and then crashes before recording the result, it should be able to detect the existing VM on retry rather than creating a duplicate.
 
 
 ## Axis 6: Error Recovery and Observability
