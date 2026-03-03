@@ -112,7 +112,7 @@ The following timeline documents major tmux releases from inception through 2025
 
 ## Technical evolution and major features
 
-tmux's architecture has remained fundamentally stable—a **client-server model** where the server manages sessions/windows/panes and clients connect via Unix sockets—but the feature set has evolved dramatically.
+tmux's architecture has remained largely stable—a **client-server model** where the server manages sessions/windows/panes and clients connect via Unix sockets—but the feature set has evolved dramatically.
 
 ### Color support progression
 
@@ -122,7 +122,7 @@ Color capabilities expanded across three generations. **256-color support** arri
 
 Early tmux versions (1.0-2.0) required multiple options: `mouse-resize-pane`, `mouse-select-pane`, `mouse-select-window`, and `mode-mouse`. The **2.1 release** (October 2015) consolidated these into a single `mouse` option—an incompatible but welcomed simplification. Subsequent versions added double/triple-click support (2.4), improved pane resizing (2.8), and right-click context menus (3.0).
 
-### The format strings revolution
+### Expansion of format strings
 
 Version 1.6 (January 2012) introduced the **format strings framework**, enabling the `#{variable}` syntax that transformed tmux scripting. This system evolved continuously:
 

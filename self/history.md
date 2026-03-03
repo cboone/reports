@@ -18,7 +18,7 @@ When Ungar moved to Stanford as an assistant professor, **implementation began i
 
 The **Sun Microsystems era (1991-1995)** brought additional talent, including **Lars Bak**  and Mario Wolczko. The team developed the Morphic UI framework  and released Version 4.0 in 1995 with a completely redesigned programming environment. But 1995 also marked Java's launch, and Sun redirected resources toward its new commercial priority.  The Self project officially ended that year.
 
-## The technical revolution: eliminating classes, inventing modern JIT
+## The technical shift: eliminating classes, influencing modern JIT
 
 Self's core insight was that classes are unnecessary for object-oriented programming.  Objects inherit directly from other objects through **prototype delegation**—when a message is sent, the system searches the receiver for a matching slot, then recursively searches parent objects.  Creating new objects requires only **cloning** existing ones, not instantiating from abstract class descriptions. 
 
@@ -26,11 +26,11 @@ This simplicity created severe performance challenges that drove groundbreaking 
 
 **Polymorphic inline caches (PICs)**, introduced by Hölzle, Chambers, and Ungar in 1991, solved the problem of call sites that encounter multiple receiver types. Rather than falling back to slow dictionary lookups, PICs generate stub routines that test receiver types and branch directly to cached methods. Published results showed clear median speedups on representative workloads, and the technique became standard in modern JavaScript engines.
 
-The team's work on **adaptive optimization** proved equally transformative. Urs Hölzle's 1994 PhD thesis demonstrated that compilers could use runtime type information collected by PICs to guide aggressive speculative optimization, then safely **deoptimize** when assumptions failed. This approach, compiling quickly at first and then recompiling hot code with full optimization, became a foundation of Java's HotSpot VM and major JavaScript engines.  
+The team's work on **adaptive optimization** proved highly influential. Urs Hölzle's 1994 PhD thesis demonstrated that compilers could use runtime type information collected by PICs to guide aggressive speculative optimization, then safely **deoptimize** when assumptions failed. This approach, compiling quickly at first and then recompiling hot code with full optimization, became part of the foundation for Java's HotSpot VM and major JavaScript engines.  
 
 ## Why Self remained a research curiosity
 
-Despite its technical brilliance, Self faced formidable adoption barriers. The system required approximately **32MB of RAM**—extraordinary when typical PCs had 8-16MB.   Its image-based development model, where programs existed as "snapshots" of memory rather than source files, confused developers trained in file-based workflows.  The GUI-intensive environment demanded substantial hardware and made text-based development awkward.
+Despite its technical strengths, Self faced formidable adoption barriers. The system required approximately **32MB of RAM**—extraordinary when typical PCs had 8-16MB.   Its image-based development model, where programs existed as "snapshots" of memory rather than source files, confused developers trained in file-based workflows.  The GUI-intensive environment demanded substantial hardware and made text-based development awkward.
 
 More fundamentally, prototype-based programming was simply unfamiliar. Industry and academia had converged on class-based object orientation, and Self's alternative paradigm required conceptual reorientation that few were willing to undertake.  When Sun cancelled the project in favor of Java, Self lost its institutional champion. By the time hardware caught up with Self's requirements, JavaScript and Java had captured mindshare.
 
