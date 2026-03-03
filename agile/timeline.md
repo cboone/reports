@@ -14,11 +14,11 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **1940s** — **Taiichi Ohno** begins developing the Toyota Production System (TPS) at Toyota Motor Corporation in Japan, introducing concepts like just-in-time delivery, continuous improvement (kaizen), and respect for workers that will later influence agile thinking.
 
-**1950** — **W. Edwards Deming** teaches statistical quality control to Japanese engineers; his Plan-Do-Study-Act (PDSA) cycle becomes foundational to iterative improvement philosophies.
+**1950** — **W. Edwards Deming** teaches statistical quality control to Japanese engineers; his Plan-Do-Study-Act (PDSA) cycle becomes highly influential in iterative improvement philosophies.
 
 **1950s** — **Shigeo Shingo** collaborates with Ohno to refine TPS, developing Single-Minute Exchange of Dies (SMED) and poka-yoke (mistake-proofing) techniques.
 
-**1958–1963** — NASA's **Project Mercury** uses half-day time-boxed iterations with test-first development—planning and writing tests before each micro-increment. Gerald Weinberg later recalls this as deliberate incremental development.
+**1958–1963** — NASA's **Project Mercury** is frequently cited as an early example of short, test-heavy iterative development. Gerald Weinberg later recalls this as deliberate incremental development.
 
 **1961** — IBM's **Federal Systems Division**, seeded by Mercury personnel, becomes a major proponent of iterative approaches for government and aerospace projects.
 
@@ -86,7 +86,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **1997** — **Kent Beck** and **Erich Gamma** create **JUnit** on a flight to OOPSLA, making test-driven development practical and spawning the xUnit family of testing frameworks.
 
-**1998** — Daimler-Benz acquires Chrysler; the on-site customer at C3 resigns from burnout and cannot be replaced.
+**1998** — Daimler-Benz acquires Chrysler; the on-site customer at C3 resigns from burnout and could not be replaced at that time.
 
 **1999** — C3 development stops; DaimlerChrysler officially cancels the project in February 2000, but by then XP has spread to many other projects.
 
@@ -96,7 +96,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **1999** — **Martin Fowler** publishes *Refactoring: Improving the Design of Existing Code*, providing a catalog of 70+ refactorings with step-by-step instructions and making code improvement mainstream.
 
-**1999** — A review of U.S. Department of Defense projects reveals 75% failed or were never used, with only 2% deployed without extensive modification—approximately $37 billion in failed spending.
+**1999** — Late-1990s U.S. Department of Defense reviews report high failure and rework rates, with only a small minority of projects deploying without major modification.
 
 ---
 
@@ -125,7 +125,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **2002** — **Atlassian** founded in Sydney, Australia by Mike Cannon-Brookes and Scott Farquhar.
 
-**2002** — **Jira** launched by Atlassian as bug-tracking software; it will later become the dominant agile project management tool.
+**2002** — **Jira** launched by Atlassian as bug-tracking software; it later became a widely used agile project management tool.
 
 **2002** — **Ken Schwaber** co-founds the **Scrum Alliance** with Mike Cohn and Esther Derby, creating the Certified ScrumMaster (CSM) program.
 
@@ -145,7 +145,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **2004–2005** — **David Anderson** experiments with visual workflow management and work-in-progress limits at Microsoft's XIT Maintenance Engineering team, laying groundwork for Kanban.
 
-**2005** — **Mike Cohn** publishes *Agile Estimating and Planning*, becoming the definitive guide to story points and velocity.
+**2005** — **Mike Cohn** publishes *Agile Estimating and Planning*, becoming a widely cited guide to story points and velocity.
 
 **2005** — **LeSS (Large-Scale Scrum)** created by **Craig Larman** and **Bas Vodde** at Nokia Siemens Networks in Finland.
 
@@ -159,7 +159,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 ## Scaling, DevOps, and Mainstream Adoption (2006–2014)
 
-**2006–2007** — **David Anderson** develops the full **Kanban Method** at Corbis, achieving 240% improvement in delivery rates and 90% reduction in delivery times.
+**2006–2007** — **David Anderson** develops the full **Kanban Method** at Corbis, with case studies reporting large improvements in throughput and cycle time.
 
 **2007** — **Dean Leffingwell** publishes *Scaling Software Agility: Best Practices for Large Enterprises*, laying theoretical groundwork for SAFe.
 
@@ -191,7 +191,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **2011** — **Robert C. Martin** publishes *The Clean Coder: A Code of Conduct for Professional Programmers*, addressing ethics and professionalism.
 
-**2011** — **Jenkins** forked from Hudson after an Oracle trademark dispute, becoming the dominant CI/CD tool with 1,500+ plugins.
+**2011** — **Jenkins** forked from Hudson after an Oracle trademark dispute, becoming a widely used CI/CD tool with 1,500+ plugins.
 
 **2011** — **Travis CI** and **CircleCI** founded, adding cloud-based continuous integration options.
 
@@ -213,7 +213,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **2016** — **Gene Kim**, Jez Humble, Patrick Debois, and John Willis publish *The DevOps Handbook*, providing comprehensive guidance on implementing DevOps practices.
 
-**2018** — **Microsoft acquires GitHub** for $7.5 billion, signaling Git's dominance in software development.
+**2018** — **Microsoft acquires GitHub** for $7.5 billion, signaling Git's broad adoption in software development.
 
 **2018** — **Martin Fowler** delivers influential keynote at Agile Australia identifying the "Agile Industrial Complex" as a key problem—criticizing imposition of processes on teams rather than letting teams choose their own approaches.
 
@@ -247,9 +247,9 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **April 2025** — **Pivotal Tracker** retired by Broadcom, ending a 17-year run as an XP-focused project management tool.
 
-**2025** — Enterprise agile transformation market reaches **$48.75 billion**, projected to grow to $96.28 billion by 2029.
+**2025** — Market analysts project strong growth in enterprise agile transformation spending through the late 2020s.
 
-**2025** — Industry surveys report **71% of organizations** use agile in software development, with 97% reporting some agile adoption. **Scrum** remains the dominant framework (87% of agile teams), followed by Kanban and hybrid approaches.
+**2025** — Industry surveys continue to report broad agile adoption in software development, with **Scrum** still the most common framework, followed by Kanban and hybrid approaches.
 
 **2025** — Ongoing debates continue about "Agile Industrial Complex" commercialization, certification proliferation, and whether mainstream adoption has preserved or diluted original agile values. Post-agile and "Modern Agile" movements advocate returning to ultra-light approaches.
 
@@ -281,4 +281,4 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 ---
 
-*Timeline compiled from primary sources and historical research, January 2025.*
+*Timeline compiled from primary sources and historical research, January 2026.*

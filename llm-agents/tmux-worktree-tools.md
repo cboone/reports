@@ -6,9 +6,9 @@ created: 2026-02-15
 
 _February 15, 2026_
 
-The intersection of LLM-powered coding agents, tmux session management, and git worktree isolation has become one of the most active categories in developer tooling. The core pattern is simple: git worktrees provide filesystem isolation so multiple agents don't collide, tmux provides persistent and observable terminal sessions, and an orchestration layer ties the lifecycle together — from spinning up an agent on a feature branch to merging the result and cleaning up.
+The intersection of LLM-powered coding agents, tmux session management, and git worktree isolation has become a busier category in developer tooling. The core pattern is simple: git worktrees provide filesystem isolation so multiple agents don't collide, tmux provides persistent and observable terminal sessions, and an orchestration layer ties the lifecycle together — from spinning up an agent on a feature branch to merging the result and cleaning up.
 
-This document catalogs every significant tool, script, and workflow in the space, with feature comparisons, architectural analysis, and links to the community commentary that has shaped the ecosystem.
+This document catalogs a broad set of significant tools, scripts, and workflows in the space, with feature comparisons, architectural analysis, and links to the community commentary that has shaped the ecosystem.
 
 ---
 
@@ -38,7 +38,7 @@ The tools in this space fall into six broad categories, though some straddle bou
 | Category | Philosophy | Examples |
 |---|---|---|
 | **TUI Session Managers** | General-purpose "mission control" for multiple agent sessions | claude-squad, ccmanager, agent-deck, agent-of-empires |
-| **Opinionated Workflow Tools** | End-to-end lifecycle management with strong conventions | workmux, dmux, barrel, forestui, multi-agent-workflow-kit |
+| **Opinionated Workflow Tools** | End-to-end lifecycle management with clear conventions | workmux, dmux, barrel (now axel), forestui, multi-agent-workflow-kit |
 | **Tmux-Focused** | Enhance the tmux experience specifically for agent workflows | claude-tmux, vscode-ext-tmux-worktree |
 | **Worktree-Focused** | Center the workflow around git worktree management | agenttools/worktree, worktree-manager-skill |
 | **Lightweight Scripts** | Minimal shell scripts or slash commands for quick parallelism | andynu's gist, worksfornow's /delegate |
@@ -64,7 +64,7 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 | **Supported Agents** | Claude Code, Aider, Codex, OpenCode, Amp |
 | **Maturity** | One of the earliest tools in the space; well-established community |
 
-**Overview.** claude-squad was one of the first tools to formalize the tmux + worktree + agent pattern into a proper TUI. It uses tmux to create isolated terminal sessions for each agent and git worktrees to isolate codebases so each session works on its own branch. The binary is called `cs` and provides a clean terminal interface for creating, monitoring, and switching between agent sessions.
+**Overview.** claude-squad was an early tool to formalize the tmux + worktree + agent pattern into a proper TUI. It uses tmux to create isolated terminal sessions for each agent and git worktrees to isolate codebases so each session works on its own branch. The binary is called `cs` and provides a clean terminal interface for creating, monitoring, and switching between agent sessions.
 
 **Key Features:**
 
@@ -87,9 +87,9 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 | **Language** | TypeScript (Node.js) |
 | **Install** | `npx ccmanager` |
 | **Supported Agents** | Claude Code, Gemini CLI, Codex CLI, Cursor Agent, Copilot CLI, Cline CLI, OpenCode, Kimi CLI |
-| **Maturity** | Feature-rich; broadest agent support of any tool |
+| **Maturity** | Rich feature set; broad agent support among listed tools |
 
-**Overview.** ccmanager is the most feature-dense tool in this category, supporting the widest range of coding agents while being completely self-contained — it does not require tmux to be installed. It manages sessions, worktrees, and the full agent lifecycle with an impressive set of advanced capabilities.
+**Overview.** ccmanager is a feature-rich tool in this category, supporting a wide range of coding agents while being completely self-contained, and it does not require tmux to be installed. It manages sessions, worktrees, and the full agent lifecycle with an extensive set of capabilities.
 
 **Key Features:**
 
@@ -114,14 +114,14 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 | **Language** | Go (Bubble Tea TUI framework) |
 | **Install** | Installer script or `make build` |
 | **Supported Agents** | Claude Code, Gemini CLI, OpenCode, Codex CLI, and more |
-| **Maturity** | Active development; comprehensive documentation |
+| **Maturity** | Active development; detailed documentation |
 
 **Overview.** agent-deck brands itself as "mission control for your AI coding agents" and focuses on the experience of managing many concurrent sessions efficiently. It adds AI-specific intelligence on top of tmux: smart status detection that knows when Claude is thinking vs. waiting, session forking with context inheritance, MCP management, and organized groups.
 
 **Key Features:**
 
 - **Session forking:** Fork any Claude conversation instantly; each fork inherits the full conversation history
-- **MCP server management:** Attach MCP servers without touching config files; toggle per project or globally; socket pooling shares MCP processes across all sessions via Unix sockets, reducing MCP memory usage by 85-90%; connections auto-recover from MCP crashes in ~3 seconds
+- **MCP server management:** Attach MCP servers without touching config files; toggle per project or globally; socket pooling shares MCP processes across sessions via Unix sockets (project materials report 85-90% memory reduction); connections are described as recovering from MCP crashes in roughly 3 seconds
 - **Tmux status bar integration:** Waiting sessions appear in your tmux status bar; press `Ctrl+b 1-6` to jump directly
 - **Global search:** Fuzzy-search across all conversations with `/`
 - **Worktree locations:** Configurable as "sibling" (default), "subdirectory", or a custom path; `--location` flag overrides per session
@@ -160,7 +160,7 @@ These tools provide a standalone terminal UI that acts as "mission control" for 
 
 ### 2. Opinionated Workflow Tools
 
-These tools take a stronger stance on how the agent-worktree-tmux lifecycle should work, embedding conventions for branching, merging, environment setup, and cleanup.
+These tools take a clearer stance on how the agent-worktree-tmux lifecycle should work, embedding conventions for branching, merging, environment setup, and cleanup.
 
 ---
 
@@ -172,9 +172,9 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 | **Language** | TypeScript |
 | **Install** | npm (see repo) |
 | **Supported Agents** | Claude Code, Codex, Gemini, and any CLI agent via config |
-| **Maturity** | Well-designed; author also maintains a constellation of related tmux tools |
+| **Maturity** | Active; author also maintains a constellation of related tmux tools |
 
-**Overview.** workmux is self-described as a "giga opinionated zero-friction workflow tool for managing git worktrees and tmux windows as isolated development environments." Rather than providing a separate TUI, workmux maps each worktree to a tmux window within your existing tmux session. This makes it the most natural fit for developers who already live in tmux.
+**Overview.** workmux is self-described as a "giga opinionated zero-friction workflow tool for managing git worktrees and tmux windows as isolated development environments." Rather than providing a separate TUI, workmux maps each worktree to a tmux window within your existing tmux session. This makes it a natural fit for developers who already live in tmux.
 
 **Key Features:**
 
@@ -201,7 +201,7 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 | [tmux-bro](https://github.com/raine/tmux-bro) | Smart tmux session manager with project-specific sessions |
 | [git-surgeon](https://github.com/raine/git-surgeon) | Non-interactive hunk-level git staging for AI agents |
 | [claude-history](https://github.com/raine/claude-history) | Search and view Claude Code conversation history with fzf |
-| [consult-llm-mcp](https://github.com/raine/consult-llm-mcp) | MCP server that lets Claude Code consult stronger AI models (o3, Gemini, GPT-5.1 Codex) |
+| [consult-llm-mcp](https://github.com/raine/consult-llm-mcp) | MCP server that lets Claude Code consult higher-capability AI models (o3, Gemini, GPT-5.1 Codex) |
 
 **Limitations.** Requires buy-in to the "one window per worktree" model. All worktrees share the same tmux session, which means you can't easily isolate groups of worktrees across different tmux sessions. The TypeScript runtime adds some overhead compared to Go/Rust alternatives.
 
@@ -211,8 +211,8 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 
 | | |
 |---|---|
-| **Repository** | [github.com/formkit/dmux](https://github.com/formkit/dmux) |
-| **Language** | TypeScript (from the FormKit team) |
+| **Repository** | [github.com/standardagents/dmux](https://github.com/standardagents/dmux) |
+| **Language** | TypeScript |
 | **Install** | See repo |
 | **Supported Agents** | Claude Code, OpenCode |
 | **Maturity** | Newer; simpler and more focused than workmux |
@@ -232,17 +232,17 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 
 ---
 
-#### barrel
+#### barrel (now axel)
 
 | | |
 |---|---|
-| **Repository** | [github.com/txtx/barrel](https://github.com/txtx/barrel) |
+| **Repository** | [github.com/txtx/axel](https://github.com/txtx/axel) |
 | **Language** | (See repo) |
 | **Install** | See repo |
 | **Supported Agents** | Claude Code, Codex (OpenAI), OpenCode, Antigravity (Google) |
-| **Maturity** | Active development; unique agent portability angle |
+| **Maturity** | Active development; distinctive agent portability angle |
 
-**Overview.** barrel's pitch is "portable agents across LLMs, reproducible terminal workspaces." The core insight is that you should write agent definitions once and have them work across any LLM-powered coding tool. barrel handles the symlinking and configuration so that a single `agents/` directory gets picked up by Claude Code, Codex, OpenCode, or Antigravity.
+**Overview.** barrel's pitch is "portable agents across LLMs, reproducible terminal workspaces." The project repository is now `txtx/axel`, but the barrel terminology and commands below reflect the workflow described in the original writeups. The core insight is that you should write agent definitions once and have them work across any LLM-powered coding tool. barrel handles the symlinking and configuration so that a single `agents/` directory gets picked up by Claude Code, Codex, OpenCode, or Antigravity.
 
 **Key Features:**
 
@@ -287,13 +287,13 @@ These tools take a stronger stance on how the agent-worktree-tmux lifecycle shou
 
 | | |
 |---|---|
-| **Repository** | [github.com/laris-co/multi-agent-workflow-kit](https://github.com/laris-co/multi-agent-workflow-kit) |
+| **Repository** | [github.com/Soul-Brews-Studio/multi-agent-workflow-kit](https://github.com/Soul-Brews-Studio/multi-agent-workflow-kit) *(active fork of `laris-co/multi-agent-workflow-kit`)* |
 | **Language** | Shell scripts (via uvx) |
 | **Install** | `uvx --no-cache --from git+https://github.com/Soul-Brews-Studio/multi-agent-workflow-kit.git@v0.5.1 multi-agent-kit init` |
 | **Supported Agents** | Any CLI agent |
 | **Maturity** | Self-described as "proof of concept"; exploratory |
 
-**Overview.** maw provides a reusable toolkit for tmux + git worktree multi-agent workflows, with a unique inter-agent communication system. Each agent gets its own git worktree and branch, and all agents are visible in a single tmux session with split panes.
+**Overview.** maw provides a reusable toolkit for tmux + git worktree multi-agent workflows, with a notable inter-agent communication system. Each agent gets its own git worktree and branch, and all agents are visible in a single tmux session with split panes.
 
 **Key Features:**
 
@@ -408,7 +408,7 @@ These tools center the workflow around git worktree management, with agent and t
 | **Install** | Clone into `~/.claude/skills/worktree-manager` |
 | **Focus** | Teaching Claude Code to manage worktrees natively |
 
-**Overview.** Unlike every other tool in this survey, worktree-manager-skill is not a standalone program. It's a Claude Code "skill" — a set of instructions and configuration that Claude Code reads to learn how to manage worktrees on your behalf. This means the orchestration happens through conversation with Claude rather than through a separate CLI or TUI.
+**Overview.** Unlike almost every other tool in this survey, worktree-manager-skill is not a standalone program. It's a Claude Code "skill" — a set of instructions and configuration that Claude Code reads to learn how to manage worktrees on your behalf. This means the orchestration happens through conversation with Claude rather than through a separate CLI or TUI.
 
 **Key Features:**
 
@@ -418,7 +418,7 @@ These tools center the workflow around git worktree management, with agent and t
 - **Configurable via `config.json`:** Shell, Claude command, port pool, worktree base directory
 - **Zero external tooling:** Just Claude Code and git
 
-**Limitations.** Relies entirely on Claude Code's ability to follow skill instructions reliably. No TUI or status monitoring. The skill approach means no persistent process watching over sessions.
+**Limitations.** Relies heavily on Claude Code's ability to follow skill instructions reliably. No TUI or status monitoring. The skill approach means no persistent process watching over sessions.
 
 ---
 
@@ -519,7 +519,7 @@ These are minimal, copy-paste-ready implementations of the core pattern.
 
 ### Opinionated Workflow Tools
 
-| Feature | workmux | dmux | barrel | forestui | maw |
+| Feature | workmux | dmux | barrel/axel | forestui | maw |
 |---|:---:|:---:|:---:|:---:|:---:|
 | **Language** | TypeScript | TypeScript | (See repo) | Python | Shell |
 | **tmux model** | Windows in existing session | Session per project | Configurable layout | Named windows | Split panes |
@@ -539,7 +539,7 @@ These are minimal, copy-paste-ready implementations of the core pattern.
 
 ## Cross-Category Comparison Matrix
 
-This matrix compares all tools across the most commonly needed capabilities.
+This matrix compares many tools across commonly needed capabilities.
 
 | Tool | Category | Tmux Required | Worktrees | Multi-Agent | Lifecycle Mgmt | Status Monitoring | Sandboxing | Language |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|---|
@@ -549,7 +549,7 @@ This matrix compares all tools across the most commonly needed capabilities.
 | agent-of-empires | TUI Manager | ✅ | ✅ | 5 agents | Basic | ✅ | Docker | Rust |
 | workmux | Workflow | ✅ | ✅ | Any CLI | Full (merge+cleanup) | ✅ (status icons) | ❌ | TypeScript |
 | dmux | Workflow | ✅ | ✅ | 2 agents | Full (smart merge) | Basic | ❌ | TypeScript |
-| barrel | Workflow | ✅ | ✅ | 4+ agents | Session only | ❌ | ❌ | — |
+| barrel/axel | Workflow | ✅ | ✅ | 4+ agents | Session only | ❌ | ❌ | — |
 | forestui | Workflow | ✅ | ✅ | Claude only | Session tracking | ✅ | ❌ | Python |
 | maw | Workflow | ✅ | ✅ | Any CLI | Basic | ❌ | ❌ | Shell |
 | claude-tmux | Tmux | ✅ | ✅ | Claude only | Session + PR | ✅ (live preview) | ❌ | Rust |
@@ -568,7 +568,7 @@ This matrix compares all tools across the most commonly needed capabilities.
 
 ### The Core Pattern
 
-Every tool in this survey implements some variation of the same fundamental pattern:
+Most tools in this survey implement some variation of the same fundamental pattern:
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -596,11 +596,11 @@ The variation comes in three key design decisions:
 
 **2. Lifecycle scope.** Some tools manage only the "create session" phase (claude-squad, agent-of-empires), while others manage the full lifecycle through merge and cleanup (workmux, dmux). The lightweight scripts don't manage lifecycle at all — they're fire-and-forget launchers.
 
-**3. Agent awareness.** The most sophisticated tools (agent-deck, workmux, ccmanager) can detect what state an agent is in — working, waiting for input, done — and surface this information in the tmux chrome. This is implemented by monitoring the terminal output for patterns specific to each agent (e.g., Claude Code's prompt patterns). agent-deck calls this "AI-specific intelligence on top of tmux."
+**3. Agent awareness.** Several tools (agent-deck, workmux, ccmanager) can detect what state an agent is in — working, waiting for input, done — and surface this information in the tmux chrome. This is implemented by monitoring the terminal output for patterns specific to each agent (e.g., Claude Code's prompt patterns). agent-deck calls this "AI-specific intelligence on top of tmux."
 
 ### The Containerization Gap
 
-Running AI coding agents with broad filesystem and shell access is inherently risky, yet most tools in this survey provide no isolation beyond git worktrees (which only isolate the filesystem view of the repo, not the agent's ability to execute arbitrary commands). Only three approaches in the ecosystem address this:
+Running AI coding agents with broad filesystem and shell access can be risky, and many tools in this survey provide no isolation beyond git worktrees (which primarily isolate the filesystem view of the repo, not the agent's ability to execute arbitrary commands). A small number of approaches address this, and three notable examples in this survey are:
 
 | Approach | Tool | Isolation Granularity | What's Containerized | What's on the Host |
 |---|---|---|---|---|
@@ -608,13 +608,13 @@ Running AI coding agents with broad filesystem and shell access is inherently ri
 | **Devcontainer** | ccmanager | Development environment | Agent sessions + dependencies | ccmanager TUI, notifications |
 | **Full-environment** | Snapp's workflow (DIY) | Everything | tmux, agents, editors, worktrees | SSH client only |
 
-The per-session model (agent-of-empires) provides the finest-grained isolation — one container per agent — making it ideal for running `--dangerously-skip-permissions` with less actual danger. The devcontainer model (ccmanager) is coarser but more familiar to teams already using devcontainers, and it preserves host-level automation (notifications, hooks) that would be lost inside a container. The full-environment model provides the strongest isolation but requires the most setup and means your entire development workflow lives inside Docker.
+The per-session model (agent-of-empires) provides fine-grained isolation, one container per agent, and can reduce host exposure when using high-autonomy settings such as `--dangerously-skip-permissions`. The devcontainer model (ccmanager) is coarser but more familiar to teams already using devcontainers, and it preserves host-level automation (notifications, hooks) that would be lost inside a container. The full-environment model generally isolates across a broader boundary, but requires substantial setup and means your entire development workflow lives inside Docker.
 
-This remains one of the most significant gaps in the ecosystem. As agents gain more autonomy (auto-approval, background execution, `--dangerously-skip-permissions`), the argument for sandboxing grows stronger. Anthropic's own Claude Code devcontainer exists but is separate from the agent teams feature, leaving the integration to the user.
+This remains an ongoing gap in the ecosystem. As agents gain more autonomy (auto-approval, background execution, `--dangerously-skip-permissions`), the argument for sandboxing grows. Anthropic's own Claude Code devcontainer exists but is separate from the agent teams feature, leaving the integration to the user.
 
 ### The Worktree Convention Question
 
-One of the most interesting design divergences is where worktrees get created:
+One notable design divergence is where worktrees get created:
 
 | Convention | Used By | Example |
 |---|---|---|
@@ -635,7 +635,7 @@ The richsnapp.com article advocates strongly for the sibling-directory conventio
 
 **"Worktrees and Tmux and Claude, Oh My Zsh" (Dec 2025)** — [news.ycombinator.com/item?id=46316943](https://news.ycombinator.com/item?id=46316943)
 
-The author (Rich Snapp) wrote this because "I often heard about people using git worktrees to work with multiple agents but I never saw someone document exactly how they do it." The discussion validated the pattern as production-ready. Key themes: the importance of tmux's terminal bell support for notifications when agents finish, the value of Docker containers for sandboxing, and the debate over bare repos vs. default-directory worktree layouts.
+The author (Rich Snapp) wrote this because "I often heard about people using git worktrees to work with multiple agents but I never saw someone document exactly how they do it." The discussion generally treated the pattern as viable in production workflows. Key themes: the importance of tmux's terminal bell support for notifications when agents finish, the value of Docker containers for sandboxing, and the debate over bare repos vs. default-directory worktree layouts.
 
 **"Forestui: A tmux-powered worktree manager for Claude Code" (Feb 2026)** — [news.ycombinator.com/item?id=46864999](https://news.ycombinator.com/item?id=46864999)
 
@@ -663,7 +663,7 @@ The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) r
 
 **URL:** [richsnapp.com/article/2025/12-14-git-worktrees-tmux-claude-code-oh-my-zsh](https://www.richsnapp.com/article/2025/12-14-git-worktrees-tmux-claude-code-oh-my-zsh)
 
-The most comprehensive single writeup of a complete workflow. Snapp describes a Docker container-based approach where tmux provides the persistent session layer, worktrees provide filesystem isolation, and a custom `gwtmux` script ties everything together. Key insights:
+One of the more detailed single writeups of a complete workflow. Snapp describes a Docker container-based approach where tmux provides the persistent session layer, worktrees provide filesystem isolation, and a custom `gwtmux` script ties everything together. Key insights:
 
 > "Just as git worktrees give you multiple workspaces in the codebase within which to work, tmux gives you multiple workspaces for the agents, shells, IDE instances, and various tools that you will be using during development."
 
@@ -705,7 +705,7 @@ The blog post behind the `/delegate` slash command. Framed as an actual message 
 
 **URL:** [claydon.co/code/practical-parallelism-with-claude-code](https://claydon.co/code/practical-parallelism-with-claude-code/)
 
-One of the earliest writeups of the pattern, predating most of the tools above. Describes an "ensemble" approach where Claude Opus generates three alternative implementations for the same task, each in its own worktree, and you pick the best one. Also demonstrates the simpler "divide and conquer" pattern of assigning different tasks to different agents.
+An early writeup of the pattern, predating many of the tools above. Describes an "ensemble" approach where Claude Opus generates three alternative implementations for the same task, each in its own worktree, and you pick the preferred one. Also demonstrates the simpler "divide and conquer" pattern of assigning different tasks to different agents.
 
 ---
 
@@ -717,27 +717,27 @@ One of the earliest writeups of the pattern, predating most of the tools above. 
 
 ### "I want a proper mission control TUI for many concurrent sessions"
 
-**→ agent-deck** if you want the most polished TUI with session forking, MCP management, and tmux status bar integration. **→ ccmanager** if you need the broadest agent support (8+ agents), devcontainer sandboxing, or AI-powered auto-approval. **→ claude-squad** if you want the most battle-tested option with the largest community.
+**→ agent-deck** if you want a polished TUI with session forking, MCP management, and tmux status bar integration. **→ ccmanager** if you need broad multi-agent support (8+ agents), devcontainer sandboxing, or AI-powered auto-approval. **→ claude-squad** if you want an experienced option with a large community.
 
 ### "I need Docker/container isolation for security"
 
 There are three tiers of containerization in this ecosystem, each drawing the isolation boundary at a different level:
 
-**Per-session sandboxing → agent-of-empires.** Each agent session can run in its own Docker container with `aoe add --sandbox .`, giving you the most granular isolation. A misbehaving agent can't damage your host filesystem or affect other sessions. Shared auth credentials are passed through so the agent can still access APIs.
+**Per-session sandboxing → agent-of-empires.** Each agent session can run in its own Docker container with `aoe add --sandbox .`, giving you granular isolation. A misbehaving agent is less likely to directly affect your host filesystem or other sessions. Shared auth credentials are passed through so the agent can still access APIs.
 
 **Devcontainer-based environment isolation → ccmanager.** Rather than wrapping individual sessions, ccmanager can run agent sessions inside VS Code-style devcontainers while keeping the manager itself on the host machine. This enables sandboxed development environments with restricted network access while maintaining host-level notifications and automation. It's a coarser level of isolation than per-session sandboxing, but aligns well with teams that already use devcontainers for development and want to add `--dangerously-skip-permissions` inside a controlled environment.
 
-**Full-environment containerization → build it yourself.** Rich Snapp's workflow (documented in the "Worktrees & Tmux & Claude, Oh My... Zsh" article) runs everything — tmux, worktrees, agents, editors — inside a persistent Docker container. A startup script provisions the container, and tmux inside it provides session persistence across reconnections. This is the most comprehensive approach, but it's a hand-rolled workflow rather than a feature of any particular tool.
+**Full-environment containerization → build it yourself.** Rich Snapp's workflow (documented in the "Worktrees & Tmux & Claude, Oh My... Zsh" article) runs everything — tmux, worktrees, agents, editors — inside a persistent Docker container. A startup script provisions the container, and tmux inside it provides session persistence across reconnections. This is an end-to-end approach, but it's a hand-rolled workflow rather than a feature of any particular tool.
 
-Most of the other tools in this survey do not address sandboxing at all, which is a notable gap given the security implications of running AI agents with broad filesystem and shell access.
+Many of the other tools in this survey do not include built-in sandboxing, which is a persistent gap given the security implications of running AI agents with broad filesystem and shell access.
 
 ### "I want agent portability across Claude Code, Codex, OpenCode, etc."
 
-**→ barrel.** Its core feature is writing agent definitions once and symlinking them into each tool's expected location. If you're regularly switching between LLM providers or want to compare outputs, this is the tool designed for that.
+**→ barrel (now axel).** Its core feature is writing agent definitions once and symlinking them into each tool's expected location. If you're regularly switching between LLM providers or want to compare outputs, this is the tool designed for that.
 
 ### "I want to tie agent work to GitHub issues"
 
-**→ agenttools/worktree.** It creates a direct pipeline from GitHub issues to Claude Code sessions with auto-generated context. The archetype system for multi-worker setups is unique in this space.
+**→ agenttools/worktree.** It creates a direct pipeline from GitHub issues to Claude Code sessions with auto-generated context. The archetype system for multi-worker setups is distinctive in this space.
 
 ### "I just want a simple script I can understand and modify"
 
@@ -749,7 +749,7 @@ Most of the other tools in this survey do not address sandboxing at all, which i
 
 ### "I want to try Anthropic's official approach"
 
-**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It's the least mature option but the only one with first-party support and development resources behind it.
+**→ Claude Code Agent Teams.** Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` and give it a task complex enough to warrant a team. Be aware of the known limitations around session resumption and the tmux pane-splitting issue (`#23615`). It is currently among the less mature options, but it has direct vendor support and ongoing development resources in this list.
 
 ---
 
@@ -762,10 +762,10 @@ Most of the other tools in this survey do not address sandboxing at all, which i
 | agent-deck | [github.com/asheshgoplani/agent-deck](https://github.com/asheshgoplani/agent-deck) |
 | agent-of-empires | [github.com/njbrake/agent-of-empires](https://github.com/njbrake/agent-of-empires) |
 | workmux | [github.com/raine/workmux](https://github.com/raine/workmux) |
-| dmux | [github.com/formkit/dmux](https://github.com/formkit/dmux) |
-| barrel | [github.com/txtx/barrel](https://github.com/txtx/barrel) |
+| dmux | [github.com/standardagents/dmux](https://github.com/standardagents/dmux) |
+| barrel (now axel) | [github.com/txtx/axel](https://github.com/txtx/axel) |
 | forestui | [github.com/flipbit03/forestui](https://github.com/flipbit03/forestui) |
-| multi-agent-workflow-kit | [github.com/laris-co/multi-agent-workflow-kit](https://github.com/laris-co/multi-agent-workflow-kit) |
+| multi-agent-workflow-kit | [github.com/Soul-Brews-Studio/multi-agent-workflow-kit](https://github.com/Soul-Brews-Studio/multi-agent-workflow-kit) |
 | claude-tmux | [github.com/nielsgroen/claude-tmux](https://github.com/nielsgroen/claude-tmux) |
 | vscode-ext-tmux-worktree | [github.com/kargnas/vscode-ext-tmux-worktree](https://github.com/kargnas/vscode-ext-tmux-worktree) |
 | agenttools/worktree | [github.com/agenttools/worktree](https://github.com/agenttools/worktree) |

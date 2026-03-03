@@ -2,19 +2,19 @@
 created: 2026-01-23
 ---
 
-# The complete history of agile: from Toyota to transformation
+# A history of agile: from Toyota to transformation
 
 _January 23, 2026_
 
-Agile methodology represents one of software development’s most significant paradigm shifts, yet its origins extend far beyond the famous 2001 Snowbird meeting. The movement synthesized decades of iterative development practices, Japanese manufacturing philosophy, and hard-won lessons from waterfall’s failures into a coherent alternative that has since reshaped how software gets built worldwide. **Over 95% of organizations now use agile practices**,  though debates persist about whether mainstream adoption has preserved or diluted its original values.
+Agile methodology represents a significant paradigm shift in software development, yet its origins extend far beyond the famous 2001 Snowbird meeting. The movement synthesized decades of iterative development practices, Japanese manufacturing philosophy, and hard-won lessons from waterfall’s failures into a coherent alternative that has since reshaped how software gets built worldwide. Industry surveys now consistently report broad adoption of agile practices, though debates persist about whether mainstream adoption has preserved or diluted its original values.
 
-The intellectual DNA of agile traces through three distinct tributaries: the Toyota Production System’s emphasis on continuous improvement and respect for workers, early iterative development experiments at NASA and IBM in the 1960s-70s, and the mounting evidence that sequential “waterfall” development consistently produced failed projects. When 17 practitioners gathered in Utah’s Wasatch Mountains in February 2001, they crystallized these converging insights into four values and twelve principles that launched a revolution. 
+The intellectual DNA of agile traces through three distinct tributaries: the Toyota Production System’s emphasis on continuous improvement and respect for workers, early iterative development experiments at NASA and IBM in the 1960s-70s, and the mounting evidence that sequential “waterfall” development often produced failed projects. When 17 practitioners gathered in Utah’s Wasatch Mountains in February 2001, they crystallized these converging insights into four values and twelve principles that helped catalyze a broad shift. 
 
 -----
 
 ## Manufacturing philosophy crossed into software through lean thinking
 
-The Toyota Production System (TPS), developed by **Taiichi Ohno** and **Shigeo Shingo** from the late 1940s through the 1960s, established foundational concepts that would later permeate agile thinking. TPS introduced just-in-time delivery, jidoka (stop-the-line quality control), kaizen (continuous improvement), and systematic waste elimination. Ohno’s insight that “all we are doing is looking at the time line, from the moment the customer gives us an order to the point when we collect the cash” anticipated agile’s focus on flow and customer value. 
+The Toyota Production System (TPS), developed by **Taiichi Ohno** and **Shigeo Shingo** from the late 1940s through the 1960s, established core concepts that would later permeate agile thinking. TPS introduced just-in-time delivery, jidoka (stop-the-line quality control), kaizen (continuous improvement), and systematic waste elimination. Ohno’s insight that “all we are doing is looking at the time line, from the moment the customer gives us an order to the point when we collect the cash” anticipated agile’s focus on flow and customer value. 
 
 The Toyota-GM NUMMI joint venture in 1983 exposed American manufacturers to TPS firsthand, but the concepts didn’t fully enter software vocabulary until James Womack and Daniel Jones coined “lean” in their landmark 1990 book *The Machine That Changed the World*.  **Mary and Tom Poppendieck** became the primary translators of lean principles to software with their 2003 book *Lean Software Development: An Agile Toolkit*,  which won the Software Development Productivity Award  and identified seven fundamental principles adapted for software teams:   eliminate waste, amplify learning, decide as late as possible, deliver as fast as possible, empower the team, build integrity in, and see the whole. 
 
@@ -24,7 +24,7 @@ Mary Poppendieck discovered the disconnect between lean thinking and typical sof
 
 ## Iterative development predated agile by decades
 
-Long before the Agile Manifesto, practitioners had discovered that building software incrementally worked better than sequential phases. NASA’s Project Mercury (1958-early 1960s) used **half-day time-boxed iterations with test-first development**—planning and writing tests before each micro-increment.  Gerald Weinberg, who worked on Mercury, recalled: “We were doing incremental development as early as 1957… All of us, as far as I can remember, thought waterfalling of a huge project was rather stupid.”
+Long before the Agile Manifesto, practitioners had discovered that building software incrementally worked better than sequential phases. NASA’s Project Mercury (1958-early 1960s) is frequently cited as an early example of short, test-heavy iterative cycles. Gerald Weinberg, who worked on Mercury, recalled: “We were doing incremental development as early as 1957… All of us, as far as I can remember, thought waterfalling of a huge project was rather stupid.”
 
 IBM’s Federal Systems Division, seeded by Mercury personnel,  became a major proponent of iterative development. The USS Trident submarine command-and-control system (1972) used **four six-month iterations** for over one million lines of life-critical code—driven partly by $100,000/day late penalties. The Light Airborne Multipurpose System project in the mid-1970s employed **45 one-month iterations**, each delivered on time and under budget according to Harlan Mills.
 
@@ -34,17 +34,17 @@ IBM’s Federal Systems Division, seeded by Mercury personnel,  became a major p
 
 -----
 
-## Waterfall became dominant despite its creator’s warnings
+## Waterfall became widespread despite its creator’s warnings
 
 The irony of waterfall’s dominance lies in how thoroughly its original description was misread. **Winston Royce’s 1970 paper** “Managing the Development of Large Software Systems” presented the sequential model but explicitly warned: “I believe in this concept, but the implementation described above is risky and invites failure.” Royce actually recommended building the system twice, with a preliminary version preceding the delivered product, and incorporating feedback loops between phases.  His son Walker later confirmed: “He was always a proponent of iterative, incremental, evolutionary development.” 
 
 Yet waterfall became entrenched because it offered apparent orderliness. Simple to explain and recall, it promised document-driven milestones that satisfied managers seeking accountability. Textbooks, courses, and consulting organizations promoted it, and the U.S. Department of Defense’s DoD-STD-2167 (1985) essentially mandated it for defense contracts.
 
-The results proved disastrous. A 1999 review of DoD projects revealed **75% failed or were never used**, with only 2% deployed without extensive modification—representing approximately $37 billion in failed spending. The 1987 Defense Science Board Task Force, chaired by Fred Brooks, recommended radical overhaul: “DoD-Std-2167 continues to reinforce exactly the document-driven, specify-then-build approach that lies at the heart of so many DoD software problems.” Brooks declared at the 1995 International Conference on Software Engineering: “The waterfall model is wrong!” 
+Results were often poor. Late-1990s DoD reviews frequently reported high failure and rework rates, with only a small minority of projects delivering without major modification. The 1987 Defense Science Board Task Force, chaired by Fred Brooks, recommended radical overhaul: “DoD-Std-2167 continues to reinforce exactly the document-driven, specify-then-build approach that lies at the heart of so many DoD software problems.” Brooks declared at the 1995 International Conference on Software Engineering: “The waterfall model is wrong!”
 
 -----
 
-## Seventeen practitioners gathered at Snowbird and changed everything
+## Seventeen practitioners gathered at Snowbird and reshaped methods
 
 By early 2001, multiple lightweight methodologies had emerged independently—Extreme Programming, Scrum, Crystal, Adaptive Software Development, DSDM, Feature-Driven Development—each tackling waterfall’s failures differently.  **Robert C. Martin** (“Uncle Bob”) initiated a gathering with a September 2000 email seeking to convene “all the lightweight method leaders in one room.” 
 
@@ -60,7 +60,7 @@ The meeting occurred **February 11-13, 2001** at The Lodge at Snowbird ski resor
 
 The morning sessions featured presentations in the Aspen Room; afternoons allowed skiing; evenings continued discussions over dinner.  The fiercest debate concerned the name—“lightweight” was universally despised. Cockburn objected: “It somehow sounds like a bunch of skinny, feebleminded lightweight people trying to remember what day it is.”  **Mike Beedle proposed “agile,”** inspired by a book about lean manufacturing.  Martin Fowler’s only concern was that “most Americans didn’t know how to pronounce the word.” 
 
-The four values were wordsmithed to **100% unanimity**:  individuals and interactions over processes and tools; working software over comprehensive documentation; customer collaboration over contract negotiation; responding to change over following a plan.  The twelve principles were refined via email and published in April 2001.  Ward Cunningham set up the manifesto website, and the **Agile Alliance** formed later that year as a nonprofit  with Martin as its first chairman.
+The four values were wordsmithed to reported unanimous agreement:  individuals and interactions over processes and tools; working software over comprehensive documentation; customer collaboration over contract negotiation; responding to change over following a plan.  The twelve principles were refined via email and published in April 2001.  Ward Cunningham set up the manifesto website, and the **Agile Alliance** formed later that year as a nonprofit  with Martin as its first chairman.
 
 -----
 
@@ -68,7 +68,7 @@ The four values were wordsmithed to **100% unanimity**:  individuals and interac
 
 The Chrysler Comprehensive Compensation System (C3) became the crucible where Extreme Programming practices fused into a coherent methodology.  Initiated in 1993 to replace multiple legacy COBOL payroll systems with a single Smalltalk/GemStone application  for 87,000 employees, the project struggled for years before **Kent Beck** joined in March 1996—initially for performance tuning—and became project leader. 
 
-Beck brought in **Ron Jeffries** as the first XP coach, with **Ward Cunningham** providing major intellectual influence.  The team formally adopted practices that would define XP: **pair programming, test-driven development, continuous integration, refactoring, simple design, collective code ownership, sustainable pace (40-hour weeks), on-site customer, the planning game, and small releases**. Reportedly, 75% of the codebase was thrown out during refactoring sessions.
+Beck brought in **Ron Jeffries** as the first XP coach, with **Ward Cunningham** providing major intellectual influence.  The team formally adopted practices that would define XP: **pair programming, test-driven development, continuous integration, refactoring, simple design, collective code ownership, sustainable pace (40-hour weeks), on-site customer, the planning game, and small releases**. Contemporary accounts describe large portions of the codebase being rewritten during aggressive refactoring.
 
 C3 went live in 1997, paying approximately 10,000 salaried employees.  However, after Daimler-Benz acquired Chrysler in 1998, the on-site customer—a role critical to XP—resigned from burnout and couldn’t be replaced.  Development stopped in 1999,  and DaimlerChrysler officially cancelled C3 in February 2000  before it expanded beyond the initial population.
 
@@ -78,7 +78,7 @@ Martin Fowler noted: “C3’s cancellation also proves that XP is no guarantee 
 
 ## Scrum emerged from rugby metaphors and empirical process control
 
-**Jeff Sutherland** created Scrum in 1993   at Easel Corporation,  inspired by Takeuchi and Nonaka’s 1986 Harvard Business Review paper “The New New Product Development Game,”  which used the rugby “scrum” metaphor for cross-functional teams moving together. Working with John Scumniotales and Jeff McKenna, Sutherland built the first Scrum implementation— later rated one of only two teams to score “10” on his hyperproductivity scale.
+**Jeff Sutherland** created Scrum in 1993   at Easel Corporation,  inspired by Takeuchi and Nonaka’s 1986 Harvard Business Review paper “The New New Product Development Game,”  which used the rugby “scrum” metaphor for cross-functional teams moving together. Working with John Scumniotales and Jeff McKenna, Sutherland built an early Scrum implementation, later rated as one of very few teams to score “10” on his hyperproductivity scale.
 
 **Ken Schwaber** independently developed similar ideas, learning from a chemical process control expert at DuPont about distinguishing deterministic from experimental processes.  Schwaber and Sutherland unified their frameworks  and presented Scrum publicly at **OOPSLA 1995** in Austin, Texas—the first formal introduction of the methodology to the worldwide software community.  
 
@@ -90,21 +90,21 @@ The organizational history grew complex. Schwaber co-founded the **Scrum Allianc
 
 ## Kanban adapted Toyota’s visual signals for knowledge work
 
-**David Anderson** pioneered Kanban for software development during his time at Microsoft and later Corbis. At Microsoft’s XIT Maintenance Engineering team  in 2004-2005, he experimented with visual workflow management and work-in-progress limits. The full Kanban Method emerged at Corbis in 2006-2007, yielding **240% improvement in delivery rates and 90% reduction in delivery times**.
+**David Anderson** pioneered Kanban for software development during his time at Microsoft and later Corbis. At Microsoft’s XIT Maintenance Engineering team  in 2004-2005, he experimented with visual workflow management and work-in-progress limits. The full Kanban Method emerged at Corbis in 2006-2007, with published case studies reporting large improvements in delivery throughput and cycle time.
 
 Anderson’s approach drew from Toyota’s production Kanban (Japanese for “signboard”), Eli Goldratt’s Theory of Constraints, and Don Reinertsen’s product development flow principles. Rather than imposing wholesale change, Kanban offered evolutionary improvement: start with what you do now, visualize the work, limit work in progress, manage flow, make policies explicit, and improve collaboratively.
 
-His 2010 book *Kanban: Successful Evolutionary Change for Your Technology Business*  became one of the top five agile books ever published. Unlike Scrum’s prescribed roles and fixed sprints, Kanban has no mandatory roles and enables continuous flow—making it particularly suited for maintenance, operations, and teams handling unpredictable work.
+His 2010 book *Kanban: Successful Evolutionary Change for Your Technology Business* became a widely cited reference in agile and operations circles. Unlike Scrum’s prescribed roles and fixed sprints, Kanban has no mandatory roles and enables continuous flow, making it particularly suited for maintenance, operations, and teams handling unpredictable work.
 
 -----
 
-## The foundational books established agile’s intellectual canon
+## Influential books established agile’s intellectual canon
 
 The year 1999 proved pivotal for agile literature. **Kent Beck’s** *Extreme Programming Explained: Embrace Change* defined XP’s practices and philosophy,   later revised in 2004 to add “respect” as a fifth value and reorganize practices based on accumulated experience.  Reviewers called it “dynamite” for changing industry thinking.
 
 **Dave Thomas and Andy Hunt’s** *The Pragmatic Programmer: From Journeyman to Master* ran parallel to XP, introducing memorable concepts like “tracer bullets” and “broken windows.” **Martin Fowler’s** *Refactoring: Improving the Design of Existing Code* made code improvement a mainstream practice, providing a catalog of 70+ refactorings with step-by-step instructions.
 
-The post-Manifesto period consolidated knowledge. **Ken Schwaber and Mike Beedle’s** *Agile Software Development with Scrum* (2001) introduced Scrum comprehensively. **Mike Cohn’s** *User Stories Applied* (2004) standardized the user story format,   while his *Agile Estimating and Planning* (2005) became the definitive guide to story points and velocity.
+The post-Manifesto period consolidated knowledge. **Ken Schwaber and Mike Beedle’s** *Agile Software Development with Scrum* (2001) introduced Scrum comprehensively. **Mike Cohn’s** *User Stories Applied* (2004) standardized the user story format,   while his *Agile Estimating and Planning* (2005) became a widely used guide to story points and velocity.
 
 **Robert C. Martin’s** *Clean Code* (2008) defined code quality standards for agile teams,  followed by *The Clean Coder* (2011) addressing professional ethics. **Jez Humble and David Farley’s** *Continuous Delivery* (2010) won the Jolt Excellence Award and introduced deployment pipelines.  **Gene Kim’s** *The Phoenix Project* (2013) brought DevOps principles to wider audiences through narrative fiction. **Jeff Sutherland’s** *Scrum: The Art of Doing Twice the Work in Half the Time* (2014) provided a first-hand account aimed at general business readers.  
 
@@ -126,17 +126,17 @@ The **Agile Alliance** has organized annual conferences since its founding, brin
 
 **JUnit** was created by Kent Beck and Erich Gamma on a flight to OOPSLA 1997.   Beck saw it as “a political statement—as a programmer I accept responsibility for the quality of my work.”  JUnit spawned the xUnit family across languages  and made test-driven development practical.
 
-Version control evolved from CVS (1986) through Subversion to **Git** (2005), created by Linus Torvalds in response to a BitKeeper licensing dispute.  Torvalds began coding on April 3, 2005,  and released Git 1.0 on December 21, 2005. **GitHub** (2008) transformed Git from command-line tool to global collaboration platform;  **95% of developers** now use Git. 
+Version control evolved from CVS (1986) through Subversion to **Git** (2005), created by Linus Torvalds in response to a BitKeeper licensing dispute.  Torvalds began coding on April 3, 2005,  and released Git 1.0 on December 21, 2005. **GitHub** (2008) transformed Git from command-line tool to global collaboration platform, and Git became a widely adopted version-control standard across software teams.
 
-Continuous integration tools progressed from CruiseControl through Hudson (2005) to **Jenkins** (forked in 2011 after an Oracle trademark dispute),  which now has 1,500+ plugins and dominates the CI/CD landscape. **Travis CI** and **CircleCI** (both 2011) added cloud-based options.
+Continuous integration tools progressed from CruiseControl through Hudson (2005) to **Jenkins** (forked in 2011 after an Oracle trademark dispute), which now has 1,500+ plugins and remains one of the most widely used CI/CD tools. **Travis CI** and **CircleCI** (both 2011) added cloud-based options.
 
-**Jira** launched in 2002 from Atlassian, originally as bug-tracking software.  After acquiring GreenHopper in 2009, Jira gained agile boards, sprints, and burndown charts,  becoming the de facto standard for agile project management—**58-66% of companies** now use it. Pivotal Tracker (2008) served XP-focused teams until Broadcom shut it down in April 2025. 
+**Jira** launched in 2002 from Atlassian, originally as bug-tracking software.  After acquiring GreenHopper in 2009, Jira gained agile boards, sprints, and burndown charts, becoming one of the most widely used tools for agile project management. Pivotal Tracker (2008) served XP-focused teams until Broadcom shut it down in April 2025.
 
 -----
 
 ## Companies pioneered and championed agile adoption
 
-**ThoughtWorks**, founded in 1993, embedded agile DNA deeply into its corporate culture  after Martin Fowler joined as Chief Scientist in 2000. Fowler co-authored the Agile Manifesto  and hosted martinfowler.com, which became one of the most influential resources on software development practices. ThoughtWorks distinguished itself by tackling problems other firms considered impossible— particularly distributed agile development. 
+**ThoughtWorks**, founded in 1993, embedded agile DNA deeply into its corporate culture  after Martin Fowler joined as Chief Scientist in 2000. Fowler co-authored the Agile Manifesto  and hosted martinfowler.com, which became an influential resource on software development practices. ThoughtWorks distinguished itself by tackling problems other firms considered difficult, particularly distributed agile development. 
 
 **Pivotal Labs** (founded 1989 by Rob Mee)  became synonymous with disciplined XP adoption: eight hours of daily pair programming,  strict test-driven development, and collaborative product design. After acquisitions by EMC (2009), VMware (2019), and Broadcom (2023), Tanzu Labs was shut down in January 2025— a significant loss for the XP community. Rob Mee founded Mechanical Orchard in 2022 to continue similar practices. 
 
@@ -148,7 +148,7 @@ The **Spotify Model**, documented in a 2012 whitepaper by Henrik Kniberg and And
 
 ## DevOps extended agile principles to operations
 
-**Patrick Debois**, frustrated by development/operations disconnect during a 2007 Belgian data center migration, became the catalyst for the DevOps movement.  In August 2008, he attended an “Agile Infrastructure” session at the Toronto Agile Conference—as the only attendee—and met Andrew Shafer, forming the Agile System Administration Group. 
+**Patrick Debois**, frustrated by development/operations disconnect during a 2007 Belgian data center migration, became a key catalyst for the DevOps movement. In August 2008, he attended an “Agile Infrastructure” session at the Toronto Agile Conference, as the only attendee, and met Andrew Shafer, forming the Agile System Administration Group.
 
 The pivotal moment came in June 2009 when John Allspaw and Paul Hammond presented “10+ Deploys a Day: Dev and Ops Cooperation at Flickr”  at O’Reilly’s Velocity Conference. Watching remotely, Debois organized the first **DevOpsDays** in Ghent, Belgium in October 2009.  Needing a Twitter hashtag, he combined “Dev” and “Ops” and “Days”—the #DevOps hashtag named the movement. Debois later admitted: “There never was a grand plan for DevOps as a word.” 
 
@@ -160,7 +160,7 @@ DevOps evolved naturally from agile, sharing values of collaboration, flexibilit
 
 As organizations sought to apply agile at scale, multiple frameworks emerged:
 
-**SAFe (Scaled Agile Framework)**, created by Dean Leffingwell and first released in 2011,   became the most commercially successful scaling approach. Built on foundations from Leffingwell’s books *Scaling Software Agility* (2007) and *Agile Software Requirements* (2010),  SAFe organized work into Agile Release Trains at the program level, with team, solution, and portfolio layers above. Version 6.0 (2023) emphasizes flow-based principles and business agility. 
+**SAFe (Scaled Agile Framework)**, created by Dean Leffingwell and first released in 2011, became one of the more commercially successful scaling approaches. Built on foundations from Leffingwell’s books *Scaling Software Agility* (2007) and *Agile Software Requirements* (2010), SAFe organized work into Agile Release Trains at the program level, with team, solution, and portfolio layers above. Version 6.0 (2023) emphasizes flow-based principles and business agility.
 
 **LeSS (Large-Scale Scrum)**, created by Craig Larman and Bas Vodde  at Nokia Siemens Networks in 2005,  took the opposite approach—maintaining Scrum’s simplicity at scale rather than adding layers. Their philosophy of “descaling” emphasizes that large-scale Scrum IS Scrum, with basic LeSS supporting 2-8 teams and LeSS Huge organizing 8+ teams into requirement areas.
 
@@ -182,7 +182,7 @@ As organizations sought to apply agile at scale, multiple frameworks emerged:
 
 ## Modern practice confronts criticism and evolution
 
-By the 2020s, agile had achieved mainstream dominance—**71% of organizations** use agile in software development,   with 97% reporting some agile adoption. Yet success brought concerns about dilution and commercialization.
+By the 2020s, agile had achieved mainstream adoption, with industry surveys consistently reporting broad adoption in software teams. Yet success brought concerns about dilution and commercialization.
 
 **Martin Fowler** identified the “Agile Industrial Complex” as a key problem  in his 2018 keynote, criticizing the imposition of processes on teams rather than letting teams choose their own approaches.  **Ron Jeffries** coined “Dark Scrum”  and “Flaccid Scrum” to describe implementations that use agile’s name while abandoning its principles— particularly technical practices like TDD, refactoring, and pair programming that many teams skip.
 
@@ -190,7 +190,7 @@ Jeffries’ provocative 2018 article “Developers Should Abandon Agile” argue
 
 Post-agile thinking emphasizes outcomes over process compliance, moving from “doing agile” to “being agile.” The Modern Agile movement advocates “ultra-light” approaches opposite to mainstream agile bureaucracy. Remote work since 2020 has both challenged (losing co-located collaboration) and enabled (video conferencing, digital boards) agile practices.
 
-Current trends include AI-powered transformation tools, expansion beyond IT (35% of non-IT departments have adopted agile),  product-oriented team organization, and value stream focus. The enterprise agile transformation market reached **$48.75 billion in 2025**, projected to grow to $96.28 billion by 2029. 
+Current trends include AI-powered transformation tools, expansion beyond IT,  product-oriented team organization, and value stream focus. Market analysts continue to project strong growth in enterprise spending on agile transformation through the late 2020s.
 
 -----
 
@@ -199,7 +199,7 @@ Current trends include AI-powered transformation tools, expansion beyond IT (35%
 |Period         |Key Events                                                                               |
 |---------------|-----------------------------------------------------------------------------------------|
 |**1940s-1960s**|Taiichi Ohno develops Toyota Production System; Shewhart/Deming PDSA cycles              |
-|**1958-1963**  |NASA Project Mercury uses half-day iterations with test-first development                |
+|**1958-1963**  |NASA Project Mercury is cited as an early short-cycle iterative development effort       |
 |**1968**       |NATO conference coins “software crisis”; Randell/Zurcher IID paper                       |
 |**1970**       |Winston Royce’s paper (misinterpreted as waterfall advocacy)                             |
 |**1972-1977**  |Major IID projects: Trident submarine, LAMPS (45 one-month iterations), Space Shuttle    |
@@ -235,7 +235,7 @@ Current trends include AI-powered transformation tools, expansion beyond IT (35%
 |**2019**       |*Clean Agile* published; VMware acquires Pivotal                                         |
 |**2020**       |Major Scrum Guide update; COVID accelerates remote agile adoption                        |
 |**2023**       |SAFe 6.0; Broadcom acquires VMware                                                       |
-|**2025**       |Tanzu Labs shut down; Pivotal Tracker retired; market reaches $48.75B                    |
+|**2025**       |Tanzu Labs shut down; Pivotal Tracker retired; enterprise agile spending keeps growing   |
 
 -----
 

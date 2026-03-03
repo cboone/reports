@@ -31,8 +31,8 @@ _September 15, 2025_
 - Traditional Theravada account of doctrinal purification
 
 ## 2nd Century BCE - 1st Century CE
-**c. 100 BCE** - Pali Canon first written down in Sri Lanka
-- **MAJOR MILESTONE**: End of purely oral tradition for Theravada Buddhism
+**c. 100 BCE** - Pali Canon traditionally considered written down in Sri Lanka
+- **Notable milestone**: End of purely oral tradition for Theravada Buddhism
 - Written in Pali on palm leaves during reign of King Vattagamani Abhaya
 - Includes Vinaya Pitaka, Sutta Pitaka, and Abhidhamma Pitaka
 - Location: Aluvihara, Sri Lanka
@@ -71,7 +71,7 @@ _September 15, 2025_
 ## Chinese Transmission
 
 **c. 148 CE** - An Shigao arrives in China
-- First systematic translation of Buddhist texts into Chinese
+- One of the first systematic translation efforts of Buddhist texts into Chinese
 - Focuses on meditation and Abhidharma texts
 
 **c. 179 CE** - Lokakshema's translations
@@ -79,7 +79,7 @@ _September 15, 2025_
 - Including early Prajnaparamita literature
 
 **c. 402-412 CE** - Kumarajiva's translation project
-- **MAJOR MILESTONE**: Systematic translation of major Mahayana texts
+- **Notable milestone**: Systematic translation of major Mahayana texts
 - Lotus Sutra, Diamond Sutra, Vimalakirti Sutra translated into Chinese
 - Established standard Chinese Buddhist terminology
 
@@ -87,7 +87,7 @@ _September 15, 2025_
 - Brings back Sanskrit texts for translation
 
 **c. 629-645 CE** - Xuanzang's pilgrimage to India
-- **MAJOR MILESTONE**: Massive translation project upon return
+- **Notable milestone**: Massive translation project upon return
 - 1,335 fascicles of texts translated into Chinese
 - Yogacara texts, Abhidharma literature
 
@@ -98,7 +98,7 @@ _September 15, 2025_
 - First Buddhist temples built
 
 **c. 760s-770s CE** - Tibetan script adapted for Buddhist texts
-- **MAJOR MILESTONE**: Beginning of systematic translation into Tibetan
+- **Notable milestone**: Beginning of systematic translation into Tibetan
 - Padmasambhava and Shantarakshita active in Tibet
 
 **c. 780s CE** - First Buddhist texts translated into Tibetan
@@ -123,12 +123,12 @@ _September 15, 2025_
 
 **c. 700-1000 CE** - Late Sanskrit Buddhist literature
 - Tantric texts (Guhyasamaja, Chakrasamvara, etc.)
-- Final major compositions in Indian Buddhism
+- Late major compositions in Indian Buddhism
 
 ## Key Observations
 
 **Oral to Written Transition Timeline:**
-1. **Pali (c. 100 BCE)** - First complete canonical collection written down
+1. **Pali (c. 100 BCE)** - Earliest complete canonical collection known to have been written down
 2. **Gandhari/Sanskrit (c. 50 BCE-200 CE)** - Gradual written recording
 3. **Chinese (c. 150-700 CE)** - Major translation period
 4. **Tibetan (c. 760-850 CE)** - Systematic translation from Sanskrit
@@ -138,6 +138,6 @@ _September 15, 2025_
 - **Central Asia**: Gandhari manuscripts, Silk Road transmission
 - **India**: Sanskrit composition and preservation (until c. 1200 CE)
 - **China**: Major translation hub for East Asian Buddhism
-- **Tibet**: Final major translation project, preservation of late Indian texts
+- **Tibet**: Late major translation project, preservation of late Indian texts
 
 **Note on Dating**: Many dates, especially for the Buddha's life and early councils, remain subjects of scholarly debate. The timeline represents commonly accepted scholarly estimates while noting traditional dating where it differs significantly.

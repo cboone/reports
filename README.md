@@ -19,13 +19,13 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 
 ### [Agile methodology: sources and references](agile/bibliography.md)
 
-Primary sources, foundational documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
+Primary sources, core documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
 
-### [Complete timeline of agile programming](agile/timeline.md)
+### [Timeline of agile programming](agile/timeline.md)
 
-Chronological timeline from Toyota's factory floors in the 1940s to today's global software industry. Traces the full arc: manufacturing philosophy, early iterative development at NASA and IBM, the methodology wars, the Agile Manifesto, the rise of Scrum and SAFe, and the current landscape of agile practice.
+Chronological timeline from Toyota's factory floors in the 1940s to today's global software industry. Traces the arc: manufacturing philosophy, early iterative development at NASA and IBM, the methodology wars, the Agile Manifesto, the rise of Scrum and SAFe, and the current landscape of agile practice.
 
-### [The complete history of agile: from Toyota to transformation](agile/history.md)
+### [A history of agile: from Toyota to transformation](agile/history.md)
 
 How agile methodology emerged from three tributaries — Toyota's production system, early iterative experiments at NASA and IBM, and mounting evidence of waterfall's failures — and what happened after 17 practitioners met in Utah's Wasatch Mountains in February 2001. Covers the pre-history through lean manufacturing, the methodology wars of the 1990s, the Snowbird meeting, the explosion of frameworks (Scrum, XP, Kanban), enterprise adoption, and the ongoing debates about whether mainstream agile has preserved or diluted its original values.
 
@@ -37,7 +37,7 @@ Chronological timeline from the Buddha's life through the oral-to-written transi
 
 ## Containers and Virtual Machines
 
-### [Apple's native container revolution in macOS 26 Tahoe](containers-and-vms/macos-native-containers.md)
+### [Apple's native container architecture in macOS 26 Tahoe](containers-and-vms/macos-native-containers.md)
 
 How Apple's Containerization framework uses a VM-per-container architecture on Apple Silicon to provide hardware-level isolation with sub-second startup times. Covers the three-layer stack (Container CLI, Containerization framework, Virtualization.framework), the minimal Swift-based vminitd init system, performance benchmarks against Docker Desktop and OrbStack, the security model, OCI compliance, and the ecosystem maturity trade-offs at version 0.6.0.
 
@@ -45,7 +45,7 @@ How Apple's Containerization framework uses a VM-per-container architecture on A
 
 ### [Human-readable alternatives to JSON: performance, syntax, and adoption](data-formats/json-alternatives.md)
 
-How TOML, YAML, JSON5, KDL, RON, Dhall, and Pkl compare against JSON for configuration files, APIs, and data storage. Covers parsing performance benchmarks across Python, Rust, Go, and Node.js, YAML's entrenched DevOps dominance despite its gotchas, TOML's rise through Python and Rust ecosystems, emerging formats targeting specialized needs, and practical recommendations by use case.
+How TOML, YAML, JSON5, KDL, RON, Dhall, and Pkl compare against JSON for configuration files, APIs, and data storage. Covers parsing performance benchmarks across Python, Rust, Go, and Node.js, YAML's deep DevOps adoption despite its gotchas, TOML's rise through Python and Rust ecosystems, emerging formats targeting specialized needs, and practical recommendations by use case.
 
 ## Ethics
 
@@ -61,19 +61,19 @@ Survey of the programming font landscape covering established standards (Consola
 
 ### [The complete guide to programming fonts for IDEs and terminals](fonts/programming-fonts-complete-guide.md)
 
-History and catalog of programming fonts from typewriters through CRT terminals to modern displays. Traces the Bitstream Vera lineage (DejaVu, Menlo, Hack), the ClearType revolution and Consolas, Adobe's Source Code Pro and the birth of ligatures via Hasklig, Fira Code's mainstream breakthrough, corporate entries from JetBrains and Microsoft, Monaspace's texture healing, the Nerd Fonts icon-patching ecosystem, commercial options with download links, and platform rendering differences.
+History and catalog of programming fonts from typewriters through CRT terminals to modern displays. Traces the Bitstream Vera lineage (DejaVu, Menlo, Hack), the ClearType shift and Consolas, Adobe's Source Code Pro and the birth of ligatures via Hasklig, Fira Code's mainstream breakthrough, corporate entries from JetBrains and Microsoft, Monaspace's texture healing, the Nerd Fonts icon-patching ecosystem, commercial options with download links, and platform rendering differences.
 
 ## Go
 
-### [Go: the cloud's native language](go/go-cloud-native-language.md)
+### [Go: a cloud-native language](go/go-cloud-native-language.md)
 
-Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became the dominant language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of foundational papers, talks, and books.
+Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became a prominent language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of key papers, talks, and books.
 
 ## Hacker News
 
 ### [How to craft a Show HN post that resonates](hacker-news/show-hn-post-guide.md)
 
-What makes Show HN posts succeed, based on analysis of top-performing posts from 2024-2026. Covers title conventions, project types that resonate (DIY hardware and open-source outperform AI), description structure, timing strategy, comment engagement patterns, and anti-patterns that guarantee poor reception, with a checklist for launching developer tools.
+What makes Show HN posts succeed, based on analysis of high-performing posts from 2024-2026. Covers title conventions, project types that resonate (DIY hardware and open-source outperform AI), description structure, timing strategy, comment engagement patterns, and anti-patterns that often lead to poor reception, with a checklist for launching developer tools.
 
 ## LLM Coding Agents
 
@@ -85,9 +85,13 @@ A framework of eight independent axes for reasoning about the design space of ag
 
 Catalog of over 90 CLI and TUI coding tools that use large language models for software development. Organized into categories — full-featured agentic assistants, code-aware chat and REPL tools, shell and command assistants, multi-agent coding frameworks, orchestration and session management tools, research and SWE-bench tools, terminal editor plugins, and context preparation utilities — with cross-category comparison tables and landscape analysis covering market consolidation, key trends, and gaps.
 
+### [LLM agent security threat taxonomy](llm-agents/llm-agent-threat-taxonomy.md)
+
+Categorizes ten security risks specific to LLM-powered development tools, distinguishing the one qualitatively novel threat (prompt injection) from amplified versions of existing risks like secret leakage, insecure code patterns, and scope creep. Each category includes real-world incidents, academic research, and concrete mitigations grounded in current evidence through early 2026.
+
 ### [LLM coding agent configuration files: comparing Claude Code, Codex, Copilot, and OpenCode](llm-agents/agent-config-files.md)
 
-Where every configuration file lives, what it controls, and which files should be committed to version control across the four major LLM coding agents. Covers permissions, sandboxing, MCP server configuration, hooks, model selection, named profiles, and admin enforcement, with a decision framework for what goes where and a dotfiles strategy for syncing preferences across tools and machines.
+Where key configuration files live, what they control, and which files should be committed to version control across the four major LLM coding agents. Covers permissions, sandboxing, MCP server configuration, hooks, model selection, named profiles, and admin enforcement, with a decision framework for what goes where and a dotfiles strategy for syncing preferences across tools and machines.
 
 ### [LLM coding agent instruction files: comparing CLAUDE.md, AGENTS.md, copilot-instructions.md, and SKILL.md](llm-agents/agent-instruction-files.md)
 
@@ -99,7 +103,7 @@ Every notable tool available as of mid-February 2026 for monitoring LLM coding a
 
 ### [Parallel LLM coding agents with tmux and git worktrees](llm-agents/tmux-worktree-tools.md)
 
-Comprehensive survey of tools at the intersection of LLM coding agents, tmux session management, and git worktree isolation. Profiles every significant tool from full-featured TUI session managers (claude-squad, ccmanager, agent-deck) through opinionated workflow tools (workmux, dmux, barrel) to lightweight shell scripts, with architectural analysis of the core pattern, the containerization gap, worktree conventions, and community discussion.
+Comprehensive survey of tools at the intersection of LLM coding agents, tmux session management, and git worktree isolation. Profiles a broad set of significant tools from full-featured TUI session managers (claude-squad, ccmanager, agent-deck) through opinionated workflow tools (workmux, dmux, barrel/axel) to lightweight shell scripts, with architectural analysis of the core pattern, the containerization gap, worktree conventions, and community discussion.
 
 ## Programming Languages
 
@@ -111,7 +115,7 @@ A concurrent producer-consumer pipeline with bounded buffering, backpressure, an
 
 ### [Evaluating expression trees: a cross-language study](programming-languages/expression-tree-evaluation.md)
 
-A recursive expression tree evaluator implemented across the same language families, showcasing algebraic data types, pattern matching, and the expression problem. The ML family excels here where array languages struggle, inverting the results of the first study and demonstrating that language strengths are fundamentally problem-dependent.
+A recursive expression tree evaluator implemented across the same language families, showcasing algebraic data types, pattern matching, and the expression problem. The ML family excels here where array languages struggle, inverting the results of the first study and demonstrating that language strengths are strongly problem-dependent.
 
 ### [Finding indices of elements above the mean: a cross-language study](programming-languages/indices-above-mean.md)
 
@@ -123,17 +127,17 @@ How computer science emerged from mathematics and logic between 1879 and 1948. T
 
 ### [Three algorithms, dozens of languages: an overview](programming-languages/three-algorithms-overview.md)
 
-Introduces and connects three companion studies that each implement a single algorithm across dozens of programming languages. Includes a summary table rating every language family across all three problems and analysis of cross-cutting themes: how data shape determines paradigm fit, the abstraction spectrum from APL to C, and how mainstream languages borrow from specialized paradigms over time.
+Introduces and connects three companion studies that each implement a single algorithm across dozens of programming languages. Includes a summary table rating major language families across all three problems and analysis of cross-cutting themes: how data shape determines paradigm fit, the abstraction spectrum from APL to C, and how mainstream languages borrow from specialized paradigms over time.
 
 ## Self
 
 ### [Self: the invisible language that powers modern computing](self/history.md)
 
-How a radical simplification of Smalltalk — removing classes entirely in favor of prototypes — produced the optimization techniques that now power every major JavaScript engine and the Java Virtual Machine. Traces Self's journey from Xerox PARC through Stanford to Sun Microsystems, the breakthroughs in adaptive compilation and polymorphic inline caches, the direct lineage to Java HotSpot and V8, and Self's influence on JavaScript's prototype-based object model.
+How a substantial simplification of Smalltalk — replacing classes with prototypes — produced optimization techniques that now influence major JavaScript engines and the Java Virtual Machine. Traces Self's journey from Xerox PARC through Stanford to Sun Microsystems, the breakthroughs in adaptive compilation and polymorphic inline caches, the direct lineage to Java HotSpot and V8, and Self's influence on JavaScript's prototype-based object model.
 
 ### [The Self programming language: key papers and resources](self/bibliography.md)
 
-Key academic papers and resources on Self and its technical legacy, including the foundational OOPSLA and ECOOP papers by Ungar, Smith, Chambers, and Hölzle, doctoral theses, implementation guides, and the Self language website and community resources.
+Key academic papers and resources on Self and its technical legacy, including the landmark OOPSLA and ECOOP papers by Ungar, Smith, Chambers, and Hölzle, doctoral theses, implementation guides, and the Self language website and community resources.
 
 ### [Timeline of Self and its legacy](self/timeline.md)
 
@@ -147,6 +151,6 @@ See also: [LLM Coding Agents](#llm-coding-agents)
 
 Evaluation of nine macOS terminal emulators -- Terminal.app, iTerm2, Alacritty, Kitty, Ghostty, WezTerm, Warp, Rio, and Wave -- across performance benchmarks, graphics protocol support (Sixel, Kitty Graphics, iTerm2 inline images), Unicode handling, native macOS integration, configuration philosophies, AI features, latency measurements, and standards compliance, with use-case recommendations by developer profile.
 
-### [The complete history of tmux: from OpenBSD project to industry standard](terminal/tmux-history.md)
+### [A history of tmux: from OpenBSD project to a widely adopted tool](terminal/tmux-history.md)
 
-How Nicholas Marriott created tmux in 2007 as a BSD-licensed alternative to GNU Screen, earned Theo de Raadt's endorsement through exceptional code quality, and built the terminal multiplexer into an industry standard. Covers the complete version history from 0.1 through 3.6, the client-server architecture, major feature milestones (control mode, format strings, true color, SIXEL graphics, scrollbars), the plugin ecosystem around TPM, and primary sources including the original OpenBSD Journal interviews.
+How Nicholas Marriott created tmux in 2007 as a BSD-licensed alternative to GNU Screen, earned Theo de Raadt's endorsement through strong code quality, and built the terminal multiplexer into a widely adopted tool. Covers the complete version history from 0.1 through 3.6, the client-server architecture, major feature milestones (control mode, format strings, true color, SIXEL graphics, scrollbars), the plugin ecosystem around TPM, and primary sources including the original OpenBSD Journal interviews.

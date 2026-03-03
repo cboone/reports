@@ -117,11 +117,11 @@ The algorithm is defined recursively:
 3. `eval(Add(e1, e2))` = eval(e1) + eval(e2)
 4. `eval(Mul(e1, e2))` = eval(e1) × eval(e2)
 
-This is trivially simple as mathematics. What makes it interesting as a programming exercise is that it requires two things: a way to define a recursive data type (a tree with four kinds of nodes), and a way to dispatch on the node type (deciding what to do for each variant). Different language families have radically different answers to these two requirements, and those differences reveal deep design philosophies.
+This is mathematically simple. What makes it interesting as a programming exercise is that it requires two things: a way to define a recursive data type (a tree with four kinds of nodes), and a way to dispatch on the node type (deciding what to do for each variant). Different language families have meaningfully different answers to these two requirements, and those differences reveal deep design philosophies.
 
-Languages with algebraic data types (the ML family, Rust, Swift) can define the tree type directly and pattern-match on its variants. Lisp languages represent the tree as nested lists, making the data structure trivial but the dispatch manual. Object-oriented languages represent each node type as a class and use polymorphic dispatch. C-family languages use tagged unions or struct hierarchies. Array languages, designed for flat rectangular data, find recursive trees fundamentally awkward.
+Languages with algebraic data types (the ML family, Rust, Swift) can define the tree type directly and pattern-match on its variants. Lisp languages represent the tree as nested lists, making the data structure straightforward but the dispatch manual. Object-oriented languages represent each node type as a class and use polymorphic dispatch. C-family languages use tagged unions or struct hierarchies. Array languages, designed for flat rectangular data, often find recursive trees comparatively awkward.
 
-This algorithm also serves as a miniature interpreter, and interpreters are one of the most important programs in computer science — from compilers to web browsers to AI inference engines, much of computing is evaluating tree-shaped structures.
+This algorithm also serves as a miniature interpreter, and interpreters are core programs in computer science. From compilers to web browsers to AI inference engines, much of computing is evaluating tree-shaped structures.
 
 Throughout this document, we use the same example expression: `(3 + 4) × 5 = 35`.
 
@@ -200,7 +200,7 @@ OCaml requires `let rec` for recursive functions and uses `function` to introduc
 
 ### F#
 
-F# brings ML-family algebraic data types to the .NET ecosystem. It is the most natural of the .NET languages for this task.
+F# brings ML-family algebraic data types to the .NET ecosystem. It is among the most natural .NET languages for this task.
 
 ```fsharp
 type Expr =
@@ -258,19 +258,19 @@ eval (Add e1 e2) = eval e1 + eval e2
 eval (Mul e1 e2) = eval e1 * eval e2
 ```
 
-PureScript is nearly identical to Haskell here. The differences emerge in other areas: PureScript has strict evaluation, row polymorphism, and a different approach to effects. For a pure, recursive function over an algebraic data type, it is indistinguishable.
+PureScript is nearly identical to Haskell here. The differences emerge in other areas: PureScript has strict evaluation, row polymorphism, and a different approach to effects. For a pure, recursive function over an algebraic data type, the style is often very close to Haskell.
 
 ### ML Family Comparison
 
-Across the ML family, the expression tree evaluator is remarkably uniform. Every language defines the type in about four lines and the evaluator in four more. The differences are syntactic details: `data` vs. `datatype` vs. `type`, `->` vs. `=` in match arms, tupled vs. curried constructors.
+Across the ML family, the expression tree evaluator is fairly uniform. Every language defines the type in about four lines and the evaluator in four more. The differences are syntactic details: `data` vs. `datatype` vs. `type`, `->` vs. `=` in match arms, tupled vs. curried constructors.
 
-This uniformity is not a coincidence. The ML family was designed at the intersection of type theory and programming language implementation. Evaluating a recursive data structure by structural recursion is the canonical use case. If the "indices above mean" algorithm made the APL family look effortless and other families look labored, this algorithm does the reverse — the ML family is perfectly at home, while array languages must improvise.
+This uniformity is not a coincidence. The ML family was designed at the intersection of type theory and programming language implementation. Evaluating a recursive data structure by structural recursion is a classic use case. If the "indices above mean" algorithm made the APL family look effortless and other families look labored, this algorithm does the reverse: the ML family is especially at home, while array languages generally improvise.
 
 ---
 
 ## The Lisp Family
 
-The Lisp family takes a fundamentally different approach to the same problem. Rather than defining a new type for expressions, Lisp represents them as nested lists — the same data structure that Lisp programs themselves are made of. This property, called homoiconicity, means that the tree is already a native data structure, but the dispatch on node types must be done manually with conditionals.
+The Lisp family takes a meaningfully different approach to the same problem. Rather than defining a new type for expressions, Lisp represents them as nested lists — the same data structure that Lisp programs themselves are made of. This property, called homoiconicity, means that the tree is already a native data structure, but the dispatch on node types must be done manually with conditionals.
 
 ### Common Lisp
 
@@ -345,7 +345,7 @@ Racket, evolved from Scheme, adds a `match` form that provides structural patter
     [(list 'mul e1 e2)   (* (eval-expr e1) (eval-expr e2))]))
 ```
 
-Racket's `match` gives the code a remarkably ML-like feel. The pattern `(list 'lit n)` matches a list whose first element is the symbol `lit` and binds the second element to `n`. This is pattern matching over untyped data — we get the syntactic clarity of ML without the static type guarantees.
+Racket's `match` gives the code a more ML-like feel. The pattern `(list 'lit n)` matches a list whose first element is the symbol `lit` and binds the second element to `n`. This is pattern matching over untyped data — we get the syntactic clarity of ML without the static type guarantees.
 
 ### Clojure
 
@@ -423,7 +423,7 @@ eval (add e1 e2) = eval e1 + eval e2
 eval (mul e1 e2) = eval e1 * eval e2
 ```
 
-Agda's syntax is close to Haskell's, with explicit universe annotations (`Set`) and a more principled approach to pattern matching. Agda enforces totality: every function must handle every case and must terminate. The evaluator passes both checks trivially, since it is structurally recursive and exhaustive.
+Agda's syntax is close to Haskell's, with explicit universe annotations (`Set`) and a more principled approach to pattern matching. Agda enforces totality: every function must handle every case and must terminate. The evaluator passes both checks cleanly, since it is structurally recursive and exhaustive.
 
 ### Idris
 
@@ -469,7 +469,7 @@ Coq uses `Inductive` and `Fixpoint` (for recursive functions) with explicit type
 
 ### Proof Assistant Comparison
 
-For the basic evaluator, proof assistants look like slightly more verbose versions of Haskell. Their power becomes apparent in what they can do *beyond* evaluation: proving that optimizations preserve semantics, that two different evaluators agree, or that certain expression patterns never arise. The expression tree evaluator is the canonical introductory example in proof assistant tutorials for good reason — it is simple enough to be approachable but structured enough to support interesting proofs.
+For the basic evaluator, proof assistants look like slightly more verbose versions of Haskell. Their power becomes apparent in what they can do *beyond* evaluation: proving that optimizations preserve semantics, that two different evaluators agree, or that certain expression patterns never arise. The expression tree evaluator is a common introductory example in proof assistant tutorials for good reason; it is simple enough to be approachable but structured enough to support interesting proofs.
 
 ---
 
@@ -488,7 +488,7 @@ eval({add, E1, E2}) -> eval(E1) + eval(E2);
 eval({mul, E1, E2}) -> eval(E1) * eval(E2).
 ```
 
-Erlang's function clauses with pattern matching make this remarkably clean. Each clause matches a tuple shape and binds variables. The syntax is close to the mathematical definition. Variables are capitalized (Erlang convention), and clauses are separated by semicolons with a final period.
+Erlang's function clauses with pattern matching make this fairly clean. Each clause matches a tuple shape and binds variables. The syntax is close to the mathematical definition. Variables are capitalized (Erlang convention), and clauses are separated by semicolons with a final period.
 
 Example:
 
@@ -594,7 +594,7 @@ Unison's `cases` keyword introduces a pattern-matching lambda. The syntax is Has
 
 ### Prolog
 
-Prolog turns the evaluator into a logical relation between expressions and values. This is a fundamentally different approach — rather than computing a result, we declare what it means for a result to be correct.
+Prolog turns the evaluator into a logical relation between expressions and values. This is a meaningfully different approach — rather than computing a result, we declare what it means for a result to be correct.
 
 ```prolog
 eval(lit(N), N).
@@ -620,7 +620,7 @@ Example query:
 Result = 35.
 ```
 
-The remarkable thing about Prolog's approach is that the relation can sometimes be run in reverse. While we cannot easily ask "what expression evaluates to 35?" with this definition (due to `is` requiring ground arithmetic), a pure relational version using constraint logic programming (CLP) could enumerate expressions that produce a given result. This bidirectionality has no equivalent in any other paradigm.
+A notable feature of Prolog's approach is that the relation can sometimes be run in reverse. While we cannot easily ask "what expression evaluates to 35?" with this definition (due to `is` requiring ground arithmetic), a pure relational version using constraint logic programming (CLP) could enumerate expressions that produce a given result. This bidirectionality is uncommon in most other mainstream paradigms.
 
 Prolog's representation of expressions uses compound terms like `add(lit(3), lit(4))`, which are tree-shaped by nature. Prolog was designed for symbolic reasoning over tree structures, making this problem a natural fit.
 
@@ -652,7 +652,7 @@ static double eval(Expr expr) {
 }
 ```
 
-Modern Java (21+) with sealed interfaces, records, and pattern matching in switch expressions reads remarkably close to the ML versions. The `sealed` keyword ensures exhaustiveness — the compiler knows all possible implementations of `Expr` and can verify that the switch covers every case. This is Java adopting ML-family ideas after decades of relying on the visitor pattern.
+Modern Java (21+) with sealed interfaces, records, and pattern matching in switch expressions reads quite close to the ML versions. The `sealed` keyword ensures exhaustiveness — the compiler knows all possible implementations of `Expr` and can verify that the switch covers every case. This is Java adopting ML-family ideas after decades of relying on the visitor pattern.
 
 The classic pre-Java-21 approach would use the visitor pattern:
 
@@ -720,7 +720,7 @@ The JVM family shows the gradual adoption of functional programming ideas by mai
 
 ## The C Family
 
-The C family must represent the expression tree using manual memory allocation and tagged unions or struct hierarchies. This is where the algorithm's recursive nature creates real engineering work.
+The C family typically represents the expression tree using manual memory allocation and tagged unions or struct hierarchies. This is where the algorithm's recursive nature creates real engineering work.
 
 ### C
 
@@ -749,7 +749,7 @@ double eval(Expr *e) {
 }
 ```
 
-The `Expr` struct contains a tag field and a union of possible payloads. The evaluator switches on the tag and accesses the appropriate union member. C provides no guarantee that the tag and the union member are consistent — accessing `e->lit` when the tag is `ADD` would read garbage without any compiler error. The programmer must maintain this invariant manually.
+The `Expr` struct contains a tag field and a union of possible payloads. The evaluator switches on the tag and accesses the appropriate union member. C provides limited built-in guarantees that the tag and the union member are consistent; accessing `e->lit` when the tag is `ADD` would read garbage without any compiler error. The programmer must maintain this invariant manually.
 
 Constructing expressions requires heap allocation:
 
@@ -762,7 +762,7 @@ Expr *lit(double n) {
 }
 ```
 
-Each constructor function allocates memory, which must eventually be freed. A real implementation needs a corresponding `free_expr` function that recursively frees the tree — the kind of bookkeeping that higher-level languages handle automatically.
+Each constructor function allocates memory, which eventually needs to be freed. A real implementation needs a corresponding `free_expr` function that recursively frees the tree — the kind of bookkeeping that higher-level languages handle automatically.
 
 ### C++
 
@@ -795,7 +795,7 @@ double eval(const ExprPtr& e) {
 }
 ```
 
-This is type-safe — `std::variant` ensures only valid access — but the template metaprogramming required for `std::visit` produces dense, hard-to-read code. `shared_ptr` handles memory management. The `if constexpr` chain performs compile-time dispatch on the variant alternative. This approach is safe and efficient, but a far cry from the ML family's clarity.
+This is type-safe — `std::variant` ensures only valid access — but the template metaprogramming required for `std::visit` produces dense, hard-to-read code. `shared_ptr` handles memory management. The `if constexpr` chain performs compile-time dispatch on the variant alternative. This approach is safe and efficient, but noticeably more verbose than the ML-style version.
 
 An alternative C++ approach uses traditional OOP:
 
@@ -897,7 +897,7 @@ fn eval(expr: &Expr) -> f64 {
 
 Rust's `enum` is a proper sum type, and `match` is exhaustive pattern matching — the compiler refuses to compile if a case is missing. The `Box<Expr>` is required because recursive types must have indirection (the compiler needs to know the size of `Expr`, and without `Box` it would be infinite). This is a systems-level concern that ML languages hide behind garbage collection.
 
-The `Box` is the only visible systems programming artifact. Otherwise, this reads like Haskell with different syntax. Rust demonstrates that systems programming and algebraic data types are not mutually exclusive.
+The `Box` is the primary visible systems-programming artifact. Otherwise, this reads like Haskell with different syntax. Rust demonstrates that systems programming and algebraic data types are not mutually exclusive.
 
 ### Go
 
@@ -921,7 +921,7 @@ func (m Mul) eval() float64 { return m.left.eval() * m.right.eval() }
 
 Go uses structural subtyping: any type with an `eval() float64` method satisfies the `Expr` interface. Each struct type implements this method. The code is clear and straightforward, but there is no way to ensure the interface is closed — anyone can add a new `Expr` implementation, and there is no exhaustiveness checking.
 
-Go's philosophy is visible here: simple, explicit, no magic. The code does exactly what it says, with no abstractions that might surprise. For this particular problem, the lack of algebraic data types means Go cannot express the "closed set of four variants" constraint that ML-family languages capture in the type system.
+Go's philosophy is visible here: simple, explicit, no magic. The code does exactly what it says, with no abstractions that might surprise. For this particular problem, the lack of algebraic data types means Go cannot express the "closed set of four variants" constraint as directly at the type level as ML-family languages.
 
 ### Zig
 
@@ -951,7 +951,7 @@ Zig's tagged unions are similar to Rust's enums but with C-level control over me
 
 ### Systems Language Comparison
 
-Rust is the clear winner for this problem among systems languages, providing ML-family ergonomics with the `Box` indirection as the only visible cost. Go's interface approach is clean but loses the closed-world guarantee. Zig's tagged unions are powerful but more verbose. All three are practical; the differences reflect their positions on the safety-control spectrum.
+Rust is often the strongest fit for this problem among systems languages, providing ML-family ergonomics with the `Box` indirection as the primary visible cost. Go's interface approach is clean but loses the closed-world guarantee. Zig's tagged unions are powerful but more verbose. All three are practical; the differences reflect their positions on the safety-control spectrum.
 
 ---
 
@@ -1157,7 +1157,7 @@ function evalExpr(expr) {
 }
 ```
 
-JavaScript represents nodes as plain objects with a `type` string tag, which is the dynamic-language equivalent of a tagged union. Factory functions create nodes. The `switch` on the type string dispatches to each case. There is no structural guarantee that nodes have the right fields — this is entirely convention.
+JavaScript represents nodes as plain objects with a `type` string tag, which is the dynamic-language equivalent of a tagged union. Factory functions create nodes. The `switch` on the type string dispatches to each case. There is usually no structural guarantee that nodes have the right fields; this is largely convention.
 
 ### TypeScript
 
@@ -1180,7 +1180,7 @@ function evalExpr(expr: Expr): number {
 }
 ```
 
-TypeScript's discriminated union type provides real compile-time safety. The `type` field serves as the discriminant, and TypeScript narrows the type in each `case` branch — accessing `expr.value` is only valid in the `"lit"` case. The compiler can also check exhaustiveness if strict checks are enabled. This is the closest JavaScript gets to algebraic data types.
+TypeScript's discriminated union type provides real compile-time safety. The `type` field serves as the discriminant, and TypeScript narrows the type in each `case` branch — accessing `expr.value` is only valid in the `"lit"` case. The compiler can also check exhaustiveness if strict checks are enabled. This is one of the closest JavaScript-adjacent patterns to algebraic data types.
 
 ### Perl
 
@@ -1267,7 +1267,7 @@ The `indirect` keyword tells Swift to heap-allocate the recursive cases (like Ru
 
 ## The APL Family
 
-Array languages are designed for flat, rectangular data. Recursive tree structures are fundamentally alien to the array paradigm. Representing and evaluating expression trees in APL-family languages requires encoding the tree as flat arrays — possible, but working against the grain.
+Array languages are designed for flat, rectangular data. Recursive tree structures are comparatively alien to the array paradigm. Representing and evaluating expression trees in APL-family languages requires encoding the tree as flat arrays — possible, but working against the grain.
 
 ### APL
 
@@ -1353,11 +1353,11 @@ Eval ← {
 }
 ```
 
-BQN uses a list of functions selected by the tag (using `◶`, the "choose" combinator). The tree is a pair of `⟨tag, payload⟩`. This is more idiomatic than the other array languages — BQN's first-class functions and combinators allow a table-dispatch approach — but it is still fundamentally non-array code.
+BQN uses a list of functions selected by the tag (using `◶`, the "choose" combinator). The tree is a pair of `⟨tag, payload⟩`. This is more idiomatic than the other array languages — BQN's first-class functions and combinators allow a table-dispatch approach — but it is still mostly non-array code.
 
 ### APL Family Comparison
 
-The APL family's struggle with expression trees is deeply informative. These languages are built around the idea that data is rectangular and operations apply uniformly to every element. Trees are neither rectangular nor uniform — each node has a different number of children, and evaluation must respect parent-child dependencies. The flat-array encoding destroys structural clarity. The recursive approach abandons array operations entirely.
+The APL family's struggle with expression trees is deeply informative. These languages are built around the idea that data is rectangular and operations apply uniformly to every element. Trees are neither rectangular nor uniform — each node has a different number of children, and evaluation must respect parent-child dependencies. The flat-array encoding destroys structural clarity. The recursive approach largely abandons array operations.
 
 This is the inverse of the "indices above mean" algorithm, where APL was effortless and other languages labored. Different problems genuinely require different paradigms, and forcing array notation onto tree structures is as awkward as forcing explicit loops onto array transformations.
 
@@ -1381,7 +1381,7 @@ Forth's stack-based approach encodes the tree implicitly in the execution order.
 
 In Forth, the expression tree is encoded in the order of operations and the stack implicitly manages the tree structure. Each "node" is a word that operates on the stack: `lit` is a no-op (the number is already pushed), `add-e` pops two values and pushes their sum. The expression `3 lit 4 lit add-e 5 lit mul-e` evaluates to 35. This is reverse Polish notation — the tree is linearized into a post-order traversal and the stack reconstructs the dependencies.
 
-This is both elegant and limiting. There is no explicit tree data structure, so you cannot inspect or transform expressions — only evaluate them. Forth excels at this "immediate evaluation" mode but cannot easily represent deferred computation.
+This is both elegant and limiting. There is no explicit tree data structure, so inspecting or transforming expressions requires extra representation beyond simple evaluation. Forth excels at this "immediate evaluation" mode, but representing deferred computation is less direct.
 
 ### Smalltalk
 
@@ -1453,7 +1453,7 @@ function result = eval_expr(expr)
 end
 ```
 
-MATLAB structs with a type field and a switch statement — essentially the same approach as JavaScript and Lua. MATLAB's matrix operations are irrelevant here, and the code is straightforward but unexceptional. This is far from MATLAB's sweet spot.
+MATLAB structs with a type field and a switch statement — essentially the same approach as JavaScript and Lua. MATLAB's matrix operations are less relevant here, and the code is straightforward but unexceptional. This is outside MATLAB's usual sweet spot.
 
 ### R
 
@@ -1576,11 +1576,11 @@ EVAL-NODE.
     STOP RUN.
 ```
 
-COBOL uses a flat table of nodes (since it lacks pointers and recursive types) and `EVALUATE` for case dispatch. The tree is stored as a table with index-based references to children. Recursive evaluation requires paragraph-level subroutines. This is an extremely poor fit — COBOL was designed for business record processing, and recursive tree evaluation is about as far from its intended domain as possible.
+COBOL uses a flat table of nodes (since it lacks pointers and recursive types) and `EVALUATE` for case dispatch. The tree is stored as a table with index-based references to children. Recursive evaluation requires paragraph-level subroutines. This is a poor fit — COBOL was designed for business record processing, and recursive tree evaluation is far from its intended domain.
 
 ### BASIC
 
-Classic BASIC lacks user-defined types and recursion entirely.
+Classic BASIC generally lacks user-defined types and recursion.
 
 ```basic
 10 REM Expression tree in parallel arrays
@@ -1601,7 +1601,7 @@ Classic BASIC lacks user-defined types and recursion entirely.
 160 PRINT "Result: "; V(1)
 ```
 
-Without recursion, BASIC evaluates bottom-up using a loop over a flat node table. This is the most manual encoding in the document — parallel arrays for tags, values, and child indices, processed in reverse order. It works for this specific tree but would need careful ordering for arbitrary trees.
+Without recursion, BASIC evaluates bottom-up using a loop over a flat node table. This is one of the most manual encodings in the document: parallel arrays for tags, values, and child indices, processed in reverse order. It works for this specific tree but would need careful ordering for arbitrary trees.
 
 ### Algol 60
 
@@ -1627,7 +1627,7 @@ Algol 60 uses parallel arrays (like BASIC) but can recurse. The procedure takes 
 
 ### Historical Language Comparison
 
-The historical languages reveal how much the ML family's innovations — algebraic data types and pattern matching — transformed the expressibility of programs that work with tree-shaped data. FORTRAN, COBOL, and BASIC were designed before these ideas existed, and their attempts at tree manipulation are labored and fragile. Algol 60 provides recursion but not structured data types. The gap between these languages and Haskell for this particular problem is enormous — far larger than the gap for the "indices above mean" algorithm, where the historical languages were merely verbose rather than fundamentally uncomfortable.
+The historical languages reveal how much the ML family's innovations — algebraic data types and pattern matching — transformed the expressibility of programs that work with tree-shaped data. FORTRAN, COBOL, and BASIC were designed before these ideas existed, and their attempts at tree manipulation are labored and fragile. Algol 60 provides recursion but not structured data types. For this particular problem, the gap between these languages and modern ML-family ergonomics is large, larger than in the "indices above mean" algorithm where historical languages were mostly verbose rather than structurally awkward.
 
 ---
 
@@ -1645,7 +1645,7 @@ The deepest variation is in how languages define the expression type. ML-family 
 
 ### Dispatch Mechanism
 
-Four fundamentally different dispatch mechanisms appear across language families: pattern matching (ML, Rust, Erlang), conditional chains (Lisp, scripting languages), polymorphic method dispatch (OOP languages), and logical unification (Prolog). Each corresponds to a different programming philosophy. Pattern matching is declarative and centralized. Conditionals are imperative and centralized. Method dispatch is declarative and distributed. Logical unification is relational and bidirectional.
+Four distinct dispatch mechanisms appear across language families: pattern matching (ML, Rust, Erlang), conditional chains (Lisp, scripting languages), polymorphic method dispatch (OOP languages), and logical unification (Prolog). Each corresponds to a different programming philosophy. Pattern matching is declarative and centralized. Conditionals are imperative and centralized. Method dispatch is declarative and distributed. Logical unification is relational and bidirectional.
 
 ### Recursion vs. Iteration
 
@@ -1653,19 +1653,19 @@ Most implementations use structural recursion — the evaluator calls itself on 
 
 ### Type Safety Spectrum
 
-The spectrum ranges from full compile-time safety (Haskell, Rust, Lean — which guarantee exhaustiveness and correct field access) through partial safety (TypeScript, Kotlin — which check some things statically) to no static checking (Python, JavaScript, Lua — where all guarantees are at runtime). The proof assistants go further, allowing proofs that the evaluator satisfies a specification.
+The spectrum ranges from strong compile-time safety (Haskell, Rust, Lean, which can enforce exhaustiveness and correct field access for typed representations) through partial safety (TypeScript, Kotlin, which check some things statically) to no static checking (Python, JavaScript, Lua, where guarantees are primarily runtime). The proof assistants go further, allowing proofs that the evaluator satisfies a specification.
 
 ### Where Each Family Excels
 
-The ML family excels here because this is *their* canonical problem — recursive data with pattern matching. The Lisp family excels because homoiconicity makes the tree a first-class citizen. Prolog excels because relational definitions allow bidirectional reasoning. The OOP languages produce clean, extensible designs through polymorphic dispatch.
+The ML family excels here because this is one of their canonical problem shapes: recursive data with pattern matching. The Lisp family excels because homoiconicity makes the tree a first-class citizen. Prolog excels because relational definitions allow bidirectional reasoning. The OOP languages produce clean, extensible designs through polymorphic dispatch.
 
-The APL family, historical languages, and SQL are uncomfortable — trees are not their native data shape. The C family works but requires significant engineering to manage memory and maintain type safety. The scripting languages converge on a reasonable middle ground with tagged objects and conditionals.
+The APL family, historical languages, and SQL are generally less natural here because trees are not their native data shape. The C family works but requires significant engineering to manage memory and maintain type safety. The scripting languages converge on a reasonable middle ground with tagged objects and conditionals.
 
 ---
 
 ## Conclusion
 
-The expression tree evaluator inverts the results of the "indices above mean" algorithm. Where array languages were effortless and ML languages were merely adequate for array transformation, here the ML family is perfectly at home and array languages must improvise. This inversion demonstrates that no single paradigm is universally superior — each is optimized for a class of problems.
+The expression tree evaluator inverts the results of the "indices above mean" algorithm. Where array languages were effortless and ML languages were merely adequate for array transformation, here the ML family is very much at home and array languages typically improvise. This inversion demonstrates that no single paradigm is universally superior — each is optimized for a class of problems.
 
 The algorithm also reveals a progression in language design. The historical languages lacked the tools to express tree-structured data cleanly. The Wirth family introduced variant records, a partial solution. The ML family perfected algebraic data types and pattern matching, making recursive data manipulation concise and safe. Modern mainstream languages (Java 21, Python 3.10, TypeScript) are now importing these ideas, decades after their invention.
 

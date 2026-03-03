@@ -79,7 +79,7 @@ The algorithm decomposes into these concurrent coordination problems:
 4. **Shutdown signaling**: Producers must signal when they are done. Consumers must know when to stop — not when the buffer is momentarily empty, but when all producers are finished *and* the buffer is empty.
 5. **Result collection**: Consumers write results to a shared collection, which must also be concurrent-safe.
 
-Different languages have radically different primitives for these tasks. Actor-model languages (Erlang, Elixir) use message passing between lightweight processes and never share memory. Channel-based languages (Go) use typed channels for communication. Systems languages (Rust, C) use mutexes, condition variables, and atomic operations. Functional languages (Haskell) offer Software Transactional Memory or async abstractions. Scripting languages are often constrained by global interpreter locks.
+Different languages have meaningfully different primitives for these tasks. Actor-model languages (Erlang, Elixir) use message passing between lightweight processes and avoid shared mutable state in core patterns. Channel-based languages (Go) use typed channels for communication. Systems languages (Rust, C) use mutexes, condition variables, and atomic operations. Functional languages (Haskell) offer Software Transactional Memory or async abstractions. Scripting languages are often constrained by global interpreter locks.
 
 This problem reveals how languages think about coordination, safety, and the fundamental question of concurrent programming: how do independent units of computation communicate?
 
@@ -87,7 +87,7 @@ This problem reveals how languages think about coordination, safety, and the fun
 
 ## The BEAM Family
 
-The BEAM virtual machine was designed from the ground up for concurrency. Erlang processes are extraordinarily lightweight (a few hundred bytes of overhead), and message passing between them is the only coordination mechanism — there is no shared mutable state. This is the actor model in its purest form.
+The BEAM virtual machine was designed from the ground up for concurrency. Erlang processes are extraordinarily lightweight (a few hundred bytes of overhead), and message passing between them is the only coordination mechanism — there is no shared mutable state. This is a canonical actor-model implementation.
 
 ### Erlang
 
@@ -246,7 +246,7 @@ defmodule Pipeline do
 end
 ```
 
-Elixir's pipe operator (`|>`) and comprehensions make the high-level version remarkably clean. The explicit version mirrors Erlang's structure with lighter syntax. In production Elixir, you would likely use GenStage or Broadway — dedicated libraries for concurrent pipeline processing built on OTP supervision trees.
+Elixir's pipe operator (`|>`) and comprehensions make the high-level version relatively clean. The explicit version mirrors Erlang's structure with lighter syntax. In production Elixir, you would likely use GenStage or Broadway — dedicated libraries for concurrent pipeline processing built on OTP supervision trees.
 
 ### Gleam
 
@@ -289,11 +289,11 @@ Gleam's typed message channels (`Subject(ConsumerMsg)`) ensure at compile time t
 
 ### BEAM Family Comparison
 
-The BEAM family treats concurrency as its native element. Processes are cheap (millions can run simultaneously), message passing is the only coordination mechanism, and there is no shared mutable state to cause data races. The buffer process in Erlang manages all synchronization through its message-handling loop — there are no mutexes, no condition variables, and no atomics.
+The BEAM family treats concurrency as a native element. Processes are cheap (often scaling to very large counts), message passing is the primary coordination mechanism, and there is no shared mutable state in the core actor model to cause data races. The buffer process in Erlang manages all synchronization through its message-handling loop — there are no mutexes, no condition variables, and no atomics.
 
 The progression from Erlang to Elixir to Gleam adds layers of abstraction and safety: Elixir adds ergonomic syntax and high-level combinators; Gleam adds compile-time message type checking. But the underlying model — lightweight processes, message passing, no shared state — is the same throughout.
 
-This is the family's home turf. Erlang was designed for telephone switches that handle millions of concurrent connections. The producer-consumer pipeline is a toy version of problems Erlang solves in production at WhatsApp, Discord, and telecom infrastructure worldwide.
+This is a core BEAM use case. Erlang was designed for telephone switches that handle very high concurrency. The producer-consumer pipeline is a simplified version of problems Erlang-style systems solve in production at large internet and telecom scale.
 
 ---
 
@@ -376,7 +376,7 @@ Go's solution is clean and idiomatic. The bounded channel `make(chan int, buffer
 
 The directional channel types (`chan<- int` for send-only, `<-chan int` for receive-only) provide compile-time enforcement that producers only send and consumers only receive. This is not as strong as Rust's ownership guarantees, but it catches common mistakes.
 
-Go's concurrency model — goroutines communicating over channels, with the motto "don't communicate by sharing memory; share memory by communicating" — makes this pattern almost trivial. The bounded channel handles backpressure, the close-on-done pattern handles shutdown, and WaitGroups coordinate completion. This is Go at its best.
+Go's concurrency model — goroutines communicating over channels, with the motto "don't communicate by sharing memory; share memory by communicating" — makes this pattern much more direct. The bounded channel handles backpressure, the close-on-done pattern handles shutdown, and WaitGroups coordinate completion. This is a strong example of Go's design goals.
 
 ### Rust
 
@@ -543,9 +543,9 @@ Zig requires building the bounded queue from primitives: a mutex, two condition 
 
 ### Systems Language Comparison
 
-The systems languages show a clear progression in abstraction level for concurrency. Zig and C require building bounded queues from mutexes and condition variables — the most explicit but most error-prone approach. Rust's standard library provides channels, and the ownership system prevents data races at compile time. Go provides channels as a language-level feature with goroutines that make spawning concurrent work trivial.
+The systems languages show a clear progression in abstraction level for concurrency. Zig and C require building bounded queues from mutexes and condition variables, among the most explicit approaches and often more error-prone in practice. Rust's standard library provides channels, and the ownership system prevents data races at compile time. Go provides channels as a language-level feature with goroutines that make spawning concurrent work straightforward.
 
-For this specific problem, Go is the most ergonomic: bounded channels, goroutines, and close semantics are all built into the language. Rust is safer: the compiler prevents data races, though the ergonomics are slightly worse with `Arc<Mutex<>>` wrappers. Zig is the most explicit: you see every mutex lock, every condition variable wait, every buffer index operation.
+For this specific problem, Go is among the most ergonomic: bounded channels, goroutines, and close semantics are all built into the language. Rust offers stronger race-safety guarantees because the compiler prevents data races, though the ergonomics are slightly worse with `Arc<Mutex<>>` wrappers. Zig is highly explicit: you see every mutex lock, every condition variable wait, every buffer index operation.
 
 ---
 
@@ -553,7 +553,7 @@ For this specific problem, Go is the most ergonomic: bounded channels, goroutine
 
 ### Haskell
 
-Haskell offers Software Transactional Memory (STM), a fundamentally different concurrency primitive that composes transactional operations.
+Haskell offers Software Transactional Memory (STM), a distinct concurrency primitive that composes transactional operations.
 
 ```haskell
 import Control.Concurrent
@@ -640,7 +640,7 @@ pipeline = do
     sort <$> atomically (readTVar results)
 ```
 
-STM is Haskell's distinctive contribution to concurrency. Where channels are a specific coordination mechanism, STM is a general transactional framework that can express any coordination pattern without explicit locks. The composability guarantee — any combination of STM operations can be wrapped in `atomically` and will execute correctly — is unique to Haskell's approach.
+STM is Haskell's distinctive contribution to concurrency. Where channels are a specific coordination mechanism, STM is a general transactional framework that can express many coordination patterns without explicit locks. The composability guarantee — combinations of STM operations can be wrapped in `atomically` and run as a single transaction — is especially associated with Haskell's approach.
 
 ### OCaml
 
@@ -726,9 +726,9 @@ F# leverages .NET's `BlockingCollection<T>`, which provides a bounded, thread-sa
 
 ### ML Family Comparison
 
-Each ML-family language brings a different concurrency philosophy. Haskell's STM offers composable transactions — a theoretically elegant model with no equivalent in other families. OCaml 5's effect-based concurrency is the newest approach, using algebraic effects to express concurrency as a composable, structured abstraction. F# pragmatically uses .NET's concurrent collections with async workflows.
+Each ML-family language brings a different concurrency philosophy. Haskell's STM offers composable transactions, a theoretically elegant model that remains relatively uncommon outside a few ecosystems. OCaml 5's effect-based concurrency is the newest approach, using algebraic effects to express concurrency as a composable, structured abstraction. F# pragmatically uses .NET's concurrent collections with async workflows.
 
-None of these is as natural for concurrency as the BEAM family, but each offers unique strengths: Haskell's STM prevents a class of bugs that channel-based systems cannot, OCaml's structured concurrency ensures resources are always cleaned up, and F# provides seamless access to .NET's mature concurrent data structures.
+None of these is typically as natural for concurrency as the BEAM family, but each offers unique strengths: Haskell's STM prevents classes of bugs that are harder to avoid in many channel-based systems, OCaml's structured concurrency helps ensure resources are cleaned up, and F# provides seamless access to .NET's mature concurrent data structures.
 
 ---
 
@@ -812,7 +812,7 @@ public class Pipeline {
 
 Java's approach is characteristically explicit. `BlockingQueue` provides bounded buffering with blocking `put`/`take`. `CountDownLatch` coordinates shutdown — producers count down when done, a coordinator then sends "poison pill" values that signal consumers to stop. Virtual threads (Java 21+) make thread creation cheap, similar to goroutines.
 
-The "poison pill" pattern is a classic Java concurrency idiom: since `BlockingQueue` has no built-in "close" mechanism (unlike Go channels), a sentinel value signals shutdown. This requires choosing a value that cannot be confused with real data — an awkwardness that Go's `close` avoids.
+The "poison pill" pattern is a classic Java concurrency idiom: since `BlockingQueue` has no built-in "close" mechanism (unlike Go channels), a sentinel value signals shutdown. This requires choosing a value that is unlikely to be confused with real data, an awkwardness that Go's `close` avoids.
 
 ### Scala
 
@@ -955,7 +955,7 @@ Clojure's `core.async` brings Go-style channels to the Lisp world. `go` blocks a
 
 ### JVM Family Comparison
 
-The JVM family reveals decades of concurrency evolution. Java provides foundational primitives (`BlockingQueue`, `CountDownLatch`, `ExecutorService`) that are explicit and verbose. Scala adds `Future` composition and pattern matching for cleaner coordination. Kotlin imports Go's channel model with coroutines. Clojure imports Go's channel model with Lisp syntax and immutable data.
+The JVM family reveals decades of concurrency evolution. Java provides core primitives (`BlockingQueue`, `CountDownLatch`, `ExecutorService`) that are explicit and verbose. Scala adds `Future` composition and pattern matching for cleaner coordination. Kotlin imports Go's channel model with coroutines. Clojure imports Go's channel model with Lisp syntax and immutable data.
 
 The trend is clear: newer JVM languages all move toward lightweight concurrency (virtual threads, coroutines) and channel-based communication, converging on the model that Go and Erlang popularized.
 
@@ -1101,7 +1101,7 @@ int main() {
 
 This is the baseline implementation against which all higher-level abstractions can be measured. Every lock acquisition, every condition variable wait, every signal is explicit. The bounded buffer is a circular array protected by a mutex and two condition variables. The shutdown protocol requires `broadcast` (not `signal`) to wake all consumers when the last producer finishes.
 
-The code is roughly 100 lines for what Go expresses in 30 and Erlang in a different paradigm entirely. Every line is necessary — remove a lock and you get a data race, remove a signal and you get a deadlock, remove the broadcast and consumers may never wake up. This is why higher-level concurrency primitives were invented.
+The code is roughly 100 lines for what Go expresses in about 30 and Erlang in a different paradigm. Most of these lines are structural requirements of the model: remove a lock and you risk a data race, remove a signal and you risk deadlock, remove the broadcast and consumers may fail to wake up. This helps explain why higher-level concurrency primitives were invented.
 
 ### C++ (std::thread)
 
@@ -1186,7 +1186,7 @@ C++ improves on C with RAII (`unique_lock`, `lock_guard`), templates (the `Bound
 
 ### C Family Comparison
 
-The C family shows concurrency at its most explicit. Every synchronization decision is visible in the code: which mutex protects which data, when to signal vs. broadcast, how to handle spurious wakeups. C++ adds RAII and templates for safer resource management but uses the same primitives. The contrast with Go (where channels handle all of this) or Erlang (where message passing eliminates shared state entirely) illustrates why those languages were designed — the manual approach is powerful but error-prone.
+The C family shows concurrency in one of its most explicit forms. Every synchronization decision is visible in the code: which mutex protects which data, when to signal vs. broadcast, how to handle spurious wakeups. C++ adds RAII and templates for safer resource management but uses the same primitives. The contrast with Go (where channels handle much of this) or Erlang (where message passing eliminates shared state in core patterns) illustrates why those languages were designed — the manual approach is powerful but error-prone.
 
 ---
 
@@ -1373,7 +1373,7 @@ async function runPipeline() {
 }
 ```
 
-This is not truly concurrent — all Promises resolve on the same event loop. JavaScript's concurrency model is fundamentally about managing I/O interleaving, not CPU parallelism.
+This is not truly concurrent — all Promises resolve on the same event loop. JavaScript's concurrency model is primarily about managing I/O interleaving, not CPU parallelism.
 
 ### TypeScript (Deno)
 
@@ -1480,13 +1480,13 @@ end
 table.sort(results)
 ```
 
-Lua's coroutines provide cooperative multitasking but not parallelism. A bounded queue can be simulated with yield points, but without OS threads, there is no true concurrency. This is Lua's most significant limitation for this problem — the language was designed as a lightweight embeddable scripting language, not for concurrent systems programming.
+Lua's coroutines provide cooperative multitasking but not parallelism. A bounded queue can be simulated with yield points, but without OS threads, there is no true parallel execution. This is a major limitation for this problem because the language was designed as a lightweight embeddable scripting language, not for concurrent systems programming.
 
 ### Scripting Language Comparison
 
-The scripting languages reveal a fundamental architectural limitation: the GIL/GVL (Python, Ruby) or single-threaded event loop (JavaScript, Lua) prevents true CPU parallelism within a single process. All four languages can simulate the producer-consumer pattern using queues and threads/tasks, but only Python and Ruby's threads (or multiprocessing) provide actual concurrent execution, and even then with significant overhead.
+The scripting languages reveal an important architectural limitation: the GIL/GVL (Python, Ruby) or single-threaded event loop (JavaScript, Lua) limits true CPU parallelism within a single process. All four languages can simulate the producer-consumer pattern using queues and threads/tasks, but only Python and Ruby's threads (or multiprocessing) provide substantial parallel execution, and even then often with significant overhead.
 
-This is the algorithm that most starkly separates systems languages from scripting languages. For the array transformation and expression tree problems, scripting languages were merely more verbose than their ideal counterparts. For concurrent pipelines, they are fundamentally constrained by their runtime architectures.
+This algorithm sharply separates systems languages from scripting languages. For the array transformation and expression tree problems, scripting languages were mostly more verbose than their ideal counterparts. For concurrent pipelines, they are much more constrained by runtime architecture choices.
 
 ---
 
@@ -1828,7 +1828,7 @@ SWI-Prolog provides thread-based concurrency with message queues — essentially
 
 Array languages have minimal concurrency support. Their performance model relies on vectorized operations over arrays — implicit parallelism within operations, but no explicit concurrency between tasks.
 
-Some implementations provide parallel primitives: Dyalog APL has `∥` for parallel execution, and J has `t.` for threading modifiers. But the producer-consumer pattern, which requires coordination between independent tasks, is fundamentally outside the array programming model.
+Some implementations provide parallel primitives: Dyalog APL has `∥` for parallel execution, and J has `t.` for threading modifiers. But the producer-consumer pattern, which requires coordination between independent tasks, is largely outside the array programming model.
 
 ```apl
 ⍝ Dyalog APL: parallel each (⌶) can parallelize map operations
@@ -1837,7 +1837,7 @@ result ← {⍵*2}⌶ (3/⍳5)  ⍝ parallel square of replicated items
 result ← result[⍋result]  ⍝ sort
 ```
 
-The array language approach is to avoid explicit concurrency entirely — instead, operations on large arrays are implicitly parallelized by the runtime. This is a valid concurrency model for data-parallel problems but cannot express the task coordination that defines producer-consumer pipelines.
+The array language approach is to mostly avoid explicit concurrency — instead, operations on large arrays are implicitly parallelized by the runtime. This is a valid concurrency model for data-parallel problems but does not naturally express the task coordination that defines producer-consumer pipelines.
 
 ---
 
@@ -1845,17 +1845,17 @@ The array language approach is to avoid explicit concurrency entirely — instea
 
 ### Communication Paradigms
 
-The most fundamental axis of variation is how concurrent units communicate. There are three primary paradigms.
+A fundamental axis of variation is how concurrent units communicate. There are three primary paradigms.
 
 **Message passing** (Erlang, Elixir, Go channels, Kotlin channels): concurrent units communicate by sending and receiving messages through typed or untyped channels. There is no shared mutable state. Safety comes from isolation — each unit owns its data and shares nothing.
 
-**Shared memory with locks** (C, C++, Java's early model): concurrent units share memory and coordinate access with mutexes, condition variables, and atomic operations. This is the most flexible approach but the most error-prone — forgetting a lock or acquiring locks in the wrong order causes data races or deadlocks.
+**Shared memory with locks** (C, C++, Java's early model): concurrent units share memory and coordinate access with mutexes, condition variables, and atomic operations. This is a highly flexible approach but often more error-prone; forgetting a lock or acquiring locks in the wrong order causes data races or deadlocks.
 
 **Transactional memory** (Haskell's STM): concurrent units share memory but access it through composable transactions that the runtime serializes. This avoids explicit locks while preserving shared-state semantics.
 
 ### Lightweight vs. Heavyweight Concurrency
 
-Languages differ enormously in the cost of concurrent units. Erlang processes and Go goroutines cost kilobytes and can number in millions. Java virtual threads (Loom) are similarly lightweight. OS threads (C, C++, Perl) cost megabytes and are limited to thousands. JavaScript and Lua lack true concurrency units entirely.
+Languages differ enormously in the cost of concurrent units. Erlang processes and Go goroutines cost kilobytes and can number in millions. Java virtual threads (Loom) are similarly lightweight. OS threads (C, C++, Perl) cost megabytes and are often limited to thousands in practical deployments. JavaScript and Lua lack built-in CPU-parallel concurrency units in common runtime configurations.
 
 This cost difference is not just quantitative but qualitative. When concurrent units are cheap, the natural design is "one unit per logical task" — each producer and consumer is its own goroutine or process. When units are expensive, the natural design is thread pools with work-stealing — a fixed number of threads service many logical tasks.
 
@@ -1863,19 +1863,19 @@ This cost difference is not just quantitative but qualitative. When concurrent u
 
 Shutdown — knowing when all producers are done and all consumers should stop — is surprisingly tricky. Languages handle it differently. Go uses channel close semantics, where `range` over a closed channel terminates. Erlang uses explicit shutdown messages in the actor protocol. Java uses poison pills or `CountDownLatch`. C uses condition variable broadcasts when producer counts reach zero.
 
-The cleanest shutdown mechanisms are those built into the coordination primitive itself (Go's `close`, Ada's entry guards). The most error-prone are those that require manual counting and signaling (C's condition variables, Java's poison pills).
+The cleanest shutdown mechanisms are usually those built into the coordination primitive itself (Go's `close`, Ada's entry guards). The approaches that require manual counting and signaling (C's condition variables, Java's poison pills) are often more error-prone.
 
 ### Safety Guarantees
 
 The safety spectrum for concurrent programming is wider than for sequential programming. Rust prevents data races at compile time through ownership. Go prevents some races through channel direction types but allows shared-memory races. Java provides runtime race detection with `synchronized` but allows races in unsynchronized code. C provides no safety at all — races are undefined behavior that the language makes easy to write.
 
-Erlang and the BEAM family sidestep the problem entirely: since there is no shared mutable state, data races are impossible by construction. This is the strongest safety guarantee, achieved by restricting the programming model rather than by adding checks.
+Erlang and the BEAM family sidestep much of this problem: since there is no shared mutable state in the core model, data races are effectively impossible by construction. This is one of the strongest safety guarantees, achieved by restricting the programming model rather than by adding checks.
 
 ### Where Each Family Excels
 
-The BEAM family excels here because concurrency is their raison d'être — lightweight processes, message passing, and fault tolerance via supervision trees. Go excels because channels and goroutines were designed for exactly this pattern. Rust excels because the ownership system provides safety guarantees that no other systems language matches. Ada excels because its protected objects and tasking model, designed for safety-critical systems, handle synchronization with minimal boilerplate.
+The BEAM family excels here because concurrency is their raison d'etre: lightweight processes, message passing, and fault tolerance via supervision trees. Go excels because channels and goroutines align closely with this pattern. Rust excels because the ownership system provides strong safety guarantees that few systems languages match end to end. Ada excels because its protected objects and tasking model, designed for safety-critical systems, handle synchronization with minimal boilerplate.
 
-The C family works but requires significant engineering. The scripting languages are fundamentally limited by their runtime architectures. The APL family and Prolog are out of their element — concurrency is orthogonal to their core paradigms.
+The C family works but requires significant engineering. The scripting languages are materially limited by their runtime architectures. The APL family and Prolog are comparatively out of their element because explicit concurrency is orthogonal to their core paradigms.
 
 ---
 
@@ -1883,8 +1883,8 @@ The C family works but requires significant engineering. The scripting languages
 
 The concurrent producer-consumer pipeline reveals a different dimension of language design than the previous two algorithms. The array transformation showcased data-parallel thinking. The expression tree evaluator showcased algebraic data types and recursive structure. This algorithm showcases coordination — how independent computational units communicate, synchronize, and shut down safely.
 
-The results upend the previous rankings. The BEAM family, which was merely adequate for arrays and trees, is perfectly at home with concurrent processes. Go, which was verbose for tree evaluation, is clean and idiomatic for channel-based pipelines. The APL family, which excelled at array transformations, has almost nothing to contribute to explicit concurrency. Haskell, which excelled at expression trees, offers a unique perspective through STM but is not as natural for concurrency as Erlang or Go.
+The results significantly reorder the previous rankings. The BEAM family, which was merely adequate for arrays and trees, is very much at home with concurrent processes. Go, which was verbose for tree evaluation, is clean and idiomatic for channel-based pipelines. The APL family, which excelled at array transformations, contributes less to explicit task coordination. Haskell, which excelled at expression trees, offers a unique perspective through STM but is generally less natural for this style of concurrency than Erlang or Go.
 
-The most striking insight is that concurrency safety can be achieved through fundamentally different mechanisms. Rust prevents data races through compile-time ownership analysis. Erlang prevents them by eliminating shared mutable state. Go and Kotlin prevent many issues through channel abstractions. Ada prevents them through monitor-based protected objects. C prevents nothing, leaving safety entirely to the programmer's discipline.
+An important insight is that concurrency safety can be achieved through very different mechanisms. Rust prevents data races through compile-time ownership analysis. Erlang prevents them by eliminating shared mutable state. Go and Kotlin prevent many issues through channel abstractions. Ada prevents them through monitor-based protected objects. C provides minimal built-in prevention, leaving safety largely to programmer discipline.
 
 These are not points on a single spectrum but different answers to a philosophical question: should the language prevent concurrency errors by restricting what you can express, by checking what you express, or by trusting you to express it correctly? The diversity of answers reflects the diversity of contexts in which concurrent programs are written — from telephone switches to web servers to embedded controllers to financial trading systems. Each context has different requirements for safety, performance, and expressiveness, and each language's concurrency model reflects the context it was designed to serve.

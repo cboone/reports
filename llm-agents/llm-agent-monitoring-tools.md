@@ -6,7 +6,7 @@ created: 2026-02-15
 
 _February 15, 2026_
 
-This document catalogs every notable tool available (as of mid-February 2026) for monitoring LLM coding agent activity, managing sessions, receiving notifications, and tracking usage/costs. Tools are grouped by category, with links, platform support, and key features.
+This document catalogs a broad set of notable tools (as of mid-February 2026) for monitoring LLM coding agent activity, managing sessions, receiving notifications, and tracking usage/costs. Tools are grouped by category, with links, platform support, and key features.
 
 ---
 
@@ -27,7 +27,7 @@ This document catalogs every notable tool available (as of mid-February 2026) fo
 
 ## 1. Desktop Session Managers (macOS)
 
-These are native or near-native desktop apps that give you a floating/dockable window to see all running coding agent sessions at a glance.
+These are native or near-native desktop apps that give you a floating/dockable window to see running coding agent sessions at a glance.
 
 ### Agent Manager X
 
@@ -54,7 +54,7 @@ These are native or near-native desktop apps that give you a floating/dockable w
 - **Tech:** Tauri 2.x + React + TypeScript (Rust backend)
 - **Agents:** Claude Code, OpenCode
 - **Key Features:**
-  - View all active sessions in one place
+  - View active sessions in one place
   - Real-time status detection (Thinking, Processing, Waiting, Idle)
   - Global hotkey to toggle visibility
   - Click to focus on a specific session's terminal
@@ -67,12 +67,12 @@ These are native or near-native desktop apps that give you a floating/dockable w
 - **Install:** `brew tap jazzyalex/agent-sessions && brew install --cask agent-sessions`
 - **Agents:** Codex CLI, Claude Code, OpenCode, Gemini CLI, Factory Droid, GitHub Copilot CLI
 - **Key Features:**
-  - Unified session browser across ALL supported agents
-  - Full-text search across all past sessions
+  - Unified session browser across supported agents
+  - Full-text search across past sessions
   - Rate limits tracker in real-time
   - Agents analytics dashboard
   - Filter by folder/repo, resume sessions instantly
-  - Read-only, local-only, zero telemetry
+  - Read-only design with local storage and no telemetry (per project documentation)
   - Image browser for inline thumbnails
   - Supports deleted session visibility (OpenClaw)
 
@@ -95,13 +95,13 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Fuzzy search across all sessions
   - Session forking (Claude Code conversations)
   - On-demand MCP server attachment per session or globally
-  - MCP Socket Pool — reduces MCP memory usage by 85-90%
+  - MCP Socket Pool — reported to reduce MCP memory usage by 85-90%
   - Git worktree support for parallel agents
   - Conductors — persistent Claude sessions that orchestrate/monitor other sessions
   - Telegram & Slack bridges for remote monitoring
   - Tmux status bar integration showing waiting sessions
   - Groups, profiles, configurable hotkeys
-- **Notes:** One of the most feature-rich terminal-based session managers. The "conductor" feature is unique — lets a Claude Code instance supervise other sessions.
+- **Notes:** A full-featured terminal-based session manager. The "conductor" feature is a notable capability that lets a Claude Code instance supervise other sessions.
 
 ### Agent of Empires (AoE)
 
@@ -119,7 +119,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Diff view — review git changes without leaving TUI
   - Per-repo config via `.aoe/config.toml`
   - Profiles for separate workspaces
-- **Notes:** Inspired by Agent Deck. Rust-native for performance. Docker sandboxing is a differentiator.
+- **Notes:** Inspired by Agent Deck. Rust-native for performance. Docker sandboxing is a notable option.
 
 ### Claude Squad
 
@@ -147,7 +147,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Worktree hooks for post-creation automation
   - Auto-generated worktree directory paths
   - Devcontainer support for sandboxed environments
-- **Notes:** Supports the widest range of agents. The auto-approval and context-transfer features are unique.
+- **Notes:** Supports a broad range of agents. The auto-approval and context-transfer features are notable additions.
 
 ### Agent Viewer
 
@@ -161,7 +161,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Live output with ANSI color rendering
   - Send messages and upload files to agent cards
   - Columns: Running, Idle, Completed
-- **Notes:** Web-based UI is a differentiator — great for remote/mobile access.
+- **Notes:** Web-based UI is a key distinction and is useful for remote/mobile access.
 
 ### WezTerm Agent Deck (Plugin)
 
@@ -199,7 +199,7 @@ Full desktop applications focused on running multiple agent sessions with visual
   - Desktop notifications when sessions need input
   - Multiple agents per worktree support
   - Nimbalyst integration
-- **Notes:** Self-described as the first "IVE" (Integrated Vibe Environment). Very actively developed with frequent releases.
+- **Notes:** Self-described as an early "IVE" (Integrated Vibe Environment). Actively developed with frequent releases.
 
 ### Verdent Deck
 
@@ -211,9 +211,9 @@ Full desktop applications focused on running multiple agent sessions with visual
   - DiffLens for code diffs, timelines, and causal flows
   - Plan-first alignment with verification
   - Asynchronous execution — delegate tasks and walk away
-  - Comprehensive dashboards and task tracking
+  - Detailed dashboards and task tracking
   - Also has a VS Code extension variant
-- **Notes:** Commercial product. The only paid standalone desktop app in this space. Claims highest SWE-bench Verified results among production agents.
+- **Notes:** Commercial product and a paid standalone desktop app in this space. Public materials claim competitive SWE-bench Verified performance in production-agent benchmarks.
 
 ---
 
@@ -239,7 +239,7 @@ Tools for monitoring and interacting with agents from your phone or remotely.
   - Access conversation history offline
   - File mentions, slash commands, custom agents on mobile
   - Open source (MIT)
-- **Notes:** The leading mobile companion for coding agents. Genuinely useful for monitoring long-running tasks on the go. Free and open source.
+- **Notes:** A well-known mobile companion for coding agents, useful for monitoring long-running tasks on the go. Free and open source.
 
 ### Agent Viewer (via Tailscale)
 
@@ -266,7 +266,7 @@ Lightweight tools and configurations specifically for getting desktop or system 
   - macOS: `osascript -e 'display notification...'`
   - Linux: `notify-send`
   - Windows: PowerShell MessageBox
-- **Notes:** First-party solution. Zero dependencies. Should be your starting point.
+- **Notes:** First-party solution with no additional dependencies. A good starting point for many teams.
 
 ### CCNotify
 
@@ -296,7 +296,7 @@ Lightweight tools and configurations specifically for getting desktop or system 
 
 ### ai-agents-notifier (claude-code-notifier)
 
-- **GitHub:** [hta218/ai-agents-notifier](https://github.com/hta218/claude-code-notifier)
+- **GitHub:** [hta218/ai-agents-notifier](https://github.com/hta218/ai-agents-notifier)
 - **Platform:** macOS, Linux, Windows
 - **Agents:** Claude Code, GitHub Copilot CLI
 - **Features:**
@@ -318,7 +318,7 @@ Lightweight tools and configurations specifically for getting desktop or system 
   - Works over SSH tunnels — remote EC2 agent sends notification to local desktop
   - Multi-window UUID-based terminal mapping
   - Task description extraction for context-rich notifications
-- **Notes:** Best solution for remote development environments.
+- **Notes:** A good option for remote development environments.
 
 ---
 
@@ -394,7 +394,7 @@ Terminal tools for tracking token consumption, costs, and billing windows for co
 - **Platform:** VS Code 1.109+
 - **Agents:** GitHub Copilot, Claude (Anthropic), Codex (OpenAI)
 - **Features:**
-  - Unified sidebar view for ALL agent sessions (local, cloud, background)
+  - Unified sidebar view for agent sessions (local, cloud, background)
   - Real-time status tracking
   - Chat editor tabs for monitoring/course-correcting agents mid-run
   - Delegate tasks between agent types
@@ -409,7 +409,7 @@ Terminal tools for tracking token consumption, costs, and billing windows for co
 - **Agents:** GitHub Copilot, Claude, Codex
 - **Features:**
   - Assign agent sessions directly to issues and PRs
-  - Mission Control dashboard for all active sessions
+  - Mission Control dashboard for active sessions
   - Live session logs with mid-run steering
   - Multi-agent comparison on same task
   - Mobile access via GitHub Mobile
@@ -426,44 +426,44 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 - **GitHub:** [langfuse/langfuse](https://github.com/langfuse/langfuse)
 - **Website:** [langfuse.com](https://langfuse.com)
 - **Pricing:** Free (self-hosted), Cloud from $29/mo
-- **Key Strengths:** Open source, self-hostable, strong community, prompt versioning, session-based analysis, human annotation queues
+- **Key Strengths:** Open source, self-hostable, active community, prompt versioning, session-based analysis, human annotation queues
 - **Best For:** Teams wanting full data control with self-hosting
 
 ### LangSmith
 
 - **Website:** [smith.langchain.com](https://smith.langchain.com)
-- **Key Strengths:** Deep LangChain integration, virtually zero performance overhead, excellent tracing
+- **Key Strengths:** Deep LangChain integration, low overhead in vendor benchmarks, detailed tracing
 - **Best For:** Teams building with LangChain/LangGraph
 
 ### LangWatch
 
 - **Website:** [langwatch.ai](https://langwatch.ai)
-- **Key Strengths:** Full monitoring + evaluation + experimentation in one platform, fast setup (5 min)
-- **Best For:** Teams wanting comprehensive all-in-one solution
+- **Key Strengths:** Integrated monitoring, evaluation, and experimentation in one platform, with quick setup claims
+- **Best For:** Teams wanting an integrated monitoring and evaluation solution
 
 ### Braintrust
 
 - **Website:** [braintrust.dev](https://www.braintrust.dev)
-- **Key Strengths:** CI/CD integration for evals, dataset versioning, webhook alerts, strong cost attribution
+- **Key Strengths:** CI/CD integration for evals, dataset versioning, webhook alerts, granular cost attribution
 - **Best For:** Teams focused on continuous quality and evaluation
 
 ### Helicone (Open Source)
 
 - **Website:** [helicone.ai](https://helicone.ai)
 - **Pricing:** Free tier (10K requests/mo), Pro from $79/mo
-- **Key Strengths:** Proxy-based (just change base URL), zero code changes, fast setup
+- **Key Strengths:** Proxy-based (just change base URL), minimal code changes, fast setup
 - **Best For:** Quick visibility with minimal integration effort
 
 ### Maxim AI
 
 - **Website:** [getmaxim.ai](https://www.getmaxim.ai)
 - **Key Strengths:** End-to-end platform (simulation → evaluation → observability), AI-powered simulations, flexible evals, real-time alerts (Slack/PagerDuty/OpsGenie)
-- **Best For:** Enterprise teams needing comprehensive agent quality management
+- **Best For:** Enterprise teams needing broad agent quality management
 
 ### Arize AI (Phoenix)
 
 - **Website:** [arize.com](https://arize.com)
-- **Key Strengths:** Advanced drift detection for embeddings/LLM outputs, strong ML monitoring pedigree, enterprise-grade
+- **Key Strengths:** Advanced drift detection for embeddings/LLM outputs, established ML monitoring pedigree, enterprise-grade
 - **Best For:** Enterprises with existing ML infrastructure
 
 ### Datadog LLM Observability
@@ -483,7 +483,7 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 | Platform | Focus | Notes |
 |----------|-------|-------|
 | **Lunary** | Prompt management + monitoring | Self-hostable, user-friendly |
-| **Agenta** | Prompt experimentation | Finding best prompt×model combos |
+| **Agenta** | Prompt experimentation | Exploring effective prompt×model combinations |
 | **TruLens** (Snowflake) | Evaluation + tracing | Open-source library, acquired by Snowflake |
 | **Evidently AI** | Testing + monitoring | Built on open-source Evidently library |
 
@@ -509,7 +509,7 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
   - Failure detection and error tracking
   - Cost control and analytics
   - Self-hostable via Docker (ClickHouse + OTEL collector backend)
-- **Notes:** One of the most popular agent-focused observability SDKs. Open source dashboard was a recent addition.
+- **Notes:** A commonly used agent-focused observability SDK. Open source dashboard was a recent addition.
 
 ---
 
@@ -572,8 +572,8 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 ## Summary & Recommendations
 
 **For individual developers on macOS wanting to monitor multiple coding agents:**
-- Start with **Agent Deck** (terminal TUI, most feature-rich) or **Crystal** (desktop GUI) depending on whether you prefer terminal or graphical workflows.
-- Add **Happy Coder** if you want mobile push notifications.
+- Consider starting with **Agent Deck** (terminal TUI, full-featured) or **Crystal** (desktop GUI), depending on whether you prefer terminal or graphical workflows.
+- Consider **Happy Coder** if you want mobile push notifications.
 - Use **ccusage** for cost tracking.
 
 **For teams running production LLM applications:**
@@ -582,10 +582,10 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - **Datadog** or **Grafana** if you already have infrastructure monitoring in place.
 
 **For simple notifications (just tell me when Claude is done):**
-- Claude Code's built-in hooks are sufficient for most cases. Takes 2 minutes to configure.
+- Claude Code's built-in hooks are often sufficient in straightforward cases and can often be configured in a few minutes.
 - **code-notify** if you want voice announcements and cross-agent support.
 
-**The ecosystem is evolving rapidly.** Most of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is becoming a first-party concern for platform vendors, which may consolidate some of this fragmented tooling over time.
+**The ecosystem is evolving quickly.** Many of these tools appeared in mid-to-late 2025 and are being actively developed. VS Code's Agent Sessions and GitHub's Agent HQ (both February 2026) suggest that agent monitoring is increasingly a focus area for platform vendors, which may consolidate some of this fragmented tooling over time.
 
 ---
 

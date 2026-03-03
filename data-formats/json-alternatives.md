@@ -6,11 +6,11 @@ created: 2026-01-25
 
 _January 25, 2026_
 
-**JSON's dominance remains unchallenged for APIs, but TOML has emerged as the clear winner for configuration files** in modern toolchains. Performance benchmarks reveal that JSON parsers are consistently **5-650x faster** than human-readable alternatives—yet for config files parsed once at startup, this gap is irrelevant. The real driver of adoption is reduced syntax friction: TOML's explicit typing avoids YAML's infamous gotchas, while newer formats like **KDL** and **Pkl** (Apple, 2024) are gaining traction for document-heavy and type-safe configurations respectively.
+**JSON remains a widely used standard for APIs, while TOML has become a widely preferred format for configuration files** in modern toolchains. Performance benchmarks reveal that JSON parsers are consistently **5-650x faster** than human-readable alternatives, yet for config files parsed once at startup, this gap is often less important. The real driver of adoption is reduced syntax friction: TOML's explicit typing avoids many of YAML's gotchas, while newer formats like **KDL** and **Pkl** (Apple, 2024) are gaining traction for document-heavy and type-safe configurations respectively.
 
-The ecosystem has settled into distinct niches rather than crowning a single successor. YAML dominates DevOps (Kubernetes, GitHub Actions), TOML owns package management (Cargo.toml, pyproject.toml), and JSON holds firm for machine-to-machine APIs. Emerging formats target specialized needs: KDL for human-friendly documents, RON for Rust type safety, and Dhall for programmable configs that can never crash or hang.
+The ecosystem has settled into distinct niches rather than crowning a single successor. YAML is widely used in DevOps (Kubernetes, GitHub Actions), TOML is widely used in package management (Cargo.toml, pyproject.toml), and JSON holds firm for machine-to-machine APIs. Emerging formats target specialized needs: KDL for human-friendly documents, RON for Rust type safety, and Dhall for programmable configs designed to avoid non-termination.
 
-## Performance benchmarks show JSON still reigns for speed
+## Performance benchmarks show JSON still leads for speed
 
 The performance gap between JSON and its alternatives is substantial but context-dependent. Native JSON parsers benefit from decades of optimization and, in JavaScript/Python, C-level implementations.
 
@@ -49,7 +49,7 @@ line-length = 88
 
 **Limitations:** Deeply nested data becomes verbose (requires explicit `[a.b.c.d]` section headers), inline tables can't span lines, and no `null` type exists. TOML is deliberately unsuitable for general data serialization—it's purpose-built for configuration.
 
-### YAML remains dominant in DevOps despite its dangers
+### YAML remains widely used in DevOps despite its dangers
 
 YAML's indentation-based syntax and powerful features (anchors, aliases, multiline strings) make it expressive but treacherous:
 
@@ -61,11 +61,11 @@ countries: [DK, NO, SE]  # NO becomes boolean false!
 version: 1.10  # Becomes float 1.1
 ```
 
-The "Norway problem" alone has caused production incidents. Other gotchas include `~` parsing as null, tabs being forbidden, and arbitrary code execution via `!python/object` tags (always use `safe_load()`).
+The "Norway problem" alone has caused production incidents. Other gotchas include `~` parsing as null, tabs being forbidden, and arbitrary code execution via `!python/object` tags (use `safe_load()` for untrusted input).
 
-**Despite these issues, YAML is entrenched in DevOps**: Kubernetes manifests, Docker Compose, GitHub Actions, Ansible, Helm charts, AWS CloudFormation. The ecosystem lock-in is total—no format is displacing YAML in cloud-native tooling.
+**Despite these issues, YAML is deeply entrenched in DevOps**: Kubernetes manifests, Docker Compose, GitHub Actions, Ansible, Helm charts, AWS CloudFormation. The ecosystem lock-in is strong, and no other format is clearly displacing YAML in cloud-native tooling.
 
-**Library quality varies dramatically:** Python's `PyYAML` with CLoader is 17x faster than pure Python. In Node.js, `js-yaml` takes 504ms where native JSON takes 94ms—but both dwarf `yaml@2` at 2,108ms.
+**Library quality varies widely:** Python's `PyYAML` with CLoader is 17x faster than pure Python. In Node.js, `js-yaml` takes 504ms where native JSON takes 94ms—but both dwarf `yaml@2` at 2,108ms.
 
 ### JSON5 and HJSON: minimal friction for JSON users
 
@@ -119,7 +119,7 @@ GameConfig(
 )
 ```
 
-With **~2.8 million monthly downloads** on crates.io, RON dominates Rust game development (Bevy, Amethyst). However, it's deliberately Rust-centric—other language implementations are experimental at best.
+With **~2.8 million monthly downloads** on crates.io, RON is widely used in Rust ecosystems, including game development circles around projects like Bevy and Amethyst. However, it's deliberately Rust-centric, and implementations in other languages are generally less mature.
 
 ### Dhall and Pkl bring programming to configuration
 

@@ -8,7 +8,7 @@ _February 10, 2026_
 
 When we work with LLM-powered agents that use tools, we're navigating a design space with many independent dimensions. Understanding these dimensions — and how they interact — helps us make better decisions about architecture, security, trust, and user experience.
 
-This document describes eight axes that capture the most important aspects of agent-tool systems. Each axis is largely independent of the others, meaning you can be at any position on one axis regardless of where you are on another. That independence is what makes them useful as a reasoning framework: they give you a checklist of concerns that won't collapse into each other.
+This document describes eight axes that capture key aspects of agent-tool systems. Each axis is largely independent of the others, meaning you can be at any position on one axis regardless of where you are on another. That independence is what makes them useful as a reasoning framework: they give you a checklist of concerns that does not collapse into a single dimension.
 
 ---
 
@@ -53,7 +53,7 @@ Full human control                                    Full autonomy
                      within them
 ```
 
-This is distinct from topology. You can have a complex multi-agent system where a human must approve every tool call, or a single agent that runs completely unsupervised for hours. The axis captures the *locus of decision-making*: is the human deciding what to do and the agent executing, or is the agent deciding and the human merely informed?
+This is distinct from topology. You can have a complex multi-agent system where a human approves each tool call, or a single agent that runs completely unsupervised for hours. The axis captures the *locus of decision-making*: is the human deciding what to do and the agent executing, or is the agent deciding and the human merely informed?
 
 Most practical systems today sit in the middle: the agent operates freely for "safe" actions (reading files, running searches) but pauses for approval on "dangerous" ones (writing files, running shell commands, making API calls that cost money). The boundary between safe and dangerous is itself a design decision that interacts heavily with other axes.
 
@@ -79,9 +79,9 @@ This axis describes *what capabilities* the agent has access to and *how those c
   ● = granted    ○ = denied
 ```
 
-The security surface is best understood as a matrix: on one side, the *types of resources* (filesystem, network, environment variables, secrets, subprocesses, external services); on the other, the *operations* permitted on each (read, write, execute, delete). Orthogonal to this matrix is the *isolation mechanism*: is the agent running in a container, a VM, a sandbox with seccomp filters, a capability-restricted process, or just on your bare host OS with your user permissions?
+The security surface is often usefully understood as a matrix: on one side, the *types of resources* (filesystem, network, environment variables, secrets, subprocesses, external services); on the other, the *operations* permitted on each (read, write, execute, delete). Orthogonal to this matrix is the *isolation mechanism*: is the agent running in a container, a VM, a sandbox with seccomp filters, a capability-restricted process, or just on your bare host OS with your user permissions?
 
-The tighter the security surface, the less damage a misbehaving agent (or a prompt injection) can do — but also the less useful the agent is. This tension is fundamental and doesn't have a universal answer; it depends on the task, the trust level, and the consequences of failure.
+The tighter the security surface, the less damage a misbehaving agent (or a prompt injection) can do, but also the less useful the agent is. This tension is common and has no single universal answer; it depends on the task, the trust level, and the consequences of failure.
 
 **Example.** An agent that helps you write documentation might need only filesystem read access to your source code and write access to a docs directory. An agent that deploys your application might need network access, secret access for credentials, and the ability to run arbitrary shell commands. These are very different security profiles, and ideally the tooling makes it easy to express and enforce that difference rather than giving both agents the same broad permissions.
 
@@ -100,11 +100,11 @@ Pure read                                              Irreversible write
                              with git)    reverse)     unsend)
 ```
 
-This axis is about side effects. A tool call that reads a file leaves the world unchanged. A tool call that writes a file changes the world but in a way that's easily reversible (especially under version control). A tool call that sends an email or posts to a public API changes the world in a way you cannot take back.
+This axis is about side effects. A tool call that reads a file leaves the world unchanged. A tool call that writes a file changes the world but in a way that's often reversible (especially under version control). A tool call that sends an email or posts to a public API changes the world in ways that may be hard to fully reverse.
 
-The position on this axis should directly influence your position on the autonomy axis: the more irreversible the mutation, the more human oversight you probably want. It also interacts with security surface — write access to the filesystem is less alarming if you have good version control than if you don't.
+The position on this axis should directly influence your position on the autonomy axis: the harder the mutation is to reverse, the more human oversight you probably want. It also interacts with security surface — write access to the filesystem is less alarming if you have good version control than if you don't.
 
-**Example.** Consider an agent helping with database operations. Running `SELECT` queries is read-only and can be done freely. Generating `INSERT` or `UPDATE` statements is a reversible mutation if you have transactions and backups, but still warrants review. Running `DROP TABLE` or schema migrations is effectively irreversible in production and should require explicit human approval, or better yet, operate through a migration framework with rollback support rather than raw SQL execution.
+**Example.** Consider an agent helping with database operations. Running `SELECT` queries is read-only and can be done freely. Generating `INSERT` or `UPDATE` statements is a reversible mutation if you have transactions and backups, but still warrants review. Running `DROP TABLE` or schema migrations is often difficult to reverse in production and should require explicit human approval, or better yet, operate through a migration framework with rollback support rather than raw SQL execution.
 
 
 ## Axis 5: Determinism and Idempotency
@@ -129,9 +129,9 @@ This axis describes *how predictable and repeatable* a tool call is.
 
 These are actually two sub-dimensions. Determinism asks: *will I get the same result if I call this again?* Idempotency asks: *will calling this again change the world further?* A web search is non-deterministic (results change over time) but roughly idempotent (searching doesn't change anything). Sending an email is deterministic in its execution (the same email goes out) but non-idempotent (each call sends another copy).
 
-This matters for agent design because it affects caching, retries, and parallelism. If a tool call is deterministic and idempotent, you can cache its result and skip redundant calls. If it's non-idempotent, you must be very careful about retries — an agent that retries a failed `send_email` call might send the email twice.
+This matters for agent design because it affects caching, retries, and parallelism. If a tool call is deterministic and idempotent, you can cache its result and skip redundant calls. If it's non-idempotent, you should be very careful about retries — an agent that retries a failed `send_email` call might send the email twice.
 
-**Example.** An agent that gathers information by searching the web and reading files can safely retry any failed step and even parallelize its work. An agent that creates cloud infrastructure resources needs careful idempotency handling — if it creates a VM and then crashes before recording the result, it must be able to detect the existing VM on retry rather than creating a duplicate.
+**Example.** An agent that gathers information by searching the web and reading files can safely retry many failed steps and even parallelize its work. An agent that creates cloud infrastructure resources needs careful idempotency handling — if it creates a VM and then crashes before recording the result, it should be able to detect the existing VM on retry rather than creating a duplicate.
 
 
 ## Axis 6: Error Recovery and Observability
@@ -149,9 +149,9 @@ Opaque failure                                     Full observability
                                                            human can replay
 ```
 
-Every tool call can fail: the file might not exist, the API might time out, the command might return an error code. The question is what happens next. At one extreme, the agent gives up and surfaces a vague error. At the other extreme, the agent inspects the error, reasons about what went wrong, tries an alternative approach, and logs every step of this process for human review.
+Any tool call can fail: the file might not exist, the API might time out, the command might return an error code. The question is what happens next. At one extreme, the agent gives up and surfaces a vague error. At the other extreme, the agent inspects the error, reasons about what went wrong, tries an alternative approach, and logs every step of this process for human review.
 
-Observability is the often-neglected partner of error recovery. Even if the agent recovers gracefully, you want to know *that* it had to recover, *what* it tried, and *why*. This is especially important in multi-agent systems where a failure in one sub-agent might cascade or be masked by another agent's workaround.
+Observability is the often-neglected partner of error recovery. Even if the agent recovers gracefully, you want to know *that* it had to recover, *what* it tried, and *why*. This is particularly important in multi-agent systems where a failure in one sub-agent might cascade or be masked by another agent's workaround.
 
 **Example.** An agent running tests on your code might encounter a compilation error. A low-recovery, low-observability agent would say "I couldn't run the tests." A high-recovery, high-observability agent would read the compiler error, attempt to fix the code, re-run the tests, and present you with a log of everything it tried — including the approaches that didn't work — so you can evaluate not just the outcome but the process.
 
@@ -171,7 +171,7 @@ Lightweight                                              Heavyweight
                                                          data dumps
 ```
 
-LLM agents have a hard constraint that human tool users don't: every tool result occupies space in a finite context window, and that window is shared with the conversation history, system prompts, and the agent's own reasoning. This makes context cost a first-class design concern.
+LLM agents have a practical constraint that human tool users typically do not face in the same way: every tool result occupies space in a finite context window, and that window is shared with the conversation history, system prompts, and the agent's own reasoning. This makes context cost an important design concern.
 
 A tool that returns a 3-line JSON response is cheap. A tool that dumps an entire file or web page into context is expensive and might crowd out earlier conversation history or other tool results the agent needs. The design choices here include whether the tool should truncate or summarize its output, whether the agent should be able to request specific portions of a result (like line ranges from a file), and whether intermediate results can be compressed or discarded as the agent progresses.
 
@@ -207,13 +207,13 @@ This axis interacts with both security surface and autonomy. Tighter security li
 
 ## How the Axes Interact
 
-These axes are largely independent, but they're not completely orthogonal. Some combinations create emergent properties — either dangerous synergies or useful design patterns. Here are the most important interactions.
+These axes are largely independent, but they're not completely orthogonal. Some combinations create emergent properties, either dangerous synergies or useful design patterns. Here are key interactions.
 
 ### The Risk Triangle: Mutation × Autonomy × Security
 
 ```
                    State Mutation
-                  (irreversible)
+                 (hard to reverse)
                        /\
                       /  \
                      / !! \        !! = high-risk zone
@@ -223,7 +223,7 @@ These axes are largely independent, but they're not completely orthogonal. Some 
         Autonomy          Surface
 ```
 
-When an agent has broad permissions, high autonomy, and the ability to make irreversible changes, you're in the danger zone. Any one of these being constrained dramatically reduces risk. This is why the most common safety pattern is to allow high autonomy only for read-only operations, or to allow write operations only with human approval.
+When an agent has broad permissions, high autonomy, and the ability to make hard-to-reverse changes, you are likely in a high-risk zone. Constraining any one of these dimensions can meaningfully reduce risk. This is why a common safety pattern is to allow high autonomy for read-only operations, or to allow write operations with human approval.
 
 ### The Efficiency Triangle: Context Cost × Topology × Determinism
 
@@ -251,11 +251,11 @@ Complex multi-agent topologies generate a lot of intermediate results. If the to
   = very hard to audit, very hard to trust
 ```
 
-As topology grows more complex and trust chains lengthen, observability becomes more critical, not less. The tragedy is that complex systems are also the ones where observability is hardest to implement well. If you're building a multi-agent system with MCP server integration, invest in observability infrastructure proportional to the complexity of your trust chains.
+As topology grows more complex and trust chains lengthen, observability becomes more important, not less. The tragedy is that complex systems are also the ones where observability is hardest to implement well. If you're building a multi-agent system with MCP server integration, invest in observability infrastructure proportional to the complexity of your trust chains.
 
 ### Autonomy × Error Recovery
 
-Higher autonomy makes error recovery more important, because the human isn't there to notice and correct failures in real time. An agent running autonomously needs to be much better at detecting, diagnosing, and recovering from errors than one where a human is reviewing every step. This is another reason why fully autonomous operation is harder than it looks: it's not just about the happy path, it's about all the ways the unhappy path can compound when nobody's watching.
+Higher autonomy makes error recovery more important, because the human is not there to notice and correct failures in real time. An agent running autonomously usually needs more resilient detection, diagnosis, and recovery behavior than one where a human reviews every step. This is another reason fully autonomous operation is harder than it looks: it is not just about the happy path, it is also about how unhappy-path failures can compound when nobody is watching.
 
 ---
 
@@ -267,7 +267,7 @@ Axis                    Spectrum                         Key Question
 1. Interaction Topology  single agent ↔ multi-agent swarm  Who talks to whom?
 2. Degree of Autonomy    human-in-loop ↔ fully autonomous  Who makes decisions?
 3. Security Surface      locked down ↔ full host access     What can the agent touch?
-4. State Mutation        pure reads ↔ irreversible writes   Does this change the world?
+4. State Mutation        pure reads ↔ hard-to-reverse writes   Does this change the world?
 5. Determinism           pure functions ↔ side-effecting    Will I get the same result twice?
 6. Error Recovery        crash and report ↔ reason and adapt  What happens when things break?
 7. Context Cost          lightweight ↔ context-flooding      How much window does this consume?
@@ -275,6 +275,6 @@ Axis                    Spectrum                         Key Question
                          delegation                          executed?
 ```
 
-When designing or evaluating an agent-tool system, walk through each axis and ask where your system sits. The axes where you're furthest toward the "risky" end are the ones that deserve the most design attention. And pay special attention to the interactions — it's rarely a single axis that causes problems, but combinations that create emergent risk or emergent capability.
+When designing or evaluating an agent-tool system, walk through each axis and ask where your system sits. The axes where you're furthest toward the "risky" end are the ones that deserve additional design attention. And pay special attention to the interactions: it is rarely a single axis that causes problems, but combinations that create emergent risk or emergent capability.
 
-The goal isn't to minimize every axis (that would give you a useless system that can't do anything). It's to make *conscious, informed decisions* about the tradeoffs, and to make sure the axes that are set to "wide open" are balanced by axes that are set to "constrained."
+The goal is not to minimize every axis (that would produce a system with little practical utility). It is to make *conscious, informed decisions* about tradeoffs, and to make sure axes set to "wide open" are balanced by axes set to "constrained."
