@@ -20,13 +20,13 @@ One risk is qualitatively novel: **prompt injection**, which exploits LLMs' curr
 
 ### 1. Prompt Injection
 
-**What it is:** An LLM agent processes content from an external source — a file, a README, a GitHub issue, a web page, an error message — that contains instructions disguised as data. Because LLMs process all text through the same mechanism, with no hard boundary between "content to analyze" and "instructions to follow," the agent may treat the injected instructions as legitimate directives from the user.
+**What it is:** An LLM agent processes content from an external source — a file, a README, a GitHub issue, a web page, an error message — that contains instructions disguised as data. Because LLMs process all text through the same mechanism, often without a robust hard boundary between "content to analyze" and "instructions to follow," the agent may treat the injected instructions as legitimate directives from the user.
 
 This is broadly analogous to vulnerability classes like SQL injection, cross-site scripting, and buffer overflows: systems failing to maintain the boundary between data and executable instructions. In this taxonomy, it is a plausible candidate for a qualitatively new threat, while the others are largely speed or scale amplifications of existing risks.
 
 **Why it matters:** Unlike social engineering (which manipulates human _judgment_), prompt injection doesn't need to be persuasive. It just needs to be syntactically similar to legitimate instructions. The injected content doesn't need to convince the agent that following it is a good idea; it simply needs to appear in the context window alongside legitimate instructions, and the agent may follow it without any deliberation about whether it should.
 
-**Hypothetical example:** You ask your coding agent to refactor a module. The agent reads a dependency's README that contains hidden instructions (possibly in invisible Unicode characters) telling it to modify your `.vscode/settings.json` to auto-approve all future tool invocations, then download and execute a script from an attacker-controlled server. The agent follows these instructions because it cannot distinguish them from the refactoring task.
+**Hypothetical example:** You ask your coding agent to refactor a module. The agent reads a dependency's README that contains hidden instructions (possibly in invisible Unicode characters) telling it to modify your `.vscode/settings.json` to auto-approve all future tool invocations, then download and execute a script from an attacker-controlled server. The agent may follow these instructions because it may fail to distinguish them from the refactoring task.
 
 **Real incidents:**
 
@@ -146,7 +146,7 @@ In February 2026, researchers discovered that [nearly 3,000 Google API keys](htt
 
 **What it is:** LLMs plan multi-step workflows assuming continuity they don't have. They create permissive configurations "temporarily," broad-scope tokens "for now," experimental branches "to evaluate later" — and then the session ends. The artifacts persist without the plan to tighten, refine, or clean up. Subsequent LLM sessions (or human developers) may inherit these artifacts without the original intent and treat temporary states as permanent.
 
-**Why it matters:** This is not a single dramatic failure but a gradual accumulation of security debt. Each orphaned state is a small exposure — a too-permissive IAM role, a debug endpoint left enabled, a temporary file containing credentials, an overly broad CORS configuration. Individually they're minor; collectively they create an expanding attack surface that nobody fully understands because the intent behind each artifact has been lost.
+**Why it matters:** This is not a single dramatic failure but a gradual accumulation of security debt. Each orphaned state is a small exposure — a too-permissive IAM role, a debug endpoint left enabled, a temporary file containing credentials, an overly broad CORS configuration. Individually they're minor; collectively they create an expanding attack surface that teams may not fully understand because the intent behind each artifact has been lost.
 
 **Hypothetical example:** You ask your coding agent to set up a new microservice. During development, it creates a broadly-scoped API token ("we'll tighten the permissions once we know exactly which endpoints we need"), enables debug logging that includes request bodies ("useful for development"), adds a permissive CORS policy ("we can restrict this once we know the production domains"), and installs several dependencies "to evaluate which approach works best." The session ends. You ship the service. The broad token, the debug logging, the permissive CORS, and the unnecessary dependencies all go to production because the "tighten this later" step never happened.
 
