@@ -357,7 +357,7 @@ Logging evolved from the minimal `log` package to structured logging with **Zap*
 
 Go and Rust optimize for different objectives. Go prioritizes **simplicity and developer productivity**—25 keywords, rapid compilation, easy deployment. Rust prioritizes **memory safety and performance**—the ownership/borrowing model eliminates garbage collection but requires satisfying the borrow checker.
 
-Rust typically runs **10-30% faster** than Go on CPU-intensive tasks and provides fully deterministic memory behavior with zero runtime overhead. Go excels at **I/O-bound work**, handling thousands of concurrent network connections with goroutines consuming ~2KB each.
+Rust typically runs **10-30% faster** than Go on CPU-intensive tasks and provides more deterministic memory behavior without garbage-collection runtime overhead. Go excels at **I/O-bound work**, handling thousands of concurrent network connections with goroutines consuming ~2KB each.
 
 Compilation speed can differ noticeably: Go compiles large projects in seconds; Rust's borrow checker analysis and aggressive optimizations can take minutes for large codebases.
 

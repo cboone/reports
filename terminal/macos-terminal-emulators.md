@@ -69,7 +69,7 @@ Ghostty's native Swift/SwiftUI implementation provides genuine macOS-native beha
 | Scripting | Python API | Apple Shortcuts | Python kittens | IPC only | Lua | Workflows |
 | Search | ✓ | Evolving | ✓ | ✓ | ✓ | ✓ |
 
-Terminal.app's **absence of split panes** remains a notable UX gap; users generally rely on separate windows or tmux. macOS Tahoe is expected to bring true color and Powerline font support to Terminal.app, representing "a long-overdue modernization" after years of comparatively slow feature evolution.
+Terminal.app's **absence of split panes** remains a notable UX gap; users generally rely on separate windows or tmux. macOS Tahoe is expected to bring true color and Powerline font support to Terminal.app, often described as "a long-overdue modernization" after years of comparatively slow feature evolution.
 
 ## Configuration philosophies define user experience
 
