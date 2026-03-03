@@ -57,7 +57,7 @@ Marriott later reflected that he hadn't expected the inclusion: *"Paul Irofti br
 
 The following timeline documents major tmux releases from inception through 2025:
 
-### The foundational years (2007-2012)
+### The early years (2007-2012)
 
 | Version | Date | Significance |
 |---------|------|--------------|

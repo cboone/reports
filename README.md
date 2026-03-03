@@ -19,7 +19,7 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 
 ### [Agile methodology: sources and references](agile/bibliography.md)
 
-Primary sources, foundational documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
+Primary sources, core documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
 
 ### [Complete timeline of agile programming](agile/timeline.md)
 
@@ -67,7 +67,7 @@ History and catalog of programming fonts from typewriters through CRT terminals 
 
 ### [Go: a cloud-native language](go/go-cloud-native-language.md)
 
-Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became a prominent language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of foundational papers, talks, and books.
+Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became a prominent language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of key papers, talks, and books.
 
 ## Hacker News
 
@@ -137,7 +137,7 @@ How a radical simplification of Smalltalk — removing classes entirely in favor
 
 ### [The Self programming language: key papers and resources](self/bibliography.md)
 
-Key academic papers and resources on Self and its technical legacy, including the foundational OOPSLA and ECOOP papers by Ungar, Smith, Chambers, and Hölzle, doctoral theses, implementation guides, and the Self language website and community resources.
+Key academic papers and resources on Self and its technical legacy, including the landmark OOPSLA and ECOOP papers by Ungar, Smith, Chambers, and Hölzle, doctoral theses, implementation guides, and the Self language website and community resources.
 
 ### [Timeline of Self and its legacy](self/timeline.md)
 

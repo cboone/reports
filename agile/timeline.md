@@ -14,7 +14,7 @@ From Toyota's factory floors to today's global software industry, this timeline 
 
 **1940s** — **Taiichi Ohno** begins developing the Toyota Production System (TPS) at Toyota Motor Corporation in Japan, introducing concepts like just-in-time delivery, continuous improvement (kaizen), and respect for workers that will later influence agile thinking.
 
-**1950** — **W. Edwards Deming** teaches statistical quality control to Japanese engineers; his Plan-Do-Study-Act (PDSA) cycle becomes foundational to iterative improvement philosophies.
+**1950** — **W. Edwards Deming** teaches statistical quality control to Japanese engineers; his Plan-Do-Study-Act (PDSA) cycle becomes highly influential in iterative improvement philosophies.
 
 **1950s** — **Shigeo Shingo** collaborates with Ohno to refine TPS, developing Single-Minute Exchange of Dies (SMED) and poka-yoke (mistake-proofing) techniques.
 

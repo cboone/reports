@@ -76,7 +76,7 @@ At **Göttingen**, then the world's premier mathematics center, David Hilbert re
 
 The *Entscheidungsproblem* (decision problem), formalized by Hilbert and Ackermann in 1928, captured the fourth requirement: is there a general procedure to determine whether any mathematical statement is true? Hilbert expected—and hoped—the answer was yes.
 
-In 1931, **Kurt Gödel** at the University of Vienna dealt a major blow to this program in a single paper. At 25 years old, he proved his incompleteness theorems: any consistent formal system capable of expressing basic arithmetic contains true statements that cannot be proved within the system, and no such system can prove its own consistency. Gödel's technique, *Gödel numbering*, encoded formulas as numbers, allowing mathematical systems to "talk about themselves." This self-referential method became foundational to later computability theory.
+In 1931, **Kurt Gödel** at the University of Vienna dealt a major blow to this program in a single paper. At 25 years old, he proved his incompleteness theorems: any consistent formal system capable of expressing basic arithmetic contains true statements that cannot be proved within the system, and no such system can prove its own consistency. Gödel's technique, *Gödel numbering*, encoded formulas as numbers, allowing mathematical systems to "talk about themselves." This self-referential method became central to later computability theory.
 
 ---
 
@@ -334,7 +334,7 @@ The geography of computing theory reflects the concentration of talent at specif
 - [Toronto (PDF)](https://www.cs.toronto.edu/~chechik/courses05/csc410/readings/dijkstra.pdf)
 - [UT Austin Dijkstra Archive](https://www.cs.utexas.edu/~EWD/transcriptions/EWD04xx/EWD472.html)
 
-### Other foundational papers
+### Other landmark papers
 
 **Codd** — "A Relational Model of Data for Large Shared Data Banks" (1970)
 - [UPenn (PDF)](https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf)

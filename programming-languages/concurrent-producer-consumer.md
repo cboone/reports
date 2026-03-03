@@ -955,7 +955,7 @@ Clojure's `core.async` brings Go-style channels to the Lisp world. `go` blocks a
 
 ### JVM Family Comparison
 
-The JVM family reveals decades of concurrency evolution. Java provides foundational primitives (`BlockingQueue`, `CountDownLatch`, `ExecutorService`) that are explicit and verbose. Scala adds `Future` composition and pattern matching for cleaner coordination. Kotlin imports Go's channel model with coroutines. Clojure imports Go's channel model with Lisp syntax and immutable data.
+The JVM family reveals decades of concurrency evolution. Java provides core primitives (`BlockingQueue`, `CountDownLatch`, `ExecutorService`) that are explicit and verbose. Scala adds `Future` composition and pattern matching for cleaner coordination. Kotlin imports Go's channel model with coroutines. Clojure imports Go's channel model with Lisp syntax and immutable data.
 
 The trend is clear: newer JVM languages all move toward lightweight concurrency (virtual threads, coroutines) and channel-based communication, converging on the model that Go and Erlang popularized.
 

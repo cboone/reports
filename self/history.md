@@ -46,7 +46,7 @@ The VM influence runs even deeper. After Sun cancelled Self, Hölzle and Bak fou
 
 ## Key academic papers and resources
 
-The foundational paper "Self: The Power of Simplicity" by Ungar and Smith (OOPSLA 1987, revised 1991) is available at https://bibliography.selflanguage.org/_static/self-power.pdf. The maps concept appears in "An Efficient Implementation of Self" by Chambers, Ungar, and Lee (OOPSLA 1989) at https://bibliography.selflanguage.org/_static/implementation.pdf.
+The landmark paper "Self: The Power of Simplicity" by Ungar and Smith (OOPSLA 1987, revised 1991) is available at https://bibliography.selflanguage.org/_static/self-power.pdf. The maps concept appears in "An Efficient Implementation of Self" by Chambers, Ungar, and Lee (OOPSLA 1989) at https://bibliography.selflanguage.org/_static/implementation.pdf.
 
 Polymorphic inline caches are detailed in "Optimizing Dynamically-Typed Object-Oriented Languages With Polymorphic Inline Caches" by Hölzle, Chambers, and Ungar (ECOOP 1991) at https://bibliography.selflanguage.org/_static/pics.pdf. Hölzle's comprehensive PhD thesis "Adaptive Optimization for Self" (Stanford 1994) covers type feedback and deoptimization at https://bibliography.selflanguage.org/_static/urs-thesis.pdf.
 
