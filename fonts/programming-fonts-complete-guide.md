@@ -176,7 +176,7 @@ Installation methods include direct download from GitHub releases, Homebrew (`br
 
 ## Platform rendering differences affect font appearance
 
-Font rendering varies dramatically across operating systems:
+Font rendering varies significantly across operating systems:
 
 **Windows ClearType** uses heavy hinting that aligns characters to the pixel grid, producing sharp text that can distort letterforms. **macOS** uses no hinting, instead dilating fonts slightly ("smoothing") for text that's truer to the design but can appear blurry to Windows users. **Linux FreeType** is highly configurable with adjustable hinting levels and subpixel rendering options.
 

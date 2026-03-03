@@ -418,7 +418,7 @@ These tools center the workflow around git worktree management, with agent and t
 - **Configurable via `config.json`:** Shell, Claude command, port pool, worktree base directory
 - **Zero external tooling:** Just Claude Code and git
 
-**Limitations.** Relies entirely on Claude Code's ability to follow skill instructions reliably. No TUI or status monitoring. The skill approach means no persistent process watching over sessions.
+**Limitations.** Relies heavily on Claude Code's ability to follow skill instructions reliably. No TUI or status monitoring. The skill approach means no persistent process watching over sessions.
 
 ---
 

@@ -6,7 +6,7 @@ created: 2026-02-03
 
 _February 3, 2026_
 
-The most successful Show HN posts share a surprising common thread: **authenticity over polish**. Analysis of the top-performing posts from 2024-2026 reveals that personal projects with genuine backstories—often built over multiple years by passionate individuals—dramatically outperform professionally marketed launches. DIY hardware projects achieve front-page status at nearly **3x the rate** of AI-related posts, and open-source projects with clear technical merit consistently reach the top.
+The most successful Show HN posts share a surprising common thread: **authenticity over polish**. Analysis of the top-performing posts from 2024-2026 suggests that personal projects with genuine backstories, often built over multiple years by passionate individuals, frequently outperform professionally marketed launches. DIY hardware projects achieve front-page status at nearly **3x the rate** of AI-related posts, and open-source projects with clear technical merit consistently reach the top.
 
 The formula is straightforward but counterintuitive: write like you're explaining your project to a technically-minded friend over drinks, provide something people can actually try with zero friction, and be prepared to engage deeply with every commenter—including critics—as if they're doing you a favor.
 

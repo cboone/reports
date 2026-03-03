@@ -6,7 +6,7 @@ created: 2026-01-27
 
 _January 27, 2026_
 
-Terminal emulators on macOS have evolved dramatically, with **GPU-accelerated rendering now standard**, graphics protocols maturing, and AI integration emerging as a differentiating feature. Ghostty's late-2024 release disrupted the landscape with its native Metal renderer and Zig-based performance, while established players like iTerm2 and Kitty continue advancing protocol standards. This review evaluates nine major terminals across performance, standards compliance, and integration capabilities.
+Terminal emulators on macOS have evolved substantially, with **GPU-accelerated rendering now standard**, graphics protocols maturing, and AI integration emerging as a differentiating feature. Ghostty's late-2024 release shifted attention in the landscape with its native Metal renderer and Zig-based performance, while established players like iTerm2 and Kitty continue advancing protocol standards. This review evaluates nine major terminals across performance, standards compliance, and integration capabilities.
 
 ## Performance leaders differ by metric
 
