@@ -262,7 +262,7 @@ PureScript is nearly identical to Haskell here. The differences emerge in other 
 
 ### ML Family Comparison
 
-Across the ML family, the expression tree evaluator is remarkably uniform. Every language defines the type in about four lines and the evaluator in four more. The differences are syntactic details: `data` vs. `datatype` vs. `type`, `->` vs. `=` in match arms, tupled vs. curried constructors.
+Across the ML family, the expression tree evaluator is fairly uniform. Every language defines the type in about four lines and the evaluator in four more. The differences are syntactic details: `data` vs. `datatype` vs. `type`, `->` vs. `=` in match arms, tupled vs. curried constructors.
 
 This uniformity is not a coincidence. The ML family was designed at the intersection of type theory and programming language implementation. Evaluating a recursive data structure by structural recursion is a classic use case. If the "indices above mean" algorithm made the APL family look effortless and other families look labored, this algorithm does the reverse: the ML family is especially at home, while array languages generally improvise.
 
@@ -345,7 +345,7 @@ Racket, evolved from Scheme, adds a `match` form that provides structural patter
     [(list 'mul e1 e2)   (* (eval-expr e1) (eval-expr e2))]))
 ```
 
-Racket's `match` gives the code a remarkably ML-like feel. The pattern `(list 'lit n)` matches a list whose first element is the symbol `lit` and binds the second element to `n`. This is pattern matching over untyped data — we get the syntactic clarity of ML without the static type guarantees.
+Racket's `match` gives the code a more ML-like feel. The pattern `(list 'lit n)` matches a list whose first element is the symbol `lit` and binds the second element to `n`. This is pattern matching over untyped data — we get the syntactic clarity of ML without the static type guarantees.
 
 ### Clojure
 
@@ -488,7 +488,7 @@ eval({add, E1, E2}) -> eval(E1) + eval(E2);
 eval({mul, E1, E2}) -> eval(E1) * eval(E2).
 ```
 
-Erlang's function clauses with pattern matching make this remarkably clean. Each clause matches a tuple shape and binds variables. The syntax is close to the mathematical definition. Variables are capitalized (Erlang convention), and clauses are separated by semicolons with a final period.
+Erlang's function clauses with pattern matching make this fairly clean. Each clause matches a tuple shape and binds variables. The syntax is close to the mathematical definition. Variables are capitalized (Erlang convention), and clauses are separated by semicolons with a final period.
 
 Example:
 
@@ -652,7 +652,7 @@ static double eval(Expr expr) {
 }
 ```
 
-Modern Java (21+) with sealed interfaces, records, and pattern matching in switch expressions reads remarkably close to the ML versions. The `sealed` keyword ensures exhaustiveness — the compiler knows all possible implementations of `Expr` and can verify that the switch covers every case. This is Java adopting ML-family ideas after decades of relying on the visitor pattern.
+Modern Java (21+) with sealed interfaces, records, and pattern matching in switch expressions reads quite close to the ML versions. The `sealed` keyword ensures exhaustiveness — the compiler knows all possible implementations of `Expr` and can verify that the switch covers every case. This is Java adopting ML-family ideas after decades of relying on the visitor pattern.
 
 The classic pre-Java-21 approach would use the visitor pattern:
 

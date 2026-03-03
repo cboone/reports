@@ -400,7 +400,7 @@ Clojure is a modern Lisp on the JVM, emphasizing immutability and concurrency.
     (keep-indexed (fn [i x] (when (> x mean) i)) xs)))
 ```
 
-Clojure's `keep-indexed` combines indexing, filtering, and mapping: it calls the function with each index and element, keeping non-nil results. The `when` form returns `nil` when the condition is false, which `keep-indexed` discards. This is remarkably concise for a Lisp.
+Clojure's `keep-indexed` combines indexing, filtering, and mapping: it calls the function with each index and element, keeping non-nil results. The `when` form returns `nil` when the condition is false, which `keep-indexed` discards. This is quite concise for a Lisp.
 
 Alternatively, using a for comprehension:
 
@@ -675,7 +675,7 @@ def aboveMean(xs: Seq[Double]): Seq[Int] = {
 }
 ```
 
-Scala's `collect` combines filtering and mapping with pattern matching. The `case` guard `if x > mean` filters, and the right side `=> i` extracts the index. This is remarkably concise compared to Java.
+Scala's `collect` combines filtering and mapping with pattern matching. The `case` guard `if x > mean` filters, and the right side `=> i` extracts the index. This is quite concise compared to Java.
 
 Scala 3 syntax allows even cleaner expressions:
 
@@ -1086,7 +1086,7 @@ def above_mean(xs):
     return [i for i, x in enumerate(xs) if x > mean]
 ```
 
-Python's list comprehension with `enumerate` is remarkably concise. The intent is clear: for each index `i` and value `x` from the enumerated list, keep `i` if `x` exceeds the mean. This three-line solution rivals the brevity of functional languages while remaining readable to newcomers.
+Python's list comprehension with `enumerate` is quite concise. The intent is clear: for each index `i` and value `x` from the enumerated list, keep `i` if `x` exceeds the mean. This three-line solution rivals the brevity of functional languages while remaining readable to newcomers.
 
 For numerical work, NumPy provides array operations:
 
