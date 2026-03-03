@@ -34,7 +34,7 @@ IBM’s Federal Systems Division, seeded by Mercury personnel,  became a major p
 
 -----
 
-## Waterfall became dominant despite its creator’s warnings
+## Waterfall became widespread despite its creator’s warnings
 
 The irony of waterfall’s dominance lies in how thoroughly its original description was misread. **Winston Royce’s 1970 paper** “Managing the Development of Large Software Systems” presented the sequential model but explicitly warned: “I believe in this concept, but the implementation described above is risky and invites failure.” Royce actually recommended building the system twice, with a preliminary version preceding the delivered product, and incorporating feedback loops between phases.  His son Walker later confirmed: “He was always a proponent of iterative, incremental, evolutionary development.” 
 
@@ -44,7 +44,7 @@ Results were often poor. Late-1990s DoD reviews frequently reported high failure
 
 -----
 
-## Seventeen practitioners gathered at Snowbird and changed everything
+## Seventeen practitioners gathered at Snowbird and reshaped methods
 
 By early 2001, multiple lightweight methodologies had emerged independently—Extreme Programming, Scrum, Crystal, Adaptive Software Development, DSDM, Feature-Driven Development—each tackling waterfall’s failures differently.  **Robert C. Martin** (“Uncle Bob”) initiated a gathering with a September 2000 email seeking to convene “all the lightweight method leaders in one room.” 
 
@@ -98,7 +98,7 @@ His 2010 book *Kanban: Successful Evolutionary Change for Your Technology Busine
 
 -----
 
-## The foundational books established agile’s intellectual canon
+## Influential books established agile’s intellectual canon
 
 The year 1999 proved pivotal for agile literature. **Kent Beck’s** *Extreme Programming Explained: Embrace Change* defined XP’s practices and philosophy,   later revised in 2004 to add “respect” as a fifth value and reorganize practices based on accumulated experience.  Reviewers called it “dynamite” for changing industry thinking.
 

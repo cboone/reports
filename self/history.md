@@ -54,6 +54,6 @@ The official Self bibliography at https://bibliography.selflanguage.org/ provide
 
 ## Conclusion
 
-Self represents a fascinating paradox: a language that "failed" commercially yet became foundational to modern computing. The techniques Ungar, Smith, Chambers, Hölzle, and Bak developed at PARC, Stanford, and Sun are now embedded in mainstream JavaScript and JVM runtimes, as well as in modern JIT compiler design generally.  Self's vision of "simplicity, uniformity, concreteness, and liveness" lives on  not in Self programs but in infrastructure that powers a large share of modern software.
+Self represents a fascinating paradox: a language that "failed" commercially yet became highly influential in modern computing. The techniques Ungar, Smith, Chambers, Hölzle, and Bak developed at PARC, Stanford, and Sun are now embedded in mainstream JavaScript and JVM runtimes, as well as in modern JIT compiler design generally.  Self's vision of "simplicity, uniformity, concreteness, and liveness" lives on not in Self programs but in infrastructure that powers a large share of modern software.
 
 The language also demonstrated that radical simplification can drive innovation. By eliminating classes, Self forced its implementers to invent new optimization strategies—strategies that proved more powerful and general than the class-based approaches they replaced. Self's lesson for language designers: constraints can catalyze creativity, and today's research curiosity may become tomorrow's invisible foundation.
