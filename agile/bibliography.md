@@ -179,10 +179,10 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 ## State of Agile Reports and Industry Analysis
 
-- KnowledgeHut. "State of Agile 2025: Things You Need to Know." [https://www.knowledgehut.com/blog/agile/state-of-agile](https://www.knowledgehut.com/blog/agile/state-of-agile)
-- StarAgile. "State of Agile 2025: Insights, Trends, and Key Findings." [https://staragile.com/blog/state-of-agile](https://staragile.com/blog/state-of-agile)
-- Electro IQ. "Agile Statistics and Facts: Adoption, Market Size & Trends (2025)." [https://electroiq.com/stats/agile-statistics/](https://electroiq.com/stats/agile-statistics/)
+- Digital.ai. "17th State of Agile Report." [https://digital.ai/resource-center/analyst-reports/state-of-agile-report](https://digital.ai/resource-center/analyst-reports/state-of-agile-report)
 - PMWares. "17th Annual State of Agile Report – Summary & Key Findings." [https://pmwares.com/summary-of-the-17th-annual-state-of-agile-report-summary-key-findings/](https://pmwares.com/summary-of-the-17th-annual-state-of-agile-report-summary-key-findings/)
+
+Note: annual "state of agile" reports are often vendor-sponsored or survey-driven; use them as directional evidence rather than neutral ground truth.
 
 ---
 

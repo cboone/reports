@@ -407,6 +407,10 @@ Go reached **#7 on the TIOBE Index** in November 2024, its all-time high at that
 
 ## Annotated bibliography
 
+- **Primary sources:** Go project docs/blog/specs, original papers, and official release materials.
+- **Secondary sources:** Books, talks, and ecosystem analyses.
+- **Caveat:** Popularity and market-position metrics are drawn from public indices and surveys; treat them as directional.
+
 ### Foundational papers
 
 **"Communicating Sequential Processes" — C.A.R. Hoare (1978)**
@@ -429,6 +433,7 @@ https://go.dev/blog/waza-talk
 Clarifies the distinction that confused many newcomers and explains CSP through the memorable "gopher" analogy. Key quote: "Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once."
 
 **"Simplicity is Complicated" — Rob Pike (dotGo 2015)**
+https://go.dev/talks/2015/simplicity-is-complicated.slide
 Explains how Go achieves apparent simplicity through hidden complexity—features like garbage collection, goroutines, and interfaces each hide enormous implementation work behind simple facades.
 
 ### Official documentation
@@ -454,14 +459,17 @@ Often described as the "K&R for Go" for its broad coverage. Kernighan co-authore
 
 **"Concurrency in Go" — Katherine Cox-Buday (2017)**
 O'Reilly Media
+https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/
 A widely cited resource for concurrent programming patterns: pipelines, fan-out/fan-in, cancellation, context. Particularly useful once you move beyond basic goroutine usage.
 
 **"100 Go Mistakes and How to Avoid Them" — Teiva Harsanyi (2022)**
 Manning Publications
+https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
 Practical guide to common pitfalls covering concurrency bugs, error handling mistakes, testing anti-patterns. Valuable for intermediate developers.
 
 **"Learning Go" — Jon Bodner (2nd edition, 2024)**
 O'Reilly Media
+https://www.oreilly.com/library/view/learning-go-2nd/9781098139285/
 Modern introduction including generics. Good for developers coming from other languages who want efficient onboarding.
 
 ### Historical documents
@@ -471,6 +479,7 @@ https://opensource.googleblog.com/2009/11/hey-ho-lets-go.html
 The original public announcement on Google's Open Source blog.
 
 **Go 1.0 Release Notes (March 2012)**
+https://go.dev/doc/go1
 Established the Go 1 compatibility promise that enabled enterprise adoption.
 
 **"Go 1.18 is released!" (March 15, 2022)**
