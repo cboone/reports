@@ -1453,7 +1453,7 @@ function result = eval_expr(expr)
 end
 ```
 
-MATLAB structs with a type field and a switch statement — essentially the same approach as JavaScript and Lua. MATLAB's matrix operations are irrelevant here, and the code is straightforward but unexceptional. This is far from MATLAB's sweet spot.
+MATLAB structs with a type field and a switch statement — essentially the same approach as JavaScript and Lua. MATLAB's matrix operations are less relevant here, and the code is straightforward but unexceptional. This is outside MATLAB's usual sweet spot.
 
 ### R
 

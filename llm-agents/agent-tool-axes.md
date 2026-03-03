@@ -102,9 +102,9 @@ Pure read                                              Irreversible write
 
 This axis is about side effects. A tool call that reads a file leaves the world unchanged. A tool call that writes a file changes the world but in a way that's often reversible (especially under version control). A tool call that sends an email or posts to a public API changes the world in ways that may be hard to fully reverse.
 
-The position on this axis should directly influence your position on the autonomy axis: the more irreversible the mutation, the more human oversight you probably want. It also interacts with security surface — write access to the filesystem is less alarming if you have good version control than if you don't.
+The position on this axis should directly influence your position on the autonomy axis: the harder the mutation is to reverse, the more human oversight you probably want. It also interacts with security surface — write access to the filesystem is less alarming if you have good version control than if you don't.
 
-**Example.** Consider an agent helping with database operations. Running `SELECT` queries is read-only and can be done freely. Generating `INSERT` or `UPDATE` statements is a reversible mutation if you have transactions and backups, but still warrants review. Running `DROP TABLE` or schema migrations is effectively irreversible in production and should require explicit human approval, or better yet, operate through a migration framework with rollback support rather than raw SQL execution.
+**Example.** Consider an agent helping with database operations. Running `SELECT` queries is read-only and can be done freely. Generating `INSERT` or `UPDATE` statements is a reversible mutation if you have transactions and backups, but still warrants review. Running `DROP TABLE` or schema migrations is often difficult to reverse in production and should require explicit human approval, or better yet, operate through a migration framework with rollback support rather than raw SQL execution.
 
 
 ## Axis 5: Determinism and Idempotency
@@ -213,7 +213,7 @@ These axes are largely independent, but they're not completely orthogonal. Some 
 
 ```
                    State Mutation
-                  (irreversible)
+                 (hard to reverse)
                        /\
                       /  \
                      / !! \        !! = high-risk zone
@@ -223,7 +223,7 @@ These axes are largely independent, but they're not completely orthogonal. Some 
         Autonomy          Surface
 ```
 
-When an agent has broad permissions, high autonomy, and the ability to make irreversible changes, you are likely in a high-risk zone. Constraining any one of these dimensions can meaningfully reduce risk. This is why a common safety pattern is to allow high autonomy for read-only operations, or to allow write operations with human approval.
+When an agent has broad permissions, high autonomy, and the ability to make hard-to-reverse changes, you are likely in a high-risk zone. Constraining any one of these dimensions can meaningfully reduce risk. This is why a common safety pattern is to allow high autonomy for read-only operations, or to allow write operations with human approval.
 
 ### The Efficiency Triangle: Context Cost × Topology × Determinism
 
@@ -267,7 +267,7 @@ Axis                    Spectrum                         Key Question
 1. Interaction Topology  single agent ↔ multi-agent swarm  Who talks to whom?
 2. Degree of Autonomy    human-in-loop ↔ fully autonomous  Who makes decisions?
 3. Security Surface      locked down ↔ full host access     What can the agent touch?
-4. State Mutation        pure reads ↔ irreversible writes   Does this change the world?
+4. State Mutation        pure reads ↔ hard-to-reverse writes   Does this change the world?
 5. Determinism           pure functions ↔ side-effecting    Will I get the same result twice?
 6. Error Recovery        crash and report ↔ reason and adapt  What happens when things break?
 7. Context Cost          lightweight ↔ context-flooding      How much window does this consume?
