@@ -66,7 +66,7 @@ _January 21, 2026_
 
 The intellectual foundations of computer science begin not with machines but with a crisis in mathematics. When Gottlob Frege published his *Begriffsschrift* in 1879 at the **University of Jena**, he created the first formal system of predicate logic—replacing **2,300 years of Aristotelian subject-predicate analysis** with a more powerful function-argument framework. This seemingly abstract innovation would become the language in which computation could be precisely described.
 
-Frege's goal was *logicism*: proving that mathematics derives purely from logic. His system introduced quantification ("for all," "there exists"), enabling statements about infinite collections. But this ambitious program collapsed dramatically when **Bertrand Russell** discovered his famous paradox in 1901. Consider the set of all sets that don't contain themselves—does it contain itself? Either answer contradicts the other.
+Frege's goal was *logicism*: proving that mathematics derives purely from logic. His system introduced quantification ("for all," "there exists"), enabling statements about infinite collections. But this ambitious program ran into a major obstacle when **Bertrand Russell** discovered his famous paradox in 1901. Consider the set of all sets that don't contain themselves—does it contain itself? Either answer contradicts the other.
 
 Russell communicated this devastating result to Frege in a letter dated June 16, 1902, while Frege's second volume of *Grundgesetze der Arithmetik* was literally at the printer. Frege's response acknowledged the paradox "shook the foundations" of his life's work. This single logical puzzle triggered a **decades-long crisis** that reshaped mathematics and eventually gave birth to computer science.
 
