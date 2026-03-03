@@ -18,6 +18,13 @@ This comparison is based primarily on official tool documentation and upstream r
 Because configuration semantics change frequently (especially around permissions and sandboxing), details should be treated as a versioned snapshot rather than permanent guarantees.
 Where ecosystem behaviors are inferred from community usage patterns, they are marked as directional.
 
+## Methodology transparency
+
+- **Scope:** Configuration surfaces that materially affect runtime behavior, including permissions, sandboxing, MCP integration, model selection, and policy override layers.
+- **Mapping approach:** Tool-specific terms are translated into shared concepts (project-local, user-level, managed/enterprise, runtime override) for comparability.
+- **Precedence handling:** Priority orders are represented from documented behavior; undocumented edge cases are intentionally excluded.
+- **Operational caveat:** Organization policy, platform packaging, and rollout channel can materially change effective behavior in real deployments.
+
 ---
 
 ## The Root Directory Footprint

@@ -16,6 +16,13 @@ This document prioritizes first-party specifications and product documentation f
 Cross-tool compatibility behavior can change quickly as standards evolve, so support claims should be read as time-bounded.
 Adoption and ecosystem breadth statements are directional and depend on public repository metadata that may shift.
 
+## Methodology transparency
+
+- **Scope:** Instruction-file behavior across Claude Code, Codex, Copilot, OpenCode, and the shared SKILL.md standard.
+- **Comparison process:** Hierarchy, precedence, and scoping are normalized into common categories so different products can be compared side-by-side.
+- **Evidence priority:** First-party docs and specs take precedence over community interpretation when statements conflict.
+- **Drift caveat:** Tool behavior can vary by release channel, enterprise policy layer, and editor integration version.
+
 ---
 
 ## Comparison Table
