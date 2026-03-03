@@ -28,7 +28,7 @@ The creators brought extraordinary depth to Go's design. **Ken Thompson** co-cre
 
 **Robert Griesemer** earned his PhD from ETH Zurich under Niklaus Wirth (creator of Pascal and Oberon), worked on Google's V8 JavaScript engine, and contributed to the Java HotSpot Virtual Machine. He would later lead Go's generics design.
 
-Steve Francia, Go Product Lead at Google, observed: "There has never been a set of language designers with broader or deeper language design expertise than these three."
+Steve Francia, Go Product Lead at Google, argued: "There has never been a set of language designers with broader or deeper language design expertise than these three."
 
 ---
 
@@ -150,7 +150,7 @@ func (f MyFile) Read(p []byte) (n int, err error) {
 var r Reader = MyFile{}  // Works—structural match, no "implements" keyword
 ```
 
-This contrasts sharply with Java or C#, where types must explicitly declare `implements Reader`. Go's approach decouples interfaces from implementations: you can define an interface in one package for types implemented in packages you don't control.
+This contrasts with Java or C#, where types typically declare `implements Reader` explicitly. Go's approach decouples interfaces from implementations: you can define an interface in one package for types implemented in packages you don't control.
 
 Internally, interface values are **two machine words**: a pointer to type metadata (including a method table) and a pointer to the actual data. Method tables are computed at first use by comparing method signatures, then cached globally. The empty interface `interface{}` (aliased to `any` since Go 1.18) can hold any value since every type satisfies an interface with zero methods.
 
@@ -287,7 +287,7 @@ The ecosystem includes **proxy.golang.org** (module proxy caching modules for av
 
 Go ships with opinionated tools that eliminate debates about style and workflow.
 
-**gofmt** enforces a single canonical code format. There is no configuration—all Go code looks the same. This was revolutionary when Go launched and has since influenced other languages. The Go team uses gofmt for all standard library code.
+**gofmt** enforces a single canonical code format. There is no configuration; all Go code looks the same. This was a notable design choice when Go launched and has since influenced other languages. The Go team uses gofmt for all standard library code.
 
 **go vet** performs static analysis detecting suspicious constructs: Printf format mismatches, unreachable code, incorrect struct tags. Unlike the compiler, vet identifies code that compiles but is probably wrong.
 
@@ -311,13 +311,13 @@ The **race detector** (`-race` flag) instruments code to detect data races at ru
 
 ## Where Go is prominent: Cloud infrastructure
 
-Go has become a lingua franca of cloud infrastructure, with many CNCF projects and core platform tools written in Go.
+Go has become a widely used language in cloud infrastructure, with many CNCF projects and core platform tools written in Go.
 
-**Docker** (2013) made Go's reputation. The container platform's need for fast development of distributed systems, easy packaging, and minimal dependencies matched Go's strengths perfectly.
+**Docker** (2013) helped establish Go's reputation. The container platform's need for fast development of distributed systems, easy packaging, and minimal dependencies matched Go's strengths closely.
 
 **Kubernetes** (2014) cemented Go's position. Co-creator Joe Beda explained: "Go is neither too high-level nor too low-level. Good string processing, concurrency, and low-level system calls."
 
-HashiCorp built their entire infrastructure suite in Go: **Terraform** (infrastructure as code), **Consul** (service discovery), **Vault** (secrets management), **Nomad** (orchestration), and **Packer** (image building). Cross-platform single-binary distribution made deployment trivial.
+HashiCorp built their entire infrastructure suite in Go: **Terraform** (infrastructure as code), **Consul** (service discovery), **Vault** (secrets management), **Nomad** (orchestration), and **Packer** (image building). Cross-platform single-binary distribution made deployment comparatively straightforward.
 
 The monitoring ecosystem followed: **Prometheus** (metrics), **Grafana** (visualization), **Jaeger** (distributed tracing). Databases like **CockroachDB**, **InfluxDB**, **etcd**, and **TiDB** leverage Go's concurrency for distributed operations.
 
