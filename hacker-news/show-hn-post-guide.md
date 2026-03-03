@@ -21,6 +21,13 @@ The formula is straightforward but counterintuitive: write like you're explainin
 - **Secondary evidence:** Creator write-ups and follow-up discussions when available.
 - **Limitations:** This is a curated sample, not a full population model. Category percentages and timing guidance should be interpreted as directional heuristics rather than universal rules.
 
+## Sampling transparency
+
+- **Sampling approach:** Curated high-engagement Show HN posts from 2024-2026 across multiple categories.
+- **Engagement proxy:** Relative performance uses points and comment volume as practical community-interest signals.
+- **Selection bias:** The sample intentionally emphasizes standout posts to extract patterns, so it is not a random draw of all Show HN submissions.
+- **Interpretation boundary:** Percentages and ranking examples are heuristic guidance for positioning, not predictive guarantees for individual launches.
+
 ---
 
 ## Top Show HN posts from 2024-2026

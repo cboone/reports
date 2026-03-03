@@ -14,6 +14,14 @@ This review combines primary project sources (official docs, release notes, and 
 Performance numbers are directionally useful but environment-sensitive, and cross-terminal comparisons should be treated as approximate unless reproduced under identical workloads, fonts, and rendering settings.
 Where claims come from vendor benchmarks or project-authored posts, they are labeled as such and should be interpreted as self-reported.
 
+## Methodology transparency
+
+- **Coverage:** Nine actively maintained macOS terminal emulators with meaningful developer adoption and publicly documented feature sets.
+- **Performance inputs:** Public benchmark reports and release-note measurements, not a single controlled benchmark run by this report author.
+- **Protocol matrix process:** Capability tables are derived from first-party docs and release announcements, with partial-support entries used when feature behavior is constrained.
+- **UX assessment basis:** Integration and workflow claims are based on documented features plus repeat themes in practitioner discussions.
+- **Comparability caveat:** Memory, latency, and throughput figures vary with fonts, rendering backends, shell workloads, and hardware generation.
+
 ## Performance leaders differ by metric
 
 Raw throughput and input latency tell different stories. Alacritty often leads raw throughput in vtebench-style workloads, while tuned Kitty and Alacritty configurations frequently lead interactive latency measurements. Ghostty's SIMD-focused text pipeline has shown strong UTF-8 throughput in project and independent benchmarks.

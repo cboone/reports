@@ -16,6 +16,14 @@ This landscape combines primary project sources (official repositories, product 
 Several metrics in this category are self-reported or platform-derived (for example install counts, GitHub stars, and vendor benchmark results), so they should be read as directional rather than strictly comparable.
 Because tooling changes rapidly, model support, pricing, licenses, and feature matrices can shift quickly after publication.
 
+## Methodology transparency
+
+- **Inclusion scope:** Terminal-first coding assistants with visible public activity in the 2024-2026 window, including both OSS and proprietary tools.
+- **Exclusion scope:** IDE-only copilots without meaningful CLI/TUI workflows, inactive projects, and one-off demos without sustained maintenance signals.
+- **Classification method:** Tools are grouped by dominant workflow pattern (full-featured agents, task-focused tools, wrappers, or orchestration layers), recognizing some overlap.
+- **Comparison basis:** Feature matrices are assembled from first-party documentation and release notes, then sanity-checked against community usage reports.
+- **Ranking caveat:** Star counts, pricing tiers, and benchmark callouts are snapshot indicators, not normalized quality scores.
+
 ---
 
 ## Full-featured agentic coding assistants
