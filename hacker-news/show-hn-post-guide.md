@@ -184,15 +184,15 @@ Successful Show HN creators demonstrate consistent engagement patterns:
 
 ---
 
-## Anti-patterns that guarantee poor reception
+## Anti-patterns that often lead to poor reception
 
 ### Vote manipulation (the nuclear mistake)
 
-HN's voting ring detection is sophisticated and unforgiving. **Never** ask friends to upvote, share direct post links for voting campaigns, or coordinate booster comments. Artificial engagement triggers algorithmic penalties that will bury your post.
+HN's voting ring detection is sophisticated and unforgiving. Avoid asking friends to upvote, sharing direct post links for voting campaigns, or coordinating booster comments. Artificial engagement can trigger algorithmic penalties that bury your post.
 
 If you want support, ask people to browse `/newest`, find your post organically, and decide for themselves. Even this should involve different people for each attempt to avoid detection patterns.
 
-### Other guaranteed failures
+### Other common failure patterns
 
 - **Signup walls**: Requiring an account to try your product generates immediate frustration and complaint threads. Make your demo accessible instantly.
 - **Marketing language**: Superlatives, sales-speak, and promotional framing close tabs. Write like a peer, not a pitch deck.

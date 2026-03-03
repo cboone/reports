@@ -49,7 +49,7 @@ line-length = 88
 
 **Limitations:** Deeply nested data becomes verbose (requires explicit `[a.b.c.d]` section headers), inline tables can't span lines, and no `null` type exists. TOML is deliberately unsuitable for general data serialization—it's purpose-built for configuration.
 
-### YAML remains dominant in DevOps despite its dangers
+### YAML remains widely used in DevOps despite its dangers
 
 YAML's indentation-based syntax and powerful features (anchors, aliases, multiline strings) make it expressive but treacherous:
 
@@ -63,7 +63,7 @@ version: 1.10  # Becomes float 1.1
 
 The "Norway problem" alone has caused production incidents. Other gotchas include `~` parsing as null, tabs being forbidden, and arbitrary code execution via `!python/object` tags (use `safe_load()` for untrusted input).
 
-**Despite these issues, YAML is entrenched in DevOps**: Kubernetes manifests, Docker Compose, GitHub Actions, Ansible, Helm charts, AWS CloudFormation. The ecosystem lock-in is strong, and no other format is currently displacing YAML in cloud-native tooling.
+**Despite these issues, YAML is deeply entrenched in DevOps**: Kubernetes manifests, Docker Compose, GitHub Actions, Ansible, Helm charts, AWS CloudFormation. The ecosystem lock-in is strong, and no other format is clearly displacing YAML in cloud-native tooling.
 
 **Library quality varies dramatically:** Python's `PyYAML` with CLoader is 17x faster than pure Python. In Node.js, `js-yaml` takes 504ms where native JSON takes 94ms—but both dwarf `yaml@2` at 2,108ms.
 

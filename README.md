@@ -37,7 +37,7 @@ Chronological timeline from the Buddha's life through the oral-to-written transi
 
 ## Containers and Virtual Machines
 
-### [Apple's native container revolution in macOS 26 Tahoe](containers-and-vms/macos-native-containers.md)
+### [Apple's native container architecture in macOS 26 Tahoe](containers-and-vms/macos-native-containers.md)
 
 How Apple's Containerization framework uses a VM-per-container architecture on Apple Silicon to provide hardware-level isolation with sub-second startup times. Covers the three-layer stack (Container CLI, Containerization framework, Virtualization.framework), the minimal Swift-based vminitd init system, performance benchmarks against Docker Desktop and OrbStack, the security model, OCI compliance, and the ecosystem maturity trade-offs at version 0.6.0.
 
@@ -45,7 +45,7 @@ How Apple's Containerization framework uses a VM-per-container architecture on A
 
 ### [Human-readable alternatives to JSON: performance, syntax, and adoption](data-formats/json-alternatives.md)
 
-How TOML, YAML, JSON5, KDL, RON, Dhall, and Pkl compare against JSON for configuration files, APIs, and data storage. Covers parsing performance benchmarks across Python, Rust, Go, and Node.js, YAML's entrenched DevOps dominance despite its gotchas, TOML's rise through Python and Rust ecosystems, emerging formats targeting specialized needs, and practical recommendations by use case.
+How TOML, YAML, JSON5, KDL, RON, Dhall, and Pkl compare against JSON for configuration files, APIs, and data storage. Covers parsing performance benchmarks across Python, Rust, Go, and Node.js, YAML's deep DevOps adoption despite its gotchas, TOML's rise through Python and Rust ecosystems, emerging formats targeting specialized needs, and practical recommendations by use case.
 
 ## Ethics
 
