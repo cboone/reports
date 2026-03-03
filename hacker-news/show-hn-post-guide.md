@@ -45,7 +45,7 @@ Project: Self-hostable alternative to commercial map APIs. URL: openfreemap.org.
 Project: Node-based vector graphics editor written in Rust. *Key factors*: Novel paradigm, Rust implementation (HN favorite), impressive visual demo.
 
 **9. "Show HN: LLocalSearch – Locally running Perplexity clone"** — 669 points, 133 comments (Apr 2024)
-Project: Privacy-preserving AI search that runs entirely locally. *Key factors*: Privacy angle, local-first architecture, clear comparison to commercial product.
+Project: Privacy-preserving AI search that runs locally. *Key factors*: Privacy angle, local-first architecture, clear comparison to commercial product.
 
 **10. "Show HN: SmoothMQ – Drop-in SQS replacement based on SQLite"** — 656 points, 156 comments (2024)
 Project: Message queue that uses SQLite for persistence. *Key factors*: Familiar interface (SQS-compatible), surprising technical approach (SQLite), solves real infrastructure pain.

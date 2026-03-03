@@ -171,7 +171,7 @@ Here `≠` is length, `+´` is sum (the `´` modifier is fold/reduce), and `÷` 
 
 ### Uiua
 
-Uiua (pronounced "wee-wuh") is an experimental stack-based array language that eliminates named variables entirely.
+Uiua (pronounced "wee-wuh") is an experimental stack-based array language that largely eliminates named variables.
 
 ```uiua
 ⊚>⊃(÷⊃⧻/+)∘
@@ -185,7 +185,7 @@ The APL family shares a commitment to implicit array operations and extreme brev
 
 APL and BQN use Unicode symbols that visually suggest their meanings, requiring special keyboard input but offering a kind of pictorial clarity. J and K use ASCII, making them more accessible in plain-text environments but requiring memorization of less intuitive symbol combinations.
 
-K represents the terseness extreme, optimizing for minimal keystrokes. BQN represents the pedagogical extreme, trying to be learnable while preserving APL's power. Uiua experiments with eliminating variables entirely, pushing tacit programming beyond even J.
+K represents the terseness extreme, optimizing for minimal keystrokes. BQN represents the pedagogical extreme, trying to be learnable while preserving APL's power. Uiua experiments with eliminating variables, pushing tacit programming beyond even J.
 
 All these languages share the fundamental insight that loops are often incidental complexity: if you want to add two arrays element-wise, you should be able to write `A + B` rather than iterating over indices. This philosophy makes them remarkably powerful for array-heavy computation but creates a steep learning curve for programmers accustomed to explicit iteration.
 

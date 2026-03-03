@@ -14,7 +14,7 @@ Programming fonts have evolved from mechanical typewriter constraints into a sop
 
 ## From typewriters to terminals: the origins of monospace
 
-The monospaced font tradition predates computing entirely. The **1868 Sholes and Glidden typewriter** introduced fixed-width characters as a mechanical necessity—each keystroke moved the carriage by exactly the same distance. This constraint would shape computer typography for over a century.
+The monospaced font tradition predates modern computing. The **1868 Sholes and Glidden typewriter** introduced fixed-width characters as a mechanical necessity—each keystroke moved the carriage by exactly the same distance. This constraint would shape computer typography for over a century.
 
 **Courier** (1955-1956), designed by Howard "Bud" Kettler for IBM, became an influential monospaced typeface of the 20th century. Kettler chose the name because "a letter can be just an ordinary messenger, or it can be the courier, which radiates dignity, prestige, and stability." Critically, **IBM never trademarked Courier**, making both design and name public domain, a decision that helped establish it as a widely used font for government documents, screenplays, and eventually computer systems.
 
