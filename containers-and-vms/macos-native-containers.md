@@ -51,7 +51,7 @@ Third-party benchmarks from RepoFlow (October 2025) on an M4 Mac mini comparing 
 | Filesystem I/O | Improving | Variable | Best |
 | Idle resource usage | **Zero** | Constant | Low |
 
-The **near-zero idle resource consumption** represents a key efficiency advantage in this model. Docker Desktop maintains a background Linux VM consuming 2-4GB RAM even when no containers run. Apple's containers release resources when stopped.
+The **near-zero idle resource consumption** represents a notable efficiency advantage in this model. Docker Desktop maintains a background Linux VM consuming 2-4GB RAM even when no containers run. Apple's containers release resources when stopped.
 
 However, the VM-per-container model creates trade-offs. Systems researcher Anil Madhavapeddy noted it becomes "very memory inefficient for development where it's usual to spin up 4-5 VMs for a development environment with a database, etc." Each container requires its own kernel instance and cannot share memory with siblings.
 
@@ -61,7 +61,7 @@ Large image unpacking can be slow—one test showed **10+ minutes** to unpack an
 
 The security model materially changes the threat landscape. Traditional containers share a kernel, meaning a kernel exploit can affect all containers and potentially the host. Apple's architecture provides **hardware-enforced isolation** between containers, so a compromise in one container is less likely to expose kernel memory of another.
 
-The minimal VM filesystem containing only vminitd dramatically reduces privilege escalation opportunities. With no shell, no utilities, and no libraries to exploit, attackers face a barren environment even if they gain code execution.
+The minimal VM filesystem containing only vminitd can reduce privilege escalation opportunities. With no shell, no utilities, and no libraries to exploit, attackers face a much narrower environment even if they gain code execution.
 
 | Security Aspect | Apple Containerization | Docker on Linux |
 |-----------------|------------------------|-----------------|
@@ -122,4 +122,4 @@ Apple's Containerization framework represents a meaningful architectural innovat
 
 The trade-offs are clear: stronger security boundaries versus higher per-container memory overhead; native macOS integration versus cross-platform compatibility; open-source licensing versus mature enterprise tooling. For complex multi-container development workflows, Docker and OrbStack remain more practical today.
 
-The framework's future depends on ecosystem development—whether Apple adds orchestration capabilities, whether Docker adopts the Containerization framework as an optional backend, and whether the community builds the tooling layer. At version 0.6.0, Apple has delivered the foundation; the question is whether it will build or inspire the ecosystem needed to fully realize its potential.
+The framework's future depends on ecosystem development—whether Apple adds orchestration capabilities, whether Docker adopts the Containerization framework as an optional backend, and whether the community builds the tooling layer. At version 0.6.0, Apple has delivered an initial foundation; the question is whether it will build or inspire the ecosystem needed to fully realize its potential.
