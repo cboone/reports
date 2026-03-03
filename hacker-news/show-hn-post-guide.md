@@ -6,7 +6,7 @@ created: 2026-02-03
 
 _February 3, 2026_
 
-Many successful Show HN posts share a surprising common thread: **authenticity over polish**. Analysis of the top-performing posts from 2024-2026 suggests that personal projects with genuine backstories, often built over multiple years by passionate individuals, frequently outperform professionally marketed launches. DIY hardware projects achieve front-page status at nearly **3x the rate** of AI-related posts, and open-source projects with clear technical merit consistently reach the top.
+Many successful Show HN posts share a surprising common thread: **authenticity over polish**. Analysis of a high-performing sample from 2024-2026 suggests that personal projects with genuine backstories, often built over multiple years by passionate individuals, frequently outperform professionally marketed launches. DIY hardware projects achieve front-page status at nearly **3x the rate** of AI-related posts, and open-source projects with clear technical merit consistently reach the top.
 
 The formula is straightforward but counterintuitive: write like you're explaining your project to a technically-minded friend over drinks, provide something people can actually try with minimal friction, and be prepared to engage deeply with every commenter—including critics—as if they're doing you a favor.
 
@@ -22,7 +22,7 @@ The formula is straightforward but counterintuitive: write like you're explainin
 
 ## Top Show HN posts from 2024-2026
 
-The following posts exemplify the characteristics that resonate with the Hacker News community. These represent a mix of categories with emphasis on developer tools, ordered by engagement (combined points and comments).
+The following posts exemplify characteristics that often resonate with the Hacker News community. These represent a mix of categories with emphasis on developer tools, ordered by engagement (combined points and comments). This list is illustrative rather than exhaustive.
 
 ### Exceptional performers (1000+ points, 200+ comments)
 
@@ -110,7 +110,7 @@ Strong title examples include "Show HN: htmz – a low power tool for HTML" (spe
 
 ### Project types that resonate most strongly
 
-Data analysis of Show HN success rates reveals clear category preferences:
+Observed Show HN sample data suggests category preferences:
 
 | Category | Probability of reaching 100+ points |
 |----------|-------------------------------------|
@@ -122,7 +122,7 @@ Data analysis of Show HN success rates reveals clear category preferences:
 
 Physical projects that users can see and touch—even virtually through detailed documentation—significantly outperform pure software. Open-source positioning adds roughly **2-3 percentage points** to success probability. Developer tools that solve genuine daily friction (debugging, deployment, code navigation) perform notably better than tools addressing abstract or theoretical problems.
 
-**A critical finding**: AI-related posts underperform expectations despite initial hype. AI coding and AI image generation posts see measurable drops compared to their early momentum, suggesting the audience has developed some fatigue with the category.
+**A directional finding**: AI-related posts underperform some expectations despite initial hype. AI coding and AI image generation posts in this sample show lower engagement than their early momentum, suggesting audience fatigue in this category.
 
 ### What generates sustained discussion
 

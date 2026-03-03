@@ -12,6 +12,14 @@ The intellectual DNA of agile traces through three distinct tributaries: the Toy
 
 -----
 
+## Evidence basis
+
+- **Primary sources:** Agile Manifesto materials, Scrum Guide publications, first-party organizational posts, and canonical books from key contributors.
+- **Secondary sources:** Historical syntheses and academic retrospectives.
+- **Caveat:** Some adoption and trend statements rely on industry surveys and vendor analyses, and should be interpreted as directional rather than definitive.
+
+-----
+
 ## Manufacturing philosophy crossed into software through lean thinking
 
 The Toyota Production System (TPS), developed by **Taiichi Ohno** and **Shigeo Shingo** from the late 1940s through the 1960s, established core concepts that would later permeate agile thinking. TPS introduced just-in-time delivery, jidoka (stop-the-line quality control), kaizen (continuous improvement), and systematic waste elimination. Ohno’s insight that “all we are doing is looking at the time line, from the moment the customer gives us an order to the point when we collect the cash” anticipated agile’s focus on flow and customer value. 
