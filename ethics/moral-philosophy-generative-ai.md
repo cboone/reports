@@ -10,6 +10,12 @@ The ethical evaluation of generative AI has crystallized around a distinctive sh
 
 The field has matured beyond abstract guidelines into what scholars call a "practical turn," demanding operational tools rather than lofty principles. Shannon Vallor's *The AI Mirror* (2024) and Mark Coeckelbergh's *Why AI Undermines Democracy* (2024) have become touchstones for this new phase, while international frameworks like the EU AI Act and UNESCO's 2021 Recommendation provide regulatory scaffolding. Simultaneously, Ubuntu, Confucian, and care ethics frameworks are challenging the West-centrism that dominated early AI ethics discourse.
 
+## Evidence basis
+
+This report synthesizes normative philosophy, policy frameworks, and applied AI ethics scholarship rather than a single empirical dataset.
+Influence claims (for example "gaining traction" or "major challenger") are directional assessments based on publication visibility, institutional uptake, and policy relevance.
+Several core positions are intentionally contested in the literature, so this document maps debates rather than resolving them.
+
 ---
 
 ## Virtue ethics emerges as a major philosophical challenger
@@ -107,3 +113,11 @@ Virtue ethics, particularly Vallor's technomoral framework, offers a philosophic
 A growing view favors **human rights-based governance** with genuine multi-stakeholder engagement, though disagreement persists over pace, scope, and whether current AI trajectories require fundamental reconsideration or merely course correction. Notably, the field increasingly recognizes that AI ethics cannot remain a Western philosophical conversation; global technology requires global philosophical resources.
 
 What remains contested is whether these frameworks will translate into effective governance before AI's social, political, economic, and environmental consequences become difficult to reverse. The gap between philosophical sophistication and practical implementation remains a central challenge in the field.
+
+## Key references
+
+- UNESCO Recommendation on the Ethics of AI (2021): https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence
+- EU AI Act text and updates: https://artificialintelligenceact.eu/the-act/
+- Council of Europe Framework Convention on AI: https://www.coe.int/en/web/artificial-intelligence/framework-convention
+- Oxford Institute for Ethics in AI: https://www.oxford-aiethics.ox.ac.uk/
+- AI and Ethics journal (Springer): https://link.springer.com/journal/43681
