@@ -101,7 +101,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Telegram & Slack bridges for remote monitoring
   - Tmux status bar integration showing waiting sessions
   - Groups, profiles, configurable hotkeys
-- **Notes:** A feature-rich terminal-based session manager. The "conductor" feature is a distinctive capability that lets a Claude Code instance supervise other sessions.
+- **Notes:** A full-featured terminal-based session manager. The "conductor" feature is a notable capability that lets a Claude Code instance supervise other sessions.
 
 ### Agent of Empires (AoE)
 
@@ -119,7 +119,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Diff view — review git changes without leaving TUI
   - Per-repo config via `.aoe/config.toml`
   - Profiles for separate workspaces
-- **Notes:** Inspired by Agent Deck. Rust-native for performance. Docker sandboxing is a differentiator.
+- **Notes:** Inspired by Agent Deck. Rust-native for performance. Docker sandboxing is a notable option.
 
 ### Claude Squad
 
@@ -147,7 +147,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Worktree hooks for post-creation automation
   - Auto-generated worktree directory paths
   - Devcontainer support for sandboxed environments
-- **Notes:** Supports a broad range of agents. The auto-approval and context-transfer features are notable differentiators.
+- **Notes:** Supports a broad range of agents. The auto-approval and context-transfer features are notable additions.
 
 ### Agent Viewer
 
@@ -161,7 +161,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Live output with ANSI color rendering
   - Send messages and upload files to agent cards
   - Columns: Running, Idle, Completed
-- **Notes:** Web-based UI is a differentiator — great for remote/mobile access.
+- **Notes:** Web-based UI is a key distinction and is useful for remote/mobile access.
 
 ### WezTerm Agent Deck (Plugin)
 
@@ -239,7 +239,7 @@ Tools for monitoring and interacting with agents from your phone or remotely.
   - Access conversation history offline
   - File mentions, slash commands, custom agents on mobile
   - Open source (MIT)
-- **Notes:** A prominent mobile companion for coding agents, useful for monitoring long-running tasks on the go. Free and open source.
+- **Notes:** A well-known mobile companion for coding agents, useful for monitoring long-running tasks on the go. Free and open source.
 
 ### Agent Viewer (via Tailscale)
 
@@ -572,8 +572,8 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 ## Summary & Recommendations
 
 **For individual developers on macOS wanting to monitor multiple coding agents:**
-- Start with **Agent Deck** (terminal TUI, feature-rich) or **Crystal** (desktop GUI), depending on whether you prefer terminal or graphical workflows.
-- Add **Happy Coder** if you want mobile push notifications.
+- Consider starting with **Agent Deck** (terminal TUI, full-featured) or **Crystal** (desktop GUI), depending on whether you prefer terminal or graphical workflows.
+- Consider **Happy Coder** if you want mobile push notifications.
 - Use **ccusage** for cost tracking.
 
 **For teams running production LLM applications:**
