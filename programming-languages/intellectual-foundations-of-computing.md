@@ -352,7 +352,7 @@ The geography of computing theory reflects the concentration of talent at specif
 
 ## Conclusion: ideas that shaped a discipline
 
-The intellectual history of computer science reveals a discipline built on profound theoretical insights. **Gödel's incompleteness theorems** established that formal systems have inherent limits. **Church and Turing** independently defined computation itself, discovering that multiple substantially different formalizations yield identical results—strong evidence that computability reflects something fundamental about mathematical reality rather than arbitrary human choices.
+The intellectual history of computer science reveals a discipline built on deep theoretical insights. **Gödel's incompleteness theorems** established that formal systems have inherent limits. **Church and Turing** independently defined computation itself, discovering that multiple substantially different formalizations yield identical results—strong evidence that computability reflects something fundamental about mathematical reality rather than arbitrary human choices.
 
 The **Curry-Howard correspondence** unified two seemingly unrelated fields: a proof is a program, a proposition is a type, and proof normalization is computation. This insight transformed type systems from error-catching mechanisms into tools for verifying program correctness, enabling proof assistants that have now formalized major mathematical theorems.
 
