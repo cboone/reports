@@ -199,7 +199,7 @@ Full desktop applications focused on running multiple agent sessions with visual
   - Desktop notifications when sessions need input
   - Multiple agents per worktree support
   - Nimbalyst integration
-- **Notes:** Self-described as the first "IVE" (Integrated Vibe Environment). Actively developed with frequent releases.
+- **Notes:** Self-described as an early "IVE" (Integrated Vibe Environment). Actively developed with frequent releases.
 
 ### Verdent Deck
 

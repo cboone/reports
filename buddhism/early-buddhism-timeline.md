@@ -32,7 +32,7 @@ _September 15, 2025_
 
 ## 2nd Century BCE - 1st Century CE
 **c. 100 BCE** - Pali Canon first written down in Sri Lanka
-- **MAJOR MILESTONE**: End of purely oral tradition for Theravada Buddhism
+- **Notable milestone**: End of purely oral tradition for Theravada Buddhism
 - Written in Pali on palm leaves during reign of King Vattagamani Abhaya
 - Includes Vinaya Pitaka, Sutta Pitaka, and Abhidhamma Pitaka
 - Location: Aluvihara, Sri Lanka
@@ -79,7 +79,7 @@ _September 15, 2025_
 - Including early Prajnaparamita literature
 
 **c. 402-412 CE** - Kumarajiva's translation project
-- **MAJOR MILESTONE**: Systematic translation of major Mahayana texts
+- **Notable milestone**: Systematic translation of major Mahayana texts
 - Lotus Sutra, Diamond Sutra, Vimalakirti Sutra translated into Chinese
 - Established standard Chinese Buddhist terminology
 
@@ -87,7 +87,7 @@ _September 15, 2025_
 - Brings back Sanskrit texts for translation
 
 **c. 629-645 CE** - Xuanzang's pilgrimage to India
-- **MAJOR MILESTONE**: Massive translation project upon return
+- **Notable milestone**: Massive translation project upon return
 - 1,335 fascicles of texts translated into Chinese
 - Yogacara texts, Abhidharma literature
 
@@ -98,7 +98,7 @@ _September 15, 2025_
 - First Buddhist temples built
 
 **c. 760s-770s CE** - Tibetan script adapted for Buddhist texts
-- **MAJOR MILESTONE**: Beginning of systematic translation into Tibetan
+- **Notable milestone**: Beginning of systematic translation into Tibetan
 - Padmasambhava and Shantarakshita active in Tibet
 
 **c. 780s CE** - First Buddhist texts translated into Tibetan
