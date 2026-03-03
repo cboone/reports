@@ -640,7 +640,7 @@ pipeline = do
     sort <$> atomically (readTVar results)
 ```
 
-STM is Haskell's distinctive contribution to concurrency. Where channels are a specific coordination mechanism, STM is a general transactional framework that can express any coordination pattern without explicit locks. The composability guarantee — any combination of STM operations can be wrapped in `atomically` and will execute correctly — is unique to Haskell's approach.
+STM is Haskell's distinctive contribution to concurrency. Where channels are a specific coordination mechanism, STM is a general transactional framework that can express many coordination patterns without explicit locks. The composability guarantee — combinations of STM operations can be wrapped in `atomically` and run as a single transaction — is especially associated with Haskell's approach.
 
 ### OCaml
 
@@ -1869,7 +1869,7 @@ The cleanest shutdown mechanisms are usually those built into the coordination p
 
 The safety spectrum for concurrent programming is wider than for sequential programming. Rust prevents data races at compile time through ownership. Go prevents some races through channel direction types but allows shared-memory races. Java provides runtime race detection with `synchronized` but allows races in unsynchronized code. C provides no safety at all — races are undefined behavior that the language makes easy to write.
 
-Erlang and the BEAM family sidestep the problem entirely: since there is no shared mutable state, data races are impossible by construction. This is the strongest safety guarantee, achieved by restricting the programming model rather than by adding checks.
+Erlang and the BEAM family sidestep much of this problem: since there is no shared mutable state in the core model, data races are effectively impossible by construction. This is one of the strongest safety guarantees, achieved by restricting the programming model rather than by adding checks.
 
 ### Where Each Family Excels
 
