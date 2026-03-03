@@ -87,7 +87,7 @@ This problem reveals how languages think about coordination, safety, and the fun
 
 ## The BEAM Family
 
-The BEAM virtual machine was designed from the ground up for concurrency. Erlang processes are extraordinarily lightweight (a few hundred bytes of overhead), and message passing between them is the only coordination mechanism — there is no shared mutable state. This is the actor model in its purest form.
+The BEAM virtual machine was designed from the ground up for concurrency. Erlang processes are extraordinarily lightweight (a few hundred bytes of overhead), and message passing between them is the only coordination mechanism — there is no shared mutable state. This is a canonical actor-model implementation.
 
 ### Erlang
 
@@ -1186,7 +1186,7 @@ C++ improves on C with RAII (`unique_lock`, `lock_guard`), templates (the `Bound
 
 ### C Family Comparison
 
-The C family shows concurrency at its most explicit. Every synchronization decision is visible in the code: which mutex protects which data, when to signal vs. broadcast, how to handle spurious wakeups. C++ adds RAII and templates for safer resource management but uses the same primitives. The contrast with Go (where channels handle all of this) or Erlang (where message passing eliminates shared state entirely) illustrates why those languages were designed — the manual approach is powerful but error-prone.
+The C family shows concurrency in one of its most explicit forms. Every synchronization decision is visible in the code: which mutex protects which data, when to signal vs. broadcast, how to handle spurious wakeups. C++ adds RAII and templates for safer resource management but uses the same primitives. The contrast with Go (where channels handle much of this) or Erlang (where message passing eliminates shared state in core patterns) illustrates why those languages were designed — the manual approach is powerful but error-prone.
 
 ---
 
@@ -1855,7 +1855,7 @@ A fundamental axis of variation is how concurrent units communicate. There are t
 
 ### Lightweight vs. Heavyweight Concurrency
 
-Languages differ enormously in the cost of concurrent units. Erlang processes and Go goroutines cost kilobytes and can number in millions. Java virtual threads (Loom) are similarly lightweight. OS threads (C, C++, Perl) cost megabytes and are limited to thousands. JavaScript and Lua lack true concurrency units entirely.
+Languages differ enormously in the cost of concurrent units. Erlang processes and Go goroutines cost kilobytes and can number in millions. Java virtual threads (Loom) are similarly lightweight. OS threads (C, C++, Perl) cost megabytes and are often limited to thousands in practical deployments. JavaScript and Lua lack built-in CPU-parallel concurrency units in common runtime configurations.
 
 This cost difference is not just quantitative but qualitative. When concurrent units are cheap, the natural design is "one unit per logical task" — each producer and consumer is its own goroutine or process. When units are expensive, the natural design is thread pools with work-stealing — a fixed number of threads service many logical tasks.
 
