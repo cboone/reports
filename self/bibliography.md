@@ -12,7 +12,7 @@ _January 23, 2026_
 
 - [Self: The Power of Simplicity](https://bibliography.selflanguage.org/_static/self-power.pdf) — Ungar & Smith, OOPSLA 1987 (revised 1991). The original paper introducing prototype-based OOP.
 - [An Efficient Implementation of Self](https://bibliography.selflanguage.org/_static/implementation.pdf) — Chambers, Ungar & Lee, OOPSLA 1989. Introduces maps (hidden classes).
-- [Optimizing Dynamically-Typed Object-Oriented Languages With Polymorphic Inline Caches](https://bibliography.selflanguage.org/_static/pics.pdf) — Hölzle, Chambers & Ungar, ECOOP 1991. The foundational PIC paper.
+- [Optimizing Dynamically-Typed Object-Oriented Languages With Polymorphic Inline Caches](https://bibliography.selflanguage.org/_static/pics.pdf) — Hölzle, Chambers & Ungar, ECOOP 1991. A landmark PIC paper.
 
 **Theses & Extended Works**
 

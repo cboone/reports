@@ -50,7 +50,7 @@ _January 23, 2026_
 
 **1993** — Morphic UI framework developed by John Maloney and Randall B. Smith
 
-**1994** — Urs Hölzle completes PhD thesis "Adaptive Optimization for Self" — foundational work on type feedback and deoptimization
+**1994** — Urs Hölzle completes PhD thesis "Adaptive Optimization for Self" — influential work on type feedback and deoptimization
 
 **1995** — Self 4.0 released with redesigned programming environment
 
