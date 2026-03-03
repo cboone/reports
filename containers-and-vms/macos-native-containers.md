@@ -8,7 +8,7 @@ _January 31, 2026_
 
 Apple has introduced a distinct approach to container technology on macOS by implementing a **VM-per-container architecture** that prioritizes security isolation over resource density. Announced at WWDC 2025 and released with macOS 26 Tahoe in September 2025, the Containerization framework creates a dedicated lightweight virtual machine for each container, providing hardware-level isolation comparable to traditional VMs while maintaining sub-second startup times. This marks Apple's first native container solution and offers an alternative to Docker Desktop's shared Linux VM approach, with a security-first model that may influence container architecture across the industry.
 
-The technology matters for three reasons: it can deliver **near-zero resource consumption** when containers are not running (unlike Docker's always-on VM), provides **strong security boundaries** compared with namespace-based containers, and creates a fully open-source (Apache 2.0), Swift-native stack deeply integrated with macOS. However, the ecosystem remains nascent at version 0.6.0, lacking Docker Compose equivalents and enterprise tooling that many developers depend on.
+The technology matters for three reasons: it can deliver **near-zero resource consumption** when containers are not running (unlike Docker's always-on VM), provides **strong security boundaries** compared with namespace-based containers, and creates an open-source (Apache 2.0), Swift-native stack deeply integrated with macOS. However, the ecosystem remains nascent at version 0.6.0, lacking Docker Compose equivalents and enterprise tooling that many developers depend on.
 
 ## How Apple built containers on top of lightweight VMs
 
@@ -87,9 +87,9 @@ Against Docker Desktop's decade-old ecosystem, Apple's containerization remains 
 | Cross-platform | macOS only | Mac, Windows, Linux | macOS only |
 | License cost | Free (Apache 2.0) | Paid for enterprise | Paid |
 
-Compared to **Podman** and **LXC/LXD on Linux**, Apple provides stronger isolation at the cost of resource efficiency. Linux-native containers achieve near-zero overhead through direct kernel access—Apple's VM layer necessarily adds overhead despite optimizations.
+Compared to **Podman** and **LXC/LXD on Linux**, Apple can provide stronger isolation at the cost of resource efficiency. Linux-native containers achieve near-zero overhead through direct kernel access, while Apple's VM layer adds overhead despite optimizations.
 
-Against traditional VMs (**Parallels**, **VMware Fusion**, **UTM**), Apple's lightweight VMs excel at their specific purpose: running containerized Linux workloads with sub-second startup versus 30-60 seconds for full VMs. However, they cannot run desktop operating systems, support GPU passthrough, or provide GUI environments.
+Against traditional VMs (**Parallels**, **VMware Fusion**, **UTM**), Apple's lightweight VMs excel at their specific purpose: running containerized Linux workloads with sub-second startup versus 30-60 seconds for full VMs. However, they are not intended to run desktop operating systems, support GPU passthrough, or provide GUI environments.
 
 ## OCI compliance ensures image compatibility
 

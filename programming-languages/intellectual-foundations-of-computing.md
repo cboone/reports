@@ -112,7 +112,7 @@ While computability theory determined *what* can be computed, **Claude Shannon**
 
 Shannon's key move was divorcing information from meaning: "The semantic aspects of communication are irrelevant to the engineering problem." Information became a measure of uncertainty—the more surprising a message, the more information it carries. His formula for entropy, H = -Σ p(i) log p(i), quantifies average information content and sets absolute limits on data compression.
 
-The **channel capacity theorem** proved that reliable communication is possible over noisy channels, as long as the transmission rate stays below a calculable maximum. This counterintuitive result—that perfect reliability is achievable despite noise—enabled the entire digital communications revolution.
+The **channel capacity theorem** proved that reliable communication is possible over noisy channels, as long as the transmission rate stays below a calculable maximum. This counterintuitive result, that near-perfect reliability is achievable despite noise, underpinned much of the digital communications revolution.
 
 Information theory connects to computability through **algorithmic information theory**, developed independently by Kolmogorov, Solomonoff, and Chaitin in the 1960s. Here, a string's complexity equals the length of the shortest program that outputs it—linking Shannon's probabilistic entropy to Turing's computational concepts.
 
