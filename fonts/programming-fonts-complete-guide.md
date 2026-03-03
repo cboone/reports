@@ -24,13 +24,13 @@ The personal computer era brought platform-specific fonts that remain in use dec
 
 ---
 
-## The ClearType revolution and rise of purpose-built programming fonts
+## The ClearType shift and rise of purpose-built programming fonts
 
 The transition from bitmap to vector fonts occurred gradually through the 1990s, but Microsoft's **ClearType** technology (announced 1998, shipped 2000) marked a turning point. ClearType uses subpixel rendering to target the RGB elements of LCD pixels, effectively tripling horizontal resolution for sharper text.
 
-The **ClearType Font Collection** (2002-2007) represented the first major investment in fonts designed specifically for modern displays. Microsoft assembled an international team including Luc(as) de Groot, John Hudson, and Jeremy Tankard, with advisers for Greek and Cyrillic scripts. All six fonts in the collection—Calibri, Cambria, Candara, **Consolas**, Constantia, and Corbel—were named starting with "C" by deliberate design.
+The **ClearType Font Collection** (2002-2007) represented an early major investment in fonts designed specifically for modern displays. Microsoft assembled an international team including Luc(as) de Groot, John Hudson, and Jeremy Tankard, with advisers for Greek and Cyrillic scripts. All six fonts in the collection—Calibri, Cambria, Candara, **Consolas**, Constantia, and Corbel—were named starting with "C" by deliberate design.
 
-**Consolas** (2007), designed by Luc(as) de Groot, became the first major font designed explicitly for programming environments. De Groot collaborated directly with programmers, testing on "the lightweight notebook chosen to represent their species' preferred tool." Key innovations included proportions closer to proportional text (more readable than traditional monospace), slashed zeros for disambiguation, and optimizations for ClearType rendering. Consolas replaced Courier as Windows' default monospace font and remains Visual Studio's default today.
+**Consolas** (2007), designed by Luc(as) de Groot, became an early major font designed explicitly for programming environments. De Groot collaborated directly with programmers, testing on "the lightweight notebook chosen to represent their species' preferred tool." Key innovations included proportions closer to proportional text (more readable than traditional monospace), slashed zeros for disambiguation, and optimizations for ClearType rendering. Consolas replaced Courier as Windows' default monospace font and remains Visual Studio's default today.
 
 The open-source response came quickly. **Inconsolata** (2006), designed by Google engineer Raph Levien, was created with the statement that "monospaced fonts do not have to suck." Funded by the TeX Users Group, Inconsolata drew inspiration from Consolas, Avenir, Franklin Gothic, and Japanese Gothic fonts. Originally designed for printed code rather than screens, it became one of the first widely-adopted open-source programming fonts.
 
@@ -54,11 +54,11 @@ Adobe's first open-source font, **Source Sans Pro** (2012), established a design
 
 The design preserved Source Sans Pro's humanist characteristics while fitting glyphs within a 60% em square for consistent monospace rhythm. Adobe commissioned it specifically for their Brackets code editor, and it shipped under the SIL Open Font License—establishing Adobe's commitment to open-source typography.
 
-**Hasklig** (2014-2015), created by Ian Tuomi, represents a watershed moment: the **first programming font with code ligatures**. Tuomi modified Source Code Pro to combine character sequences like `>>=`, `::`, and `<$>` into single glyphs—targeting Haskell's operator-heavy syntax specifically. Though not widely adopted itself, Hasklig directly inspired the ligature revolution that followed.
+**Hasklig** (2014-2015), created by Ian Tuomi, represents a watershed moment as an early programming font with code ligatures. Tuomi modified Source Code Pro to combine character sequences like `>>=`, `::`, and `<$>` into single glyphs, targeting Haskell's operator-heavy syntax specifically. Though not widely adopted itself, Hasklig directly inspired later ligature-focused fonts.
 
 ---
 
-## Fira Code sparked the ligature revolution
+## Fira Code helped popularize programming ligatures
 
 The Fira family originated at Mozilla. **Fira Sans** (2012-2013) was commissioned for Firefox OS, designed by Erik Spiekermann's team at Carrois Type Design as an adaptation of Spiekermann's influential **FF Meta** (1991). The name "Fira" was chosen to communicate fire, light, and joy across languages. **Fira Mono** provided the monospace variant.
 

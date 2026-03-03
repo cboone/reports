@@ -32,7 +32,7 @@ Official sources: [Fira Code](https://github.com/tonsky/FiraCode), [JetBrains Mo
 
 ## 2023-2026 brought notable innovations
 
-One of the most significant releases since JetBrains Mono is **Monaspace** from GitHub Next (November 2023). It introduces **texture healing**, a technique using contextual alternates to even out monospace density while preserving the character grid, so text appears more balanced without breaking alignment. Monaspace offers five metric-compatible typefaces (Neon, Argon, Xenon, Radon, Krypton) that can be mixed within the same file, enabling distinct voices for comments, docstrings, and code.
+A significant release since JetBrains Mono is **Monaspace** from GitHub Next (November 2023). It introduces **texture healing**, a technique using contextual alternates to even out monospace density while preserving the character grid, so text appears more balanced without breaking alignment. Monaspace offers five metric-compatible typefaces (Neon, Argon, Xenon, Radon, Krypton) that can be mixed within the same file, enabling distinct voices for comments, docstrings, and code.
 
 **Intel One Mono** (April 2023) represents one of the first major programming fonts designed **accessibility-first**, developed with input from low-vision and legally blind developers. Created with Frere-Jones Type, it prioritizes high legibility to reduce eye fatigue and coding errors, with version 1.4 (July 2024) adding optional ligatures.
 
