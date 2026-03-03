@@ -186,9 +186,9 @@ Successful Show HN creators demonstrate consistent engagement patterns:
 
 ## Anti-patterns that often lead to poor reception
 
-### Vote manipulation (the nuclear mistake)
+### Vote manipulation (high-risk mistake)
 
-HN's voting ring detection is sophisticated and unforgiving. Avoid asking friends to upvote, sharing direct post links for voting campaigns, or coordinating booster comments. Artificial engagement can trigger algorithmic penalties that bury your post.
+HN's voting ring detection is sophisticated. Avoid asking friends to upvote, sharing direct post links for voting campaigns, or coordinating booster comments. Artificial engagement can trigger algorithmic penalties that may bury your post.
 
 If you want support, ask people to browse `/newest`, find your post organically, and decide for themselves. Even this should involve different people for each attempt to avoid detection patterns.
 
@@ -196,11 +196,11 @@ If you want support, ask people to browse `/newest`, find your post organically,
 
 - **Signup walls**: Requiring an account to try your product generates immediate frustration and complaint threads. Make your demo accessible instantly.
 - **Marketing language**: Superlatives, sales-speak, and promotional framing close tabs. Write like a peer, not a pitch deck.
-- **No product to try**: Landing pages, waitlists, and "coming soon" announcements don't qualify as Show HN. The product must exist and be usable.
+- **No product to try**: Landing pages, waitlists, and "coming soon" announcements generally do not qualify as Show HN. The product should exist in a usable form.
 - **Vague value propositions**: If commenters can't understand what your project does within 10 seconds, they'll move on.
 - **Hidden pricing**: Anything that feels like a bait-and-switch ("book a demo for pricing") triggers community skepticism.
 - **Company username**: An account named after your product creates an immediate sense of promotion rather than participation.
-- **Reposting too frequently**: Show HN reposts should happen only for major overhauls—once or twice per year maximum.
+- **Reposting too frequently**: Show HN reposts are usually better received when they correspond to major overhauls, often once or twice per year at most.
 
 ---
 
