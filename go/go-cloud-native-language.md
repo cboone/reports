@@ -2,7 +2,7 @@
 created: 2026-01-30
 ---
 
-# Go: The Cloud's Native Language
+# Go: A Cloud-Native Language
 
 _January 30, 2026_
 

@@ -65,7 +65,7 @@ History and catalog of programming fonts from typewriters through CRT terminals 
 
 ## Go
 
-### [Go: the cloud's native language](go/go-cloud-native-language.md)
+### [Go: a cloud-native language](go/go-cloud-native-language.md)
 
 Go's origins at Google in 2007, its design philosophy of deliberate omission, and how it became a prominent language for cloud infrastructure. Covers the CSP-based concurrency model (goroutines, channels, the GMP scheduler), garbage collector evolution from stop-the-world to sub-millisecond pauses, structural interfaces, explicit error handling, the module system, generics, tooling, and an annotated bibliography of foundational papers, talks, and books.
 
