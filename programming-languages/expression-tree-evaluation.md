@@ -1357,7 +1357,7 @@ BQN uses a list of functions selected by the tag (using `◶`, the "choose" comb
 
 ### APL Family Comparison
 
-The APL family's struggle with expression trees is deeply informative. These languages are built around the idea that data is rectangular and operations apply uniformly to every element. Trees are neither rectangular nor uniform — each node has a different number of children, and evaluation must respect parent-child dependencies. The flat-array encoding destroys structural clarity. The recursive approach abandons array operations entirely.
+The APL family's struggle with expression trees is deeply informative. These languages are built around the idea that data is rectangular and operations apply uniformly to every element. Trees are neither rectangular nor uniform — each node has a different number of children, and evaluation must respect parent-child dependencies. The flat-array encoding destroys structural clarity. The recursive approach largely abandons array operations.
 
 This is the inverse of the "indices above mean" algorithm, where APL was effortless and other languages labored. Different problems genuinely require different paradigms, and forcing array notation onto tree structures is as awkward as forcing explicit loops onto array transformations.
 
