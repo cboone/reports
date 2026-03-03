@@ -44,7 +44,7 @@ What Go explicitly rejected proved as important as what it adopted: no type hier
 
 ---
 
-## Timeline: From whiteboard to cloud dominance
+## Timeline: From whiteboard to broad cloud adoption
 
 | Date | Milestone |
 |------|-----------|
@@ -367,15 +367,15 @@ Choose Go for rapid development, large teams with varied experience, web service
 
 Go deliberately rejects class hierarchies. Where Java uses `class Dog extends Animal`, Go uses composition through struct embedding. Interfaces are implicit—any type with matching methods satisfies an interface without declaring `implements`.
 
-Go compiles to native binaries requiring no runtime environment; Java requires the JVM, C# requires .NET. Go's single-binary deployment simplifies containerization dramatically.
+Go compiles to native binaries requiring no runtime environment; Java requires the JVM, C# requires .NET. Go's single-binary deployment simplifies containerization in many workflows.
 
 Error handling differs significantly: Go uses explicit return values that must be handled at call sites; Java/C# use exceptions that can propagate up the stack.
 
 ### Go versus Python
 
-Go often runs dramatically faster than Python for CPU-bound tasks and typically uses less memory in production services. In web and API workloads, exact speedups vary by framework, payload, and deployment model, but Go's native compilation and lightweight concurrency are usually advantageous. Go's deployment story, single binary with minimal runtime dependencies, also avoids much of Python's environment-management overhead.
+Go often runs substantially faster than Python for CPU-bound tasks and typically uses less memory in production services. In web and API workloads, exact speedups vary by framework, payload, and deployment model, but Go's native compilation and lightweight concurrency are usually advantageous. Go's deployment story, single binary with minimal runtime dependencies, also avoids much of Python's environment-management overhead.
 
-Python's Global Interpreter Lock limits true parallelism; Go's goroutines utilize all available cores. However, Python remains dominant in data science, machine learning, and rapid prototyping where its ecosystem is unusually deep.
+Python's Global Interpreter Lock limits true parallelism; Go's goroutines utilize all available cores. However, Python remains widely used in data science, machine learning, and rapid prototyping where its ecosystem is unusually deep.
 
 ### Historical influences
 
@@ -481,7 +481,7 @@ Generics announcement. The blog called it "the most significant change to Go sin
 
 ## Conclusion
 
-Go succeeded by rejecting conventional wisdom about what programming languages should include. No inheritance, no exceptions, no generics (for 13 years), no metaprogramming—yet Go became the foundation of cloud infrastructure. The creators understood that **removing features can improve a language** when those features add complexity disproportionate to their value.
+Go succeeded by rejecting conventional wisdom about what programming languages should include. No inheritance, no exceptions, no generics (for 13 years), no metaprogramming—yet Go became a key part of modern cloud infrastructure. The creators understood that **removing features can improve a language** when those features add complexity disproportionate to their value.
 
 Three principles define Go's philosophy: **simplicity** (25 keywords, one obvious way to do things), **readability** (code is read far more than written, so optimize for readers), and **practicality** (designed for large teams building production systems, not researchers or individual hackers).
 
