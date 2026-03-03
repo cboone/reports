@@ -34,7 +34,7 @@ Despite its technical strengths, Self faced formidable adoption barriers. The sy
 
 More fundamentally, prototype-based programming was simply unfamiliar. Industry and academia had converged on class-based object orientation, and Self's alternative paradigm required conceptual reorientation that few were willing to undertake.  When Sun cancelled the project in favor of Java, Self lost its institutional champion. By the time hardware caught up with Self's requirements, JavaScript and Java had captured mindshare.
 
-The project didn't entirely disappear. Community members released Version 4.4 in 2010 with Linux support, and **Self 2024.1** shipped in August 2024  with FreeBSD and NetBSD support. The codebase remains active on GitHub, maintained by enthusiasts who recognize its historical significance.
+The project did not disappear. Community members released Version 4.4 in 2010 with Linux support, and **Self 2024.1** shipped in August 2024 with FreeBSD and NetBSD support. The codebase remains active on GitHub, maintained by enthusiasts who recognize its historical significance.
 
 ## Legacy: powering modern runtimes invisibly
 

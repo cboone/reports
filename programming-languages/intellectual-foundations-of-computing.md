@@ -92,7 +92,7 @@ Lambda calculus represented computation as **pure function manipulation**, with 
 
 ### Turing machines at Cambridge
 
-**Alan Turing** at King's College, Cambridge, independently solved the Entscheidungsproblem using a different model. His paper "On Computable Numbers," received in May 1936, imagined an abstract machine with an infinite tape, a read/write head, and a finite set of states. Despite its mechanical metaphor, Turing's construction was entirely mathematical.
+**Alan Turing** at King's College, Cambridge, independently solved the Entscheidungsproblem using a different model. His paper "On Computable Numbers," received in May 1936, imagined an abstract machine with an infinite tape, a read/write head, and a finite set of states. Despite its mechanical metaphor, Turing's construction was still mathematical.
 
 Turing's key insight was the **universal machine**: a single Turing machine that could simulate any other when given its description as input. This abstract concept anticipated stored-program computers by a decade. He also proved the *halting problem* undecidable: no algorithm can determine whether an arbitrary program terminates, establishing limits on what computation can achieve.
 
