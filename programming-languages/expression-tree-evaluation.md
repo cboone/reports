@@ -117,9 +117,9 @@ The algorithm is defined recursively:
 3. `eval(Add(e1, e2))` = eval(e1) + eval(e2)
 4. `eval(Mul(e1, e2))` = eval(e1) × eval(e2)
 
-This is trivially simple as mathematics. What makes it interesting as a programming exercise is that it requires two things: a way to define a recursive data type (a tree with four kinds of nodes), and a way to dispatch on the node type (deciding what to do for each variant). Different language families have radically different answers to these two requirements, and those differences reveal deep design philosophies.
+This is mathematically simple. What makes it interesting as a programming exercise is that it requires two things: a way to define a recursive data type (a tree with four kinds of nodes), and a way to dispatch on the node type (deciding what to do for each variant). Different language families have radically different answers to these two requirements, and those differences reveal deep design philosophies.
 
-Languages with algebraic data types (the ML family, Rust, Swift) can define the tree type directly and pattern-match on its variants. Lisp languages represent the tree as nested lists, making the data structure trivial but the dispatch manual. Object-oriented languages represent each node type as a class and use polymorphic dispatch. C-family languages use tagged unions or struct hierarchies. Array languages, designed for flat rectangular data, often find recursive trees comparatively awkward.
+Languages with algebraic data types (the ML family, Rust, Swift) can define the tree type directly and pattern-match on its variants. Lisp languages represent the tree as nested lists, making the data structure straightforward but the dispatch manual. Object-oriented languages represent each node type as a class and use polymorphic dispatch. C-family languages use tagged unions or struct hierarchies. Array languages, designed for flat rectangular data, often find recursive trees comparatively awkward.
 
 This algorithm also serves as a miniature interpreter, and interpreters are core programs in computer science. From compilers to web browsers to AI inference engines, much of computing is evaluating tree-shaped structures.
 
@@ -423,7 +423,7 @@ eval (add e1 e2) = eval e1 + eval e2
 eval (mul e1 e2) = eval e1 * eval e2
 ```
 
-Agda's syntax is close to Haskell's, with explicit universe annotations (`Set`) and a more principled approach to pattern matching. Agda enforces totality: every function must handle every case and must terminate. The evaluator passes both checks trivially, since it is structurally recursive and exhaustive.
+Agda's syntax is close to Haskell's, with explicit universe annotations (`Set`) and a more principled approach to pattern matching. Agda enforces totality: every function must handle every case and must terminate. The evaluator passes both checks cleanly, since it is structurally recursive and exhaustive.
 
 ### Idris
 
@@ -720,7 +720,7 @@ The JVM family shows the gradual adoption of functional programming ideas by mai
 
 ## The C Family
 
-The C family must represent the expression tree using manual memory allocation and tagged unions or struct hierarchies. This is where the algorithm's recursive nature creates real engineering work.
+The C family typically represents the expression tree using manual memory allocation and tagged unions or struct hierarchies. This is where the algorithm's recursive nature creates real engineering work.
 
 ### C
 
@@ -762,7 +762,7 @@ Expr *lit(double n) {
 }
 ```
 
-Each constructor function allocates memory, which must eventually be freed. A real implementation needs a corresponding `free_expr` function that recursively frees the tree — the kind of bookkeeping that higher-level languages handle automatically.
+Each constructor function allocates memory, which eventually needs to be freed. A real implementation needs a corresponding `free_expr` function that recursively frees the tree — the kind of bookkeeping that higher-level languages handle automatically.
 
 ### C++
 
