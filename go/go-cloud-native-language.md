@@ -20,9 +20,9 @@ Ken Thompson later recalled: "When the three of us got started, it was pure rese
 
 The problems extended beyond compilation times. C++ header file guards caused identical files to be opened and read hundreds of times during preprocessing. Computers had become multiprocessors, but mainstream languages offered little help for concurrent programming. The Go FAQ crystallized the dilemma: "One had to choose either efficient compilation, efficient execution, or ease of programming; all three were not available in the same mainstream language."
 
-### Three architects with exceptional credentials
+### Three architects and their backgrounds
 
-The creators brought extraordinary depth to Go's design. **Ken Thompson** co-created Unix with Dennis Ritchie at Bell Labs, invented the B programming language (C's precursor), co-created UTF-8 encoding, and won the 1983 Turing Award. He joined Google in 2006 as Distinguished Engineer after building Belle, the first chess computer to achieve Master rating.
+The creators brought deep language and systems experience to Go's design. **Ken Thompson** co-created Unix with Dennis Ritchie at Bell Labs, invented the B programming language (C's precursor), co-created UTF-8 encoding, and won the 1983 Turing Award. He joined Google in 2006 as Distinguished Engineer after building Belle, the first chess computer to achieve Master rating.
 
 **Rob Pike** worked on the Unix team at Bell Labs, co-created Plan 9 and Inferno operating systems, designed the Limbo and Newsqueak concurrent programming languages, and co-invented UTF-8 with Thompson. His prior language work directly informed Go's concurrency model.
 

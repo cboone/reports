@@ -62,7 +62,7 @@ The commercial programming font market serves developers willing to pay for dist
 
 **Dank Mono** (£24-40) emerged from an indie developer's hobby project and found its niche around 14px on retina displays. **Input Mono** from David Jonathan Ross stands apart by offering a very large variant catalog across monospace, sans, and serif families with customizable character shapes before download, all free for personal use.
 
-For those seeking character without cost, **Fantasque Sans Mono** has developed a cult following for its deliberately whimsical appearance, while **JuliaMono** provides exceptional mathematical symbol support for scientific programming.
+For those seeking character without cost, **Fantasque Sans Mono** has developed a niche following for its deliberately whimsical appearance, while **JuliaMono** provides strong mathematical symbol support for scientific programming.
 
 Sources: [PragmataPro](https://fsd.it/shop/fonts/pragmatapro/), [Operator Mono](https://www.typography.com/fonts/operator/overview), [MonoLisa](https://www.monolisa.dev/), [Berkeley Mono](https://berkeleygraphics.com/typefaces/berkeley-mono/), [Input Mono](https://input.djr.com/)
 
@@ -72,7 +72,7 @@ Sources: [PragmataPro](https://fsd.it/shop/fonts/pragmatapro/), [Operator Mono](
 
 **OpenDyslexic Mono** uses heavy weighted bottoms to indicate letter direction and unique shapes for each character to prevent rotation confusion—though research by Rello and Baeza-Yates (2016) found that general monospace fonts actually outperformed specialized dyslexia fonts, with fixation durations of 0.22 seconds versus 0.26 seconds for proportional fonts.
 
-For CJK programming, **Sarasa Gothic** combines Iosevka with Source Han Sans, targeting a 2:1 CJK-to-Latin width for alignment. **Noto Sans Mono CJK** provides exceptionally broad Unicode coverage for multilingual work.
+For CJK programming, **Sarasa Gothic** combines Iosevka with Source Han Sans, targeting a 2:1 CJK-to-Latin width for alignment. **Noto Sans Mono CJK** provides very broad Unicode coverage for multilingual work.
 
 The retro computing aesthetic is served by the **Ultimate Oldschool PC Font Pack**, which authentically recreates IBM VGA, EGA, CGA, and various BIOS fonts in scalable TrueType format. **VT323** recreates the DEC VT320 terminal, while **IBM 3270** revives the mainframe era.
 
