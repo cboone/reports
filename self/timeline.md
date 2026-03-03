@@ -6,6 +6,11 @@ created: 2026-01-23
 
 _January 23, 2026_
 
+## Evidence basis
+
+Dates are compiled from primary papers, thesis records, project-maintained Self archives, and release artifacts.
+Some lineage milestones (especially cross-project influence claims) are synthesis from multiple sources rather than single canonical records.
+
 ## Predecessors
 
 **1972** — Smalltalk created at Xerox PARC by Alan Kay, Dan Ingalls, and Adele Goldstein
@@ -97,3 +102,10 @@ _January 23, 2026_
 **August 2024** — Self 2024.1 released with FreeBSD and NetBSD support
 
 **Present** — Self maintained on GitHub; V8 and HotSpot continue to use optimization techniques shaped by Self research across a vast global software footprint
+
+## Key references
+
+- Self bibliography and primary papers: https://bibliography.selflanguage.org/
+- Self language project site: https://selflanguage.org/
+- Self source and releases: https://github.com/russellallen/self
+- V8 hidden classes implementation notes: https://v8.dev/docs/hidden-classes
