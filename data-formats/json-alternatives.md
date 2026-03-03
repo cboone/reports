@@ -10,6 +10,19 @@ _January 25, 2026_
 
 The ecosystem has settled into distinct niches rather than crowning a single successor. YAML is widely used in DevOps (Kubernetes, GitHub Actions), TOML is widely used in package management (Cargo.toml, pyproject.toml), and JSON holds firm for machine-to-machine APIs. Emerging formats target specialized needs: KDL for human-friendly documents, RON for Rust type safety, and Dhall for programmable configs designed to avoid non-termination.
 
+## Method and source quality
+
+This comparison prioritizes language specifications, official project documentation, and ecosystem standards (for example PEPs and primary language docs).
+Benchmark values are synthesized from different runtimes and libraries, so absolute numbers are less important than broad relative patterns.
+Adoption figures (downloads, npm activity, and project usage examples) are time-sensitive and should be treated as directional.
+
+## Methodology transparency
+
+- **Scope:** Human-readable and developer-facing alternatives to JSON, with selected binary formats included only for practical API/storage comparison.
+- **Benchmark handling:** Performance figures are reported as published by source benchmarks and normalized in prose as rough orders of magnitude.
+- **Decision framing:** Recommendations prioritize ecosystem fit and failure modes over raw parser speed for startup-loaded configuration files.
+- **Ecosystem evidence:** Adoption examples are drawn from visible toolchain defaults and public package activity, not comprehensive telemetry.
+
 ## Performance benchmarks show JSON still leads for speed
 
 The performance gap between JSON and its alternatives is substantial but context-dependent. Native JSON parsers benefit from decades of optimization and, in JavaScript/Python, C-level implementations.
@@ -163,3 +176,14 @@ The "JSON alternative" landscape has matured into stable niches rather than conv
 For teams frustrated with JSON's verbosity in human-edited files, **JSON5 offers the lowest-friction migration path**. Those willing to learn new syntax should evaluate **KDL for documents** and **TOML for structured configs**. Rust developers have an excellent native option in **RON**, while organizations managing complex infrastructure should consider **Dhall's safety guarantees** or **Pkl's Apple-backed IDE integration**.
 
 The performance penalty of human-readable formats (5-650x slower than JSON) sounds alarming but is irrelevant for configuration files parsed once at startup. Choose based on **ecosystem fit** (what does your toolchain already use?), **syntax ergonomics** (will humans edit this?), and **failure modes** (can YAML's implicit typing break your deployments?).
+
+## Key references
+
+- JSON standard (RFC 8259): https://www.rfc-editor.org/rfc/rfc8259
+- TOML v1.0.0 spec: https://toml.io/en/
+- YAML 1.2.2 spec: https://yaml.org/spec/1.2.2/
+- JSON5 specification: https://spec.json5.org/
+- KDL language specification: https://github.com/kdl-org/kdl/blob/main/SPEC.md
+- RON project: https://github.com/ron-rs/ron
+- Dhall language: https://dhall-lang.org/
+- Pkl language docs: https://pkl-lang.org/

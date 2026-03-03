@@ -10,6 +10,19 @@ See also: [The complete guide to programming fonts for IDEs and terminals](progr
 
 The programming font landscape has evolved significantly, with **texture healing**, **variable font axes**, and **accessibility-first design** emerging as notable innovations of 2023-2026. JetBrains Mono and Fira Code remain widely adopted free options, while Monaspace stands out as a major technical release. For developers seeking optimal readability, existing research suggests personalized font selection can materially improve reading speed, meaning experimentation matters more than following trends.
 
+## Method and source quality
+
+This survey prioritizes primary project sources (official repositories, foundry pages, release notes, and licensing pages).
+Some historical context and adoption framing draws on secondary commentary and should be read as contextual synthesis rather than archival fact.
+Popularity and pricing signals (for example GitHub stars and commercial pricing tiers) are point-in-time and change frequently.
+
+## Methodology transparency
+
+- **Scope:** Widely discussed programming fonts with emphasis on active projects, notable recent releases, and representative premium alternatives.
+- **Evaluation lens:** Comparison centers on readability ergonomics, ecosystem adoption, and documented design intent rather than controlled legibility experiments.
+- **Research usage:** Academic studies are used to frame plausible effects and uncertainty, not to claim one universally optimal font.
+- **Popularity caveat:** Repository stars and download signals are treated as rough community-interest proxies.
+
 ## The established standards still dominating IDEs
 
 The classic programming fonts that shaped developer expectations remain highly relevant. **Consolas**, designed by Lucas de Groot for Microsoft in 2004, pioneered ClearType optimization and proved monospace fonts could be both functional and elegant. It remains Windows' default and offers slashed, dotted, or plain zeros via OpenType features. **Monaco** (1984) and its successor **Menlo** (2009) defined the Mac aesthetic, with Monaco's distinctive curved parentheses creating an almost circular appearance that makes bracket matching intuitive at a glance.

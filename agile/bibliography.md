@@ -10,7 +10,16 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 ---
 
-## Primary Sources and Foundational Documents
+## Source quality note
+
+- **Primary sources:** Original manifestos, standards, books, conference material, and vendor/organization first-party publications.
+- **Secondary sources:** Academic synthesis papers, analyst reports, and historical overviews.
+- **Tertiary sources:** Encyclopedias and commentary sites, useful for discovery but lower confidence for factual claims.
+- **Usage guidance:** Prefer primary and secondary sources for substantive claims in narrative reports; treat tertiary links as orientation material.
+
+---
+
+## Primary Sources and Core Documents
 
 **The Agile Manifesto and History**
 - Agile Alliance. "History: The Agile Manifesto." [https://agilemanifesto.org/history.html](https://agilemanifesto.org/history.html)
@@ -31,7 +40,7 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 **Scrum**
 - Schwaber, Ken, and Mike Beedle. *Agile Software Development with Scrum*. Prentice Hall, 2001. [https://www.amazon.com/Agile-Software-Development-Scrum/dp/0130676349](https://www.amazon.com/Agile-Software-Development-Scrum/dp/0130676349)
 - Schwaber, Ken. *Agile Project Management with Scrum*. Microsoft Press, 2004. [https://www.amazon.com/Agile-Project-Management-Scrum-Developer/dp/073561993X](https://www.amazon.com/Agile-Project-Management-Scrum-Developer/dp/073561993X)
-- Sutherland, Jeff. *Scrum: The Art of Doing Twice the Work in Half the Time*. Crown Business, 2014. [https://www.goodreads.com/book/show/19288230-scrum](https://www.goodreads.com/book/show/19288230-scrum)
+- Sutherland, Jeff. *Scrum: The Art of Doing Twice the Work in Half the Time*. Crown Business, 2014. [https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X](https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X)
 
 **Lean Software Development**
 - Poppendieck, Mary, and Tom Poppendieck. *Lean Software Development: An Agile Toolkit*. Addison-Wesley, 2003. [https://www.amazon.com/Lean-Software-Development-Agile-Toolkit/dp/0321150783](https://www.amazon.com/Lean-Software-Development-Agile-Toolkit/dp/0321150783)
@@ -42,7 +51,6 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 **Continuous Delivery and DevOps**
 - Humble, Jez, and David Farley. *Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation*. Addison-Wesley, 2010. [https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912](https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912)
-- Humble, Jez, and David Farley. *Continuous Delivery* (Goodreads page). [https://www.goodreads.com/book/show/8686650-continuous-delivery](https://www.goodreads.com/book/show/8686650-continuous-delivery)
 
 **User Stories and Estimation**
 - Cohn, Mike. *User Stories Applied: For Agile Software Development*. Addison-Wesley, 2004. [https://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685](https://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685)
@@ -52,16 +60,14 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 ## Academic Papers and Historical Research
 
 **Iterative Development History**
-- Larman, Craig, and Victor Basili. "Iterative and Incremental Development: A Brief History." *IEEE Computer*, June 2003. [https://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf](https://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf)
-- Web3us. "Iterative and Incremental Development: A Brief History." [https://www.web3us.com/how-guides/iterative-and-incremental-development](https://www.web3us.com/how-guides/iterative-and-incremental-development)
-- WebSeitz Wiki. "(2003-06-30) Iterative and Incremental Development: A Brief History." [http://webseitz.fluxent.com/wiki/2003-06-30-IterativeAndIncrementalDevelopmentABriefHistory](http://webseitz.fluxent.com/wiki/2003-06-30-IterativeAndIncrementalDevelopmentABriefHistory)
+- Larman, Craig, and Victor Basili. "Iterative and Incremental Development: A Brief History." *IEEE Computer*, June 2003. [https://doi.org/10.1109/MC.2003.1204375](https://doi.org/10.1109/MC.2003.1204375)
 
 **Toyota Production System**
 - Lean Enterprise Institute. "Toyota Production System (TPS)." [https://www.lean.org/lexicon-terms/toyota-production-system/](https://www.lean.org/lexicon-terms/toyota-production-system/)
 
 ---
 
-## Encyclopedia and Reference Articles
+## Encyclopedia and Tertiary Reference Articles
 
 **Wikipedia**
 - "Agile Software Development." Wikipedia. [https://en.wikipedia.org/wiki/Agile_software_development](https://en.wikipedia.org/wiki/Agile_software_development)
@@ -77,8 +83,6 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 **Other Encyclopedic Sources**
 - HandWiki. "Biography: Ward Cunningham." [https://handwiki.org/wiki/Biography:Ward_Cunningham](https://handwiki.org/wiki/Biography:Ward_Cunningham)
-- Grokipedia. "Ward Cunningham." [https://grokipedia.com/page/Ward_Cunningham](https://grokipedia.com/page/Ward_Cunningham)
-- Grokipedia. "Pivotal Labs." [https://grokipedia.com/page/Pivotal_Labs](https://grokipedia.com/page/Pivotal_Labs)
 
 ---
 
@@ -97,8 +101,6 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 - Kaizenko. "A Historical Look at The Scrum Guide From 1986 to 2020." [https://www.kaizenko.com/the-scrum-guide-history/](https://www.kaizenko.com/the-scrum-guide-history/)
 - Kaizenko. "A Behind the Scenes Look at the Writing of the Agile Manifesto." [https://www.kaizenko.com/a-behind-the-scenes-look-at-the-writing-of-the-agile-manifesto/](https://www.kaizenko.com/a-behind-the-scenes-look-at-the-writing-of-the-agile-manifesto/)
 - Teaching Agile. "Scrum Origins & Agile Principles: Complete Foundation Guide." [https://teachingagile.com/scrum/psm-1/scrum-theory-principles/scrum-history](https://teachingagile.com/scrum/psm-1/scrum-theory-principles/scrum-history)
-- Next Agile. "Scrum Guide: Versions & Its Implications Over The Years." [https://nextagile.ai/blogs/agile/scrum-guide-versions-and-implications/](https://nextagile.ai/blogs/agile/scrum-guide-versions-and-implications/)
-- ZenTao. "A Brief History of Agile: Ken Schwaber - A Brave Warrior (Part 1)." [https://www.zentao.pm/blog/a-brief-history-of-agile-ken-schwaber-a-brave-warrior-1-1101.html](https://www.zentao.pm/blog/a-brief-history-of-agile-ken-schwaber-a-brave-warrior-1-1101.html)
 
 ---
 
@@ -119,8 +121,8 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 ## DevOps History
 
+- DevOpsDays Ghent 2009 (archive). "Welcome." [https://devopsdays.org/events/2009-ghent/welcome/](https://devopsdays.org/events/2009-ghent/welcome/)
 - New Relic. "The Incredible True Story of How DevOps Got Its Name." [https://newrelic.com/blog/news/devops-name](https://newrelic.com/blog/news/devops-name)
-- KnowledgeHut. "A Brief History of DevOps." [https://www.knowledgehut.com/blog/devops/history-of-devops](https://www.knowledgehut.com/blog/devops/history-of-devops)
 - Atlassian. "History of DevOps." [https://www.atlassian.com/devops/what-is-devops/history-of-devops](https://www.atlassian.com/devops/what-is-devops/history-of-devops)
 - CircleCI. "A Brief History of DevOps, Part III: Automated Testing and Continuous Integration." [https://circleci.com/blog/a-brief-history-of-devops-part-iii-automated-testing-and-continuous-integration/](https://circleci.com/blog/a-brief-history-of-devops-part-iii-automated-testing-and-continuous-integration/)
 
@@ -137,22 +139,21 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 - LeSS. "What is LeSS?" [https://less.works/less/framework](https://less.works/less/framework)
 
 **Spotify Model**
-- Product School. "What Is The Spotify Model?" [https://productschool.com/blog/product-fundamentals/spotify-model-scaling-agile](https://productschool.com/blog/product-fundamentals/spotify-model-scaling-agile)
+- Kniberg, Henrik. "Spotify Engineering Culture (Part 1)." Spotify Engineering Blog, 2014. [https://engineering.atspotify.com/2014/03/spotify-engineering-culture-part-1/](https://engineering.atspotify.com/2014/03/spotify-engineering-culture-part-1/)
+- Kniberg, Henrik. "Spotify Engineering Culture (Part 2)." Spotify Engineering Blog, 2014. [https://engineering.atspotify.com/2014/09/spotify-engineering-culture-part-2/](https://engineering.atspotify.com/2014/09/spotify-engineering-culture-part-2/)
 
 ---
 
 ## Other Agile Methodologies
 
 **Crystal**
-- ToolsQA. "What is Crystal Method in Agile and How it is Different?" [https://www.toolsqa.com/agile/crystal-method/](https://www.toolsqa.com/agile/crystal-method/)
-- ActiveCollab. "Crystal Methodology in Agile - Essential Guide." [https://activecollab.com/learn/project-management-methodologies/crystal-methods](https://activecollab.com/learn/project-management-methodologies/crystal-methods)
+- Cockburn, Alistair. *Crystal Clear: A Human-Powered Methodology for Small Teams*. Addison-Wesley, 2004. [https://www.amazon.com/Crystal-Clear-Human-Powered-Methodology-Development/dp/0201699478](https://www.amazon.com/Crystal-Clear-Human-Powered-Methodology-Development/dp/0201699478)
 
 ---
 
 ## Tools and Technology History
 
 **Git**
-- GeeksforGeeks. "History of Git." [https://www.geeksforgeeks.org/git/history-of-git/](https://www.geeksforgeeks.org/git/history-of-git/)
 - Git SCM. "A Short History of Git." [https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git)
 
 **Jira**
@@ -176,10 +177,10 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 ## State of Agile Reports and Industry Analysis
 
-- KnowledgeHut. "State of Agile 2025: Things You Need to Know." [https://www.knowledgehut.com/blog/agile/state-of-agile](https://www.knowledgehut.com/blog/agile/state-of-agile)
-- StarAgile. "State of Agile 2025: Insights, Trends, and Key Findings." [https://staragile.com/blog/state-of-agile](https://staragile.com/blog/state-of-agile)
-- Electro IQ. "Agile Statistics and Facts: Adoption, Market Size & Trends (2025)." [https://electroiq.com/stats/agile-statistics/](https://electroiq.com/stats/agile-statistics/)
+- Digital.ai. "17th State of Agile Report." [https://digital.ai/resource-center/analyst-reports/state-of-agile-report](https://digital.ai/resource-center/analyst-reports/state-of-agile-report)
 - PMWares. "17th Annual State of Agile Report – Summary & Key Findings." [https://pmwares.com/summary-of-the-17th-annual-state-of-agile-report-summary-key-findings/](https://pmwares.com/summary-of-the-17th-annual-state-of-agile-report-summary-key-findings/)
+
+Note: annual "state of agile" reports are often vendor-sponsored or survey-driven; use them as directional evidence rather than neutral ground truth.
 
 ---
 
@@ -200,7 +201,6 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 - O'Reilly Media. *Lean Software Development: An Agile Toolkit*. [https://www.oreilly.com/library/view/lean-software-development/0321150783/](https://www.oreilly.com/library/view/lean-software-development/0321150783/)
 - Google Books. *Lean Software Development: An Agile Toolkit*. [https://books.google.com/books/about/Lean_Software_Development.html?id=IJ1gAgAAQBAJ](https://books.google.com/books/about/Lean_Software_Development.html?id=IJ1gAgAAQBAJ)
-- UMA Technology. "10 Books Every Tech Professional Should Read." [https://umatechnology.org/10-books-every-tech-professional-should-read/](https://umatechnology.org/10-books-every-tech-professional-should-read/)
 - Gihyo (Japan). "#27 Ward Cunningham: Wiki Inventor; Agile Programming Pioneer." [https://gihyo.jp/dev/serial/01/software_designers/0027](https://gihyo.jp/dev/serial/01/software_designers/0027)
 
 ---

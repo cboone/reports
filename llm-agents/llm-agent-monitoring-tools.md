@@ -10,6 +10,14 @@ This document catalogs a broad set of notable tools (as of mid-February 2026) fo
 
 ---
 
+## Source quality note
+
+- **Primary sources:** Most entries rely on official project documentation (GitHub READMEs, release notes, and vendor docs).
+- **Secondary sources:** Community write-ups and discussion threads are used for additional context.
+- **Caveat:** Feature, benchmark, and performance claims are frequently self-reported by tool maintainers unless explicitly attributed to independent testing.
+
+---
+
 ## Table of Contents
 
 1. [Desktop Session Managers (macOS)](#1-desktop-session-managers-macos)
@@ -95,7 +103,7 @@ Terminal-based tools that wrap tmux (or equivalent) to provide a unified dashboa
   - Fuzzy search across all sessions
   - Session forking (Claude Code conversations)
   - On-demand MCP server attachment per session or globally
-  - MCP Socket Pool — reported to reduce MCP memory usage by 85-90%
+  - MCP Socket Pool — project-reported reduction in MCP memory usage of 85-90%
   - Git worktree support for parallel agents
   - Conductors — persistent Claude sessions that orchestrate/monitor other sessions
   - Telegram & Slack bridges for remote monitoring
@@ -213,7 +221,7 @@ Full desktop applications focused on running multiple agent sessions with visual
   - Asynchronous execution — delegate tasks and walk away
   - Detailed dashboards and task tracking
   - Also has a VS Code extension variant
-- **Notes:** Commercial product and a paid standalone desktop app in this space. Public materials claim competitive SWE-bench Verified performance in production-agent benchmarks.
+- **Notes:** Commercial product and a paid standalone desktop app in this space. Vendor materials cite competitive SWE-bench Verified performance in production-agent benchmarks (independent confirmation not included here).
 
 ---
 
@@ -432,13 +440,13 @@ Enterprise-grade platforms for monitoring LLM applications in production. These 
 ### LangSmith
 
 - **Website:** [smith.langchain.com](https://smith.langchain.com)
-- **Key Strengths:** Deep LangChain integration, low overhead in vendor benchmarks, detailed tracing
+- **Key Strengths:** Deep LangChain integration, low overhead in vendor-reported benchmarks, detailed tracing
 - **Best For:** Teams building with LangChain/LangGraph
 
 ### LangWatch
 
 - **Website:** [langwatch.ai](https://langwatch.ai)
-- **Key Strengths:** Integrated monitoring, evaluation, and experimentation in one platform, with quick setup claims
+- **Key Strengths:** Integrated monitoring, evaluation, and experimentation in one platform, with vendor-claimed quick setup
 - **Best For:** Teams wanting an integrated monitoring and evaluation solution
 
 ### Braintrust
@@ -563,9 +571,9 @@ Python/TypeScript SDKs for instrumenting your own agents with monitoring and obs
 - **Awesome Claude Code:** [github.com/hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) — Curated list of skills, hooks, orchestrators, and apps
 - **Git Worktrees for AI Agents (comprehensive guide):** [Upsun Developer Center](https://devcenter.upsun.com/posts/git-worktrees-for-parallel-ai-coding-agents/) — Compares agentree, git-worktree-runner, worktree-cli, gwq, ccswarm, Crystal
 - **VS Code Multi-Agent Development:** [VS Code blog (Feb 2026)](https://code.visualstudio.com/blogs/2026/02/05/multi-agent-development)
-- **GitHub Agent HQ Announcement:** [helpnetsecurity.com](https://www.helpnetsecurity.com/2026/02/05/github-enables-coding-agents/)
+- **GitHub Agent HQ Announcement (third-party coverage):** [helpnetsecurity.com](https://www.helpnetsecurity.com/2026/02/05/github-enables-coding-agents/)
 - **Claude Code Hooks Guide (official):** [code.claude.com/docs/en/hooks-guide](https://code.claude.com/docs/en/hooks-guide)
-- **AIMultiple — 15 AI Agent Observability Tools (benchmark):** [research.aimultiple.com/agentic-monitoring](https://research.aimultiple.com/agentic-monitoring/)
+- **AIMultiple — 15 AI Agent Observability Tools (third-party benchmark):** [research.aimultiple.com/agentic-monitoring](https://research.aimultiple.com/agentic-monitoring/)
 
 ---
 

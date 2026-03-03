@@ -10,6 +10,12 @@ See also: [Programming fonts in 2026: a comprehensive survey](programming-fonts-
 
 Programming fonts have evolved from mechanical typewriter constraints into a sophisticated ecosystem of **80+ purpose-designed typefaces** optimized for code readability. The modern landscape spans free open-source options like **Fira Code** (81,000+ GitHub stars) and **JetBrains Mono**, platform-bundled fonts like **SF Mono** and **Consolas**, and premium commercial options including **MonoLisa** and **Operator Mono**. The 2014 introduction of programming ligatures—where character sequences like `=>` render as connected symbols—revolutionized the field, while the **Nerd Fonts** project now patches 50+ fonts with 10,000+ icons for modern terminal workflows.
 
+## Method and source quality
+
+This guide prioritizes primary project sources (official font repositories, foundry pages, release notes, and licensing documents).
+Historical context and adoption signals also draw on secondary coverage, which is useful for narrative context but less authoritative than original project documentation.
+Repository-star counts and popularity indicators are point-in-time metrics and should be read as approximate.
+
 ---
 
 ## From typewriters to terminals: the origins of monospace
@@ -241,11 +247,16 @@ For high-DPI displays, traditional hinting becomes less important (sufficient pi
 - Nerd Fonts cheat sheet (searchable icons): https://www.nerdfonts.com/cheat-sheet
 - Ligaturizer (add Fira Code ligatures to any font): https://github.com/ToxicFrog/Ligaturizer
 
-**Historical and technical references**:
-- Wikipedia's monospaced font article: https://en.wikipedia.org/wiki/Monospaced_font
-- mass:werk's DEC CRT typography analysis: https://www.masswerk.at/nowgobang/2019/dec-crt-typography
-- Microsoft ClearType Font Collection history: https://learn.microsoft.com/en-us/typography/cleartype/clear-type-font-collection
-- Evil Martians' "Beyond Monospace" analysis: https://evilmartians.com/chronicles/beyond-monospace-the-search-for-the-perfect-coding-font
+**Primary and high-authority references**:
+- Microsoft typography documentation (ClearType collection): https://learn.microsoft.com/en-us/typography/cleartype/clear-type-font-collection
+- IBM Plex project: https://www.ibm.com/plex/
+- Source Code Pro repository: https://github.com/adobe-fonts/source-code-pro
+- Cascadia Code repository: https://github.com/microsoft/cascadia-code
+
+**Secondary references (contextual, lower authority)**:
+- Wikipedia monospaced font overview: https://en.wikipedia.org/wiki/Monospaced_font
+- mass:werk DEC CRT typography analysis: https://www.masswerk.at/nowgobang/2019/dec-crt-typography
+- Evil Martians "Beyond Monospace" analysis: https://evilmartians.com/chronicles/beyond-monospace-the-search-for-the-perfect-coding-font
 
 **Designer pages**:
 - LucasFonts (Luc(as) de Groot/Consolas): https://www.lucasfonts.com/

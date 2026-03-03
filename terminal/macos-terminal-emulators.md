@@ -8,6 +8,20 @@ _January 27, 2026_
 
 Terminal emulators on macOS have evolved substantially, with **GPU-accelerated rendering now standard**, graphics protocols maturing, and AI integration emerging as a differentiating feature. Ghostty's late-2024 release shifted attention in the landscape with its native Metal renderer and Zig-based performance, while established players like iTerm2 and Kitty continue advancing protocol standards. This review evaluates nine major terminals across performance, standards compliance, and integration capabilities.
 
+## Method and source quality
+
+This review combines primary project sources (official docs, release notes, and repository changelogs) with independent benchmark writeups and vendor-published performance claims.
+Performance numbers are directionally useful but environment-sensitive, and cross-terminal comparisons should be treated as approximate unless reproduced under identical workloads, fonts, and rendering settings.
+Where claims come from vendor benchmarks or project-authored posts, they are labeled as such and should be interpreted as self-reported.
+
+## Methodology transparency
+
+- **Coverage:** Nine actively maintained macOS terminal emulators with meaningful developer adoption and publicly documented feature sets.
+- **Performance inputs:** Public benchmark reports and release-note measurements, not a single controlled benchmark run by this report author.
+- **Protocol matrix process:** Capability tables are derived from first-party docs and release announcements, with partial-support entries used when feature behavior is constrained.
+- **UX assessment basis:** Integration and workflow claims are based on documented features plus repeat themes in practitioner discussions.
+- **Comparability caveat:** Memory, latency, and throughput figures vary with fonts, rendering backends, shell workloads, and hardware generation.
+
 ## Performance leaders differ by metric
 
 Raw throughput and input latency tell different stories. Alacritty often leads raw throughput in vtebench-style workloads, while tuned Kitty and Alacritty configurations frequently lead interactive latency measurements. Ghostty's SIMD-focused text pipeline has shown strong UTF-8 throughput in project and independent benchmarks.
@@ -183,3 +197,14 @@ The macOS terminal landscape in 2026 offers distinct choices rather than margina
 Ghostty's emergence validates demand for native implementations prioritizing platform conventions, while Warp's commercial success demonstrates appetite for AI-integrated terminals despite open-source alternatives. The graphics protocol fragmentation—Sixel vs. Kitty Graphics vs. iTerm2—may gradually consolidate around Kitty Graphics as more terminals adopt it, though Sixel's broader legacy support ensures continued relevance.
 
 Terminal.app's macOS Tahoe updates finally address a longstanding limitation with true color support, potentially satisfying casual users who previously needed third-party alternatives. For serious development work, however, the third-party ecosystem's decade-plus advancement in features, performance, and customization remains difficult to match through incremental improvements to Apple's built-in offering.
+
+## Key references
+
+- iTerm2: https://iterm2.com/
+- Kitty docs and protocol notes: https://sw.kovidgoyal.net/kitty/
+- Ghostty docs: https://ghostty.org/docs
+- Alacritty project and releases: https://github.com/alacritty/alacritty
+- WezTerm docs: https://wezterm.org/
+- Warp product and docs: https://www.warp.dev/
+- Rio terminal project: https://github.com/raphamorim/rio
+- Apple Terminal User Guide: https://support.apple.com/guide/terminal/welcome/mac

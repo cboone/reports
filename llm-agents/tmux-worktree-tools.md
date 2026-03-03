@@ -10,6 +10,19 @@ The intersection of LLM-powered coding agents, tmux session management, and git 
 
 This document catalogs a broad set of significant tools, scripts, and workflows in the space, with feature comparisons, architectural analysis, and links to the community commentary that has shaped the ecosystem.
 
+## Method and source quality
+
+This survey combines primary evidence (official repositories, release notes, and project documentation) with community commentary from blogs, forums, and social threads.
+Feature matrices and maturity assessments are directional snapshots and can change quickly as these tools iterate.
+Community sentiment sections are useful for qualitative context but should not be treated as controlled benchmark evidence.
+
+## Methodology transparency
+
+- **Scope:** Publicly documented tools and workflows that combine agent execution with tmux and git worktree isolation.
+- **Inclusion signal:** Projects with visible maintenance activity, usable documentation, and evidence of real workflow adoption.
+- **Comparison method:** Features are cataloged from project docs and release notes, then grouped by workflow philosophy rather than language or license alone.
+- **Narrative caveat:** Community commentary sections summarize recurring practitioner themes and are intentionally qualitative.
+
 ---
 
 ## Table of Contents

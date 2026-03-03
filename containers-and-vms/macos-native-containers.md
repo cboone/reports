@@ -10,6 +10,19 @@ Apple has introduced a distinct approach to container technology on macOS by imp
 
 The technology matters for three reasons: it can deliver **near-zero resource consumption** when containers are not running (unlike Docker's always-on VM), provides **strong security boundaries** compared with namespace-based containers, and creates an open-source (Apache 2.0), Swift-native stack deeply integrated with macOS. However, the ecosystem remains nascent at version 0.6.0, lacking Docker Compose equivalents and enterprise tooling that many developers depend on.
 
+## Method and source quality
+
+This analysis relies primarily on Apple-maintained sources (project repositories, framework documentation, and release artifacts) plus official documentation from adjacent container ecosystems.
+Performance and adoption claims include third-party benchmark reports and community observations, which are useful but environment-sensitive and not always directly comparable.
+Project metrics such as stars, release versions, and ecosystem maturity are point-in-time signals.
+
+## Methodology transparency
+
+- **Scope:** Native macOS container approaches and adjacent alternatives (Docker Desktop, OrbStack, Linux-native container models, and traditional VMs).
+- **Benchmark interpretation:** Public benchmark snapshots are treated as comparative signals, not definitive performance rankings across all workloads.
+- **Security analysis basis:** Architecture-level reasoning (isolation boundary, kernel-sharing model, attack surface) is prioritized over single-incident anecdotes.
+- **Roadmap uncertainty:** Ecosystem-maturity conclusions reflect current tooling gaps and can shift quickly with platform releases.
+
 ## How Apple built containers on top of lightweight VMs
 
 Apple's architecture departs significantly from traditional containers. While Docker and Podman on Linux use kernel namespaces and cgroups to isolate processes sharing a single kernel, Apple runs each container inside its own dedicated virtual machine with a separate Linux kernel. The stack consists of three layers: the **Container CLI** user interface, the **Containerization framework** (Swift package handling container lifecycle), and Apple's **Virtualization.framework** providing hypervisor capabilities.
@@ -123,3 +136,11 @@ Apple's Containerization framework represents a meaningful architectural innovat
 The trade-offs are clear: stronger security boundaries versus higher per-container memory overhead; native macOS integration versus cross-platform compatibility; open-source licensing versus mature enterprise tooling. For complex multi-container development workflows, Docker and OrbStack remain more practical today.
 
 The framework's future depends on ecosystem development—whether Apple adds orchestration capabilities, whether Docker adopts the Containerization framework as an optional backend, and whether the community builds the tooling layer. At version 0.6.0, Apple has delivered an initial foundation; the question is whether it will build or inspire the ecosystem needed to fully realize its potential.
+
+## Key references
+
+- Apple container CLI: https://github.com/apple/container
+- Apple Containerization framework: https://github.com/apple/containerization
+- Apple Virtualization framework docs: https://developer.apple.com/documentation/virtualization
+- Kata Containers project: https://katacontainers.io/
+- Docker Engine and container docs: https://docs.docker.com/

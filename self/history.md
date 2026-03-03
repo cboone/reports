@@ -10,6 +10,11 @@ Self is often cited as an influential programming language that many developers 
 
 The language emerged from frustration with Smalltalk's complexity. Ungar, fresh from his award-winning Berkeley dissertation on Smalltalk performance, joined Smith at PARC to explore a radical simplification: what if object-oriented programming didn't need classes at all?
 
+## Evidence basis
+
+This report relies primarily on original Self papers, doctoral theses, and the project-maintained bibliography archive at `bibliography.selflanguage.org`.
+Later ecosystem-impact claims (for example, influence on specific VMs or languages) are based on a mix of primary statements and secondary engineering retrospectives, and should be read as historically grounded but interpretive.
+
 ## From PARC to Stanford to Sun: a research odyssey
 
 Self's journey through three institutions shaped both the language and the engineers who would later transform the industry.  The **design phase at Xerox PARC (1985-1986)** established the conceptual foundations, with Smith bringing insights from his Alternate Reality Kit prototype system and Ungar contributing deep expertise in dynamic language implementation.
@@ -22,7 +27,7 @@ The **Sun Microsystems era (1991-1995)** brought additional talent, including **
 
 Self's core insight was that classes are not strictly necessary for object-oriented programming.  Objects inherit directly from other objects through **prototype delegation**—when a message is sent, the system searches the receiver for a matching slot, then recursively searches parent objects.  Creating new objects requires only **cloning** existing ones, not instantiating from abstract class descriptions. 
 
-This simplicity created severe performance challenges that drove groundbreaking innovations. A key one was **maps** (now called "hidden classes" in V8): an implementation-level structure that transparently groups objects with identical slot layouts. Since objects cloned from the same prototype typically share structure, maps enabled class-like optimization without language-level classes. V8's documentation explicitly acknowledges: "This basic idea is not new—the prototype-based programming language Self used maps to do something similar." 
+This simplicity created severe performance challenges that drove groundbreaking innovations. A key one was **maps** (now called "hidden classes" in V8): an implementation-level structure that transparently groups objects with identical slot layouts. Since objects cloned from the same prototype typically share structure, maps enabled class-like optimization without language-level classes. V8 implementation documents describe hidden classes in ways that closely mirror these Self-era techniques.
 
 **Polymorphic inline caches (PICs)**, introduced by Hölzle, Chambers, and Ungar in 1991, solved the problem of call sites that encounter multiple receiver types. Rather than falling back to slow dictionary lookups, PICs generate stub routines that test receiver types and branch directly to cached methods. Published results showed clear median speedups on representative workloads, and the technique became standard in modern JavaScript engines.
 
@@ -38,7 +43,7 @@ The project did not disappear. Community members released Version 4.4 in 2010 wi
 
 ## Legacy: powering modern runtimes invisibly
 
-Self's influence flows through two channels: language design and virtual machine technology. **Brendan Eich** explicitly adopted Self's prototype model when creating JavaScript in 1995, later writing: "I'm not proud, but I'm happy that I chose Scheme-ish first-class functions and Self-ish prototypes as the main ingredients."   JavaScript's prototype-based inheritance model traces directly to Self.
+Self's influence flows through two channels: language design and virtual machine technology. **Brendan Eich** has cited Self and Scheme as key influences when creating JavaScript in 1995. JavaScript's prototype-based inheritance model traces directly to Self.
 
 **NewtonScript** (1993) adapted Self for Apple's Newton PDA, demonstrating that prototype-based programming could work on resource-constrained devices.   **Lua**'s metatable mechanism enables Self-style delegation.  **Io**, **Slate**, and numerous research languages carried forward the prototype paradigm.  
 

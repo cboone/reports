@@ -8,6 +8,12 @@ _January 27, 2026_
 
 **tmux, a terminal multiplexer that helped reshape command-line workflows, was created by Nicholas Marriott in 2007 as a cleaner, BSD-licensed alternative to GNU Screen.** What began as a personal project driven by frustration with Screen's unreadable codebase became one of the more influential developer tools of the 2010s. After OpenBSD founder Theo de Raadt personally audited the code and found it "high quality," tmux was imported into the OpenBSD base system on June 1, 2009, a noteworthy event that signaled production readiness. Today, with **40,000+ GitHub stars** and inclusion in most Unix-like operating systems, tmux is a widely adopted choice for terminal multiplexing.
 
+## Method and source quality
+
+This history is built primarily from project-maintained artifacts (the tmux repository and changelog), OpenBSD records, and contemporaneous interviews.
+Adoption indicators such as package availability and GitHub stars are directional, not fixed, and should be interpreted as approximate.
+Community tutorials and plugin ecosystem references are included for ecosystem context, but they are secondary sources.
+
 ---
 
 ## Nicholas Marriott and the creation story

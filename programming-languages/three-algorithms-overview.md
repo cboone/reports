@@ -8,6 +8,12 @@ _February 6, 2026_
 
 This document introduces and connects three companion studies, each implementing a single algorithm across dozens of programming languages. Together, they reveal how different language families are optimized for different kinds of problems — and why no single paradigm is universally best.
 
+## Method and source quality
+
+The companion studies use representative implementations chosen to highlight language idioms, not exhaustive benchmarking or formal proofs.
+Comparisons are based on conceptual parity across examples, but stylistic and library choices still involve editorial judgment.
+Language ecosystems evolve quickly, so toolchain support and "best" idioms should be treated as snapshot observations.
+
 ---
 
 ## The Three Algorithms

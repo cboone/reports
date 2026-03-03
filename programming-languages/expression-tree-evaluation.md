@@ -10,6 +10,12 @@ _February 6, 2026_
 
 This document explores a single algorithm implemented across dozens of programming languages, organized by language family. Where the companion document on [finding indices above the mean](indices-above-mean.md) showcased array languages, this algorithm — evaluating a recursive expression tree — rewards languages with algebraic data types, pattern matching, and recursive thinking.
 
+## Method and source quality
+
+Examples are curated to keep the core algorithm structurally comparable across language families.
+The goal is explanatory contrast, not definitive judgments about absolute performance, ergonomics, or ecosystem quality.
+Idiomatic choices are informed by community conventions but remain interpretive and version-sensitive.
+
 ## Table of Contents
 
 1. [The Algorithm](#the-algorithm)

@@ -8,6 +8,12 @@ _January 30, 2026_
 
 Go emerged from Google in 2009 as a deliberate answer to software engineering at scale, born from **45-minute C++ compilation times** and the realization that mainstream languages often forced a difficult choice between fast compilation, efficient execution, and ease of programming. Created by three highly influential language engineers, Ken Thompson (Unix co-creator, Turing Award winner), Rob Pike (Plan 9, UTF-8 co-creator), and Robert Griesemer (V8, HotSpot JVM), Go combined C's efficiency with garbage collection and built-in concurrency primitives based on Tony Hoare's Communicating Sequential Processes. The result helped reshape cloud infrastructure: Go now powers a large share of the Cloud Native Computing Foundation ecosystem, including Docker, Kubernetes, and Terraform. Go 1.0's 2012 compatibility promise remains unbroken, and the language continues evolving with generics arriving in 2022 and ongoing runtime work such as the experimental Green Tea garbage collector path in 2025.
 
+## Method and source quality
+
+This report prioritizes primary project sources (official Go docs, release notes, talks, and repository-linked materials) and direct historical artifacts.
+Ecosystem adoption and benchmark-oriented claims are synthesized from multiple public sources and should be treated as directional rather than exact.
+Historical influence statements are evidence-informed but interpretive where direct attribution is limited.
+
 ---
 
 ## The frustrations that sparked a new language
@@ -395,17 +401,21 @@ Go's development continues under new leadership. **Austin Clements** became Tech
 
 ### What the community requests
 
-The **2025 Go Developer Survey** showed **91% satisfaction** (stable since 2019). Top feature requests include **sum types/discriminated unions**, better enums, and nil safety improvements. An active proposal (GitHub #76920) discusses a `union` keyword for sum types.
+The **2025 Go Developer Survey** ([go.dev/blog/survey2025](https://go.dev/blog/survey2025)) reported **91% satisfaction** (stable since 2019). Top feature requests include **sum types/discriminated unions**, better enums, and nil safety improvements. An active proposal (GitHub #76920) discusses a `union` keyword for sum types.
 
 The Go team definitively closed one debate: syntactic error handling. After the 2019 `try` proposal and 2024 `?` operator proposal both failed to achieve consensus, the June 2025 blog post concluded: "We should stop trying to solve the syntactic problem." The `if err != nil` pattern will remain.
 
 ### Market position
 
-Go reached **#7 on the TIOBE Index** in November 2024, its all-time high at that point. GitHub's Octoverse 2024 reported Go as one of the faster-growing languages, and JetBrains estimated **4.1-5.8 million Go developers** worldwide. Cloudflare Radar trend data also highlighted Go's growing share in automated API traffic.
+Go reached **#7 on the TIOBE Index** in November 2024 ([tiobe.com/tiobe-index](https://www.tiobe.com/tiobe-index/)). GitHub's Octoverse report ([octoverse.github.com](https://octoverse.github.com/)) identified continued growth in typed-language usage, and JetBrains' Developer Ecosystem report ([jetbrains.com/lp/devecosystem-2024](https://www.jetbrains.com/lp/devecosystem-2024/)) reported steady Go adoption in its sample.
 
 ---
 
 ## Annotated bibliography
+
+- **Primary sources:** Go project docs/blog/specs, original papers, and official release materials.
+- **Secondary sources:** Books, talks, and ecosystem analyses.
+- **Caveat:** Popularity and market-position metrics are drawn from public indices and surveys; treat them as directional.
 
 ### Foundational papers
 
@@ -429,6 +439,7 @@ https://go.dev/blog/waza-talk
 Clarifies the distinction that confused many newcomers and explains CSP through the memorable "gopher" analogy. Key quote: "Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once."
 
 **"Simplicity is Complicated" — Rob Pike (dotGo 2015)**
+https://go.dev/talks/2015/simplicity-is-complicated.slide
 Explains how Go achieves apparent simplicity through hidden complexity—features like garbage collection, goroutines, and interfaces each hide enormous implementation work behind simple facades.
 
 ### Official documentation
@@ -454,14 +465,17 @@ Often described as the "K&R for Go" for its broad coverage. Kernighan co-authore
 
 **"Concurrency in Go" — Katherine Cox-Buday (2017)**
 O'Reilly Media
+https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/
 A widely cited resource for concurrent programming patterns: pipelines, fan-out/fan-in, cancellation, context. Particularly useful once you move beyond basic goroutine usage.
 
 **"100 Go Mistakes and How to Avoid Them" — Teiva Harsanyi (2022)**
 Manning Publications
+https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
 Practical guide to common pitfalls covering concurrency bugs, error handling mistakes, testing anti-patterns. Valuable for intermediate developers.
 
 **"Learning Go" — Jon Bodner (2nd edition, 2024)**
 O'Reilly Media
+https://www.oreilly.com/library/view/learning-go-2nd/9781098139285/
 Modern introduction including generics. Good for developers coming from other languages who want efficient onboarding.
 
 ### Historical documents
@@ -471,6 +485,7 @@ https://opensource.googleblog.com/2009/11/hey-ho-lets-go.html
 The original public announcement on Google's Open Source blog.
 
 **Go 1.0 Release Notes (March 2012)**
+https://go.dev/doc/go1
 Established the Go 1 compatibility promise that enabled enterprise adoption.
 
 **"Go 1.18 is released!" (March 15, 2022)**

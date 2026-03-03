@@ -6,9 +6,23 @@ created: 2026-02-10
 
 _February 10, 2026_
 
-**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with visible recent activity in under two years.** The category barely existed before mid-2024; today, several AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a common extensibility standard, local model support via Ollama is common, and multi-agent orchestration is a growing sub-category.
+**The CLI/TUI AI coding tool landscape has expanded from a handful of experiments to roughly 90 tools with visible recent activity in this survey snapshot.** The category barely existed before mid-2024; today, several AI labs ship a terminal coding agent, and model-agnostic open-source alternatives have attracted tens of thousands of GitHub stars. Three tools appear most frequently in practitioner discussions, Claude Code, Aider, and OpenAI's Codex CLI, but a vibrant ecosystem of specialized, multi-agent, and local-first tools has emerged around them. MCP (Model Context Protocol) has become a common extensibility standard, local model support via Ollama is common, and multi-agent orchestration is a growing sub-category.
 
 This document catalogs a broad set of CLI and TUI coding tools that use large language models to assist with software development, organized into logical categories with comparison tables and landscape analysis.
+
+## Method and source quality
+
+This landscape combines primary project sources (official repositories, product docs, release notes, and pricing pages) with secondary evidence from community discussions and benchmark summaries.
+Several metrics in this category are self-reported or platform-derived (for example install counts, GitHub stars, and vendor benchmark results), so they should be read as directional rather than strictly comparable.
+Because tooling changes rapidly, model support, pricing, licenses, and feature matrices can shift quickly after publication.
+
+## Methodology transparency
+
+- **Inclusion scope:** Terminal-first coding assistants with visible public activity in the 2024-2026 window, including both OSS and proprietary tools.
+- **Exclusion scope:** IDE-only copilots without meaningful CLI/TUI workflows, inactive projects, and one-off demos without sustained maintenance signals.
+- **Classification method:** Tools are grouped by dominant workflow pattern (full-featured agents, task-focused tools, wrappers, or orchestration layers), recognizing some overlap.
+- **Comparison basis:** Feature matrices are assembled from first-party documentation and release notes, then sanity-checked against community usage reports.
+- **Ranking caveat:** Star counts, pricing tiers, and benchmark callouts are snapshot indicators, not normalized quality scores.
 
 ---
 

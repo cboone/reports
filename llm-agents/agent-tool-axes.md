@@ -10,6 +10,12 @@ When we work with LLM-powered agents that use tools, we're navigating a design s
 
 This document describes eight axes that capture key aspects of agent-tool systems. Each axis is largely independent of the others, meaning you can be at any position on one axis regardless of where you are on another. That independence is what makes them useful as a reasoning framework: they give you a checklist of concerns that does not collapse into a single dimension.
 
+## Method and source quality
+
+This is a conceptual framework synthesized from current agent-tool behavior patterns and first-party tool documentation.
+It is intended as an analytical model, not a benchmark or formal standard, and examples should be read as illustrative.
+Specific product behaviors referenced here can change as tools update permission models, sandboxing, and orchestration features.
+
 ---
 
 ## Axis 1: Interaction Topology

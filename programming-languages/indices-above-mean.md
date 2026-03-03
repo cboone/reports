@@ -10,6 +10,12 @@ _February 6, 2026_
 
 This document explores a single algorithm implemented across dozens of programming languages, organized by language family. By examining how different languages and paradigms approach the same problem, we can understand the philosophies, trade-offs, and aesthetics that distinguish programming communities from one another.
 
+## Method and source quality
+
+Implementations are selected to emphasize idiomatic approaches while preserving algorithmic equivalence across languages.
+These comparisons are qualitative and pedagogical, not controlled benchmark results.
+Language-specific best practices can change with compiler, library, and tooling releases, so conclusions are time-bounded.
+
 ## Table of Contents
 
 1. [The Algorithm](#the-algorithm)

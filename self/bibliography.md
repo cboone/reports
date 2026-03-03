@@ -6,6 +6,11 @@ created: 2026-01-23
 
 _January 23, 2026_
 
+## Source quality note
+
+This list prioritizes primary sources (original papers, theses, and project-maintained archives).
+Where only index pages or video recordings are available, entries are labeled so evidence strength is clear.
+
 ## Key academic papers and resources
 
 **Foundational Papers**
@@ -17,11 +22,11 @@ _January 23, 2026_
 **Theses & Extended Works**
 
 - [Adaptive Optimization for Self: Reconciling High Performance with Exploratory Programming](https://bibliography.selflanguage.org/_static/urs-thesis.pdf) — Urs Hölzle, Stanford PhD Thesis, 1994. Comprehensive treatment of type feedback and deoptimization.
-- [The Design and Implementation of the Self Compiler](https://bibliography.selflanguage.org/craig-thesis.html) — Craig Chambers, Stanford PhD Thesis, 1992. Bibliography entry with abstract and publication details.
+- [The Design and Implementation of the Self Compiler](https://bibliography.selflanguage.org/craig-thesis.html) — Craig Chambers, Stanford PhD Thesis, 1992. Bibliography catalog entry with publication details.
 
 **UI and Environment**
 
-- [Self: The Video](https://www.youtube.com/watch?v=Ox5P7QyL774) — Stanford demonstration video showing the live programming environment.
+- [Self: The Video](https://www.youtube.com/watch?v=Ox5P7QyL774) — Stanford demonstration recording of the live programming environment (secondary format).
 - [Directness and Liveness in the Morphic User Interface Construction Environment](https://bibliography.selflanguage.org/directness.pdf) — Maloney & Smith, UIST 1995. The direct-manipulation UI paper that influenced Squeak.
 
 **Official Resources**
