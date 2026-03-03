@@ -65,7 +65,7 @@ The "Norway problem" alone has caused production incidents. Other gotchas includ
 
 **Despite these issues, YAML is deeply entrenched in DevOps**: Kubernetes manifests, Docker Compose, GitHub Actions, Ansible, Helm charts, AWS CloudFormation. The ecosystem lock-in is strong, and no other format is clearly displacing YAML in cloud-native tooling.
 
-**Library quality varies dramatically:** Python's `PyYAML` with CLoader is 17x faster than pure Python. In Node.js, `js-yaml` takes 504ms where native JSON takes 94ms—but both dwarf `yaml@2` at 2,108ms.
+**Library quality varies widely:** Python's `PyYAML` with CLoader is 17x faster than pure Python. In Node.js, `js-yaml` takes 504ms where native JSON takes 94ms—but both dwarf `yaml@2` at 2,108ms.
 
 ### JSON5 and HJSON: minimal friction for JSON users
 

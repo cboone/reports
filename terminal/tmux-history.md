@@ -37,7 +37,7 @@ Marriott designed tmux with several specific improvements over Screen:
 
 ## The road to OpenBSD and version 1.0
 
-tmux's path to mainstream adoption accelerated dramatically when it caught the attention of the OpenBSD community.
+tmux's path to mainstream adoption accelerated when it caught the attention of the OpenBSD community.
 
 **May 31, 2008**: tmux 0.2 was imported into the OpenBSD ports system by brynet@, who had discovered the project on SourceForge. The CVS commit message read: *"import tmux 0.2 - tmux is a 'terminal multiplexer'... intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen."*
 
@@ -112,7 +112,7 @@ The following timeline documents major tmux releases from inception through 2025
 
 ## Technical evolution and major features
 
-tmux's architecture has remained largely stable—a **client-server model** where the server manages sessions/windows/panes and clients connect via Unix sockets—but the feature set has evolved dramatically.
+tmux's architecture has remained largely stable—a **client-server model** where the server manages sessions/windows/panes and clients connect via Unix sockets—but the feature set has evolved significantly.
 
 ### Color support progression
 

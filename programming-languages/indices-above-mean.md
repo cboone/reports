@@ -714,7 +714,7 @@ The C family encompasses languages that descended from or were heavily influence
 
 ### C
 
-C is the lingua franca of systems programming, created by Dennis Ritchie at Bell Labs in the early 1970s.
+C is a widely used baseline language in systems programming, created by Dennis Ritchie at Bell Labs in the early 1970s.
 
 ```c
 #include <stdio.h>
@@ -1562,7 +1562,7 @@ Most modern languages use zero-based indexing: the first element is at index 0. 
 
 ### Domain Orientation
 
-Some languages are general-purpose; others target specific domains. MATLAB and R are designed for numerical and statistical computing, making our algorithm trivial. SQL is designed for relational data, making the algorithm possible but awkward. Domain fit matters: the right tool makes work easy, the wrong tool makes it painful.
+Some languages are general-purpose; others target specific domains. MATLAB and R are designed for numerical and statistical computing, making our algorithm comparatively straightforward. SQL is designed for relational data, making the algorithm possible but awkward. Domain fit matters: the right tool makes work easy, the wrong tool makes it painful.
 
 ---
 
