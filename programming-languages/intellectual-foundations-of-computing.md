@@ -166,7 +166,7 @@ Scholars have noted striking parallels between OOP and **Platonic philosophy**: 
 
 ## Logic programming: computation as deduction
 
-**Robert Kowalski** at Edinburgh and **Alain Colmerauer** at Aix-Marseille pioneered logic programming in the early 1970s, based on a remarkable insight: **algorithms can be decomposed into logic plus control**. A program becomes a set of logical assertions; execution is the search for proofs.
+**Robert Kowalski** at Edinburgh and **Alain Colmerauer** at Aix-Marseille pioneered logic programming in the early 1970s, based on a notable insight: **algorithms can be decomposed into logic plus control**. A program becomes a set of logical assertions; execution is the search for proofs.
 
 Prolog (1972) implements this vision using **Horn clauses**—a restricted form of first-order logic that J. Alan Robinson's resolution principle (1965) can efficiently process. Programs are simultaneously **declarative** (stating what is true) and **procedural** (describing how computation proceeds). The programmer specifies logical relationships; the system searches for solutions.
 
@@ -176,13 +176,13 @@ Kowalski's slogan "Algorithm = Logic + Control" captures the paradigm's essence.
 
 ## Type theory evolves from paradox-prevention to program verification
 
-Russell originally invented type theory to prevent paradoxes—a defensive measure. Over decades, types transformed into a positive tool for ensuring program correctness through the remarkable **Curry-Howard correspondence**.
+Russell originally invented type theory to prevent paradoxes, a defensive measure. Over decades, types transformed into a positive tool for ensuring program correctness through the influential **Curry-Howard correspondence**.
 
 ### Proofs as programs
 
 **Haskell Curry** first observed in 1934 that type structures in combinatory logic resembled logical axiom schemes. **William Howard** made this precise in 1969 (circulated in xerox, published 1980): natural deduction proofs correspond exactly to simply typed lambda calculus terms. A proof of "A implies B" is a function from A to B; a proof of "A and B" is a pair of proofs.
 
-This correspondence—**propositions as types, proofs as programs**—revolutionized both logic and programming. Proof simplification corresponds to program evaluation. A terminating program is a constructive proof that its type is inhabited. Type checking becomes proof verification.
+This correspondence, **propositions as types, proofs as programs**, reshaped both logic and programming. Proof simplification corresponds to program evaluation. A terminating program is a constructive proof that its type is inhabited. Type checking becomes proof verification.
 
 **N.G. de Bruijn** independently developed these ideas at Eindhoven through the Automath project (1967–68), the first working theorem prover. His influence extended to modern proof assistants and invented de Bruijn indices for variable binding.
 
@@ -358,4 +358,4 @@ The **Curry-Howard correspondence** unified two seemingly unrelated fields: a pr
 
 **Functional programming** descended directly from lambda calculus through LISP, ML, and Haskell, one of the clearest cases of mathematical theory becoming practical technology. **Type theory** evolved from Russell's paradox-prevention into sophisticated systems guaranteeing properties ranging from memory safety to full functional correctness.
 
-The field continues evolving: dependent types move from proof assistants into languages like Idris; linear types appear in Rust; gradual typing bridges static and dynamic worlds. But these innovations rest on foundations laid between 1879 and 1948—a remarkable period when mathematicians asking abstract questions about logic, proof, and decidability inadvertently created the theoretical basis for the computational world we inhabit.
+The field continues evolving: dependent types move from proof assistants into languages like Idris; linear types appear in Rust; gradual typing bridges static and dynamic worlds. But these innovations rest on foundations laid between 1879 and 1948, a particularly productive period when mathematicians asking abstract questions about logic, proof, and decidability inadvertently created the theoretical basis for the computational world we inhabit.

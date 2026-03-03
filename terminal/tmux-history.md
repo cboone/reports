@@ -41,7 +41,7 @@ tmux's path to mainstream adoption accelerated when it caught the attention of t
 
 **May 31, 2008**: tmux 0.2 was imported into the OpenBSD ports system by brynet@, who had discovered the project on SourceForge. The CVS commit message read: *"import tmux 0.2 - tmux is a 'terminal multiplexer'... intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen."*
 
-**June 1, 2009**: In a remarkable vote of confidence, tmux was imported directly into the **OpenBSD base system**—not as a port, but as part of the core operating system. This was a rare honor that reflected exceptional code quality. Theo de Raadt, OpenBSD's founder, personally audited the code:
+**June 1, 2009**: In a notable vote of confidence, tmux was imported directly into the **OpenBSD base system**—not as a port, but as part of the core operating system. This was a rare honor that reflected exceptional code quality. Theo de Raadt, OpenBSD's founder, personally audited the code:
 
 > "The most impressive thing about tmux, in my view, is how frustrating the code audit was. In 2 hours, I found only one or two nits that had very minor security consequences. It was not accepted into the tree based on license alone. It is high quality code."
 

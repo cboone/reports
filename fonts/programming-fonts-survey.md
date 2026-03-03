@@ -12,7 +12,7 @@ The programming font landscape has evolved significantly, with **texture healing
 
 ## The established standards still dominating IDEs
 
-The classic programming fonts that shaped developer expectations remain remarkably relevant. **Consolas**, designed by Lucas de Groot for Microsoft in 2004, pioneered ClearType optimization and proved monospace fonts could be both functional and elegant. It remains Windows' default and offers slashed, dotted, or plain zeros via OpenType features. **Monaco** (1984) and its successor **Menlo** (2009) defined the Mac aesthetic, with Monaco's distinctive curved parentheses creating an almost circular appearance that makes bracket matching intuitive at a glance.
+The classic programming fonts that shaped developer expectations remain highly relevant. **Consolas**, designed by Lucas de Groot for Microsoft in 2004, pioneered ClearType optimization and proved monospace fonts could be both functional and elegant. It remains Windows' default and offers slashed, dotted, or plain zeros via OpenType features. **Monaco** (1984) and its successor **Menlo** (2009) defined the Mac aesthetic, with Monaco's distinctive curved parentheses creating an almost circular appearance that makes bracket matching intuitive at a glance.
 
 **Source Code Pro** from Adobe (2012) established the open-source benchmark with seven weights, variable font support, and meticulous attention to consistent glyph widths that prevent text reflow when toggling between weights. Notably, Adobe has resisted adding programming ligatures despite community requests, maintaining a purist approach to character representation.
 

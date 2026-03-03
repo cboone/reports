@@ -246,7 +246,7 @@ defmodule Pipeline do
 end
 ```
 
-Elixir's pipe operator (`|>`) and comprehensions make the high-level version remarkably clean. The explicit version mirrors Erlang's structure with lighter syntax. In production Elixir, you would likely use GenStage or Broadway — dedicated libraries for concurrent pipeline processing built on OTP supervision trees.
+Elixir's pipe operator (`|>`) and comprehensions make the high-level version relatively clean. The explicit version mirrors Erlang's structure with lighter syntax. In production Elixir, you would likely use GenStage or Broadway — dedicated libraries for concurrent pipeline processing built on OTP supervision trees.
 
 ### Gleam
 

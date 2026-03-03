@@ -187,7 +187,7 @@ APL and BQN use Unicode symbols that visually suggest their meanings, requiring 
 
 K represents the terseness extreme, optimizing for minimal keystrokes. BQN represents the pedagogical extreme, trying to be learnable while preserving APL's power. Uiua experiments with eliminating variables, pushing tacit programming beyond even J.
 
-All these languages share the fundamental insight that loops are often incidental complexity: if you want to add two arrays element-wise, you should be able to write `A + B` rather than iterating over indices. This philosophy makes them remarkably powerful for array-heavy computation but creates a steep learning curve for programmers accustomed to explicit iteration.
+All these languages share the fundamental insight that loops are often incidental complexity: if you want to add two arrays element-wise, you should be able to write `A + B` rather than iterating over indices. This philosophy makes them especially powerful for array-heavy computation but creates a steep learning curve for programmers accustomed to explicit iteration.
 
 ---
 
