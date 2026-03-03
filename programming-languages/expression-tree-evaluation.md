@@ -620,7 +620,7 @@ Example query:
 Result = 35.
 ```
 
-The remarkable thing about Prolog's approach is that the relation can sometimes be run in reverse. While we cannot easily ask "what expression evaluates to 35?" with this definition (due to `is` requiring ground arithmetic), a pure relational version using constraint logic programming (CLP) could enumerate expressions that produce a given result. This bidirectionality is uncommon in most other mainstream paradigms.
+A notable feature of Prolog's approach is that the relation can sometimes be run in reverse. While we cannot easily ask "what expression evaluates to 35?" with this definition (due to `is` requiring ground arithmetic), a pure relational version using constraint logic programming (CLP) could enumerate expressions that produce a given result. This bidirectionality is uncommon in most other mainstream paradigms.
 
 Prolog's representation of expressions uses compound terms like `add(lit(3), lit(4))`, which are tree-shaped by nature. Prolog was designed for symbolic reasoning over tree structures, making this problem a natural fit.
 

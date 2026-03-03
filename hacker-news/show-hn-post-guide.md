@@ -88,7 +88,7 @@ Rust-based CLI using LLMs for shell command suggestions. URL: github.com/guywald
 
 ### Title conventions that consistently work
 
-Many successful titles follow a clear pattern: **"Show HN: [Name] – [Concrete description of what it does]"** or the more personal **"Show HN: I built/made [thing] to [achieve outcome]"**. Character limits matter—aim for **50 characters or fewer** in your tagline portion.
+Many successful titles follow a common pattern: **"Show HN: [Name] – [Concrete description of what it does]"** or the more personal **"Show HN: I built/made [thing] to [achieve outcome]"**. Character limits matter—aim for **50 characters or fewer** in your tagline portion.
 
 Titles that perform well share specific characteristics:
 - **Personal narrative framing**: "I made," "I built," "I spent X years" creates immediate credibility and human connection

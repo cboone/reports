@@ -73,7 +73,7 @@ Go's origins at Google in 2007, its design philosophy of deliberate omission, an
 
 ### [How to craft a Show HN post that resonates](hacker-news/show-hn-post-guide.md)
 
-What makes Show HN posts succeed, based on analysis of top-performing posts from 2024-2026. Covers title conventions, project types that resonate (DIY hardware and open-source outperform AI), description structure, timing strategy, comment engagement patterns, and anti-patterns that often lead to poor reception, with a checklist for launching developer tools.
+What makes Show HN posts succeed, based on analysis of high-performing posts from 2024-2026. Covers title conventions, project types that resonate (DIY hardware and open-source outperform AI), description structure, timing strategy, comment engagement patterns, and anti-patterns that often lead to poor reception, with a checklist for launching developer tools.
 
 ## LLM Coding Agents
 

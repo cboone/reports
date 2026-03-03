@@ -12,7 +12,7 @@ Go emerged from Google in 2009 as a deliberate answer to software engineering at
 
 ## The frustrations that sparked a new language
 
-On **September 21, 2007**, Robert Griesemer, Rob Pike, and Ken Thompson gathered at a whiteboard to sketch goals for a new programming language. The catalyst was profound frustration with software development at Google.
+On **September 21, 2007**, Robert Griesemer, Rob Pike, and Ken Thompson gathered at a whiteboard to sketch goals for a new programming language. The catalyst was mounting frustration with software development at Google.
 
 The numbers told a damning story. Google engineers instrumented a major binary's compilation and discovered that **4.2 megabytes of source code** expanded to **over 8 gigabytes** after `#include` processing—a **2,000x expansion factor**. That binary took 45 minutes to build using Google's distributed build system. Even years later, with improvements, the same program (having grown larger) still required 27 minutes.
 
