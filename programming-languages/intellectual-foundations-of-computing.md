@@ -72,7 +72,7 @@ Russell communicated this devastating result to Frege in a letter dated June 16,
 
 ### Hilbert's program and its demise
 
-At **Göttingen**, then the world's premier mathematics center, David Hilbert responded to the foundations crisis with breathtaking ambition. His program, articulated formally in 1921, sought to place all mathematics on absolutely solid foundations through four requirements: all mathematics should be (1) expressible in formal language, (2) derivable from finite axioms, (3) provably consistent, and (4) decidable by algorithm.
+At **Göttingen**, then one of the leading mathematics centers, David Hilbert responded to the foundations crisis with broad ambition. His program, articulated formally in 1921, sought to place all mathematics on rigorous foundations through four requirements: all mathematics should be (1) expressible in formal language, (2) derivable from finite axioms, (3) provably consistent, and (4) decidable by algorithm.
 
 The *Entscheidungsproblem* (decision problem), formalized by Hilbert and Ackermann in 1928, captured the fourth requirement: is there a general procedure to determine whether any mathematical statement is true? Hilbert expected—and hoped—the answer was yes.
 
@@ -82,19 +82,19 @@ In 1931, **Kurt Gödel** at the University of Vienna dealt a major blow to this 
 
 ## Three mathematicians independently invent computation
 
-The remaining piece of Hilbert's program—the Entscheidungsproblem—fell in 1936 through three independent but equivalent answers. This remarkable convergence established that "computation" has a unique, objective mathematical meaning.
+The remaining piece of Hilbert's program, the Entscheidungsproblem, fell in 1936 through three independent but equivalent answers. This convergence helped establish that "computation" has a robust mathematical meaning.
 
 ### Church's lambda calculus at Princeton
 
-**Alonzo Church** at Princeton had been developing lambda calculus since 1932 as a foundation for mathematics. His system was stunningly minimal: only three constructs exist—variables, function abstraction (λx.M), and function application (M N). Church proved in April 1936 that no algorithm could decide whether arbitrary lambda expressions have normal forms, thereby showing the Entscheidungsproblem unsolvable.
+**Alonzo Church** at Princeton had been developing lambda calculus since 1932 as a foundation for mathematics. His system was notably minimal: only three constructs exist, variables, function abstraction (λx.M), and function application (M N). Church proved in April 1936 that no algorithm could decide whether arbitrary lambda expressions have normal forms, thereby showing the Entscheidungsproblem unsolvable.
 
 Lambda calculus represented computation as **pure function manipulation**, with no notion of memory or state. Church numerals encoded natural numbers as functions: zero as λf.λx.x, one as λf.λx.fx, two as λf.λx.f(fx). Addition, multiplication, and recursion all emerge from function application alone. This purely functional model would directly inspire LISP and eventually Haskell.
 
 ### Turing machines at Cambridge
 
-**Alan Turing** at King's College, Cambridge, independently solved the Entscheidungsproblem using a radically different model. His paper "On Computable Numbers," received in May 1936, imagined an abstract machine with an infinite tape, a read/write head, and a finite set of states. Despite its mechanical metaphor, Turing's construction was entirely mathematical.
+**Alan Turing** at King's College, Cambridge, independently solved the Entscheidungsproblem using a different model. His paper "On Computable Numbers," received in May 1936, imagined an abstract machine with an infinite tape, a read/write head, and a finite set of states. Despite its mechanical metaphor, Turing's construction was entirely mathematical.
 
-Turing's crucial insight was the **universal machine**: a single Turing machine that could simulate any other when given its description as input. This abstract concept anticipated stored-program computers by a decade. He also proved the *halting problem* undecidable—no algorithm can determine whether an arbitrary program terminates—establishing fundamental limits on what computation can achieve.
+Turing's key insight was the **universal machine**: a single Turing machine that could simulate any other when given its description as input. This abstract concept anticipated stored-program computers by a decade. He also proved the *halting problem* undecidable: no algorithm can determine whether an arbitrary program terminates, establishing limits on what computation can achieve.
 
 Gödel, initially skeptical of Church's lambda calculus, found Turing's analysis completely convincing. He later wrote that Turing's work provided "the correct definition of mechanical computability." After publishing, Turing traveled to Princeton to work with Church, completing his PhD there in 1938.
 
@@ -102,7 +102,7 @@ Gödel, initially skeptical of Church's lambda calculus, found Turing's analysis
 
 **Emil Post** at the City College of New York, working in isolation due to manic-depressive illness that had disrupted his career, submitted yet another equivalent formulation in October 1936. His model imagined a worker moving between boxes, marking or unmarking them—essentially a Turing machine described differently. Post had actually anticipated incompleteness in the 1920s but never published those results.
 
-The **Church-Turing thesis**, named by Stephen Kleene, expresses the profound fact that all these independent models—lambda calculus, Turing machines, Post machines, general recursive functions—compute exactly the same class of functions. This convergence provides compelling evidence that "computability" is not an arbitrary human construction but reflects something fundamental about mathematical reality.
+The **Church-Turing thesis**, named by Stephen Kleene, expresses that all these independent models, including lambda calculus, Turing machines, Post machines, and general recursive functions, compute exactly the same class of functions. This convergence is widely treated as evidence that "computability" is not an arbitrary human construction but reflects a stable mathematical notion.
 
 ---
 
@@ -226,7 +226,7 @@ This mathematical framework enabled rigorous reasoning about recursion, partial 
 
 **Amir Pnueli** had introduced temporal logic for programs in 1977, enabling specifications like "every request is eventually granted" (G(request → F granted)). Model checking made such properties mechanically verifiable, with counterexample generation when properties fail.
 
-The **state explosion problem**—exponential growth of state spaces—drove innovations including symbolic model checking with BDDs (Ken McMillan), bounded model checking with SAT solvers, and abstraction-refinement (CEGAR). Clarke, Emerson, and Sifakis shared the 2007 Turing Award for this transformative work.
+The **state explosion problem**, the exponential growth of state spaces, drove innovations including symbolic model checking with BDDs (Ken McMillan), bounded model checking with SAT solvers, and abstraction-refinement (CEGAR). Clarke, Emerson, and Sifakis shared the 2007 Turing Award for this influential work.
 
 ---
 
@@ -242,7 +242,7 @@ This **LCF approach** influenced many subsequent systems: Cambridge LCF, HOL, HO
 
 At **INRIA** in France, **Thierry Coquand** and **Gérard Huet** developed the **Calculus of Constructions** (1984)—a type theory combining dependent types, polymorphism, and type operators, sitting at the top of Barendregt's lambda cube. Extended to the Calculus of Inductive Constructions by **Christine Paulin-Mohring**, this became the foundation for Coq (now Rocq).
 
-Coq enabled unprecedented formalizations: Georges Gonthier's proof of the **Four Color Theorem** (2005) and the Mathematical Components project's **Feit-Thompson theorem** (2012)—170,000 lines verifying a cornerstone of finite group theory. Xavier Leroy's **CompCert** provided a formally verified C compiler, demonstrating practical verification of substantial software.
+Coq enabled major formalizations: Georges Gonthier's proof of the **Four Color Theorem** (2005) and the Mathematical Components project's **Feit-Thompson theorem** (2012), 170,000 lines verifying a cornerstone of finite group theory. Xavier Leroy's **CompCert** provided a formally verified C compiler, demonstrating practical verification of substantial software.
 
 ### The current landscape
 
