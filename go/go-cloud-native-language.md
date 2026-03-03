@@ -395,13 +395,13 @@ Go's development continues under new leadership. **Austin Clements** became Tech
 
 ### What the community requests
 
-The **2025 Go Developer Survey** showed **91% satisfaction** (stable since 2019). Top feature requests include **sum types/discriminated unions**, better enums, and nil safety improvements. An active proposal (GitHub #76920) discusses a `union` keyword for sum types.
+The **2025 Go Developer Survey** ([go.dev/blog/survey2025](https://go.dev/blog/survey2025)) reported **91% satisfaction** (stable since 2019). Top feature requests include **sum types/discriminated unions**, better enums, and nil safety improvements. An active proposal (GitHub #76920) discusses a `union` keyword for sum types.
 
 The Go team definitively closed one debate: syntactic error handling. After the 2019 `try` proposal and 2024 `?` operator proposal both failed to achieve consensus, the June 2025 blog post concluded: "We should stop trying to solve the syntactic problem." The `if err != nil` pattern will remain.
 
 ### Market position
 
-Go reached **#7 on the TIOBE Index** in November 2024, its all-time high at that point. GitHub's Octoverse 2024 reported Go as one of the faster-growing languages, and JetBrains estimated **4.1-5.8 million Go developers** worldwide. Cloudflare Radar trend data also highlighted Go's growing share in automated API traffic.
+Go reached **#7 on the TIOBE Index** in November 2024 ([tiobe.com/tiobe-index](https://www.tiobe.com/tiobe-index/)). GitHub's Octoverse report ([octoverse.github.com](https://octoverse.github.com/)) identified continued growth in typed-language usage, and JetBrains' Developer Ecosystem report ([jetbrains.com/lp/devecosystem-2024](https://www.jetbrains.com/lp/devecosystem-2024/)) reported steady Go adoption in its sample.
 
 ---
 

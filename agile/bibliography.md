@@ -40,7 +40,7 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 **Scrum**
 - Schwaber, Ken, and Mike Beedle. *Agile Software Development with Scrum*. Prentice Hall, 2001. [https://www.amazon.com/Agile-Software-Development-Scrum/dp/0130676349](https://www.amazon.com/Agile-Software-Development-Scrum/dp/0130676349)
 - Schwaber, Ken. *Agile Project Management with Scrum*. Microsoft Press, 2004. [https://www.amazon.com/Agile-Project-Management-Scrum-Developer/dp/073561993X](https://www.amazon.com/Agile-Project-Management-Scrum-Developer/dp/073561993X)
-- Sutherland, Jeff. *Scrum: The Art of Doing Twice the Work in Half the Time*. Crown Business, 2014. [https://www.goodreads.com/book/show/19288230-scrum](https://www.goodreads.com/book/show/19288230-scrum)
+- Sutherland, Jeff. *Scrum: The Art of Doing Twice the Work in Half the Time*. Crown Business, 2014. [https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X](https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X)
 
 **Lean Software Development**
 - Poppendieck, Mary, and Tom Poppendieck. *Lean Software Development: An Agile Toolkit*. Addison-Wesley, 2003. [https://www.amazon.com/Lean-Software-Development-Agile-Toolkit/dp/0321150783](https://www.amazon.com/Lean-Software-Development-Agile-Toolkit/dp/0321150783)
@@ -51,7 +51,6 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 
 **Continuous Delivery and DevOps**
 - Humble, Jez, and David Farley. *Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation*. Addison-Wesley, 2010. [https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912](https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912)
-- Humble, Jez, and David Farley. *Continuous Delivery* (Goodreads page). [https://www.goodreads.com/book/show/8686650-continuous-delivery](https://www.goodreads.com/book/show/8686650-continuous-delivery)
 
 **User Stories and Estimation**
 - Cohn, Mike. *User Stories Applied: For Agile Software Development*. Addison-Wesley, 2004. [https://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685](https://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685)
@@ -155,7 +154,6 @@ This bibliography accompanies the comprehensive history of agile methodology, or
 ## Tools and Technology History
 
 **Git**
-- GeeksforGeeks. "History of Git." [https://www.geeksforgeeks.org/git/history-of-git/](https://www.geeksforgeeks.org/git/history-of-git/)
 - Git SCM. "A Short History of Git." [https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git)
 
 **Jira**
