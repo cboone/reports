@@ -151,6 +151,6 @@ See also: [LLM Coding Agents](#llm-coding-agents)
 
 Evaluation of nine macOS terminal emulators -- Terminal.app, iTerm2, Alacritty, Kitty, Ghostty, WezTerm, Warp, Rio, and Wave -- across performance benchmarks, graphics protocol support (Sixel, Kitty Graphics, iTerm2 inline images), Unicode handling, native macOS integration, configuration philosophies, AI features, latency measurements, and standards compliance, with use-case recommendations by developer profile.
 
-### [The complete history of tmux: from OpenBSD project to industry standard](terminal/tmux-history.md)
+### [The complete history of tmux: from OpenBSD project to a widely adopted tool](terminal/tmux-history.md)
 
-How Nicholas Marriott created tmux in 2007 as a BSD-licensed alternative to GNU Screen, earned Theo de Raadt's endorsement through exceptional code quality, and built the terminal multiplexer into an industry standard. Covers the complete version history from 0.1 through 3.6, the client-server architecture, major feature milestones (control mode, format strings, true color, SIXEL graphics, scrollbars), the plugin ecosystem around TPM, and primary sources including the original OpenBSD Journal interviews.
+How Nicholas Marriott created tmux in 2007 as a BSD-licensed alternative to GNU Screen, earned Theo de Raadt's endorsement through strong code quality, and built the terminal multiplexer into a widely adopted tool. Covers the complete version history from 0.1 through 3.6, the client-server architecture, major feature milestones (control mode, format strings, true color, SIXEL graphics, scrollbars), the plugin ecosystem around TPM, and primary sources including the original OpenBSD Journal interviews.

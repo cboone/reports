@@ -6,7 +6,7 @@ created: 2026-01-27
 
 _January 27, 2026_
 
-**tmux, a terminal multiplexer that helped reshape command-line workflows, was created by Nicholas Marriott in 2007 as a cleaner, BSD-licensed alternative to GNU Screen.** What began as a personal project driven by frustration with Screen's unreadable codebase became one of the more influential developer tools of the 2010s. After OpenBSD founder Theo de Raadt personally audited the code and found it "high quality," tmux was imported into the OpenBSD base system on June 1, 2009, a rare honor that signaled production readiness. Today, with **40,000+ GitHub stars** and inclusion in most Unix-like operating systems, tmux is a widely adopted standard choice for terminal multiplexing.
+**tmux, a terminal multiplexer that helped reshape command-line workflows, was created by Nicholas Marriott in 2007 as a cleaner, BSD-licensed alternative to GNU Screen.** What began as a personal project driven by frustration with Screen's unreadable codebase became one of the more influential developer tools of the 2010s. After OpenBSD founder Theo de Raadt personally audited the code and found it "high quality," tmux was imported into the OpenBSD base system on June 1, 2009, a rare honor that signaled production readiness. Today, with **40,000+ GitHub stars** and inclusion in most Unix-like operating systems, tmux is a widely adopted choice for terminal multiplexing.
 
 ---
 
@@ -41,7 +41,7 @@ tmux's path to mainstream adoption accelerated when it caught the attention of t
 
 **May 31, 2008**: tmux 0.2 was imported into the OpenBSD ports system by brynet@, who had discovered the project on SourceForge. The CVS commit message read: *"import tmux 0.2 - tmux is a 'terminal multiplexer'... intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen."*
 
-**June 1, 2009**: In a notable vote of confidence, tmux was imported directly into the **OpenBSD base system**—not as a port, but as part of the core operating system. This was a rare honor that reflected exceptional code quality. Theo de Raadt, OpenBSD's founder, personally audited the code:
+**June 1, 2009**: In a notable vote of confidence, tmux was imported directly into the **OpenBSD base system**—not as a port, but as part of the core operating system. This was a rare honor that reflected strong code quality. Theo de Raadt, OpenBSD's founder, personally audited the code:
 
 > "The most impressive thing about tmux, in my view, is how frustrating the code audit was. In 2 hours, I found only one or two nits that had very minor security consequences. It was not accepted into the tree based on license alone. It is high quality code."
 

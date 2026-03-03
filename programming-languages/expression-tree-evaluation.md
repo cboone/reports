@@ -117,7 +117,7 @@ The algorithm is defined recursively:
 3. `eval(Add(e1, e2))` = eval(e1) + eval(e2)
 4. `eval(Mul(e1, e2))` = eval(e1) × eval(e2)
 
-This is mathematically simple. What makes it interesting as a programming exercise is that it requires two things: a way to define a recursive data type (a tree with four kinds of nodes), and a way to dispatch on the node type (deciding what to do for each variant). Different language families have radically different answers to these two requirements, and those differences reveal deep design philosophies.
+This is mathematically simple. What makes it interesting as a programming exercise is that it requires two things: a way to define a recursive data type (a tree with four kinds of nodes), and a way to dispatch on the node type (deciding what to do for each variant). Different language families have meaningfully different answers to these two requirements, and those differences reveal deep design philosophies.
 
 Languages with algebraic data types (the ML family, Rust, Swift) can define the tree type directly and pattern-match on its variants. Lisp languages represent the tree as nested lists, making the data structure straightforward but the dispatch manual. Object-oriented languages represent each node type as a class and use polymorphic dispatch. C-family languages use tagged unions or struct hierarchies. Array languages, designed for flat rectangular data, often find recursive trees comparatively awkward.
 

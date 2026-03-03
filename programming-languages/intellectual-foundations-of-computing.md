@@ -138,7 +138,7 @@ ML introduced **algebraic data types** with pattern matching, enabling concise e
 
 ### Haskell: purity and laziness
 
-By 1987, over a dozen lazy functional languages existed, creating fragmentation. A committee formed at the FPCA conference to design **Haskell**, named after logician Haskell Curry. Released in 1990, Haskell took an uncompromising stance: functions must be **pure** (no side effects), and evaluation is **lazy** by default (computed only when needed).
+By 1987, over a dozen lazy functional languages existed, creating fragmentation. A committee formed at the FPCA conference to design **Haskell**, named after logician Haskell Curry. Released in 1990, Haskell took an explicit stance: functions are **pure** (no side effects), and evaluation is **lazy** by default (computed only when needed).
 
 **Philip Wadler** and Stephen Blott introduced **type classes** to handle operator overloading systematically, solving a problem that had plagued ML. Wadler's later work on **monads** provided the theoretical framework for managing effects—I/O, state, exceptions—within a pure functional setting. This allowed Haskell to be both mathematically pure and practically useful.
 
@@ -156,7 +156,7 @@ Simula extended ALGOL 60 rather than rejecting it, treating objects as a layer a
 
 ### Smalltalk: everything is an object
 
-**Alan Kay** at Xerox PARC took object ideas in a radically different direction with Smalltalk. Where Simula added objects to existing paradigms, Smalltalk made objects universal: **everything** is an object, including integers, classes, and code blocks. Objects communicate exclusively through **message passing**, with late binding determining which method handles each message.
+**Alan Kay** at Xerox PARC took object ideas in a different direction with Smalltalk. Where Simula added objects to existing paradigms, Smalltalk made objects universal: **everything** is an object, including integers, classes, and code blocks. Objects communicate exclusively through **message passing**, with late binding determining which method handles each message.
 
 Kay later emphasized that messaging, not objects, was the "big idea": "I'm sorry that I long ago coined the term 'objects' for this topic because it gets many people to focus on the lesser idea." His design drew from LISP's dynamism, Simula's classes, and Ivan Sutherland's Sketchpad (MIT, 1963), which had primitive object concepts.
 

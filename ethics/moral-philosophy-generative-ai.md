@@ -106,4 +106,4 @@ Virtue ethics, particularly Vallor's technomoral framework, offers a philosophic
 
 A growing view favors **human rights-based governance** with genuine multi-stakeholder engagement, though disagreement persists over pace, scope, and whether current AI trajectories require fundamental reconsideration or merely course correction. Notably, the field increasingly recognizes that AI ethics cannot remain a Western philosophical conversation; global technology requires global philosophical resources.
 
-What remains contested is whether these frameworks will translate into effective governance before AI's social, political, economic, and environmental consequences become irreversible. The gap between philosophical sophistication and practical implementation remains the field's central challenge.
+What remains contested is whether these frameworks will translate into effective governance before AI's social, political, economic, and environmental consequences become difficult to reverse. The gap between philosophical sophistication and practical implementation remains a central challenge in the field.
