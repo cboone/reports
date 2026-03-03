@@ -8,6 +8,12 @@ _January 30, 2026_
 
 Go emerged from Google in 2009 as a deliberate answer to software engineering at scale, born from **45-minute C++ compilation times** and the realization that mainstream languages often forced a difficult choice between fast compilation, efficient execution, and ease of programming. Created by three highly influential language engineers, Ken Thompson (Unix co-creator, Turing Award winner), Rob Pike (Plan 9, UTF-8 co-creator), and Robert Griesemer (V8, HotSpot JVM), Go combined C's efficiency with garbage collection and built-in concurrency primitives based on Tony Hoare's Communicating Sequential Processes. The result helped reshape cloud infrastructure: Go now powers a large share of the Cloud Native Computing Foundation ecosystem, including Docker, Kubernetes, and Terraform. Go 1.0's 2012 compatibility promise remains unbroken, and the language continues evolving with generics arriving in 2022 and ongoing runtime work such as the experimental Green Tea garbage collector path in 2025.
 
+## Method and source quality
+
+This report prioritizes primary project sources (official Go docs, release notes, talks, and repository-linked materials) and direct historical artifacts.
+Ecosystem adoption and benchmark-oriented claims are synthesized from multiple public sources and should be treated as directional rather than exact.
+Historical influence statements are evidence-informed but interpretive where direct attribution is limited.
+
 ---
 
 ## The frustrations that sparked a new language
