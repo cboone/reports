@@ -600,7 +600,7 @@ The variation comes in three key design decisions:
 
 ### The Containerization Gap
 
-Running AI coding agents with broad filesystem and shell access can be risky, and many tools in this survey provide no isolation beyond git worktrees (which only isolate the filesystem view of the repo, not the agent's ability to execute arbitrary commands). A small number of approaches address this, and three notable examples in this survey are:
+Running AI coding agents with broad filesystem and shell access can be risky, and many tools in this survey provide no isolation beyond git worktrees (which primarily isolate the filesystem view of the repo, not the agent's ability to execute arbitrary commands). A small number of approaches address this, and three notable examples in this survey are:
 
 | Approach | Tool | Isolation Granularity | What's Containerized | What's on the Host |
 |---|---|---|---|---|
@@ -705,7 +705,7 @@ The blog post behind the `/delegate` slash command. Framed as an actual message 
 
 **URL:** [claydon.co/code/practical-parallelism-with-claude-code](https://claydon.co/code/practical-parallelism-with-claude-code/)
 
-An early writeup of the pattern, predating many of the tools above. Describes an "ensemble" approach where Claude Opus generates three alternative implementations for the same task, each in its own worktree, and you pick the best one. Also demonstrates the simpler "divide and conquer" pattern of assigning different tasks to different agents.
+An early writeup of the pattern, predating many of the tools above. Describes an "ensemble" approach where Claude Opus generates three alternative implementations for the same task, each in its own worktree, and you pick the preferred one. Also demonstrates the simpler "divide and conquer" pattern of assigning different tasks to different agents.
 
 ---
 
@@ -729,7 +729,7 @@ There are three tiers of containerization in this ecosystem, each drawing the is
 
 **Full-environment containerization → build it yourself.** Rich Snapp's workflow (documented in the "Worktrees & Tmux & Claude, Oh My... Zsh" article) runs everything — tmux, worktrees, agents, editors — inside a persistent Docker container. A startup script provisions the container, and tmux inside it provides session persistence across reconnections. This is an end-to-end approach, but it's a hand-rolled workflow rather than a feature of any particular tool.
 
-Most of the other tools in this survey do not include built-in sandboxing, which is a persistent gap given the security implications of running AI agents with broad filesystem and shell access.
+Many of the other tools in this survey do not include built-in sandboxing, which is a persistent gap given the security implications of running AI agents with broad filesystem and shell access.
 
 ### "I want agent portability across Claude Code, Codex, OpenCode, etc."
 
