@@ -10,6 +10,12 @@ _February 15, 2026_
 
 Many AI coding agents read some form of Markdown instruction file from your project. The idea is simple: instead of repeating "we use pnpm, not npm" and "run tests before committing" in every prompt, you write it once and the agent reads it automatically at session start. The ecosystem has fragmented into several distinct formats with varying degrees of cross-tool compatibility. This document maps the territory across four widely used tools, Claude Code, OpenAI Codex, GitHub Copilot, and OpenCode, and gives you a concrete strategy.
 
+## Method and source quality
+
+This document prioritizes first-party specifications and product documentation for each tool.
+Cross-tool compatibility behavior can change quickly as standards evolve, so support claims should be read as time-bounded.
+Adoption and ecosystem breadth statements are directional and depend on public repository metadata that may shift.
+
 ---
 
 ## Comparison Table

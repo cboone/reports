@@ -8,6 +8,12 @@ _February 27, 2026_
 
 A practical guide for developers using AI coding agents on local systems. This document categorizes the security risks specific to LLM-powered development tools, distinguishes genuinely novel threats from amplified versions of existing ones, and provides concrete mitigation strategies grounded in real-world incidents and current research.
 
+## Evidence basis
+
+This taxonomy combines documented incidents, security research, and practitioner guidance, with explicit separation between real incidents and hypothetical scenarios.
+Claims about what is "novel" versus "amplified" are analytical judgments based on current public evidence, not settled consensus.
+Defensive guidance is time-sensitive because both attack techniques and agent safeguards are evolving rapidly.
+
 ## The Core Question
 
 When an LLM agent operates on your local system — reading files, executing commands, installing packages, making network requests — what can go wrong, and how much of it is genuinely new versus a faster version of problems we already had?

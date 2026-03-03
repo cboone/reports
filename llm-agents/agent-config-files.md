@@ -12,6 +12,12 @@ Companion to: [LLM coding agent instruction files](agent-instruction-files.md)
 
 Beyond the instruction/context files (CLAUDE.md, AGENTS.md, etc.), many AI coding agents have their own configuration systems for things like model selection, permissions, sandboxing, MCP servers, and tool policies. These config files control the *behavior* of the tool itself, whereas instruction files control the *context* the LLM receives. This document maps out where common config files live, what they control, which files should be committed to version control, and how it all fits together.
 
+## Method and source quality
+
+This comparison is based primarily on official tool documentation and upstream repositories.
+Because configuration semantics change frequently (especially around permissions and sandboxing), details should be treated as a versioned snapshot rather than permanent guarantees.
+Where ecosystem behaviors are inferred from community usage patterns, they are marked as directional.
+
 ---
 
 ## The Root Directory Footprint
