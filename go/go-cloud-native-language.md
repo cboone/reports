@@ -450,11 +450,11 @@ Official announcements, design rationales, and tutorials. Notable posts include 
 **"The Go Programming Language" — Alan Donovan & Brian Kernighan (2015)**
 https://www.gopl.io/
 Addison-Wesley, 380pp, ISBN 978-0134190440
-The "K&R for Go"—authoritative and comprehensive. Kernighan co-authored the original C book; Donovan worked on Google's Go team. Predates generics but covers fundamentals excellently.
+Often described as the "K&R for Go" for its broad coverage. Kernighan co-authored the original C book; Donovan worked on Google's Go team. Predates generics but covers fundamentals very well.
 
 **"Concurrency in Go" — Katherine Cox-Buday (2017)**
 O'Reilly Media
-Definitive resource for concurrent programming patterns: pipelines, fan-out/fan-in, cancellation, context. Essential once you move beyond basic goroutine usage.
+A widely cited resource for concurrent programming patterns: pipelines, fan-out/fan-in, cancellation, context. Particularly useful once you move beyond basic goroutine usage.
 
 **"100 Go Mistakes and How to Avoid Them" — Teiva Harsanyi (2022)**
 Manning Publications

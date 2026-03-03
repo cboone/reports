@@ -21,11 +21,11 @@ Detailed reports on various topics, created by LLMs, usually the latest version 
 
 Primary sources, core documents, and further reading for the history of agile, including the original Manifesto documents, key books by Beck, Schwaber, Cockburn, and others, and academic research on agile adoption and outcomes.
 
-### [Complete timeline of agile programming](agile/timeline.md)
+### [Timeline of agile programming](agile/timeline.md)
 
-Chronological timeline from Toyota's factory floors in the 1940s to today's global software industry. Traces the full arc: manufacturing philosophy, early iterative development at NASA and IBM, the methodology wars, the Agile Manifesto, the rise of Scrum and SAFe, and the current landscape of agile practice.
+Chronological timeline from Toyota's factory floors in the 1940s to today's global software industry. Traces the arc: manufacturing philosophy, early iterative development at NASA and IBM, the methodology wars, the Agile Manifesto, the rise of Scrum and SAFe, and the current landscape of agile practice.
 
-### [The complete history of agile: from Toyota to transformation](agile/history.md)
+### [A history of agile: from Toyota to transformation](agile/history.md)
 
 How agile methodology emerged from three tributaries — Toyota's production system, early iterative experiments at NASA and IBM, and mounting evidence of waterfall's failures — and what happened after 17 practitioners met in Utah's Wasatch Mountains in February 2001. Covers the pre-history through lean manufacturing, the methodology wars of the 1990s, the Snowbird meeting, the explosion of frameworks (Scrum, XP, Kanban), enterprise adoption, and the ongoing debates about whether mainstream agile has preserved or diluted its original values.
 
@@ -151,6 +151,6 @@ See also: [LLM Coding Agents](#llm-coding-agents)
 
 Evaluation of nine macOS terminal emulators -- Terminal.app, iTerm2, Alacritty, Kitty, Ghostty, WezTerm, Warp, Rio, and Wave -- across performance benchmarks, graphics protocol support (Sixel, Kitty Graphics, iTerm2 inline images), Unicode handling, native macOS integration, configuration philosophies, AI features, latency measurements, and standards compliance, with use-case recommendations by developer profile.
 
-### [The complete history of tmux: from OpenBSD project to a widely adopted tool](terminal/tmux-history.md)
+### [A history of tmux: from OpenBSD project to a widely adopted tool](terminal/tmux-history.md)
 
 How Nicholas Marriott created tmux in 2007 as a BSD-licensed alternative to GNU Screen, earned Theo de Raadt's endorsement through strong code quality, and built the terminal multiplexer into a widely adopted tool. Covers the complete version history from 0.1 through 3.6, the client-server architecture, major feature milestones (control mode, format strings, true color, SIXEL graphics, scrollbars), the plugin ecosystem around TPM, and primary sources including the original OpenBSD Journal interviews.

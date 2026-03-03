@@ -2,7 +2,7 @@
 created: 2026-01-27
 ---
 
-# The Complete History of tmux: From OpenBSD Project to Widely Adopted Tool
+# A History of tmux: From OpenBSD Project to Widely Adopted Tool
 
 _January 27, 2026_
 
