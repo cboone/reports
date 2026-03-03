@@ -69,11 +69,11 @@ Ghostty's native Swift/SwiftUI implementation provides genuine macOS-native beha
 | Scripting | Python API | Apple Shortcuts | Python kittens | IPC only | Lua | Workflows |
 | Search | ✓ | Evolving | ✓ | ✓ | ✓ | ✓ |
 
-Terminal.app's **absence of split panes** remains a major UX gap; users must rely on separate windows or tmux. macOS Tahoe will finally bring true color and Powerline font support to Terminal.app, representing "a long-overdue modernization" after years of comparatively slow feature evolution.
+Terminal.app's **absence of split panes** remains a major UX gap; users must rely on separate windows or tmux. macOS Tahoe is expected to bring true color and Powerline font support to Terminal.app, representing "a long-overdue modernization" after years of comparatively slow feature evolution.
 
 ## Configuration philosophies define user experience
 
-**WezTerm's Lua configuration** offers very powerful customization, embedding Lua 5.4 with 15+ API crates for window management, color manipulation, and event callbacks. Configuration hot-reloads instantly, and the 900+ built-in color schemes provide immediate personalization.
+**WezTerm's Lua configuration** offers extensive customization, embedding Lua 5.4 with 15+ API crates for window management, color manipulation, and event callbacks. Configuration hot-reloads instantly, and the 900+ built-in color schemes provide immediate personalization.
 
 ```lua
 local wezterm = require 'wezterm'
@@ -178,7 +178,7 @@ Alacritty's 452+ contributors and dual Apache/MIT licensing make it among the mo
 
 ## Conclusion
 
-The macOS terminal landscape in 2026 offers genuinely distinct choices rather than marginal variations. **Performance-focused users often prefer Alacritty**; **feature-maximalists often choose iTerm2**; **AI-forward developers may find Warp compelling**; **protocol-complete needs often point to WezTerm**; and **native-experience seekers should evaluate Ghostty** as it matures through its v1.x releases.
+The macOS terminal landscape in 2026 offers distinct choices rather than marginal variations. **Performance-focused users often prefer Alacritty**; **feature-maximalists often choose iTerm2**; **AI-forward developers may find Warp compelling**; **protocol-complete needs often point to WezTerm**; and **native-experience seekers should evaluate Ghostty** as it matures through its v1.x releases.
 
 Ghostty's emergence validates demand for native implementations prioritizing platform conventions, while Warp's commercial success demonstrates appetite for AI-integrated terminals despite open-source alternatives. The graphics protocol fragmentation—Sixel vs. Kitty Graphics vs. iTerm2—may gradually consolidate around Kitty Graphics as more terminals adopt it, though Sixel's broader legacy support ensures continued relevance.
 
