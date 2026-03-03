@@ -6,7 +6,7 @@ created: 2026-01-25
 
 _January 25, 2026_
 
-**JSON remains dominant for APIs, while TOML has become a widely preferred format for configuration files** in modern toolchains. Performance benchmarks reveal that JSON parsers are consistently **5-650x faster** than human-readable alternatives, yet for config files parsed once at startup, this gap is often less important. The real driver of adoption is reduced syntax friction: TOML's explicit typing avoids many of YAML's gotchas, while newer formats like **KDL** and **Pkl** (Apple, 2024) are gaining traction for document-heavy and type-safe configurations respectively.
+**JSON remains a widely used standard for APIs, while TOML has become a widely preferred format for configuration files** in modern toolchains. Performance benchmarks reveal that JSON parsers are consistently **5-650x faster** than human-readable alternatives, yet for config files parsed once at startup, this gap is often less important. The real driver of adoption is reduced syntax friction: TOML's explicit typing avoids many of YAML's gotchas, while newer formats like **KDL** and **Pkl** (Apple, 2024) are gaining traction for document-heavy and type-safe configurations respectively.
 
 The ecosystem has settled into distinct niches rather than crowning a single successor. YAML is widely used in DevOps (Kubernetes, GitHub Actions), TOML is widely used in package management (Cargo.toml, pyproject.toml), and JSON holds firm for machine-to-machine APIs. Emerging formats target specialized needs: KDL for human-friendly documents, RON for Rust type safety, and Dhall for programmable configs designed to avoid non-termination.
 
