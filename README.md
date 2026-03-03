@@ -133,7 +133,7 @@ Introduces and connects three companion studies that each implement a single alg
 
 ### [Self: the invisible language that powers modern computing](self/history.md)
 
-How a radical simplification of Smalltalk — removing classes entirely in favor of prototypes — produced optimization techniques that now power major JavaScript engines and the Java Virtual Machine. Traces Self's journey from Xerox PARC through Stanford to Sun Microsystems, the breakthroughs in adaptive compilation and polymorphic inline caches, the direct lineage to Java HotSpot and V8, and Self's influence on JavaScript's prototype-based object model.
+How a substantial simplification of Smalltalk — removing classes entirely in favor of prototypes — produced optimization techniques that now influence major JavaScript engines and the Java Virtual Machine. Traces Self's journey from Xerox PARC through Stanford to Sun Microsystems, the breakthroughs in adaptive compilation and polymorphic inline caches, the direct lineage to Java HotSpot and V8, and Self's influence on JavaScript's prototype-based object model.
 
 ### [The Self programming language: key papers and resources](self/bibliography.md)
 

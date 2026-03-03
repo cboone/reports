@@ -20,7 +20,7 @@ The **Sun Microsystems era (1991-1995)** brought additional talent, including **
 
 ## The technical shift: eliminating classes, influencing modern JIT
 
-Self's core insight was that classes are unnecessary for object-oriented programming.  Objects inherit directly from other objects through **prototype delegation**—when a message is sent, the system searches the receiver for a matching slot, then recursively searches parent objects.  Creating new objects requires only **cloning** existing ones, not instantiating from abstract class descriptions. 
+Self's core insight was that classes are not strictly necessary for object-oriented programming.  Objects inherit directly from other objects through **prototype delegation**—when a message is sent, the system searches the receiver for a matching slot, then recursively searches parent objects.  Creating new objects requires only **cloning** existing ones, not instantiating from abstract class descriptions. 
 
 This simplicity created severe performance challenges that drove groundbreaking innovations. A key one was **maps** (now called "hidden classes" in V8): an implementation-level structure that transparently groups objects with identical slot layouts. Since objects cloned from the same prototype typically share structure, maps enabled class-like optimization without language-level classes. V8's documentation explicitly acknowledges: "This basic idea is not new—the prototype-based programming language Self used maps to do something similar." 
 
