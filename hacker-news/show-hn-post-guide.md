@@ -12,6 +12,14 @@ The formula is straightforward but counterintuitive: write like you're explainin
 
 ---
 
+## Method and source quality
+
+- **Primary evidence:** Linked Show HN threads and engagement metrics from 2024-2026, plus first-party Hacker News moderator guidance.
+- **Secondary evidence:** Creator write-ups and follow-up discussions when available.
+- **Limitations:** This is a curated sample, not a full population model. Category percentages and timing guidance should be interpreted as directional heuristics rather than universal rules.
+
+---
+
 ## Top Show HN posts from 2024-2026
 
 The following posts exemplify the characteristics that resonate with the Hacker News community. These represent a mix of categories with emphasis on developer tools, ordered by engagement (combined points and comments).

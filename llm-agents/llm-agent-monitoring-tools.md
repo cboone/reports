@@ -10,6 +10,14 @@ This document catalogs a broad set of notable tools (as of mid-February 2026) fo
 
 ---
 
+## Source quality note
+
+- **Primary sources:** Most entries rely on official project documentation (GitHub READMEs, release notes, and vendor docs).
+- **Secondary sources:** Community write-ups and discussion threads are used for additional context.
+- **Caveat:** Feature, benchmark, and performance claims are frequently self-reported by tool maintainers unless explicitly attributed to independent testing.
+
+---
+
 ## Table of Contents
 
 1. [Desktop Session Managers (macOS)](#1-desktop-session-managers-macos)
