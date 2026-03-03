@@ -648,9 +648,9 @@ Tools that prepare codebases for LLM consumption rather than being agents themse
 
 **Code review is underserved.** While several tools offer code review features, few CLI tools are purpose-built for AI-assisted code review workflows. Devin's `npx devin-review` and Codex's review agent are early entries but neither is comprehensive.
 
-**Team collaboration is nascent.** Amp's thread sharing is distinctive. Many tools are still fundamentally single-developer. As organizations adopt CLI agents, tools that enable team workflows (shared sessions, review of agent output, audit trails) will have an advantage.
+**Team collaboration is nascent.** Amp's thread sharing is distinctive. Many tools are still primarily single-developer experiences. As organizations adopt CLI agents, tools that enable team workflows (shared sessions, review of agent output, audit trails) will have an advantage.
 
-**Testing integration is weak across the board.** Most agents can *run* tests but few can *write* meaningful test suites or use test results to guide their approach. Kiro's property-based testing and GPT-Pilot's TDD approach are exceptions.
+**Testing integration remains uneven.** Most agents can *run* tests but few can *write* meaningful test suites or use test results to guide their approach. Kiro's property-based testing and GPT-Pilot's TDD approach are exceptions.
 
 ### The convergence pattern
 
