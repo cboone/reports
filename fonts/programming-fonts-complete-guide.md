@@ -40,7 +40,7 @@ The open-source response came quickly. **Inconsolata** (2006), designed by Googl
 
 A prolific open-source font lineage began with **Bitstream Vera** (2003), commissioned by the GNOME Foundation for the Linux desktop. Designer Jim Lyles created a complete font family with full TrueType hinting optimized for low-resolution displays. The permissive license explicitly allowed derivatives, provided they were renamed.
 
-**DejaVu** (2004), started by Czech programmer Štěpán Roh, extended Vera with dramatically broader Unicode coverage including Latin, Cyrillic, Greek, Armenian, Georgian, and Hebrew scripts. The project absorbed contributions from multiple sources and expanded from 10 to 21 font styles. DejaVu Sans Mono became the default monospace font on Ubuntu, Debian, Fedora, OpenBSD, and numerous other systems.
+**DejaVu** (2004), started by Czech programmer Štěpán Roh, extended Vera with much broader Unicode coverage including Latin, Cyrillic, Greek, Armenian, Georgian, and Hebrew scripts. The project absorbed contributions from multiple sources and expanded from 10 to 21 font styles. DejaVu Sans Mono became the default monospace font on Ubuntu, Debian, Fedora, OpenBSD, and numerous other systems.
 
 Apple hired original Vera designer Jim Lyles to create **Menlo** (2009), which shipped with Mac OS X Snow Leopard. Based on both Vera and DejaVu, Menlo refined proportions for Apple displays and changed the zero from dotted to slashed. It replaced Monaco as macOS's default terminal font and remained so until **SF Mono** (2015) arrived with El Capitan as part of Apple's San Francisco font family.
 
