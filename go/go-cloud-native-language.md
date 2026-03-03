@@ -369,7 +369,7 @@ Go deliberately rejects class hierarchies. Where Java uses `class Dog extends An
 
 Go compiles to native binaries requiring no runtime environment; Java requires the JVM, C# requires .NET. Go's single-binary deployment simplifies containerization in many workflows.
 
-Error handling differs significantly: Go uses explicit return values that must be handled at call sites; Java/C# use exceptions that can propagate up the stack.
+Error handling differs significantly: Go uses explicit return values that are typically handled at call sites; Java/C# use exceptions that can propagate up the stack.
 
 ### Go versus Python
 
@@ -416,7 +416,7 @@ One of the most-cited computer science papers, establishing the theoretical foun
 
 **The Go Memory Model**
 https://go.dev/ref/mem
-Official specification defining happens-before relationships for concurrent programming. Strongly recommended for anyone writing concurrent Go beyond trivial cases.
+Official specification defining happens-before relationships for concurrent programming. Recommended for engineers writing concurrent Go beyond simple cases.
 
 ### Essential talks
 
