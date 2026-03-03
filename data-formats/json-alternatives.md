@@ -16,6 +16,13 @@ This comparison prioritizes language specifications, official project documentat
 Benchmark values are synthesized from different runtimes and libraries, so absolute numbers are less important than broad relative patterns.
 Adoption figures (downloads, npm activity, and project usage examples) are time-sensitive and should be treated as directional.
 
+## Methodology transparency
+
+- **Scope:** Human-readable and developer-facing alternatives to JSON, with selected binary formats included only for practical API/storage comparison.
+- **Benchmark handling:** Performance figures are reported as published by source benchmarks and normalized in prose as rough orders of magnitude.
+- **Decision framing:** Recommendations prioritize ecosystem fit and failure modes over raw parser speed for startup-loaded configuration files.
+- **Ecosystem evidence:** Adoption examples are drawn from visible toolchain defaults and public package activity, not comprehensive telemetry.
+
 ## Performance benchmarks show JSON still leads for speed
 
 The performance gap between JSON and its alternatives is substantial but context-dependent. Native JSON parsers benefit from decades of optimization and, in JavaScript/Python, C-level implementations.

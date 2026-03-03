@@ -16,6 +16,13 @@ This analysis relies primarily on Apple-maintained sources (project repositories
 Performance and adoption claims include third-party benchmark reports and community observations, which are useful but environment-sensitive and not always directly comparable.
 Project metrics such as stars, release versions, and ecosystem maturity are point-in-time signals.
 
+## Methodology transparency
+
+- **Scope:** Native macOS container approaches and adjacent alternatives (Docker Desktop, OrbStack, Linux-native container models, and traditional VMs).
+- **Benchmark interpretation:** Public benchmark snapshots are treated as comparative signals, not definitive performance rankings across all workloads.
+- **Security analysis basis:** Architecture-level reasoning (isolation boundary, kernel-sharing model, attack surface) is prioritized over single-incident anecdotes.
+- **Roadmap uncertainty:** Ecosystem-maturity conclusions reflect current tooling gaps and can shift quickly with platform releases.
+
 ## How Apple built containers on top of lightweight VMs
 
 Apple's architecture departs significantly from traditional containers. While Docker and Podman on Linux use kernel namespaces and cgroups to isolate processes sharing a single kernel, Apple runs each container inside its own dedicated virtual machine with a separate Linux kernel. The stack consists of three layers: the **Container CLI** user interface, the **Containerization framework** (Swift package handling container lifecycle), and Apple's **Virtualization.framework** providing hypervisor capabilities.
